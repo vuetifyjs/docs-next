@@ -16,8 +16,19 @@
   import 'prismjs/components/prism-typescript'
   import '@/styles/overrides.sass'
   import 'github-markdown-css/github-markdown.css'
+  import { loadLocale } from '@/plugins/i18n'
 
   export default {
-    //
+    created () {
+      if (this.$i18n.locale === 'eo-UY') {
+        const crowdin = document.createElement('script')
+        crowdin.setAttribute('src', 'https://cdn.crowdin.com/jipt/jipt.js')
+        document.head.appendChild(crowdin)
+      }
+    },
+    beforeRouteUpdate: (to, _, next) => {
+      const locale = to.params.locale
+      loadLocale(locale).then(next)
+    },
   }
 </script>
