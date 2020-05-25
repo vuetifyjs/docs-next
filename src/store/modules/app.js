@@ -14,7 +14,11 @@ const actions = {
   },
 }
 
-const getters = {}
+const getters = {
+  translating: (state, getters, rootState) => {
+    return rootState.route.params.locale === 'eo-UY'
+  },
+}
 
 export default {
   namespaced: true,

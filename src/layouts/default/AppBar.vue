@@ -1,7 +1,9 @@
 <template>
   <v-app-bar app>
     <v-toolbar-title>Application</v-toolbar-title>
+
     <v-spacer />
+
     <v-toolbar-items>
       <v-menu>
         <template v-slot:activator="{ on }">
@@ -28,6 +30,9 @@
 </template>
 
 <script>
+  // Utilities
+  import { get } from 'vuex-pathify'
+
   // Language
   import locales from '@/i18n/locales'
 
@@ -36,22 +41,24 @@
 
     data: () => ({ locales }),
 
+    computed: {
+      translating: get('app/translating'),
+    },
+
     methods: {
-      switchLocale (locale) {
+      async switchLocale (locale) {
         if (this.$i18n.locale === locale) return
 
         const to = this.$router.resolve({ params: { locale } })
 
-        if (
-          this.$i18n.locale !== 'eo-UY' &&
-          locale !== 'eo-UY'
-        ) return this.$router.push(to.location)
+        await this.$router.replace(to.location)
 
         // If we're moving to or from crowdin language, we should
         // refresh so that jipt script can be loaded or unloaded
-        this.$router
-          .replace(to.location)
-          .then(this.$router.go)
+        if (
+          this.translating ||
+          locale === 'eo-UY'
+        ) window.location.reload()
       },
     },
   }
