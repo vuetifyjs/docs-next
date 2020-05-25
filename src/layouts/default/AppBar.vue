@@ -28,30 +28,30 @@
 </template>
 
 <script>
+  // Language
   import locales from '@/i18n/locales'
 
   export default {
     name: 'DefaultBar',
 
-    data: () => ({
-      locales,
-    }),
+    data: () => ({ locales }),
 
     methods: {
       switchLocale (locale) {
         if (this.$i18n.locale === locale) return
 
+        const to = this.$router.resolve({ params: { locale } })
+
+        if (
+          this.$i18n.locale !== 'eo-UY' &&
+          locale !== 'eo-UY'
+        ) return this.$router.push(to.location)
+
         // If we're moving to or from crowdin language, we should
         // refresh so that jipt script can be loaded or unloaded
-        if (this.$i18n.locale === 'eo-UY' || locale === 'eo-UY') {
-          setTimeout(() => {
-            this.$router.go()
-          }, 250)
-          this.$router.replace({ params: { locale } })
-        } else {
-          const to = this.$router.resolve({ params: { locale } })
-          this.$router.push(to.location)
-        }
+        this.$router
+          .replace(to.location)
+          .then(this.$router.go)
       },
     },
   }
