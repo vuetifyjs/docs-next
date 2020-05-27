@@ -7,11 +7,9 @@ keywords: v-alert, alerts, api, vue alert component, vuetify alert component
 # V-Alert
 
 ## Props
-<api-table>
 | Name   |  Type  |  Default  | Description                                                                            |
 |:------ |:------:|:---------:|:-------------------------------------------------------------------------------------- |
 | border | string | undefined | Puts a border on the alert. Accepts **top** \| **right** \| **bottom** \| **left**. |
-</api-table>
 
 ## Slots
 

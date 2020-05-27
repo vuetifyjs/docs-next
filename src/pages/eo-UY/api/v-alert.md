@@ -7,11 +7,9 @@ keywords: crwdns59126:0crwdne59126:0
 # crwdns59128:0crwdne59128:0
 
 ## crwdns59130:0crwdne59130:0
-<api-table>
 | crwdns59132:0crwdne59132:0 | crwdns59134:0crwdne59134:0 | crwdns59136:0crwdne59136:0 | crwdns59138:0crwdne59138:0                            |
 |:-------------------------- |:--------------------------:|:--------------------------:|:----------------------------------------------------- |
 | crwdns59140:0crwdne59140:0 | crwdns59142:0crwdne59142:0 | crwdns59144:0crwdne59144:0 | crwdns59146:0crwdne59146:0 crwdns59148:0crwdne59148:0 |
-</api-table>
 
 ## crwdns59150:0crwdne59150:0
 
