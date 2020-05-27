@@ -50,7 +50,7 @@
       '$route.params.locale': 'loadComponent',
     },
 
-    async created () {
+    created () {
       this.loadComponent()
     },
 
