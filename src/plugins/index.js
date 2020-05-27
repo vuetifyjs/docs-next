@@ -4,8 +4,8 @@
  * Automatically included in `./src/main.js`
  */
 
-import { registerComponents } from './app'
 import { loadFonts } from './webfontloader'
+import { registerComponents } from './app'
 import { useMeta } from './vue-meta'
 import { useVuetify } from './vuetify'
 
