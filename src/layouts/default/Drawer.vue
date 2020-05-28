@@ -37,43 +37,11 @@
   // Utilities
   import { get } from 'vuex-pathify'
 
-  import pages from '@/data/pages'
-
   export default {
     name: 'DefaultDrawer',
 
     computed: {
-      locale: get('route/params@locale'),
-      pages: get('i18n/pages'),
-      items () {
-        return pages.map(item => this.genItem(item, ''))
-      },
-    },
-
-    methods: {
-      findItems (group) {
-        return Object.keys(this.pages).filter(p => p.startsWith(group)).map(p => {
-          return {
-            title: this.pages[p],
-            to: `/${this.$route.params.locale}${p}`,
-          }
-        })
-      },
-      genItem (item, parent) {
-        const group = `${parent}/${item.title}`
-
-        return {
-          // Try finding title among imported pages, otherwise try translating it
-          title: this.pages[group] || this.$t(item.title),
-          icon: item.icon || undefined,
-          group,
-          // If there are no defined components, try finding them among imported pages
-          items: item.items
-            ? item.items.map(i => this.genItem(i, group))
-            : this.findItems(group),
-          to: `/${this.$route.params.locale}${group}`,
-        }
-      },
+      items: get('app/nav'),
     },
   }
 </script>

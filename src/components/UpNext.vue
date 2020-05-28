@@ -5,7 +5,7 @@
   >
     <router-link
       v-if="prev"
-      :to="`/${lang}${prev.to}`"
+      :to="prev.to"
     >
       <span class="text--primary">←</span>
 
@@ -16,7 +16,7 @@
 
     <router-link
       v-if="next"
-      :to="`/${lang}${next.to}`"
+      :to="next.to"
     >
       {{ next.title }}
 
@@ -36,28 +36,34 @@
       ...get('route', [
         'params@category',
         'params@page',
-        'params@lang',
+        'params@locale',
       ]),
-      pages: get('i18n/pages'),
-      page: get('route/params@page'),
-      currentCategory () {
-        return this.pages && this.pages[this.category]
-      },
-      current () {
-        return this.currentCategory && this.currentCategory[this.currentIndex]
+      nav: get('app/nav'),
+      leafs () {
+        const unvisited = [...this.nav]
+        const leafs = []
+
+        while (unvisited.length) {
+          const current = unvisited.shift()
+
+          if (current.items) {
+            unvisited.push(...current.items)
+          } else {
+            leafs.push(current)
+          }
+        }
+
+        return leafs
       },
       currentIndex () {
-        const current = `/${this.category}/${this.page}`
-
-        return this.currentCategory && this.currentCategory.findIndex(page => {
-          return page.to === current
-        })
+        const to = `/${this.locale}/${this.category}/${this.page}`
+        return this.leafs && this.leafs.findIndex(item => item.to === to)
       },
       prev () {
-        return this.currentCategory && this.currentCategory[this.currentIndex - 1]
+        return this.leafs[this.currentIndex - 1]
       },
       next () {
-        return this.currentCategory && this.currentCategory[this.currentIndex + 1]
+        return this.leafs[this.currentIndex + 1]
       },
     },
   }
