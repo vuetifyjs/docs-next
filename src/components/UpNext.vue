@@ -35,13 +35,13 @@
     computed: {
       ...get('route', [
         'params@category',
-        'params@page',
         'params@locale',
+        'params@page',
       ]),
       nav: get('app/nav'),
       leafs () {
-        const unvisited = [...this.nav]
         const leafs = []
+        const unvisited = [...this.nav]
 
         while (unvisited.length) {
           const current = unvisited.shift()
@@ -56,8 +56,11 @@
         return leafs
       },
       currentIndex () {
+        if (!this.leafs) return -1
+
         const to = `/${this.locale}/${this.category}/${this.page}/`
-        return this.leafs && this.leafs.findIndex(item => item.to === to)
+
+        return this.leafs.findIndex(item => item.to === to)
       },
       prev () {
         return this.leafs[this.currentIndex - 1]
