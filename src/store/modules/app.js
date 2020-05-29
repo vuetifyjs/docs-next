@@ -27,6 +27,7 @@ const actions = {
 const getters = {
   nav: (_, __, rootState) => {
     const group = `/${rootState.route.params.locale}/`
+
     return nav.map(item => genItem(item, group, rootState))
   },
 }
