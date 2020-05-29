@@ -8,7 +8,7 @@
         <v-list-group
           v-if="item.items"
           :key="item.title"
-          :group="item.group"
+          :group="item.to"
           :prepend-icon="item.icon"
           no-action
         >

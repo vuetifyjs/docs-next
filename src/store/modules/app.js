@@ -25,8 +25,9 @@ const actions = {
 }
 
 const getters = {
-  nav: (state, _, rootState) => {
-    return nav.map(item => genItem(item, '', rootState))
+  nav: (_, __, rootState) => {
+    const group = `/${rootState.route.params.locale}/`
+    return nav.map(item => genItem(item, group, rootState))
   },
 }
 
@@ -44,16 +45,15 @@ function genItems (item, ...args) {
     : findItems(...args)
 }
 
-function findItems (group, { i18n, route }) {
+function findItems (group, { i18n }) {
   const pages = []
-  const { locale } = route.params
 
   for (const key in i18n.pages) {
     if (!key.startsWith(group) || group === key) continue
 
     pages.push({
       title: i18n.pages[key],
-      to: `/${locale}${key}/`,
+      to: key,
     })
   }
 
@@ -62,16 +62,15 @@ function findItems (group, { i18n, route }) {
 
 function genItem (item, parent, rootState) {
   const path = kebabCase(item.to || item.title)
-  const group = `${parent}/${path}`
+  const to = `${parent}${path}/`
   const pages = rootState.i18n.pages
-  const title = pages[group] || item.title
+  const title = pages[to] || i18n.t(item.title)
 
   return {
-    group,
     href: item.href || undefined,
     icon: item.icon || undefined,
-    items: genItems(item, group, rootState),
-    title: i18n.te(title) ? i18n.t(title) : title,
-    to: !item.href ? `${path}/` : '',
+    items: genItems(item, to, rootState),
+    title,
+    to,
   }
 }

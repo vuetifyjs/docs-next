@@ -56,7 +56,7 @@
         return leafs
       },
       currentIndex () {
-        const to = `/${this.locale}/${this.category}/${this.page}`
+        const to = `/${this.locale}/${this.category}/${this.page}/`
         return this.leafs && this.leafs.findIndex(item => item.to === to)
       },
       prev () {
