@@ -1,5 +1,13 @@
 {
   "api": "API",
   "components": "Components",
-  "getting-started": "Getting started"
+  "getting-started": "Getting started",
+  "props": "Props",
+  "type": "Type",
+  "default": "Default",
+  "description": "Description",
+  "name": "Name",
+  "source": "Source",
+  "value": "Value",
+  "signature": "Signature"
 }
