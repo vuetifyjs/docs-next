@@ -108,7 +108,6 @@ function writeMdFile (file, data) {
       }
     }
     stream.write(footer)
-    // stream.write(JSON.stringify(obj, null, 2))
     stream.end()
   })
 }
