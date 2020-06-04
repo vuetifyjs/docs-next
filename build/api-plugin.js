@@ -27,16 +27,19 @@ function genFrontMatter (component) {
     `description: API for the ${component} component.`,
     `keywords: ${component}, api, vuetify`,
   ]
+
   return `---\n${fm.join('\n')}\n---\n\n`
 }
 
 function genTableHeader (headers) {
   const headerLine = []
   const dividerLine = []
+
   for (const header of headers) {
     headerLine.push(`${capitalize(header)}`)
     dividerLine.push('---')
   }
+
   return [
     genRowString(headerLine),
     genRowString(dividerLine),
@@ -45,6 +48,7 @@ function genTableHeader (headers) {
 
 function genTableRow (headers, row) {
   const headerRow = []
+
   for (const header of headers) {
     if (header === 'source' && isProduction) continue
 
@@ -60,6 +64,7 @@ function genTableRow (headers, row) {
 
     headerRow.push(value || '')
   }
+
   return genRowString(headerRow)
 }
 
@@ -84,6 +89,7 @@ function genFooter () {
     '<vuetify-ad />',
     '<contribute />',
   ]
+
   return `${footer.join('\n\n')}\n\n`
 }
 
@@ -92,6 +98,7 @@ function createMdFile (component, data) {
 
   str += genFrontMatter(component)
   str += `# ${component} API\n\n`
+
   for (const [header, value] of Object.entries(data)) {
     if (header === 'mixins') continue
 
@@ -102,6 +109,7 @@ function createMdFile (component, data) {
     str += headerLine
     str += table
   }
+
   str += genFooter()
 
   return str
@@ -110,17 +118,20 @@ function createMdFile (component, data) {
 const toJs = data => `module.exports = ${JSON.stringify(data)};`
 
 function generateFiles () {
-  const files = {}
   const components = generateCompList()
+  const files = {}
   const locales = generateLocaleList()
-  // generateAPI
+
   for (const locale of locales) {
     const pages = {}
+
     for (const component of components) {
       const data = generateAPI(component, locale)
+
       files[`node_modules/@docs/${locale}/api/${component}.md`] = createMdFile(component, data)
       pages[`/${locale}/api/${component}/`] = component
     }
+
     files[`node_modules/@docs/${locale}/api/pages.js`] = toJs(pages)
   }
 
@@ -130,7 +141,6 @@ function generateFiles () {
 class ApiPlugin {
   apply (compiler) {
     const files = generateFiles()
-
     const virtualModules = new VirtualModulesPlugin(files)
 
     virtualModules.apply(compiler)
