@@ -1,6 +1,9 @@
-const { createWriteStream } = require('fs')
 const VirtualModulesPlugin = require('webpack-virtual-modules')
-const api = require('./fake-api')
+const {
+  generateAPI,
+  generateCompList,
+  generateLocaleList,
+} = require('./api-gen')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -84,16 +87,6 @@ function genFooter () {
   return `${footer.join('\n\n')}\n\n`
 }
 
-function writeMdFile (file, content) {
-  const root = './src/pages/en/api'
-  const stream = createWriteStream(`${root}/${file}.md`)
-
-  stream.once('open', () => {
-    stream.write(content)
-    stream.end()
-  })
-}
-
 function createMdFile (component, data) {
   let str = ''
 
@@ -118,10 +111,13 @@ const toJs = data => `module.exports = ${JSON.stringify(data)};`
 
 function generateFiles () {
   const files = {}
-
-  for (const [locale, components] of Object.entries(api)) {
+  const components = generateCompList()
+  const locales = generateLocaleList()
+  // generateAPI
+  for (const locale of locales) {
     const pages = {}
-    for (const [component, data] of Object.entries(components)) {
+    for (const component of components) {
+      const data = generateAPI(component, locale)
       files[`node_modules/@docs/${locale}/api/${component}.md`] = createMdFile(component, data)
       pages[`/${locale}/api/${component}/`] = component
     }
