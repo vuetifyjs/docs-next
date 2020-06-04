@@ -1,13 +1,5 @@
 {
   "api": "API",
   "components": "Komponenter",
-  "getting-started": "Kom igång",
-  "props": "Props",
-  "type": "Typ",
-  "default": "Standardvärde",
-  "description": "Beskrivning",
-  "name": "Namm",
-  "source": "Källa",
-  "value": "Värde",
-  "signature": "Signatur"
+  "getting-started": "Kom igång"
 }

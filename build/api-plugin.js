@@ -77,7 +77,6 @@ function genTable (tableData) {
 
 function genFooter () {
   const footer = [
-    '<carbon-ad />',
     '<up-next />',
     '<vuetify-ad />',
     '<contribute />',
@@ -85,29 +84,12 @@ function genFooter () {
   return `${footer.join('\n\n')}\n\n`
 }
 
-function writeMdFile (file, data) {
+function writeMdFile (file, content) {
   const root = './src/pages/en/api'
   const stream = createWriteStream(`${root}/${file}.md`)
 
-  // gen front-matter
-  const frontMatter = genFrontMatter()
-  const title = '# V-Alert API\n\n'
-  const footer = genFooter()
-
   stream.once('open', () => {
-    stream.write(frontMatter)
-    stream.write(title)
-    for (const [header, value] of Object.entries(data)) {
-      if (header !== 'mixins') {
-        const headerLine = header === 'sass'
-          ? '## SASS Variables\n'
-          : `## ${capitalize(header)}\n`
-        const table = genTable(value)
-        stream.write(headerLine)
-        stream.write(table)
-      }
-    }
-    stream.write(footer)
+    stream.write(content)
     stream.end()
   })
 }
