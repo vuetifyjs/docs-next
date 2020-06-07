@@ -52,6 +52,7 @@
                 v-bind="{ ...usageProps }"
                 :file="file"
                 @loaded="setContents"
+                @error="hasError = true"
               />
             </div>
           </v-sheet>
@@ -72,6 +73,7 @@
             <app-tooltip-btn
               icon="$mdiInvertColors"
               tooltip="Invert example colors"
+              :disabled="hasError"
               @click="dark = !dark"
             />
           </div>
@@ -137,11 +139,15 @@
   export default {
     name: 'Usage',
 
+    props: {
+      name: String,
+    },
+
     data: () => ({
       booleans: undefined,
-      component: undefined,
       dark: false,
       file: undefined,
+      hasError: false,
       options: {},
       selects: undefined,
       sliders: undefined,
@@ -162,8 +168,8 @@
           }
         }
         const indent = attributeArray.length ? '\r\t' : ''
-        const tail = `${attributeArray.length ? '\r' : ''}></${this.compName}>`
-        return `<${this.compName}${indent}${attributeArray.join('\r\t')}${tail}`
+        const tail = `${attributeArray.length ? '\r' : ''}></${this.name}>`
+        return `<${this.name}${indent}${attributeArray.join('\r\t')}${tail}`
       },
       headerColor () {
         return this.$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-3'
@@ -172,9 +178,7 @@
     },
 
     mounted () {
-      const name = this.$attrs.name
-      this.compName = name
-      this.file = `${name}/usage`
+      this.file = `${this.name}/usage`
     },
 
     methods: {
