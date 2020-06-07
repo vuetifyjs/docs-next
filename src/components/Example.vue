@@ -139,6 +139,7 @@
       },
       setContents (contents) {
         this.pen = contents.pen
+        this.component = contents.component
       },
     },
   }
