@@ -3,86 +3,90 @@
     class="mb-9 v-example"
     outlined
   >
-    <v-sheet class="text-end pa-2">
-      <app-tooltip-btn
-        icon="$mdiInvertColors"
-        tooltip="Invert example colors"
-        :disabled="hasError"
-        @click="dark = !dark"
-      />
+    <v-lazy min-height="52">
+      <v-sheet class="text-end pa-2">
+        <app-tooltip-btn
+          :disabled="hasError"
+          icon="$mdiInvertColors"
+          tooltip="Invert example colors"
+          @click="dark = !dark"
+        />
 
-      <app-tooltip-btn
-        icon="$mdiCodepen"
-        tooltip="Edit in Codepen"
-        :disabled="hasError"
-        @click="sendToCodepen"
-      />
+        <app-tooltip-btn
+          :disabled="hasError"
+          icon="$mdiCodepen"
+          tooltip="Edit in Codepen"
+          @click="sendToCodepen"
+        />
 
-      <app-tooltip-btn
-        icon="$mdiGithub"
-        tooltip="View on Github"
-        :disabled="hasError"
-        :href="`https://github.com/vuetifyjs/vuetify/tree/${branch}/packages/docs/src/examples/${file}.vue`"
-      />
+        <app-tooltip-btn
+          :disabled="hasError"
+          :href="`https://github.com/vuetifyjs/vuetify/tree/${branch}/packages/docs/src/examples/${file}.vue`"
+          icon="$mdiGithub"
+          tooltip="View on Github"
+        />
 
-      <app-tooltip-btn
-        icon="$mdiCodeTags"
-        tooltip="View Source"
-        :disabled="hasError"
-        @click="expand = !expand"
-      />
-    </v-sheet>
+        <app-tooltip-btn
+          :disabled="hasError"
+          icon="$mdiCodeTags"
+          tooltip="View Source"
+          @click="expand = !expand"
+        />
+      </v-sheet>
+    </v-lazy>
 
-    <template v-if="pen">
-      <v-expand-transition>
-        <v-sheet v-show="expand">
-          <v-item-group
-            v-model="selected"
-            mandatory
-            class="pa-2"
-          >
-            <template v-for="(section, i) in sections">
-              <v-item
-                :key="`item-${i}`"
-                :value="section"
-              >
-                <template v-slot="{ active, toggle }">
-                  <v-btn
-                    :input-value="active"
-                    class="mr-2"
-                    text
-                    @click="toggle"
-                  >
-                    {{ section }}
-                  </v-btn>
-                </template>
-              </v-item>
-            </template>
-          </v-item-group>
+    <v-lazy>
+      <template v-if="pen">
+        <v-expand-transition>
+          <v-sheet v-show="expand">
+            <v-item-group
+              v-model="selected"
+              mandatory
+              class="pa-2"
+            >
+              <template v-for="(section, i) in sections">
+                <v-item
+                  :key="`item-${i}`"
+                  :value="section"
+                >
+                  <template v-slot="{ active, toggle }">
+                    <v-btn
+                      :input-value="active"
+                      class="mr-2"
+                      text
+                      @click="toggle"
+                    >
+                      {{ section }}
+                    </v-btn>
+                  </template>
+                </v-item>
+              </template>
+            </v-item-group>
 
-          <v-divider />
+            <v-divider />
 
-          <v-window v-model="selected">
-            <template v-for="(section, i) in sections">
-              <v-window-item
-                :key="`window-${i}`"
-                :value="section"
-                eager
-              >
-                <markup :code="pen[section]" />
-              </v-window-item>
-            </template>
-          </v-window>
+            <v-window v-model="selected">
+              <template v-for="(section, i) in sections">
+                <v-window-item
+                  :key="`window-${i}`"
+                  :value="section"
+                  eager
+                >
+                  <markup :code="pen[section]" />
+                </v-window-item>
+              </template>
+            </v-window>
 
-          <v-divider />
-        </v-sheet>
-      </v-expand-transition>
+            <v-divider />
+          </v-sheet>
+        </v-expand-transition>
 
-      <codepen
-        ref="codepen"
-        :pen="pen"
-      />
-    </template>
+        <codepen
+          ref="codepen"
+          :pen="pen"
+        />
+      </template>
+    </v-lazy>
 
     <v-fade-transition
       v-if="file"
@@ -95,8 +99,8 @@
         <vue-file
           class="mb-0"
           :file="file"
-          @loaded="setContents"
           @error="hasError = true"
+          @loaded="setContents"
         />
       </v-sheet>
     </v-fade-transition>
@@ -139,7 +143,6 @@
       },
       setContents (contents) {
         this.pen = contents.pen
-        this.component = contents.component
       },
     },
   }

@@ -51,8 +51,8 @@
               <vue-file
                 v-bind="{ ...usageProps }"
                 :file="file"
-                @loaded="setContents"
                 @error="hasError = true"
+                @loaded="setContents"
               />
             </div>
           </v-sheet>
@@ -167,8 +167,10 @@
             attributeArray.push(`${key.trim()}="${value}"`)
           }
         }
+
         const indent = attributeArray.length ? '\r\t' : ''
         const tail = `${attributeArray.length ? '\r' : ''}></${this.name}>`
+
         return `<${this.name}${indent}${attributeArray.join('\r\t')}${tail}`
       },
       headerColor () {
