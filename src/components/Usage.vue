@@ -8,8 +8,12 @@
         cols="12"
         md="8"
       >
-        <div :class="`d-flex ${headerColor}`">
+        <v-responsive
+          :class="`d-flex ${headerColor}`"
+          height="44"
+        >
           <v-slide-group
+            v-if="tabs.length"
             multiple
             show-arrows="mobile"
           >
@@ -31,15 +35,13 @@
               </v-btn>
             </v-slide-item>
           </v-slide-group>
-        </div>
+        </v-responsive>
 
         <v-divider />
 
-        <v-fade-transition
-          v-if="file"
-          appear
-        >
+        <v-fade-transition appear>
           <v-sheet
+            v-if="file"
             :dark="dark"
             class="d-inline-block"
             width="100%"
@@ -49,10 +51,11 @@
           >
             <div class="fill-height pa-6 d-flex align-center">
               <vue-file
+                ref="usage"
                 v-bind="{ ...usageProps }"
                 :file="file"
-                @error="hasError = true"
                 @loaded="setContents"
+                @error="hasError = true"
               />
             </div>
           </v-sheet>
@@ -136,12 +139,15 @@
 </template>
 
 <script>
+  // Mixins
+  import Codepen from '@/mixins/codepen'
+
   export default {
     name: 'Usage',
 
-    props: {
-      name: String,
-    },
+    mixins: [Codepen],
+
+    props: { name: String },
 
     data: () => ({
       booleans: undefined,
@@ -184,10 +190,14 @@
     },
 
     methods: {
-      setContents (contents) {
-        const data = contents.component.data()
+      setContents (component) {
+        if (!component) return
+
+        const data = component.data()
+
         this.usageProps = Object.assign({}, data.defaults)
         this.tabs = data.tabs
+
         for (const [key, value] of Object.entries(data.options)) {
           this[key] = value
         }

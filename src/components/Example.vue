@@ -35,14 +35,14 @@
       </v-sheet>
     </v-lazy>
 
-    <v-lazy>
-      <template v-if="pen">
+    <v-lazy v-if="pen">
+      <div>
         <v-expand-transition>
           <v-sheet v-show="expand">
             <v-item-group
               v-model="selected"
-              mandatory
               class="pa-2"
+              mandatory
             >
               <template v-for="(section, i) in sections">
                 <v-item
@@ -85,22 +85,20 @@
           ref="codepen"
           :pen="pen"
         />
-      </template>
+      </div>
     </v-lazy>
 
-    <v-fade-transition
-      v-if="file"
-      appear
-    >
+    <v-fade-transition appear>
       <v-sheet
-        class="pa-2"
+        v-if="file"
         :dark="dark"
+        class="pa-2"
+        @mouseenter.once="importTemplate"
       >
         <vue-file
-          class="mb-0"
           :file="file"
+          class="mb-0"
           @error="hasError = true"
-          @loaded="setContents"
         />
       </v-sheet>
     </v-fade-transition>
@@ -108,41 +106,31 @@
 </template>
 
 <script>
+  // Mixins
+  import Codepen from '@/mixins/codepen'
+
   // Utilities
-  import { getBranch } from '@/util/helpers'
+  import { get } from 'vuex-pathify'
 
   export default {
     name: 'Example',
 
-    props: {
-      file: String,
-    },
+    mixins: [Codepen],
+
+    props: { file: String },
 
     data: () => ({
-      branch: 'master',
       dark: false,
       expand: false,
-      selected: 'template',
-      pen: undefined,
       hasError: false,
+      pen: undefined,
+      selected: 'template',
     }),
 
     computed: {
+      branch: get('app/branch'),
       sections () {
         return ['template', 'script', 'style'].filter(section => this.pen[section])
-      },
-    },
-
-    mounted () {
-      this.branch = getBranch()
-    },
-
-    methods: {
-      sendToCodepen () {
-        this.$refs.codepen.submit()
-      },
-      setContents (contents) {
-        this.pen = contents.pen
       },
     },
   }
