@@ -12,6 +12,13 @@
       @click="drawer = !drawer"
     />
 
+    <v-btn
+      icon
+      @click="drawerAdvanced = !drawerAdvanced"
+    >
+      <v-icon>{{ drawerAdvanced ? '$mdiOrderBoolAscending' : '$mdiOrderAlphabeticalAscending' }}</v-icon>
+    </v-btn>
+
     <vuetify-logo />
 
     <v-spacer />
@@ -55,6 +62,7 @@
 
     computed: {
       drawer: sync('app/drawer'),
+      drawerAdvanced: sync('app/drawerAdvanced'),
       translating: get('i18n/translating'),
     },
 

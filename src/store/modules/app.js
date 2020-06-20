@@ -10,6 +10,7 @@ import { ROOT_DISPATCH } from '@/store'
 const state = {
   branch: getBranch(),
   drawer: true,
+  drawerAdvanced: false,
   initializing: false,
   modified: {},
   nav: [],

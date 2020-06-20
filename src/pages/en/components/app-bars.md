@@ -1,5 +1,6 @@
 ---
 meta:
+  realName: v-app-bar
   title: App-bar component
   description: The app bar component is a supercharged toolbar with advanced scrolling techniques and application layout support.
   keywords: app bars, vuetify app bar component, vue app bar component

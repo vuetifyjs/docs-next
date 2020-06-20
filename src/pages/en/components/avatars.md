@@ -1,5 +1,6 @@
 ---
 meta:
+  realName: v-avatar
   title: Avatar component
   description: The avatar component is used to control the size and border radius of an image. It can be used with numerous components to provide better visual context.
   keywords: avatars, vuetify avatar component, vue avatar component

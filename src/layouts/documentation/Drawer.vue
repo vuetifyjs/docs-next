@@ -10,7 +10,7 @@
       nav
       expand
     >
-      <template v-for="(item, i) in nav">
+      <template v-for="(item, i) in (drawerAdvanced ? navAdvanced : nav)">
         <v-list-group
           v-if="item.items"
           :key="item.title"
@@ -30,8 +30,12 @@
               :key="subItem.title"
               :to="subItem.to"
             >
+              <v-list-item-icon v-if="subItem.icon">
+                <v-icon v-text="subItem.icon" />
+              </v-list-item-icon>
+
               <v-list-item-content>
-                <v-list-item-title v-text="subItem.title" />
+                <v-list-item-title v-text="(drawerAdvanced && subItem.realName) || subItem.title" />
               </v-list-item-content>
             </v-list-item>
           </template>
@@ -50,7 +54,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title v-text="(drawerAdvanced && item.realName) || item.title" />
           </v-list-item-content>
         </v-list-item>
       </template>
@@ -67,7 +71,32 @@
 
     computed: {
       drawer: sync('app/drawer'),
+      drawerAdvanced: sync('app/drawerAdvanced'),
       nav: sync('app/nav'),
+      navAdvanced () {
+        const flattened = []
+        this.nav
+          .map(parent =>
+            parent.items
+              ? parent.items.map(child => ({
+                ...child,
+                icon: child.icon || parent.icon,
+              }))
+              : [parent],
+          )
+          .forEach(child => flattened.push(...child))
+
+        return Object.values(flattened.reduce((acc, child) => {
+          const name = child.realName || child.title
+          const letter = name.replace(/^v-/, '').toUpperCase().replace(/[^A-Z]/, '*')[0]
+          if (!acc[letter]) {
+            acc[letter] = { letter, icon: letter === '*' ? '$mdiNumeric' : `$mdiAlpha${letter}`, items: [child] }
+          } else {
+            acc[letter].items.push(child)
+          }
+          return acc
+        }, {})).sort((a, b) => a.letter > b.letter)
+      },
     },
   }
 </script>

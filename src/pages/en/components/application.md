@@ -1,5 +1,6 @@
 ---
 meta:
+  realName: v-app
   title: Application service
   description: Vuetify comes equipped with a default markup that makes it easy to create layouts (boilerplate) for any Vue application.
   keywords: default layout, vuetify default markup, vuetify default layout
