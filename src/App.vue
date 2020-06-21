@@ -7,7 +7,7 @@
 <script>
   // Utilities
   import { get, sync } from 'vuex-pathify'
-  import { wait, waitForReadystate } from '@/util/helpers'
+  import { waitForReadystate } from '@/util/helpers'
 
   export default {
     name: 'App',
@@ -20,7 +20,7 @@
     data: () => ({ unwatch: undefined }),
 
     computed: {
-      frontmatter: get('i18n/frontmatter'),
+      frontmatter: get('pages/frontmatter'),
       hash: get('route/hash'),
       initializing: sync('app/initializing'),
     },

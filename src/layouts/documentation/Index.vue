@@ -57,9 +57,7 @@
         'nav',
         'modified',
       ]),
-      ...sync('i18n', [
-        'pages',
-      ]),
+      pages: sync('pages/pages'),
       locale: get('route/params@locale'),
     },
 
@@ -79,7 +77,7 @@
       async getPages () {
         const { default: api } = await import(
           /* webpackChunkName: "api-pages-[request]" */
-          `@docs/${this.locale}/api/pages`
+          `@/api/${this.locale}/pages.json`
         )
         const { default: pages } = await import(
           /* webpackChunkName: "local-pages-[request]" */
@@ -130,7 +128,8 @@
       genChild (item, group) {
         const isGroup = item.group
         const items = isGroup ? this.getChildren(item, group) : undefined
-        const { href, icon, title: path, realName } = item
+        const { href, icon, realName } = item
+        const path = item.path || item.title
         const page = `${group}${kebabCase(path)}/`
         const to = isGroup ? group : page
 

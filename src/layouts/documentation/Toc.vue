@@ -42,9 +42,11 @@
     name: 'DocumentationToc',
 
     computed: {
-      category: get('route/params@category'),
-      page: get('route/params@page'),
-      toc: get('page/toc'),
+      ...get('route', [
+        'params@category',
+        'params@page',
+      ]),
+      toc: get('pages/toc'),
     },
   }
 </script>

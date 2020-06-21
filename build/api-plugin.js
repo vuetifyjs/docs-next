@@ -1,5 +1,6 @@
 // Imports
-const VirtualModulesPlugin = require('webpack-virtual-modules')
+const fs = require('fs')
+const { resolve } = require('path')
 const {
   generateAPI,
   generateCompList,
@@ -115,7 +116,18 @@ function createMdFile (component, data) {
   return str
 }
 
-const toJs = data => `module.exports = ${JSON.stringify(data)};`
+function writeFile (component, locale) {
+  const data = generateAPI(component, locale)
+  const folder = `src/api/${locale}`
+
+  if (!fs.existsSync(resolve(folder))) {
+    fs.mkdirSync(resolve(folder))
+  }
+
+  const file = `${folder}/${component}.md`
+
+  fs.writeFileSync(resolve(file), createMdFile(component, data))
+}
 
 function generateFiles () {
   const components = generateCompList()
@@ -126,14 +138,12 @@ function generateFiles () {
     const pages = {}
 
     for (const component of components) {
-      const data = generateAPI(component, locale)
-      const target = `/${locale}/api/${component}`
+      writeFile(component, locale)
 
-      files[`node_modules/@docs${target}.md`] = createMdFile(component, data)
-      pages[`${target}/`] = component
+      pages[`/${locale}/api/${component}`] = component
     }
 
-    files[`node_modules/@docs/${locale}/api/pages.js`] = toJs(pages)
+    fs.writeFileSync(resolve(`src/api/${locale}/pages.json`), JSON.stringify(pages, null, 2))
   }
 
   return files
@@ -141,10 +151,42 @@ function generateFiles () {
 
 class ApiPlugin {
   apply (compiler) {
-    const files = generateFiles()
-    const virtualModules = new VirtualModulesPlugin(files)
+    generateFiles()
 
-    virtualModules.apply(compiler)
+    let changedFiles = []
+    const sourcePath = resolve('build/api-gen')
+
+    compiler.hooks.afterCompile.tap('ApiPlugin', compilation => {
+      compilation.contextDependencies.add(sourcePath)
+    })
+
+    compiler.hooks.watchRun.tap('ApiPlugin', async (comp) => {
+      const changedTimes = comp.watchFileSystem.watcher.mtimes
+
+      changedFiles = Object.keys(changedTimes).filter(filePath => filePath.startsWith(sourcePath))
+    })
+
+    compiler.hooks.compilation.tap('ApiPlugin', () => {
+      if (!changedFiles.length) return
+
+      for (const filePath of changedFiles) {
+        if (filePath.indexOf('maps') >= 0) {
+          // re-generate all locales
+          const matches = /[/\\]([-a-z]+)\.js$/i.exec(filePath)
+          const [_, component] = matches
+          for (const locale of generateLocaleList()) {
+            writeFile(component, locale)
+          }
+        } else if (filePath.indexOf('locale') >= 0) {
+          // re-generate only specific locale
+          const matches = /[/\\]([-a-z]+)[/\\]([-a-z]+)\.json$/i.exec(filePath)
+          const [_, locale, component] = matches
+          writeFile(component, locale)
+        }
+      }
+
+      changedFiles = []
+    })
   }
 }
 
