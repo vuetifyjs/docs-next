@@ -5,19 +5,21 @@
     clipped
     width="300"
   >
-    <keep-alive>
-      <documentation-list
-        v-if="advanced"
-        key="advanced"
-        :items="anav"
-      />
+    <v-fade-transition mode="out-in">
+      <keep-alive>
+        <documentation-list
+          v-if="advanced"
+          key="advanced"
+          :items="anav"
+        />
 
-      <documentation-list
-        v-else
-        key="simple"
-        :items="nav"
-      />
-    </keep-alive>
+        <documentation-list
+          v-else
+          key="simple"
+          :items="nav"
+        />
+      </keep-alive>
+    </v-fade-transition>
   </v-navigation-drawer>
 </template>
 
