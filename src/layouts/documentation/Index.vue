@@ -83,13 +83,8 @@
           /* webpackChunkName: "local-pages-[request]" */
           `@docs/${this.locale}/pages`
         )
-        const { default: realNames } = await import(
-          /* webpackChunkName: "local-realnames-[request]" */
-          `@docs/${this.locale}/realNames`
-        )
 
         this.pages = { ...pages, ...api }
-        this.realNames = realNames
         this.unassigned = Object.keys(this.pages)
 
         this.genNav()
@@ -118,7 +113,6 @@
           // using the key/value from pages
           pages.push({
             title: this.pages[orphan],
-            realName: this.realNames[orphan],
             to: orphan,
           })
         }
@@ -128,7 +122,7 @@
       genChild (item, group) {
         const isGroup = item.group
         const items = isGroup ? this.getChildren(item, group) : undefined
-        const { href, icon, realName } = item
+        const { href, icon } = item
         const path = item.path || item.title
         const page = `${group}${kebabCase(path)}/`
         const to = isGroup ? group : page
@@ -145,7 +139,6 @@
           items,
           title,
           to,
-          realName,
         }
       },
       genNav () {

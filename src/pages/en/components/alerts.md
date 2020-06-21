@@ -1,6 +1,5 @@
 ---
 meta:
-  realName: v-alert
   title: Alert component
   description: The v-alert component is used to convey information to the user. Designed to stand out, the alerts come in four contextual styles.
   keywords: v-alert, alerts, vue alert component, vuetify alert component

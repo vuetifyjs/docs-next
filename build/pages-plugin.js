@@ -33,18 +33,6 @@ function getPages (files) {
   }, {})
 }
 
-function getRealNames (files) {
-  return files.reduce((names, filePath) => {
-    const { attributes } = fm(readFile(filePath))
-    const { meta = {} } = attributes
-    const dir = filePath.replace(/^\.\/src\/pages/, '').replace(/\.\w+$/, '/')
-
-    names[dir] = meta.realName
-
-    return names
-  }, {})
-}
-
 function getModified (files) {
   return files.reduce((pages, filePath) => {
     const file = fs.statSync(filePath)
@@ -71,7 +59,6 @@ function generateFiles () {
   const langDirectories = glob.sync('./src/pages/*')
 
   const pages = files => `module.exports = ${JSON.stringify(getPages(files))};`
-  const realNames = files => `module.exports = ${JSON.stringify(getRealNames(files))};`
   const modified = files => `module.exports = ${JSON.stringify(getModified(files))};`
 
   for (const langDir of langDirectories) {
@@ -79,7 +66,6 @@ function generateFiles () {
     const lang = path.basename(langDir)
 
     generatedFiles[`node_modules/@docs/${lang}/pages.js`] = pages(files)
-    generatedFiles[`node_modules/@docs/${lang}/realNames.js`] = realNames(files)
     generatedFiles[`node_modules/@docs/${lang}/modified.js`] = modified(files)
   }
 

@@ -1,6 +1,5 @@
 ---
 meta:
-  realName: v-autocomplete
   title: Autocomplete component
   description: The autocomplete component provides type-ahead autocomplete functionality and provides a list of available options.
   keywords: autocomplete, vuetify autocomplete component, vue autocomplete component

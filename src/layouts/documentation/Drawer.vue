@@ -35,7 +35,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title v-text="(drawerAdvanced && subItem.realName) || subItem.title" />
+                <v-list-item-title v-text="subItem.title" />
               </v-list-item-content>
             </v-list-item>
           </template>
@@ -55,7 +55,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title v-text="(drawerAdvanced && item.realName) || item.title" />
+            <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
       </template>
@@ -88,8 +88,7 @@
           .forEach(child => flattened.push(...child))
 
         return Object.values(flattened.reduce((acc, child) => {
-          const name = child.realName || child.title
-          const letter = name.replace(/^v-/, '').toUpperCase().replace(/[^A-Z]/, '*')[0]
+          const letter = child.title.replace(/^v-/, '').toUpperCase().replace(/[^A-Z]/, '*')[0]
           if (!acc[letter]) {
             acc[letter] = { letter, icon: letter === '*' ? '$mdiNumeric' : `$mdiAlpha${letter}`, items: [child] }
           } else {
