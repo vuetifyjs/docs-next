@@ -5,10 +5,10 @@
       justify="center"
     >
       <v-combobox
-        v-model="model"
-        v-bind="$attrs"
-        label="Add some tags"
         hint="Comboboxes can receive custom values not present in items"
+        :items="items"
+        label="Add some tags"
+        v-bind="$attrs"
         v-on="$listeners"
       >
         <template
@@ -36,28 +36,27 @@
 
     data: () => ({
       items: ['Gaming', 'Programming', 'Vue', 'Vuetify'],
-      model: 'Vuetify',
       search: null,
       defaults: {
+        clearable: false,
+        dense: false,
+        filled: false,
         'hide-selected': false,
         multiple: false,
+        outlined: false,
         'persistent-hint': false,
         'small-chips': false,
-        clearable: false,
-        type: 'outlined',
+        solo: false,
       },
       options: {
         booleans: [
+          'clearable',
           'hide-selected',
           'multiple',
           'persistent-hint',
           'small-chips',
-          'clearable',
         ],
-        selects: {
-          type: ['filled', 'outlined', 'solo'],
-        },
-        tabs: [],
+        tabs: ['dense', 'filled', 'outlined', 'solo'],
       },
     }),
   }
