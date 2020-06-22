@@ -3,53 +3,56 @@ meta:
   title: Combobox component
   description: The combobox component provides type-ahead autocomplete functionality and allows users to provide a custom values beyond the provided list of options.
   keywords: comboboxes, vuetify combobox component, vue combobox component
+related:
+  - /components/autocompletes/
+  - /components/forms/
+  - /components/selects/
 ---
 
-# Comboboxs
-Component description
+# Combobox
+The `v-combobox` component is a [v-autocomplete](/components/autocompletes) that allows the user to enter values that do not exist within the provided **items**. Created items will be returned as strings.
 
 <entry-ad />
 
 ## Usage
-Usage text
+With Combobox, you can allow a user to create new values that may not be present in a provided items list.
 
-`<usage name="" />`
-- **name**: component name
-- eg: `<usage name="v-alert" />`
-
-
-## Sub-Components
-Omit if none
-
-### Sub Component 1
-Sub component text
-
-### Sub Component 2
-Sub component text
+<usage name="v-combobox" />
 
 ## Caveats
-Omit if none
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+<alert type="error">As the Combobox allows user input, it **always** returns the full value provided to it (for example a list of Objects will always return an Object when selected). This is because there's no way to tell if a value is supposed to be user input or an object lookup [GitHub Issue](https://github.com/vuetifyjs/vuetify/issues/5479)</alert>
+<alert type="warning">The **auto** property of **menu-props** is only supported for the default input style.</alert>
+<alert type="info">Browser autocomplete is set to off by default, may vary by browser and may be ignored. [MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)</alert>
 
 ## Examples
-Example text.
 
-### Props/Events/Slots/Misc
+### Props
 
-#### example
-Example description
+#### Dense
+You can use `dense` prop to reduce combobox height and lower max height of list items.
 
-`<example file="" />`
-- **file**: `<component>/<type>-<propname>`
-- eg: `<example file="v-alert/prop-colored-border" />`
+<example file="v-combobox/prop-dense" />
 
-## Accessibility
-Accessibility text - omit if none
+#### Multiple combobox
+Previously known as **tags** - user is allowed to enter more than 1 value
+
+<example file="v-combobox/prop-multiple" />
+
+### Slots
+
+#### No data with chips
+In this example we utilize a custom **no-data** slot to provide context to the user when searching / creating items.
+
+<example file="v-combobox/slot-no-data" />
+
+### Misc
+
+#### Advanced custom options
+The `v-combobox` improves upon the added functionality from `v-select` and `v-autocomplete`. This provides you with an expansive interface to create truly customized implementations. This example takes advantage of some more advanced features such as a custom **filter** algorithm, inline list editing and dynamic input items.
+
+<example file="v-combobox/misc-advanced" />
 
 ## API
-- [API Page Link]()
+- [v-combobox](../../api/v-combo-box)
 
 <doc-footer />
