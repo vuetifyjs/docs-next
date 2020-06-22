@@ -3,53 +3,37 @@ meta:
   title: Content styles
   description: Vuetify provides custom styling for various HTML elements.
   keywords: content, html, markup
+related:
+  - /styles/typography/
+  - /styles/alignment/
 ---
 
 # Content
-Component description
+
+Vuetify has custom styling for multiple standard elements.
 
 <entry-ad />
 
-## Usage
-Usage text
+## Block quote
 
-`<usage name="" />`
-- **name**: component name
-- eg: `<usage name="v-alert" />`
+> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maiores modi quidem veniam, expedita quis laboriosam, ullam facere adipisci, iusto, voluptate sapiente corrupti asperiores rem nemo numquam fuga ab at. {.blockquote}
 
+## Paragraphs
 
-## Sub-Components
-Omit if none
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maiores modi quidem veniam, expedita quis laboriosam, ullam facere adipisci, iusto, voluptate sapiente corrupti asperiores rem nemo numquam fuga ab at.
 
-### Sub Component 1
-Sub component text
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maiores modi quidem veniam, expedita quis laboriosam, ullam facere adipisci, iusto, voluptate sapiente corrupti asperiores rem nemo numquam fuga ab at.
 
-### Sub Component 2
-Sub component text
+##  Code
 
-## Caveats
-Omit if none
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+Example of an inline `<code>` element.
 
-## Examples
-Example text.
+## Variables
 
-### Props/Events/Slots/Misc
+<var>v</var> = <var>u</var> * <var>e</var>
 
-#### example
-Example description
+## User input
 
-`<example file="" />`
-- **file**: `<component>/<type>-<propname>`
-- eg: `<example file="v-alert/prop-colored-border" />`
-
-## Accessibility
-Accessibility text - omit if none
-
-## API
-- [API Page Link]()
+To install Vuetify, type <kbd>npm install vuetify</kbd> into your console. Once complete, type <kbd>cd `<project name>`</kbd> and run <kbd>npm install</kbd>
 
 <doc-footer />
