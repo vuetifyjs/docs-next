@@ -1,18 +1,23 @@
 {
   "props": {
+    "empty": "",
     "inset": "Adds indentation (72px) for **normal** dividers, reduces max height for **vertical**.",
     "vertical": "Displays dividers vertically"
   },
   "slots": {
     "empty": ""
+    // add prop lang here
   },
   "events": {
     "empty": ""
+    // add prop lang here
   },
   "functions": {
     "empty": ""
+    // add prop lang here
   },
   "sass": {
     "empty": ""
+    // add prop lang here
   }
 }
