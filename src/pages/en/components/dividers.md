@@ -31,32 +31,34 @@ Below is a collection of simple to complex examples.
 
 ### Props
 
-#### Inset dividers
+#### Inset
 
 Inset dividers are moved 72px to the right. This will cause them to line up with list items.
 
 <example file="v-divider/prop-inset" />
 
-#### Vertical dividers
+#### Vertical
 
 Vertical dividers give you more tools for unique layouts.
 
 <example file="v-divider/prop-vertical" />
 
-#### Dividers and subheaders
+### Misc
+
+#### Subheaders
 
 Dividers and subheaders can help break up content and can optionally line up with one another by using the same `inset` prop.
 
-<example file="v-divider/prop-subheaders" />
+<example file="v-divider/misc-subheaders" />
 
-#### Dividers in Portrait View
+#### Portrait View
 
 Create custom cards to fit any use-case.
 
-<example file="v-divider/prop-divider-list-portrait" />
+<example file="v-divider/misc-portrait-view" />
 
 ## Accessibility
 
-By default, `v-divider` components are assigned the [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) role of [**separator**](https://www.w3.org/TR/wai-aria/#separator) which denotes that the divider \"separates and distinguishes sections of content or groups of menuitems.\" However, sometimes a divider is just a way to make an interface look nice. In those cases, the role of [**presentation**](https://www.w3.org/TR/wai-aria/#presentation) should be used which denotes \"an element whose implicit native role semantics will not be mapped to the accessibility API.\" To override the default **separator** role in a `v-divider`, simply add a `role=\"presentation\"` prop to your component. In addition, `v-divider` components have an `aria-orientation=\"horizontal\"`. If `vertical=\"true\"`, then `aria-orientation=\"vertical\"` will be set automatically as well. If `role=\"presentation\"`, `aria-orientation=\"undefined\"`, its default value.
+By default, `v-divider` components are assigned the [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) role of [**separator**](https://www.w3.org/TR/wai-aria/#separator) which denotes that the divider "separates and distinguishes sections of content or groups of menuitems." However, sometimes a divider is just a way to make an interface look nice. In those cases, the role of [**presentation**](https://www.w3.org/TR/wai-aria/#presentation) should be used which denotes "an element whose implicit native role semantics will not be mapped to the accessibility API." To override the default **separator** role in a `v-divider`, simply add a `role="presentation"` prop to your component. In addition, `v-divider` components have an `aria-orientation="horizontal"`. If `vertical="true"`, then `aria-orientation="vertical"` will be set automatically as well. If `role="presentation"`, `aria-orientation="undefined"`, its default value.
 
-<doc-footer />
+<endmatter />
