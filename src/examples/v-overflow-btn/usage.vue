@@ -1,12 +1,12 @@
 <template>
   <v-container id="dropdown-playground">
     <v-overflow-btn
-      class="my-2"
-      v-bind="$attrs"
-      :items="dropdownFont"
       hint="I'm a hint"
+      :items="dropdownFont"
       label="Overflow Btn"
       target="#dropdown-playground"
+      v-bind="$attrs"
+      v-on="$listeners"
     ></v-overflow-btn>
   </v-container>
 </template>
@@ -25,29 +25,29 @@
         { text: 'Verdana', callback: () => {} },
       ],
       defaults: {
-        loading: false,
-        disabled: false,
-        readonly: false,
-        filled: false,
-        reverse: false,
         dense: false,
-        persistentHint: false,
+        disabled: false,
         editable: false,
+        filled: false,
+        loading: false,
+        overflow: false,
+        'persistent-hint': false,
+        readonly: false,
+        reverse: false,
         segmented: false,
-        overflow: true,
       },
       options: {
         booleans: [
-          'loading',
-          'disabled',
-          'readonly',
-          'filled',
-          'reverse',
           'dense',
-          'persistentHint',
+          'disabled',
+          'filled',
+          'loading',
+          'persistent-hint',
+          'readonly',
+          'reverse',
         ],
       },
-      tabs: ['editable', 'segmented', 'overflow'],
+      tabs: ['editable', 'overflow', 'segmented'],
     }),
   }
 </script>
