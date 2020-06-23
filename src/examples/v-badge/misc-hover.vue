@@ -12,7 +12,7 @@
           color="grey lighten-1"
           large
         >
-          $mdiAccount
+          mdi-account
         </v-icon>
       </v-hover>
     </v-badge>

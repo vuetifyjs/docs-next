@@ -26,7 +26,7 @@
         overlap
       >
         <v-icon large>
-          $mdiVuetify
+          mdi-vuetify
         </v-icon>
       </v-badge>
     </v-row>

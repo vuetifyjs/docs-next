@@ -22,16 +22,18 @@
 
     data: () => ({
       defaults: {
-        dot: false,
-        overlap: false,
-        icon: false,
-        left: false,
+        bordered: false,
         bottom: false,
+        dot: false,
+        inline: false,
+        left: false,
+        overlap: false,
+        tile: false,
       },
       options: {
-        booleans: ['dot', 'overlap', 'icon', 'left', 'bottom'],
+        booleans: ['bottom', 'dot', 'left', 'overlap'],
       },
-      tabs: ['default', 'hidden', 'text', 'inline', 'borderd'],
+      tabs: ['bordered', 'inline', 'tile'],
     }),
   }
 </script>

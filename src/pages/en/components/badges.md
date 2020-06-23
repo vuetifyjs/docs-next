@@ -4,9 +4,9 @@ meta:
   description: The badge component is a small status descriptor for elements. This typically contains a small number or short set of characters.
   keywords: badges, vuetify badge component, vue badge component
 related:
-  - /components/avatars'
-  - /components/icons'
-  - /components/toolbars'
+  - /components/avatars/'
+  - /components/icons/'
+  - /components/toolbars/'
 ---
 
 # Badges
@@ -37,7 +37,7 @@ Badges help convey information to the user in a variety of ways.
 
 <example file="v-badge/misc-tabs" />
 
-#### Show-on-hover
+#### Show on hover
 
 You can do many things with visibility control, for example, show badge on hover.
 

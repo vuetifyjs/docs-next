@@ -1,7 +1,6 @@
  {
   "props": {
     "empty": "",
-    // add prop lang here
     "avatar": "Removes badge padding for the use of the `v-avatar` in the **badge** slot.",
     "bordered": "Applies a **2px** by default and **1.5px** border around the badge when using the **dot** property.",
     "content": "Any content you want injected as text into the badge.",
@@ -18,7 +17,6 @@
   },
   "slots": {
     "empty": "",
-    // add slot lang here
     "badge": "The slot used for the badge's content."
   },
   "events": {
