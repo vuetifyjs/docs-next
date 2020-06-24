@@ -3,77 +3,48 @@ meta:
   title: Sheet component
   description: The sheet component is the default paper element in Vuetify and serves as the baseline for many Material Design implementations.
   keywords: sheets, vuetify sheet component, vue sheet component
+related:
+  - /components/cards/
+  - /components/grids/
+  - /styles/elevation/
 ---
 
 # Sheets
 
-Component description
+The `v-sheet` is designed to power other **paper** components within Vuetify. It is meant to be used as a low level component.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+The `v-sheet` component is a malleable piece of paper that can be morphed to facilitate other components.
 
-`<usage name="" />`
-- **name**: component name
-- eg: `<usage name="v-alert" />`
+<usage name="v-sheet" />
 
 ## API
 
-- [API Page Link]()
-
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+- [v-sheet](../../api/v-sheet)
 
 ## Examples
 
-Example text.
-
 ### Props
 
-Omit if none
+#### Using elevation
 
-### Events
+Sheets can accept a custom elevation between **0 and 24** (0 is default).
 
-Omit if none
+<example file="v-sheet/prop-elevation" />
 
-### Slots
+#### Tile
 
-Omit if none
+Sheets can accept a `tile` property which makes them rectangular (no `border-radius`).
 
-### Misc
+<example file="v-sheet/prop-tile" />
 
-Omit if none
+#### Colors & sizes
 
-#### Example Header
+Sheets and components based on them can have different sizes and colors.
 
-Example description
-
-`<example file="" />`
-- **file**: `<component>/<type>-<propname>`
-- eg: `<example file="v-alert/prop-colored-border" />`
-
-## Accessibility
-
-Accessibility text - omit if none
+<example file="v-sheet/prop-colors-sizes" />
 
 <backmatter />
