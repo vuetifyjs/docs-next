@@ -7,7 +7,7 @@
           large
           @click="props.click"
         >
-          {{ props.isFilled ? '$mdiStarCircle' : '$mdiStarCircleOutline' }}
+          {{ props.isFilled ? 'mdi-star-circle' : 'mdi-star-circle-outline' }}
         </v-icon>
       </template>
     </v-rating>

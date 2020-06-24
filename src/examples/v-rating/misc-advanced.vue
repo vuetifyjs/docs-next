@@ -68,7 +68,7 @@
       >
         <template v-slot:activator="{ on }">
           <v-icon v-on="on">
-            $mdiShareVariant
+            mdi-share-variant
           </v-icon>
         </template>
         <v-card>
@@ -80,14 +80,14 @@
               icon
               @click="dialog = false"
             >
-              <v-icon>$mdiCloseCircleOutline</v-icon>
+              <v-icon>mdi-close-circle-outline</v-icon>
             </v-btn>
           </v-card-title>
           <v-list>
             <v-list-item>
               <v-list-item-action>
                 <v-icon color="indigo">
-                  $mdiFacebook
+                  mdi-facebook
                 </v-icon>
               </v-list-item-action>
               <v-card-title>Facebook</v-card-title>
@@ -95,14 +95,14 @@
             <v-list-item>
               <v-list-item-action>
                 <v-icon color="cyan">
-                  $mdiTwitter
+                  mdi-twitter
                 </v-icon>
               </v-list-item-action>
               <v-card-title>Twitter</v-card-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-action>
-                <v-icon>$mdiEmail</v-icon>
+                <v-icon>mdi-email</v-icon>
               </v-list-item-action>
               <v-card-title>Email</v-card-title>
             </v-list-item>
@@ -131,7 +131,7 @@
           <v-icon
             large
             :color="props.isFilled ? 'purple darken-4' : ''"
-            v-text="`$mdiNumeric${props.index}Box`"
+            v-text="`mdi-numeric${props.index}-box`"
           ></v-icon>
         </template>
       </v-rating>
