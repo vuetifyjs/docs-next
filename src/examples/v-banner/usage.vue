@@ -4,18 +4,7 @@
       v-bind="$attrs"
       v-on="$listeners"
     >
-      One line message text string with two actions on tablet / Desktop
-      <template
-        v-if="$attrs.action"
-        v-slot:actions
-      >
-        <v-btn
-          text
-          color="deep-purple accent-4"
-        >
-          Action
-        </v-btn>
-      </template>
+      A banner for use on desktop / mobile
     </v-banner>
   </div>
 </template>
@@ -28,13 +17,12 @@
 
     data: () => ({
       defaults: {
-        action: false,
+        elevation: null,
         icon: null,
         'single-line': null,
         sticky: null,
       },
       options: {
-        booleans: ['action'],
         selects: {
           icon: ['$mdiAccount', '$mdiVuetify'],
         },

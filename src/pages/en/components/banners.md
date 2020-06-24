@@ -3,7 +3,7 @@ meta:
   title: Banner component
   description: The banner component displays an important and succint message for a user to address. It can also provide actions for user to take.
   keywords: banners, vuetify banner component, vue banner component
-  related:
+related:
   - /components/alerts/
   - /components/icons/
   - /components/snackbars/
@@ -30,9 +30,9 @@ Below is a collection of simple to complex examples.
 
 ### Props
 
-#### Single-line (desktop)
+#### Single line
 
-**Single-line** VBanner is used for small amount of information and is recommended for desktop only implementations. You can optionally enable the **sticky** prop to ensure the content is pinned to the screen (note: does not work in IE11). You can find more information about [sticky positioning here](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
+**Single-line** VBanner is used for small amount of information and is recommended for **desktop** only implementations. You can optionally enable the **sticky** prop to ensure the content is pinned to the screen (note: does not work in IE11). You can find more information about [sticky positioning here](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
 <example file="v-banner/prop-single-line" />
 
@@ -60,14 +60,10 @@ The icon slot allows you to to explicitly control the content and functionality 
 
 ### Misc
 
-#### Two-line (mobile)
+#### Two line
 
-**Two-line** VBanner can store larger amount of data, use it for big messages.
+**Two-line** VBanner can store larger amount of data, use it for big messages. This is recommend **mobile** implementations.
 
 <example file="v-banner/misc-two-line" />
-
-## Accessibility
-
-Accessibility text - omit if none
 
 <backmatter />
