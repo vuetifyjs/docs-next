@@ -2,6 +2,7 @@
   <div class="text-center">
     <v-rating
       v-bind="$attrs"
+      v-on="$listeners"
     ></v-rating>
   </div>
 </template>
@@ -15,25 +16,24 @@
     data: () => ({
       show: true,
       defaults: {
-        'empty-icon': '$mdiHeartOutline',
-        'full-icon': '$mdiHeart',
-        'half-icon': '$mdiHeartHalfFull',
-        'half-increments': true,
+        'background-color': null,
+        dense: false,
+        color: null,
+        'empty-icon': '$mdiStarOutline',
+        'full-icon': '$mdiStar',
+        'half-icon': '$mdiStarHalfFull',
+        'half-increments': false,
+        length: 5,
         hover: true,
         readonly: false,
-        dense: false,
-        length: 5,
-        value: 4.5,
+        value: 3,
         size: 64,
-        color: 'red lighten-3',
-        'background-color': 'grey',
       },
       options: {
         booleans: [
           'half-increments',
           'hover',
           'readonly',
-          'dense',
         ],
         selects: {
           color: [
@@ -71,11 +71,11 @@
         },
         sliders: {
           length: [1, 15],
-          value: [0, 15, 0.5],
           size: [0, 100],
+          value: [0, 15, 0.5],
         },
       },
-      tabs: [],
+      tabs: ['dense'],
     }),
   }
 </script>
