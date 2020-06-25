@@ -32,6 +32,7 @@ Time pickers have the light theme enabled by default.
 #### Colors
 
 Time picker colors can be set using the `color` and `header-color` props. If `header-color` prop is not provided  header will use the `color` prop value."
+
 <example file="v-time-picker/prop-color" />
 
 #### 24h format
@@ -79,6 +80,7 @@ You can't interact with disabled picker.
 #### Read-only
 
 Read-only picker behaves same as disabled one, but looks like default one.
+
 <example file="v-time-picker/prop-readonly" />
 
 #### With seconds
