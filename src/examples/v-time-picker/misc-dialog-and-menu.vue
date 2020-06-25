@@ -19,7 +19,7 @@
           <v-text-field
             v-model="time"
             label="Picker in menu"
-            prepend-icon="$mdiClockTimeFourOutline"
+            prepend-icon="mdi-clock-time-four-outline"
             readonly
             v-bind="attrs"
             v-on="on"
@@ -49,7 +49,7 @@
           <v-text-field
             v-model="time"
             label="Picker in dialog"
-            prepend-icon="$mdiClockTimeFourOutline"
+            prepend-icon="mdi-clock-time-four-outline"
             readonly
             v-bind="attrs"
             v-on="on"
