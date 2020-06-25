@@ -1,11 +1,8 @@
 <template>
-  <v-row align="center">
-    <v-time-picker
-      v-model="picker"
-      class="mt-2"
-      v-bind="$attrs"
-    ></v-time-picker>
-  </v-row>
+  <v-time-picker
+    v-bind="$attrs"
+    v-on="$listeners"
+  ></v-time-picker>
 </template>
 
 <script>
@@ -15,36 +12,31 @@
     inheritAttrs: false,
 
     data: () => ({
-      picker: null,
       defaults: {
+        'ampm-in-title': false,
         disabled: false,
-        flat: false,
-        readonly: false,
-        landscape: false,
-        ampmInTitle: false,
-        useSeconds: false,
         format: 'ampm',
-        fullWidth: false,
-        noTitle: false,
+        'full-width': false,
+        landscape: false,
+        'no-title': false,
+        readonly: false,
         scrollable: false,
+        'use-seconds': false,
       },
       options: {
         booleans: [
+          'ampm-in-title',
           'disabled',
-          'flat',
+          'full-width',
+          'no-title',
           'readonly',
-          'landscape',
-          'ampmInTitle',
-          'useSeconds',
-          'fullWidth',
-          'noTitle',
-          'scrollable',
+          'use-seconds',
         ],
         btnToggles: {
           format: ['ampm', '24hr'],
         },
       },
-      tabs: [],
+      tabs: ['landscape', 'scrollable'],
     }),
   }
 </script>
