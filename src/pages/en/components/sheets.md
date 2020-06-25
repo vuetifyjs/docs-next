@@ -1,8 +1,8 @@
 ---
 meta:
   title: Sheet component
-  description: The sheet component is the default paper element in Vuetify and serves as the baseline for many Material Design implementations.
-  keywords: sheets, vuetify sheet component, vue sheet component
+  description: The sheet component is the baseline for many Material Design implementations used in Vuetify.
+  keywords: sheets, vuetify sheet component, vue sheet component, paper, material design paper, material design sheets
 related:
   - /components/cards/
   - /components/grids/
@@ -11,13 +11,13 @@ related:
 
 # Sheets
 
-The `v-sheet` is designed to power other **paper** components within Vuetify. It is meant to be used as a low level component.
+The `v-sheet` component is the baseline for numerous components such as [v-card](/components/cards/), [v-toolbar](/components/toolbars/), and more. The available properties form the foundation of Material Design—the concept of paper and elevation (shadows).
 
 <entry-ad />
 
 ## Usage
 
-The `v-sheet` component is a malleable piece of paper that can be morphed to facilitate other components.
+The `v-sheet` component is a transformable piece of _paper_ that provides a basic foundation for Vuetify features. For example, properties such as **rounded** and **shaped** modify the `border-radius` property while **elevation** increase / decreases `box-shadow`.
 
 <usage name="v-sheet" />
 
@@ -29,22 +29,24 @@ The `v-sheet` component is a malleable piece of paper that can be morphed to fac
 
 ### Props
 
-#### Using elevation
+#### Elevation
 
-Sheets can accept a custom elevation between **0 and 24** (0 is default).
+The `v-sheet` component accepts a custom elevation between **0 and 24** (0 is default). The *elevation* property modifies the `box-shadow` property. More information is located in the MD [Elevation Design Specification](https://material.io/design/environment/elevation.html).
 
 <example file="v-sheet/prop-elevation" />
 
-#### Tile
+#### Rounded
 
-Sheets can accept a `tile` property which makes them rectangular (no `border-radius`).
+The **rounded** prop adds a default `border-radius` of _4px_. By default, the `v-sheet` component has no border-radius. Customize the radius's size and location by providing a custom rounded value; e.g. a rounded value of *tr-xl l-pill* equates to *rounded-tr-xl rounded-l-pill*. Additional information is on the [Border Radius](/styles/border-radius/) page.
 
-<example file="v-sheet/prop-tile" />
+<example file="v-sheet/prop-rounded" />
 
-#### Colors & sizes
+#### Color
 
 Sheets and components based on them can have different sizes and colors.
 
-<example file="v-sheet/prop-colors-sizes" />
+The `v-sheet` component accepts custom [Material Design Color](/styles/colors/) values such as `warning`, `amber darken-3`, and `deep-purple accent`—as well as *rgb, rgba, and hexidecimal* values.
+
+<example file="v-sheet/prop-color" />
 
 <backmatter />

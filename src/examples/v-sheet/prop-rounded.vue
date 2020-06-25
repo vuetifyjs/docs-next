@@ -2,8 +2,8 @@
   <v-container>
     <v-row justify="space-around">
       <v-col
-        v-for="tile in [false, true]"
-        :key="tile"
+        v-for="rounded in [false, true, 'xl']"
+        :key="rounded"
         cols="12"
         md="4"
       >
@@ -13,7 +13,7 @@
         >
           <div></div>
           <v-sheet
-            :tile="tile"
+            :rounded="rounded"
             class="mx-auto"
             height="100"
             width="100"

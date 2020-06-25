@@ -1,9 +1,7 @@
 <template>
   <v-container>
     <v-row justify="space-around">
-      <v-sheet
-        v-bind="$attrs"
-      ></v-sheet>
+      <v-sheet v-bind="$attrs"></v-sheet>
     </v-row>
   </v-container>
 </template>
@@ -16,24 +14,36 @@
 
     data: () => ({
       defaults: {
-        width: 100,
-        height: 100,
-        elevation: 4,
         color: 'white',
-        tile: false,
+        elevation: 1,
+        height: 100,
+        outlined: false,
+        rounded: false,
+        shaped: false,
+        width: 100,
       },
       options: {
-        booleans: ['tile'],
         selects: {
-          color: ['white', 'gray darken-2', 'warning', 'error', 'success', 'teal'],
+          color: [
+            'white',
+            'gray darken-2',
+            'warning',
+            'error',
+            'success',
+            'teal',
+          ],
         },
         sliders: {
-          width: [0, 500],
-          height: [0, 500],
           elevation: [0, 24],
+          height: [50, 250],
+          width: [50, 250],
         },
       },
-      tabs: [],
+      tabs: [
+        'outlined',
+        'rounded',
+        'shaped',
+      ],
     }),
   }
 </script>
