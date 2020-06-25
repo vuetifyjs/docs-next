@@ -19,7 +19,7 @@ The `v-footer` component is used for displaying general information that a user 
 
 The `v-footer` component in its simplest form is a container.
 
-<usage name="v-footer" />
+<example file="v-footer/usage" />
 
 ## API
 
