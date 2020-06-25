@@ -1,18 +1,14 @@
 <template>
-  <v-container class="fill-height">
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-img
-        src="https://picsum.photos/id/11/500/300"
-        lazy-src="https://picsum.photos/id/11/10/6"
-        aspect-ratio="1"
-        class="grey lighten-2"
-        v-bind="$attrs"
-      ></v-img>
-    </v-row>
-  </v-container>
+  <v-row
+    align="center"
+    justify="center"
+  >
+    <v-img
+      class="grey lighten-2"
+      v-bind="$attrs"
+      v-on="$listeners"
+    ></v-img>
+  </v-row>
 </template>
 
 <script>
@@ -25,16 +21,18 @@
       show: true,
       defaults: {
         contain: false,
-        'max-width': 250,
+        'lazy-src': 'https://picsum.photos/id/11/10/6',
         'max-height': 150,
+        'max-width': 250,
+        src: 'https://picsum.photos/id/11/500/300',
       },
       options: {
         booleans: [
           'contain',
         ],
         sliders: {
-          'max-width': [0, 500],
           'max-height': [0, 300],
+          'max-width': [0, 500],
         },
       },
       tabs: [],
