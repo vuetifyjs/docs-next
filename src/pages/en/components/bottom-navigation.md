@@ -43,11 +43,23 @@ If `v-bottom-navigation` has `grow` property, buttons within it grow to fill ava
 
 <example file="v-bottom-navigation/prop-grow" />
 
+#### Hide on scroll
+
+Hide-on-scroll hides `v-bottom-navigation` when target element is scrolled.
+
+<example file="v-bottom-navigation/prop-hide-on-scroll" />
+
 #### Horizontal
 
 The `horizontal` prop, places nav text next to the icon as appose to beneath it.
 
 <example file="v-bottom-navigation/prop-horizontal" />
+
+#### Scroll threshold
+
+`scroll-threshold` property allows you to customize the threshold you can scroll before `v-bottom-navigation` disappears.
+
+<example file="v-bottom-navigation/prop-scroll-threshold" />
 
 #### Shift
 
@@ -60,17 +72,5 @@ The `shift` prop will hide the button text until active. For this to work, `v-bt
 The display state of `v-bottom-navigation` can be toggled using the `input-value` prop. You can also control the currently active button using `v-model`.
 
 <example file="v-bottom-navigation/prop-toggle" />
-
-#### Hide on scroll
-
-Hide-on-scroll hides `v-bottom-navigation` when target element is scrolled.
-
-<example file="v-bottom-navigation/prop-hide-on-scroll" />
-
-#### Scroll threshold
-
-`scroll-threshold` property allows you to customize the threshold you can scroll before `v-bottom-navigation` disappears.
-
-<example file="v-bottom-navigation/prop-scroll-threshold" />
 
 <backmatter />
