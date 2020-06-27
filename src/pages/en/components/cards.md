@@ -1,23 +1,23 @@
 ---
 meta:
   title: Card component
-  description: The card component provides an elevatable sheet of paper to display content and provide actions on a single topic.
-  keywords: cards, vuetify card component, vue card component
+  description: The v-card component is a versatile component that can be used for anything from a panel to a static image.
+  keywords: cards, vuetify card component, vue card component, v-card
 ---
 
 # Cards
 
-Component description. <inline-ad slug="scrimba-cards" />
+The `v-card` component is a versatile component that can be used for anything from a panel to a static image. The **card** component has numerous helper components to make markup as easy as possible. Components that have no listed options use Vue's functional component option for faster rendering and serve as markup sugar to make building easier. <inline-ad slug="scrimba-cards" />
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+A card has 4 basic components, `v-card-title`, `v-card-subtitle`, `v-card-text` and `v-card-actions`.
 
-`<usage name="" />`
+<usage name="v-card" />
 - **name**: component name
-- eg: `<usage name="v-alert" />`
+- eg: `<usage name="v-card" />`
 
 ## API
 

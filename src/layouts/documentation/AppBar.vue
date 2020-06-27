@@ -1,10 +1,10 @@
 <template>
   <v-app-bar
     id="default-app-bar"
-    app
-    clipped-left
-    clipped-right
     :color="dark ? undefined : 'white'"
+    app
+    class="v-bar--underline"
+    clipped-right
     flat
   >
     <v-app-bar-nav-icon
@@ -12,16 +12,7 @@
       @click="drawer = !drawer"
     />
 
-    <vuetify-logo />
-
     <v-spacer />
-
-    <v-btn
-      icon
-      @click="advanced = !advanced"
-    >
-      <v-icon v-text="aicon" />
-    </v-btn>
 
     <v-btn
       icon
@@ -105,18 +96,13 @@
 
     computed: {
       ...sync('user', [
-        'drawer@advanced',
         'dark',
         'rtl',
       ]),
       drawer: sync('app/drawer'),
       locale: get('route/params@locale'),
       translating: get('pages/translating'),
-      aicon () {
-        const icon = this.advanced ? 'Bool' : 'Alphabetical'
 
-        return `$mdiOrder${icon}Ascending`
-      },
       current () {
         return this.locales.find(l => l.locale === this.locale) || {}
       },
@@ -149,17 +135,3 @@
     },
   }
 </script>
-
-<style lang="sass">
-  .theme--light,
-  .theme--dark
-    #default-app-bar
-      border-width: 0 0 thin 0
-      border-style: solid
-
-      &.theme--light
-        border-bottom-color: #0000001F !important
-
-      &.theme--dark
-        border-bottom-color: #FFFFFF1F !important
-</style>
