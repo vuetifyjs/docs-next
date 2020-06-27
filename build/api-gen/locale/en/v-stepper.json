@@ -1,22 +1,39 @@
- {
+{
   "props": {
-    "empty": ""
-    // add prop lang here
+    "empty": "",
+    "altLabels": "Places the labels beneath the step",
+    "color": "Mixins.Colorable.props.color",
+    "complete": "Marks step as complete",
+    "completeIcon": "Icon to display when step is marked as completed",
+    "editable": "Marks step as editable",
+    "editIcon": "Icon to display when step is editable",
+    "errorIcon": "Icon to display when step has an error",
+    "nonLinear": "Allow user to jump to any step",
+    "rules": "Mixins.Validatable.props.rules",
+    "vertical": "Display steps vertically",
+    "v-stepper-step": {
+      "step": "Content to display inside step circle"
+    },
+    "v-stepper-content": {
+      "step": "Sets step to associate the content to"
+    }
   },
   "slots": {
     "empty": ""
-    // add slot lang here
   },
   "events": {
-    "empty": ""
-    // add event lang here
+    "empty": "",
+    "v-stepper": {
+      "change": "Emitted when step is changed by user interaction"
+    },
+    "v-stepper-step": {
+      "click": "Emitted when component is clicked"
+    }
   },
   "functions": {
     "empty": ""
-    // add function lang here
   },
   "sass": {
     "empty": ""
-    // add sass lang here
   }
 }
