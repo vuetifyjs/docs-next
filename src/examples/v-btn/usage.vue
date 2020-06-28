@@ -1,21 +1,19 @@
 <template>
-  <v-container class="fill-height">
-    <v-row
-      align="center"
-      justify="center"
+  <v-row
+    align="center"
+    justify="center"
+  >
+    <v-btn
+      v-bind="$attrs"
+      v-on="$listeners"
     >
-      <v-btn
-        class="white--text"
-        v-bind="$attrs"
-      >
-        <v-icon v-if="$attrs.fab || $attrs.icon">
-          $mdiVuetify
-        </v-icon>
+      <v-icon v-if="$attrs.fab || $attrs.icon">
+        $mdiVuetify
+      </v-icon>
 
-        <span v-else>Click Me</span>
-      </v-btn>
-    </v-row>
-  </v-container>
+      <span v-else>Click Me</span>
+    </v-btn>
+  </v-row>
 </template>
 
 <script>
@@ -26,56 +24,55 @@
 
     data: () => ({
       defaults: {
-        elevation: 2,
-        disabled: false,
-        loading: false,
         block: false,
-        raised: false,
+        color: null,
         depressed: false,
-        outlined: false,
-        rounded: false,
-        text: false,
+        disabled: false,
+        elevation: 2,
         fab: false,
         icon: false,
-        tile: false,
-        color: 'primary',
-        'x-small': false,
-        small: false,
-        medium: true,
         large: false,
+        loading: false,
+        medium: false,
+        outlined: false,
+        raised: false,
+        rounded: false,
+        small: false,
+        text: false,
+        tile: false,
         'x-large': false,
+        'x-small': false,
       },
       options: {
         booleans: [
-          'disabled',
-          'loading',
           'block',
+          'disabled',
+          'large',
+          'loading',
+          'medium',
+          'small',
+          'x-large',
+          'x-small',
         ],
         sliders: {
           elevation: [0, 24],
         },
         selects: {
           color: [
-            'deep-purple accent-4',
+            'accent',
             'primary',
             'secondary',
-            'accent',
           ],
         },
       },
       tabs: [
-        'x-small',
-        'small',
-        'medium',
-        'large',
-        'x-large',
-        'raised',
         'depressed',
-        'outlined',
-        'rounded',
-        'text',
-        'fab',
         'icon',
+        'outlined',
+        'raised',
+        'rounded',
+        'fab',
+        'text',
         'tile',
       ],
     }),
