@@ -4,9 +4,9 @@ meta:
   description: The stepper component provides a linear progression process for gathering and displaying information to a user, similar to a form wizard.
   keywords: steppers, vuetify stepper component, vue stepper component
 related:
-  - '/components/tabs/'
-  - '/components/buttons/'
-  - '/components/windows/'
+  - /components/tabs/
+  - /components/buttons/
+  - /components/windows/
 ---
 
 # Steppers
@@ -19,45 +19,51 @@ The `v-stepper` component displays progress through numbered steps.
 
 A stepper can be used for a multitude of scenarios, including shopping carts, record creation and more.
 
-`<usage name="v-stepper" />`
+<usage name="v-stepper" />
 
 ## API
 
 - [v-stepper](../../api/v-stepper)
-- [v-stepper-step](../../api/v-stepper-step)
 - [v-stepper-content](../../api/v-stepper-content)
 - [v-stepper-header](../../api/v-stepper-header)
 - [v-stepper-items](../../api/v-stepper-items)
+- [v-stepper-step](../../api/v-stepper-step)
 
 ## Sub-Components
 
-Omit if none
+### v-stepper-content
 
-### Sub Component 1
+v-stepper-content description
 
-Sub component text
+### v-stepper-header
 
-### Sub Component 2
+v-stepper-header description
 
-Sub component text
+### v-stepper-items
+
+v-stepper-header description
+
+### v-stepper-step
+
+v-stepper-step description
 
 ## Examples
 
 ### Props
 
-#### Alternate labels
+#### Alternate label
 
 Steppers also have an alternative label style which places the title under the step itself.
 
-<example file="v-stepper/prop-alternate-labels" />
+<example file="v-stepper/prop-alternate-label" />
 
-#### Non-linear steppers
+#### Non linear
 
 Non-linear steppers allow the user to move through your process in whatever way they choose.
 
 <example file="v-stepper/prop-non-linear" />
 
-#### Vertical steppers
+#### Vertical
 
 Vertical steppers move users along the y-axis and otherwise work exactly the same as their horizontal counterpart.
 
@@ -65,7 +71,7 @@ Vertical steppers move users along the y-axis and otherwise work exactly the sam
 
 ### Misc
 
-#### Alternative label multi-line error state
+#### Alternative label with errors
 
 The error state can also be applied to the alternative label style.
 
@@ -83,7 +89,7 @@ An editable step can be selected by a user at any point and will navigate them t
 
 <example file="v-stepper/misc-editable" />
 
-#### Multi-line error state
+#### Errors
 
 An error state can be displayed to notify the user of some action that must be taken.
 
@@ -101,7 +107,7 @@ Linear steppers will always move a user through your defined path.
 
 <example file="v-stepper/misc-linear" />
 
-#### Non-editable steps
+#### Non editable steps
 
 Non-editable steps force a user to process linearly through your process.
 
@@ -113,7 +119,7 @@ An optional step can be called out with sub-text.
 
 <example file="v-stepper/misc-optional" />
 
-#### Vertical multi-line error state
+#### Vertical errors
 
 The same state also applies to Vertical steppers.
 
