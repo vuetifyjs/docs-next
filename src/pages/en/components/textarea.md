@@ -63,7 +63,7 @@ The `counter` prop informs the user of a character limit for the `v-textarea`.
 
 The `append-icon` and `prepend-icon` props help add context to `v-textarea`.
 
-<example file="v-textarea/prop-icon" />
+<example file="v-textarea/prop-icons" />
 
 #### No resize
 
@@ -79,10 +79,10 @@ The `rows` prop allows you to define how many rows the textarea has, when combin
 
 ### Misc
 
-#### Beautiful Forms
+#### Signup form
 
 Utilizing alternative input styles, you can create amazing interfaces that are easy to build and easy to use.
 
-<example file="v-textarea/misc-signup-box" />
+<example file="v-textarea/misc-signup-form" />
 
 <backmatter />
