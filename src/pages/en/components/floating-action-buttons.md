@@ -30,12 +30,6 @@ Floating action buttons can be attached to material to signify a promoted action
 
 ### Misc
 
-#### Small variant
-
-For better visual appeal, we use a small button to match our list avatars.
-
-<example file="v-btn-fab/misc-small" />
-
 #### Display animation
 
 When displaying for the first time, a floating action button should animate onto the screen. Here we use the `v-fab-transition` with v-show. You can also use any custom transition provided by Vuetify or your own.
@@ -48,7 +42,13 @@ When changing the default action of your button, it is recommended that you disp
 
 <example file="v-btn-fab/misc-lateral-screens" />
 
-#### FAB with speed-dial
+#### Small variant
+
+For better visual appeal, we use a small button to match our list avatars.
+
+<example file="v-btn-fab/misc-small" />
+
+#### Speed dial
 
 The speed-dial component has an very robust api for customizing your FAB experience exactly how you want.
 
