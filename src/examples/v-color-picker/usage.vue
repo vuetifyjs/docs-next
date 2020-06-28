@@ -6,6 +6,7 @@
     >
       <v-color-picker
         v-bind="$attrs"
+        v-on="$listeners"
       ></v-color-picker>
     </v-row>
   </v-container>
@@ -20,13 +21,12 @@
     data: () => ({
       defaults: {
         disabled: false,
+        'dot-size': 25,
         'hide-canvas': false,
         'hide-inputs': false,
         'hide-mode-switch': false,
+        mode: null,
         'show-swatches': false,
-        flat: false,
-        mode: 'rgba',
-        'dot-size': 25,
         'swatches-max-height': 200,
       },
       options: {
@@ -36,7 +36,6 @@
           'hide-inputs',
           'hide-mode-switch',
           'show-swatches',
-          'flat',
         ],
         selects: {
           mode: [
