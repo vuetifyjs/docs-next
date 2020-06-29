@@ -8,6 +8,7 @@
     "dev": "yarn serve",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
+    "lint:md": "markdownlint --config .markdownlintrc src/pages/en --fix",
     "prod": "http-server dist --proxy http://localhost:8080/?"
   },
   "dependencies": {

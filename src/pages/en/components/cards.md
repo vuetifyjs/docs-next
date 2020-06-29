@@ -16,6 +16,7 @@ Component description. <inline-ad slug="scrimba-cards" />
 Usage text
 
 `<usage name="" />`
+
 - **name**: component name
 - eg: `<usage name="v-alert" />`
 
@@ -69,6 +70,7 @@ Omit if none
 Example description
 
 `<example file="" />`
+
 - **file**: `<component>/<type>-<propname>`
 - eg: `<example file="v-alert/prop-colored-border" />`
 

@@ -9,11 +9,12 @@ meta:
 <br>
 <br>
 
-# 🎉 Contribute to Vuetify!
+# 🎉 Contribute to Vuetify
 
 Help us build the new documentation by porting over existing pages:
 
 ## Getting Started
+
 1. Join our [Discord server](https://discord.gg/HJXwxMy) and say hello
 2. Select an unassigned task on our [Notion Board](https://www.notion.so/vuetify/e8053365c88b4b238ebe4fd187057d03?v=33d6efa7be664eb088164810c70928eb)
 
@@ -137,12 +138,14 @@ usage-new(:value=`{
 <!-- usage -->
 usage(value="usage")
 ```
+
 These are essentially the same thing: A single usage example. These will be completed at a different time. In the meantime you can still prep this `Usage` section by doing the following:
 
 1. Move the usage/playground description text from your `.json` file (`Alerts.json`) beneath the `Usage` section of the `.md` page (`alerts.md`)
 2. Add a custom usage component with the name of the component as its `name` attribute - eg: `<usage name="v-alert" />`
 
 Full Example
+
 ```html
 ## Usage
 
@@ -310,6 +313,7 @@ examples(:value=`[
 
     <example file="v-alert/prop-border" />
     ```
+
 <alert type="info">
   Place examples for each section in alphabetical order.
 </alert>

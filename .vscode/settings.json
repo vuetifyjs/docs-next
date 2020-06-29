@@ -1,5 +1,6 @@
 {
   "markdownlint.config": {
+    "MD022": true,
     "MD025": {
       "front_matter_title": "", // Ignore frontmatter title
     },

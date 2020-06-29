@@ -6,6 +6,7 @@ meta:
 ---
 
 # Elevation
+
 Component description
 
 <entry-ad />
