@@ -91,7 +91,6 @@ The **type** prop provides 4 default `v-alert` styles: **success**, **info**, **
 
 <example file="v-alert/prop-type" />
 
-
 #### Twitter
 
 By combining **color**, **dismissible**, **border**, **elevation**, **icon**, and **colored-border** props you can create stylish custom alerts such as this twitter notification.

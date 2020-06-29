@@ -43,23 +43,11 @@ Using the **grow** property forces [v-btn](/components/buttons/) components to _
 
 <example file="v-bottom-navigation/prop-grow" />
 
-#### Hide on scroll
-
-Hide-on-scroll hides `v-bottom-navigation` when target element is scrolled.
-
-<example file="v-bottom-navigation/prop-hide-on-scroll" />
-
 #### Horizontal
 
 Adjust the style of buttons and icons by using the **horizontal** prop. This positions button text *inline* with the provided [v-icon](/components/icons/).
 
 <example file="v-bottom-navigation/prop-horizontal" />
-
-#### Scroll threshold
-
-`scroll-threshold` property allows you to customize the threshold you can scroll before `v-bottom-navigation` disappears.
-
-<example file="v-bottom-navigation/prop-scroll-threshold" />
 
 #### Shift
 
