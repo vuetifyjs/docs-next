@@ -9,9 +9,9 @@ related:
   - /components/lists/
 ---
 
-# Lazy loading
+# Lazy
 
-The `v-lazy` component is used to dynamically load components based upon an elements visiblity.
+The `v-lazy` component is used to dynamically load components based upon an elements visibility.
 
 <entry-ad />
 
@@ -27,6 +27,8 @@ The `v-lazy` component by default will not render its contents until it has been
 
 ## Caveats
 
-<alert type="info">The `v-lazy` component uses the [v-intersect](/directives/intersect) directive which requires a [Polyfill](/directives/intersect#polyfill) in order to work on IE11 / Safari. It's possible on some iOS versions will also require the use of this polyfill.</alert>
+<alert type="info">
+  The `v-lazy` component uses the [v-intersect](/directives/intersect) directive which requires a [Polyfill](/directives/intersect#polyfill) in order to work on IE11 / Safari. It's possible on some iOS versions will also require the use of this polyfill.
+</alert>
 
 <backmatter />
