@@ -268,7 +268,7 @@ examples(:value=`[
 3. Copy all **folders** (simple/intermediate/complex)  to the newly created examples folder in the *docs-next* repo.
 4. Move all files from each folder to the root of the example folder, and remove the folders. You should now have a single example folder containing `.vue` files that looks something like this:
 
-  ```
+  ```markdown
   - src
     - examples
       - v-alert
@@ -278,15 +278,15 @@ examples(:value=`[
 
 5. Prepend the following to each of the files based on the following structure:
 
-    - `prop-<filename>`: an example for a given prop
-    - `event-<filename>`: an example for a given event
-    - `slot-<filename>`: an example for a given slot
-    - `misc-<filename>`: an example for anything that doesn't fall in the above mentioned.
-    - eg: `dense.vue` -> `prop-dense.vue`
+    * `prop-<filename>`: an example for a given prop
+    * `event-<filename>`: an example for a given event
+    * `slot-<filename>`: an example for a given slot
+    * `misc-<filename>`: an example for anything that doesn't fall in the above mentioned.
+    * eg: `dense.vue` -> `prop-dense.vue`
 
 6. Add the examples to the `.md` file under the headers of respective prefix (prop/event/slot/misc).
 
-    - Provide the header and description text provided in the *Vuetify* `.json` language file using the following format:
+    * Provide the header and description text provided in the *Vuetify* `.json` language file using the following format:
 
     ```html
     ### Props

@@ -22,7 +22,7 @@ Usage text
 
 ## API
 
-- [API Page Link]()
+- [API Page Link](../../api/v-component)
 
 ## Sub-Components
 
