@@ -1,18 +1,29 @@
 {
   "markdownlint.config": {
-    "MD033": {
-      "allowed_elements": [
-        "entry-ad",
-        "usage",
-        "example",
-        "backmatter",
-        "alert",
-        "inline-ad",
-        "promoted-ad",
-      ],
-    },
     "MD025": {
       "front_matter_title": "", // Ignore frontmatter title
+    },
+    "MD026": false,
+    "MD033": {
+      "allowed_elements": [
+        "alert",
+        "backmatter",
+        "br",
+        "contribute",
+        "discovery-ad",
+        "entry-ad",
+        "example",
+        "exit-ad",
+        "inline-ad",
+        "kbd",
+        "promoted-ad",
+        "random-ad",
+        "sponsored-ad",
+        "up-next",
+        "usage",
+        "var",
+        "vuetify-comparison",
+      ],
     },
   },
   "markdownlint.ignore": [
