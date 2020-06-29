@@ -43,11 +43,23 @@ Using the **grow** property forces [v-btn](/components/buttons/) components to _
 
 <example file="v-bottom-navigation/prop-grow" />
 
+#### Hide on scroll
+
+The `v-bottom-navigation` component hides when *scrolling up* when using the **hide-on-scroll** property. This is similar to the [scrolling techniques](https://material.io/archive/guidelines/patterns/scrolling-techniques.html) that are supported in [v-app-bar](/components/app-bars/). In the following example, scroll *up and down* to see this behavior.
+
+<example file="v-bottom-navigation/prop-hide-on-scroll" />
+
 #### Horizontal
 
 Adjust the style of buttons and icons by using the **horizontal** prop. This positions button text *inline* with the provided [v-icon](/components/icons/).
 
 <example file="v-bottom-navigation/prop-horizontal" />
+
+#### Scroll threshold
+
+Modify the **scroll-threshold** property to increase the distance a user must *scroll* before the `v-bottom-navigation` is hidden.
+
+<example file="v-bottom-navigation/prop-scroll-threshold" />
 
 #### Shift
 
@@ -64,17 +76,5 @@ The **shift** prop hides button text when not active. This provides an alternati
 The display state of `v-bottom-navigation` can be toggled using the **input-value** prop. You can also control the currently active button using **v-model**.
 
 <example file="v-bottom-navigation/prop-toggle" />
-
-#### Hide on scroll
-
-The `v-bottom-navigation` component hides when *scrolling up* when using the **hide-on-scroll** property. This is similar to the [scrolling techniques](https://material.io/archive/guidelines/patterns/scrolling-techniques.html) that are supported in [v-app-bar](/components/app-bars/). In the following example, scroll *up and down* to see this behavior.
-
-<example file="v-bottom-navigation/prop-hide-on-scroll" />
-
-#### Scroll threshold
-
-Modify the **scroll-threshold** property to increase the distance a user must *scroll* before the `v-bottom-navigation` is hidden.
-
-<example file="v-bottom-navigation/prop-scroll-threshold" />
 
 <backmatter />
