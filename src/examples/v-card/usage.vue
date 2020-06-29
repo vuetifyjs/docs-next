@@ -26,8 +26,8 @@
     data: () => ({
       defaults: {
         disabled: false,
-        loading: false,
         image: false,
+        loading: false,
         subtitle: true,
         supportingText: true,
       },
