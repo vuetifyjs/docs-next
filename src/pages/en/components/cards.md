@@ -16,33 +16,17 @@ The `v-card` component is a versatile component that can be used for anything fr
 A card has 4 basic components, `v-card-title`, `v-card-subtitle`, `v-card-text` and `v-card-actions`.
 
 <usage name="v-card" />
-- **name**: component name
-- eg: `<usage name="v-card" />`
+
+### Functional Components
+- `v-card-actions`: The container used for placing **actions** for a card, such as [v-btn](/components/buttons) or [v-menu](/components/menus). Also applies *special margin* to buttons so that they properly line up with other card content areas.
+- `v-card-subtitle`: Provides a default **font-size** and **padding** for card subtitles. Font-size can be overwritten with [typography classes](/styles/typography).
+- `v-card-text`: Primarily used for **text content** in a card. Applies padding for text, reduces its font-size to .875rem.
+- `v-card-title`: Provides a default **font-size** and **padding** for card titles. Font-size can be overwritten with [typography classes](/styes/typography).
 
 ## API
 
-- [API Page Link]()
+- [v-card](../../api/v-card)
 
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
 
 ## Examples
 
