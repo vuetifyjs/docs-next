@@ -1,11 +1,9 @@
 <template>
   <v-card>
-    <v-card-title>
-      Card title
-    </v-card-title>
-    <v-card-subtitle>
-      Secondary text
-    </v-card-subtitle>
+    <v-card-title>Card title</v-card-title>
+
+    <v-card-subtitle>Secondary text</v-card-subtitle>
+
     <v-card-text>
       Greyhound divisively hello coldly wonderfully marginally far upon excluding.
     </v-card-text>
@@ -21,8 +19,8 @@
     data: () => ({
       defaults: {
         disabled: false,
-        loading: false,
         image: false,
+        loading: false,
         subtitle: true,
         supportingText: true,
       },
