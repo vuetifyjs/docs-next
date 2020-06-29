@@ -1,0 +1,18 @@
+{
+  "markdownlint.config": {
+    "MD033": {
+      "allowed_elements": [
+        "entry-ad",
+        "usage",
+        "example",
+        "backmatter",
+        "alert",
+        "inline-ad",
+        "promoted-ad",
+      ],
+    },
+    "MD025": {
+      "front_matter_title": "", // Ignore frontmatter title
+    },
+  },
+}
