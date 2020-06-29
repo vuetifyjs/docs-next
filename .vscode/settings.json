@@ -15,4 +15,8 @@
       "front_matter_title": "", // Ignore frontmatter title
     },
   },
+  "markdownlint.ignore": [
+    "src/api/**/*",
+    "node_modules/**/*"
+  ]
 }
