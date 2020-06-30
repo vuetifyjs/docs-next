@@ -53,36 +53,36 @@ The `filter` prop can be used to filter each individual item with custom logic. 
 
 ### Slots
 
-#### Simple Slots
+#### Item and selection
 
 With the power of slots, you can customize the visual output of the select. In this example we add a profile picture for both the chips and list items.
 
-<example file="v-autocomplete/slot-simple" />
-
-#### Advanced Slots
-
-The `v-autocomplete` component is extremely flexible and can fit in just about any use-case. Create custom displays for **no-data**, **item** and **selection** slots to provide a unique user experience. Using _slots_ enables you to easily customize the desired look for your application.
-
-<example file="v-autocomplete/slot-advanced" />
+<example file="v-autocomplete/slot-item-and-selection" />
 
 ### Misc
 
-#### Searching an API
+#### API search
 
 Easily hook up dynamic data and create a unique experience. The `v-autocomplete`'s expansive prop list makes it easy to fine tune every aspect of the input.
 
-<example file="v-autocomplete/misc-api" />
+<example file="v-autocomplete/misc-api-search" />
 
 #### Asynchronous items
 
 Sometimes you need to load data externally based upon a search query. Use the `search-input` prop with the **.sync** modifier when using the `autocomplete` prop. We also make use of the new `cache-items` prop. This will keep a unique list of all items that have been passed to the `items` prop and is **REQUIRED** when using asynchronous items and the **multiple** prop.
 
-<example file="v-autocomplete/misc-asynchronous" />
+<example file="v-autocomplete/misc-asynchronous-items" />
+
+#### Cryptocurrency selector
+
+The `v-autocomplete` component is extremely flexible and can fit in just about any use-case. Create custom displays for **no-data**, **item** and **selection** slots to provide a unique user experience. Using _slots_ enables you to easily customize the desired look for your application.
+
+<example file="v-autocomplete/misc-cryptocurrency-selector" />
 
 #### State selector
 
 Using a combination of `v-autocomplete` slots and transitions, you can create a stylish toggleable autocomplete field such as this state selector.
 
-<example file="v-autocomplete/misc-stateSelector" />
+<example file="v-autocomplete/misc-state-selector" />
 
 <backmatter />

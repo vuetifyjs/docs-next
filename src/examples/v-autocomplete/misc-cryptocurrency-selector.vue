@@ -35,7 +35,7 @@
           v-on="on"
         >
           <v-icon left>
-            mdi-coin
+            mdi-bitcoin
           </v-icon>
           <span v-text="item.name"></span>
         </v-chip>
@@ -52,7 +52,7 @@
           <v-list-item-subtitle v-text="item.symbol"></v-list-item-subtitle>
         </v-list-item-content>
         <v-list-item-action>
-          <v-icon>mdi-coin</v-icon>
+          <v-icon>mdi-bitcoin</v-icon>
         </v-list-item-action>
       </template>
     </v-autocomplete>
