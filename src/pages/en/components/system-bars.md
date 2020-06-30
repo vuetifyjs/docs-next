@@ -29,17 +29,17 @@ The `v-system-bar` component can be used for displaying statuses to the user. It
 
 ### Props
 
-#### Colored bar
+#### Color
 
 You can optionally change the color of the `v-system-bar` by using the `color` prop.
 
 <example file="v-system-bar/prop-color" />
 
-#### Window bar
+#### Lights out
 
-A window bar with window controls and status info.
+You can reduce `v-system-bar`'s opacity using `lights-out` property.
 
-<example file="v-system-bar/prop-window" />
+<example file="v-system-bar/prop-lights-out" />
 
 #### Themes
 
@@ -47,10 +47,10 @@ Dark or light theme variants can be applied to `v-system-bar`.
 
 <example file="v-system-bar/prop-themes" />
 
-#### Lights out
+#### Window
 
-You can reduce `v-system-bar`'s opacity using `lights-out` property.
+A window bar with window controls and status info.
 
-<example file="v-system-bar/prop-lights-out" />
+<example file="v-system-bar/prop-window" />
 
 <backmatter />
