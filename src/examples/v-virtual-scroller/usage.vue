@@ -2,6 +2,7 @@
   <div class="py-6 grow">
     <v-slider
       v-model="count"
+      hide-details
       min="7000"
       max="15000"
     ></v-slider>
@@ -11,12 +12,12 @@
 
     <v-card outlined>
       <v-virtual-scroll
-        v-bind="$attrs"
         :items="items"
-        item-height="25"
+        v-bind="$attrs"
+        v-on="$listeners"
       >
         <template v-slot="{ item }">
-          <div class="pa-4">
+          <div class="px-2">
             I'm item number {{ item }}
           </div>
         </template>
@@ -34,11 +35,13 @@
     data: () => ({
       count: 10000,
       defaults: {
-        height: 200,
+        height: 100,
+        'item-height': 20,
       },
       options: {
         sliders: {
-          height: [175, 275],
+          height: [100, 175],
+          'item-height': [20, 50],
         },
       },
       tabs: [],

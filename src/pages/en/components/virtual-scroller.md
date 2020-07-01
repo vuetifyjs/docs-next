@@ -27,17 +27,19 @@ The virtual scroller displays just enough records to fill the viewport and uses 
 
 ## Caveats
 
-<alert type="info">We are in the *process* of integrating the `v-virtual-scroll` component into existing features and components. If you are interested in helping, please reach out to **John Leider** in the [Discord Community](https://community.vuetifyjs.com).</alert>
+<alert type="info">
+  We are in the *process* of integrating the `v-virtual-scroll` component into existing features and components. If you are interested in helping, please reach out to **John Leider** in the [Discord Community](https://community.vuetifyjs.com).
+</alert>
 
 ## Examples
 
 ### Props
 
-#### Pre-rendering items
+#### Bench
 
-By default the `v-virtual-scroll` does not pre-render additional items outside of the viewport. Increasing this value causes the scroller to render additional items as **padding**. It is **recommended** to keep this number as low as possible for the best possible `performance`.
+By default the `v-virtual-scroll` does not pre-render additional items outside of the viewport. Using the `bench` prop will have the scroller render additional items as **padding**. It is **recommended** to keep this number as low as possible for the best possible `performance`.
 
-<example file="v-virtual-scroller/prop-benching" />
+<example file="v-virtual-scroller/prop-bench" />
 
 ### Misc
 
