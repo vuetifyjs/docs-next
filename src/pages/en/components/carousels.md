@@ -19,7 +19,7 @@ The `v-carousel` component is used to display large numbers of visual content on
 
 The `v-carousel` component expands upon `v-window` by providing additional features targeted at displaying images.
 
-<usage name="v-carousel" />
+<example file="v-carousel/usage" />
 
 ## API
 
@@ -35,12 +35,6 @@ v-carousel-item description
 ## Examples
 
 ### Props
-
-#### `v-model` control
-
-You can control carousel with model.
-
-<example file="v-carousel/prop-model" />
 
 #### Custom delimiters
 
@@ -71,5 +65,11 @@ You can hide the carousel navigation controls with `:show-arrows="false"`.
 You can hide the bottom controls with `hide-delimiters` prop.
 
 <example file="v-carousel/prop-hide-delimiters" />
+
+#### Model
+
+You can control carousel with model.
+
+<example file="v-carousel/prop-model" />
 
 <backmatter />
