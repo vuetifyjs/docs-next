@@ -3,77 +3,73 @@ meta:
   title: Carousel component
   description: The carousel component is used to cycle through visual content such as images or slides of text.
   keywords: carousels, vuetify carousel component, vue carousel component
+related:
+  - /components/parallax/
+  - /components/images/
+  - /components/windows/
 ---
 
 # Carousels
 
-Component description
+The `v-carousel` component is used to display large numbers of visual content on a rotating timer.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+The `v-carousel` component expands upon `v-window` by providing additional features targeted at displaying images.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<usage name="v-carousel" />
 
 ## API
 
-- [API Page Link](../../api/v-component)
+- [v-carousel](../../api/v-carousel)
+- [v-carousel-item](../../api/v-carousel-item)
 
 ## Sub-Components
 
-Omit if none
+### v-carousel-item
 
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+v-carousel-item description
 
 ## Examples
 
-Example text.
-
 ### Props
 
-Omit if none
+#### `v-model` control
 
-### Events
+You can control carousel with model.
 
-Omit if none
+<example file="v-carousel/prop-model" />
 
-### Slots
+#### Custom delimiters
 
-Omit if none
+Use any available icon as your carousel's slide delimiter.
 
-### Misc
+<example file="v-carousel/prop-custom-icons" />
 
-Omit if none
+#### Custom transition
 
-#### Example Header
+The `v-carousel-item` component can have its **transition/reverse-transition** changed.
 
-Example description
+<example file="v-carousel/prop-custom-transition" />
 
-`<example file="" />`
-**file**: `<component>/<type>-<propname>`
-eg: `<example file="v-alert/prop-colored-border" />`
+#### Cycle
 
-## Accessibility
+With the **cycle** prop you can have your slides automatically transition to the next available every 6s (default).
 
-Accessibility text - omit if none
+<example file="v-carousel/prop-cycle" />
+
+#### Hide controls
+
+You can hide the carousel navigation controls with `:show-arrows="false"`.
+
+<example file="v-carousel/prop-hide-controls" />
+
+#### Hide delimiters
+
+You can hide the bottom controls with `hide-delimiters` prop.
+
+<example file="v-carousel/prop-hide-delimiters" />
 
 <backmatter />
