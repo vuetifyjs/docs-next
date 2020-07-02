@@ -3,25 +3,27 @@ meta:
   title: Date picker component
   description: The date picker component is a stand-alone interface that allows the selection of a date, month and year.
   keywords: date pickers, vuetify date picker component, vue date picker component
+related:
+  - components/buttons,
+  - components/text-fields,
+  - components/time-pickers
 ---
 
 # Date pickers
 
-Component description
+The date picker component is a stand-alone interface that allows the selection of a date, month and year.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+Date pickers come in two orientation variations, portrait **(default)** and landscape. By default they are emitting `input` event when the day (for date picker) or month (for month picker), but with **reactive** prop they can update the model even after clicking year/month.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+`<usage name="v-date-picker" />`
 
 ## API
 
-- [API Page Link](../../api/v-component)
+- [v-date-picker](../../api/v-date-picker)
 
 ## Sub-Components
 
@@ -37,12 +39,9 @@ Sub component text
 
 ## Caveats
 
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+<alert type="warning">
+  `v-date-picker` accepts ISO 8601 **date** strings (*YYYY-MM-DD*). For more information regarding ISO 8601 and other standards, visit the official ISO (International Organization for Standardization) [International Standards](https://www.iso.org/standards.html) page.
+</alert>
 
 ## Examples
 
