@@ -1,6 +1,10 @@
 <template>
   <v-row justify="center">
-    <v-date-picker v-model="date" type="month" readonly></v-date-picker>
+    <v-date-picker
+      v-model="date"
+      type="month"
+      readonly
+    ></v-date-picker>
   </v-row>
 </template>
 

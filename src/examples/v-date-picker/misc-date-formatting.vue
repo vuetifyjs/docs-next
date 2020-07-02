@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" lg="6">
+      <v-col
+        cols="12"
+        lg="6"
+      >
         <v-menu
           ref="menu1"
           v-model="menu1"
@@ -23,12 +26,19 @@
               v-on="on"
             ></v-text-field>
           </template>
-          <v-date-picker v-model="date" no-title @input="menu1 = false"></v-date-picker>
+          <v-date-picker
+            v-model="date"
+            no-title
+            @input="menu1 = false"
+          ></v-date-picker>
         </v-menu>
         <p>Date in ISO format: <strong>{{ date }}</strong></p>
       </v-col>
 
-      <v-col cols="12" lg="6">
+      <v-col
+        cols="12"
+        lg="6"
+      >
         <v-menu
           v-model="menu2"
           :close-on-content-click="false"
@@ -49,7 +59,11 @@
               v-on="on"
             ></v-text-field>
           </template>
-          <v-date-picker v-model="date" no-title @input="menu2 = false"></v-date-picker>
+          <v-date-picker
+            v-model="date"
+            no-title
+            @input="menu2 = false"
+          ></v-date-picker>
         </v-menu>
         <p>Date in ISO format: <strong>{{ date }}</strong></p>
       </v-col>

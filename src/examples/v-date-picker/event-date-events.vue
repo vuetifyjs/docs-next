@@ -1,7 +1,9 @@
 <template>
   <v-row justify="space-between">
     <div>
-      <div class="subheading">Defined by array</div>
+      <div class="subheading">
+        Defined by array
+      </div>
       <v-date-picker
         v-model="date1"
         :events="arrayEvents"
@@ -9,7 +11,9 @@
       ></v-date-picker>
     </div>
     <div>
-      <div class="subheading">Defined by function</div>
+      <div class="subheading">
+        Defined by function
+      </div>
       <v-date-picker
         v-model="date2"
         :event-color="date => date[9] % 2 ? 'red' : 'yellow'"

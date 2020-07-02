@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" lg="6">
+      <v-col
+        cols="12"
+        lg="6"
+      >
         <v-menu
           v-model="menu1"
           :close-on-content-click="false"
@@ -25,7 +28,10 @@
         </v-menu>
       </v-col>
 
-      <v-col cols="12" lg="6">
+      <v-col
+        cols="12"
+        lg="6"
+      >
         <v-menu
           v-model="menu2"
           :close-on-content-click="false"

@@ -1,6 +1,10 @@
 <template>
   <v-row>
-    <v-col cols="12" sm="6" class="my-2 px-1">
+    <v-col
+      cols="12"
+      sm="6"
+      class="my-2 px-1"
+    >
       <v-date-picker
         ref="picker"
         v-model="date"
@@ -8,11 +12,24 @@
         full-width
       ></v-date-picker>
     </v-col>
-    <v-col cols="12" sm="6" class="my-2 px-1">
-      <div class="title">Month news ({{ pickerDate || 'change month...' }})</div>
-      <div class="subheading">Change month to see other news</div>
+    <v-col
+      cols="12"
+      sm="6"
+      class="my-2 px-1"
+    >
+      <div class="title">
+        Month news ({{ pickerDate || 'change month...' }})
+      </div>
+      <div class="subheading">
+        Change month to see other news
+      </div>
       <ul class="ma-4">
-        <li v-for="note in notes" :key="note">{{ note }}</li>
+        <li
+          v-for="note in notes"
+          :key="note"
+        >
+          {{ note }}
+        </li>
       </ul>
     </v-col>
   </v-row>

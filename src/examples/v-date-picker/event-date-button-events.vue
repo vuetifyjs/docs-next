@@ -20,19 +20,27 @@
       sm="6"
     >
       <div class="body-1 mb-2">
-        <v-icon small>{{ done[0] ? '$checkboxOn' : '$checkboxOff' }}</v-icon>
+        <v-icon small>
+          {{ done[0] ? '$checkboxOn' : '$checkboxOff' }}
+        </v-icon>
         Double click on any date
       </div>
 
       <div class="body-1">
-        <v-icon small>{{ done[1] ? '$checkboxOn' : '$checkboxOff' }}</v-icon>
+        <v-icon small>
+          {{ done[1] ? '$checkboxOn' : '$checkboxOff' }}
+        </v-icon>
         Move mouse cursor over any month button
       </div>
 
-      <div class="title mb-2">Mouse pointer is located on: {{ mouseMonth || '-' }}</div>
+      <div class="title mb-2">
+        Mouse pointer is located on: {{ mouseMonth || '-' }}
+      </div>
 
       <div class="body-1">
-        <v-icon small>{{ done[2] ? '$checkboxOn' : '$checkboxOff' }}</v-icon>
+        <v-icon small>
+          {{ done[2] ? '$checkboxOn' : '$checkboxOff' }}
+        </v-icon>
         Right click on any year
       </div>
     </v-col>
