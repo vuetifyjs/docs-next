@@ -19,7 +19,7 @@ The `v-tabs` component is used for hiding content behind a selectable item. This
 
 The `v-tabs` component is a styled extension of [v-item-group](/components/item-groups). It provides an easy to use interface for organizing groups of content.
 
-<usage name="v-tabs" />
+<example file="v-tabs/usage" />
 
 ## API
 
@@ -61,15 +61,15 @@ v-tabs-slider description
 
 ### Props
 
-#### Align tabs with toolbar title
+#### Align with title
 
-Make `v-tabs` lined up with the `v-toolbar-title` component (`v-app-bar-nav-icon` or `v-btn` must be used in `v-toolbar`).
+Make `v-tabs` lined up with the `v-toolbar-title` component using the **align-with-title** prop (`v-app-bar-nav-icon` or `v-btn` must be used in `v-toolbar`).
 
 <example file="v-tabs/prop-align-with-title" />
 
-#### Centered active tab
+#### Center active
 
-Active tab is always centered
+The **center-active** prop will make the active tab always centered
 
 <example file="v-tabs/prop-center-active" />
 
@@ -93,11 +93,17 @@ The **grow** prop will make the tab items take up all available space up to a ma
 
 #### Icons and text
 
-`v-tab`'s can contain icons as well as text. This increases the `v-tabs` height to 72px.
+Using **icons-with-text** prop increases the `v-tabs` height to 72px to allow for both icons as well as text to be used.
 
 <example file="v-tabs/prop-icons-and-text" />
 
-#### Right aligned tabs
+#### Pagination
+
+If the tab items overflow their container, pagination controls will appear on desktop. For mobile devices, arrows will only display with the **show-arrows** prop.
+
+<example file="v-tabs/misc-pagination" />
+
+#### Right
 
 The **right** prop aligns the tabs to the right.
 
@@ -105,7 +111,7 @@ The **right** prop aligns the tabs to the right.
 
 #### Vertical Tabs
 
-Tabs can be toggled to stack its `v-tab` components vertically.
+The **vertical** prop allows for `v-tab` components to stack vertically.
 
 <example file="v-tabs/prop-vertical" />
 
@@ -123,34 +129,28 @@ You can represent `v-tab` actions by using single icons. This is useful when it 
 
 <example file="v-tabs/misc-desktop" />
 
+#### Dynamic height
+
+When changing your `v-tab-item`, the content area will smoothly scale to the new size.
+
+<example file="v-tabs/misc-dynamic-height" />
+
 #### Dynamic Tabs
 
 Tabs can be dynamically added and removed. This allows you to update to any number and the `v-tabs` component will react. In this example when we add a new tab, we automatically change our model to match. As we add more tabs and overflow the container, the selected item will be automatically scrolled into view. Remove all `v-tab`s and the slider will disappear.
 
 <example file="v-tabs/misc-dynamic" />
 
-#### Pagination
+#### Overflow to menu
 
-If the tab items overflow their container, pagination controls will appear on desktop. For mobile devices, arrows will only display with the **show-arrows** prop.
+You can use a menu to hold additional tabs, swapping them out on the fly.
 
-<example file="v-tabs/misc-pagination" />
+<example file="v-tabs/misc-overflow-to-menu" />
 
 #### Tab Items
 
 The `v-tabs-items` component allows for you to customize the content per tab. Using a shared `v-model`, the `v-tabs-items` will sync with the currently selected `v-tab`.
 
 <example file="v-tabs/misc-tab-items" />
-
-#### With menu
-
-You can use a menu to hold additional tabs, swapping them out on the fly.
-
-<example file="v-tabs/misc-overflow-to-menu" />
-
-#### With search
-
-When changing your `v-tab-item`, the content area will smoothly scale to the new size.
-
-<example file="v-tabs/misc-dynamic-height" />
 
 <backmatter />
