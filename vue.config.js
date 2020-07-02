@@ -3,6 +3,9 @@
 const path = require('path')
 const Mode = require('frontmatter-markdown-loader/mode')
 const { md } = require('./build/markdown-it')
+const { ContextReplacementPlugin } = require('webpack')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const { EN_LOCALE_ONLY } = require('./src/util/globals')
 
 module.exports = {
   devServer: {
@@ -54,6 +57,16 @@ module.exports = {
           mode: [Mode.VUE_COMPONENT, Mode.BODY],
           vue: { root: 'markdown-body' },
         }))
+
+    if (EN_LOCALE_ONLY) {
+      config.plugin('ContextReplacementPlugin')
+        .use(ContextReplacementPlugin, [/@\/pages/, /^\.\/en\/.*\.md$/])
+    }
+
+    if (process.env.ANALYZE === 'true') {
+      config.plugin('BundleAnalyzerPlugin')
+        .use(BundleAnalyzerPlugin)
+    }
   },
   configureWebpack: {
     optimization: {
