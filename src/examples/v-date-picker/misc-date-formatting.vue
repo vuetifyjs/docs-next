@@ -20,7 +20,7 @@
               label="Date"
               hint="MM/DD/YYYY format"
               persistent-hint
-              prepend-icon="event"
+              prepend-icon="mdi-calendar"
               v-bind="attrs"
               @blur="date = parseDate(dateFormatted)"
               v-on="on"
@@ -53,7 +53,7 @@
               label="Date (read only text field)"
               hint="MM/DD/YYYY format"
               persistent-hint
-              prepend-icon="event"
+              prepend-icon="mdi-calendar"
               readonly
               v-bind="attrs"
               v-on="on"

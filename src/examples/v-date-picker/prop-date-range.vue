@@ -16,7 +16,7 @@
       <v-text-field
         v-model="dateRangeText"
         label="Date range"
-        prepend-icon="event"
+        prepend-icon="mdi-calendar"
         readonly
       ></v-text-field>
       model: {{ dates }}
