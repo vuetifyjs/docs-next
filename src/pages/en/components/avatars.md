@@ -49,16 +49,16 @@ The `v-avatar` default slot will accept the `v-icon` component, an image, or tex
 
 ### Misc
 
-#### Profile Card
-
-Using the **tile** prop, we can create a sleek hard-lined profile card.
-
-<example file="v-avatar/misc-profile" />
-
 #### Advanced usage
 
 Combining an avatar with other components allows you to build beautiful user interfaces right out of the box.
 
 <example file="v-avatar/misc-advanced" />
+
+#### Profile Card
+
+Using the **tile** prop, we can create a sleek hard-lined profile card.
+
+<example file="v-avatar/misc-profile-card" />
 
 <backmatter />
