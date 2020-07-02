@@ -276,7 +276,9 @@ examples(:value=`[
         - example2.vue
   ```
 
-If there are duplicated file names, figure out the reason. Delete/merge if necessary.
+<alert type="info">
+  If there are duplicated file names, figure out the reason. Delete/merge if necessary.
+</alert>
 
 5. Prepend the following to each of the files based on the following structure:
 
