@@ -7,7 +7,7 @@
       v-bind="$attrs"
       v-on="$listeners"
     >
-      VJ
+      <span class="white--text">VJ</span>
     </v-avatar>
   </div>
 </template>
@@ -21,19 +21,20 @@
     data: () => ({
       defaults: {
         color: 'primary',
-        image: false,
+        rounded: false,
+        size: 56,
         tile: false,
       },
       options: {
         selects: {
           color: ['primary', 'accent', 'warning lighten-2', 'teal', 'grey lighten-2'],
         },
-        booleans: ['image', 'tile'],
+        booleans: [],
         sliders: {
-          size: [56, 128],
+          size: [25, 128],
         },
       },
-      tabs: [],
+      tabs: ['rounded', 'tile'],
     }),
   }
 </script>
