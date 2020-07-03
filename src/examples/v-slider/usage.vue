@@ -1,14 +1,11 @@
 <template>
-  <v-row
-    justify="space-around"
-  >
+  <v-row justify="space-around">
     <v-col cols="12">
       <v-slider
-        v-model="volume"
+        v-model="slider"
+        label="Slider"
         v-bind="$attrs"
-        append-icon="volume_up"
-        prepend-icon="volume_down"
-        label="Volume"
+        v-on="$listeners"
       ></v-slider>
     </v-col>
   </v-row>
@@ -21,14 +18,15 @@
     inheritAttrs: false,
 
     data: () => ({
-      volume: 10,
+      slider: 0,
       defaults: {
         dense: false,
         disabled: false,
         'hide-details': false,
+        hint: 'Im a hint',
         'inverse-label': false,
-        max: 100,
-        min: 0,
+        max: 50,
+        min: -50,
         'persistent-hint': false,
         readonly: false,
         vertical: false,
