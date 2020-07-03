@@ -19,7 +19,7 @@ The `v-dialog` component inform users about a specific task and may contain crit
 
 A dialog contains two slots, one for its activator and one for its content (default). Good for Privacy Policies.
 
-<usage name="v-dialog" />
+<example file="v-dialog/usage" />
 
 ## API
 
@@ -61,11 +61,11 @@ The `v-dialog` component makes it easy to create a customized loading experience
 
 <example file="v-dialog/misc-loader" />
 
-#### Nested dialogs
+#### Nesting
 
 Dialogs can be nested: you can open one dialog from another.
 
-<example file="v-dialog/misc-advanced" />
+<example file="v-dialog/misc-nesting" />
 
 #### Overflowed
 
