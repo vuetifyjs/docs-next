@@ -1,23 +1,14 @@
 <template>
-  <v-container class="fill-height">
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-breadcrumbs
-        :items="items"
-        v-bind="$attrs"
-        v-on="$listeners"
-      >
-        <template
-          v-if="!$attrs.customDivider"
-          v-slot:divider
-        >
-          <v-icon>$mdiDotsVertical</v-icon>
-        </template>
-      </v-breadcrumbs>
-    </v-row>
-  </v-container>
+  <v-row
+    align="center"
+    justify="center"
+  >
+    <v-breadcrumbs
+      :items="items"
+      v-bind="$attrs"
+      v-on="$listeners"
+    ></v-breadcrumbs>
+  </v-row>
 </template>
 
 <script>
@@ -47,7 +38,7 @@
       defaults: {
         large: false,
         customDivider: false,
-        divider: null,
+        divider: undefined,
       },
       options: {
         booleans: ['customDivider'],

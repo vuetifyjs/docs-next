@@ -24,12 +24,13 @@ By default, breadcrumbs use a text divider. This can be any string.
 ## API
 
 - [v-breadcrumbs](../../api/v-breadcrumbs)
-
 - [v-breadcrumbs-item](../../api/v-breadcrumbs-item)
 
 ## Caveats
 
-<alert type="info">By default `v-breadcrumbs` will disable all crumbs up to the current page in a nested paths. You can prevent this behavior by using `exact: true` on each applicable breadcrumb in the `items` array.</alert>
+<alert type="info">
+  By default `v-breadcrumbs` will disable all crumbs up to the current page in a nested paths. You can prevent this behavior by using `exact: true` on each applicable breadcrumb in the `items` array.
+</alert>
 
 ## Examples
 
