@@ -105,7 +105,7 @@ Handle events such as `@click`, `@dblclick`, `@mouseenter`, and more when intera
 
 <example file="v-date-picker/event-date-button-events" />
 
-#### Events
+#### Date Events
 
 You can specify events using arrays, objects or functions. To change the default color of the event use **event-color** prop. Your **events** function or object can return an array of colors (material or css) in case you want to display multiple event indicators.
 
