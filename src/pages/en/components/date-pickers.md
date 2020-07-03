@@ -205,7 +205,7 @@ The date picker supports internationalization through the JavaScript Date object
 
 When integrating a picker into a `v-text-field`, it is recommended to use the **readonly** prop. This will prevent mobile keyboards from triggering. To save vertical space, you can also hide the picker title.
 
- Pickers expose a slot that allow you to hook into save and cancel functionality. This will maintain an old value which can be replaced if the user cancels.
+Pickers expose a slot that allow you to hook into save and cancel functionality. This will maintain an old value which can be replaced if the user cancels.
 
 <example file="v-date-picker/misc-month-dialog-and-menu" />
 
