@@ -47,10 +47,10 @@
   },
   "functions": {
     "empty": ""
-    // add event lang here
+    // add functions lang here
   },
   "sass": {
     "empty": ""
-    // add event lang here
+    // add sass lang here
   }
 }
