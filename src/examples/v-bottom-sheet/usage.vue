@@ -30,21 +30,6 @@
           >
             close
           </v-btn>
-          <div class="title">
-            Active Playground Props
-          </div>
-          <div v-if="sheet">
-            v-model
-          </div>
-          <div v-if="$attrs.inset">
-            inset
-          </div>
-          <div v-if="$attrs['hide-overlay']">
-            hide-overlay
-          </div>
-          <div v-if="$attrs.persistent">
-            persistent
-          </div>
         </v-sheet>
       </v-bottom-sheet>
     </v-row>
@@ -64,8 +49,10 @@
         inset: false,
         persistent: false,
       },
-      options: {},
-      tabs: ['hide-overlay', 'inset', 'persistent'],
+      options: {
+        booleans: ['hide-overlay', 'persistent'],
+      },
+      tabs: ['inset'],
     }),
   }
 </script>

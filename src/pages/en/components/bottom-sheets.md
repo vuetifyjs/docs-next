@@ -31,9 +31,15 @@ Here we display an example list of actions that could be present in an applicati
 
 #### Inset
 
-Bottom sheets can be inset, reducing their maximum width on desktop to 70%. This can be further reduced manually using the `width` prop.
+Bottom sheets can be inset, reducing their maximum width on desktop to 70%. This can be further reduced manually using the **width** prop.
 
 <example file="v-bottom-sheet/prop-inset" />
+
+#### Model
+
+Bottom sheets can be controlled using **v-model**. You can use it to close them or if you can't use `activator` slot.
+
+<example file="v-bottom-sheet/prop-model" />
 
 #### Persistent
 
@@ -54,11 +60,5 @@ Using a inset bottom sheet, you can make practical components such as this simpl
 By combining a functional list into a bottom sheet, you can create a simple 'open in' component.
 
 <example file="v-bottom-sheet/misc-open-in-list" />
-
-#### v-model control
-
-Bottom sheets can be controlled using `v-model`. You can use it to close them or if you can't use `activator` slot.
-
-<example file="v-bottom-sheet/misc-model" />
 
 <backmatter />
