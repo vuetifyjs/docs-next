@@ -1,7 +1,7 @@
 ---
 meta:
   title: Month picker component
-  description: The month picker component is a stand-alone interface that allows the selection of a month, month and year.
+  description: The month picker component is a stand-alone interface that allows the selection of month or both month and year.
   keywords: month pickers, vuetify month picker component, vue month picker component
 related:
   - /components/date-pickers/
