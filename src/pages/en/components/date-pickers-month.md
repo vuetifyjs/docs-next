@@ -19,7 +19,7 @@ related:
 
 Month pickers come in two orientation variations, portrait **(default)** and landscape.
 
-`<usage name="v-date-picker" />`
+<example file="v-date-picker-month/usage" />
 
 ## API
 
@@ -33,60 +33,70 @@ Month pickers come in two orientation variations, portrait **(default)** and lan
 
 ## Examples
 
-Below is a collection of simple to complex examples.
-
 ### Props
 
 #### Allowed months
 
 You can specify allowed months using arrays, objects or functions.
 
-<example file="v-date-picker/prop-month-allowed-months" />
+<example file="v-date-picker-month/prop-allowed-months" />
 
 #### Colors
 
-Month picker colors can be set using the `color` and `header-color` props. If `header-color` prop is not provided header will use the `color` prop value.
+Month picker colors can be set using the **color** and **header-color** props. If **header-color** prop is not provided header will use the `color` prop value.
 
-<example file="v-date-picker/prop-month-colorable" />
-
-#### Current month indicator
-
-By default the current month is displayed using outlined button - **show-current** prop allows you to remove the border or select different month to be displayed as the current one.
-
-<example file="v-date-picker/prop-month-current" />
+<example file="v-date-picker-month/prop-colors" />
 
 #### Icons
 
 You can override the default icons used in the picker.
 
-<example file="v-date-picker/prop-month-icons" />
-
-#### Orientation
-
-<example file="v-date-picker/misc-month-light" />
+<example file="v-date-picker-month/prop-icons" />
 
 #### Multiple
 
-Month pickers can now select multiple months with the `multiple` prop. If using `multiple` then the month picker expects its model to be an array.
+Month pickers can now select multiple months with the **multiple** prop. If using **multiple** then the month picker expects its model to be an array.
 
-<example file="v-date-picker/prop-month-multiple" />
+<example file="v-date-picker-month/prop-multiple" />
 
 #### Readonly
 
 Selecting new date could be disabled by adding **readonly** prop.
 
-<example file="v-date-picker/prop-month-readonly" />
+<example file="v-date-picker-month/prop-readonly" />
+
+#### Show current
+
+By default the current month is displayed using outlined button - **show-current** prop allows you to remove the border or select different month to be displayed as the current one.
+
+<example file="v-date-picker-month/prop-show-current" />
 
 #### Width
 
 You can specify allowed the picker's width or make it full width.
 
-<example file="v-date-picker/prop-month-width" />
+<example file="v-date-picker-month/prop-width" />
+
+### Misc
+
+#### Dialog and menu
+
+When integrating a picker into a `v-text-field`, it is recommended to use the **readonly** prop. This will prevent mobile keyboards from triggering. To save vertical space, you can also hide the picker title.
+
+Pickers expose a slot that allow you to hook into save and cancel functionality. This will maintain an old value which can be replaced if the user cancels.
+
+<example file="v-date-picker-month/misc-dialog-and-menu" />
 
 #### Internationalization
 
-The month picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the `locale` prop, and then set the first day of the week with the `first-day-of-week` prop.
+The month picker supports internationalization through the JavaScript Date object. Specify a BCP 47 language tag using the **locale** prop.
 
-<example file="v-date-picker/misc-month-internationalization" />
+<example file="v-date-picker-month/misc-internationalization" />
+
+#### Orientation
+
+Month pickers come in two orientation variations, portrait **(default)** and landscape.
+
+<example file="v-date-picker-month/misc-orientation" />
 
 <backmatter />
