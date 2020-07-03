@@ -47,8 +47,10 @@
   },
   "functions": {
     "empty": ""
+    // add event lang here
   },
   "sass": {
     "empty": ""
+    // add event lang here
   }
 }
