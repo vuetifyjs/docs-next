@@ -104,7 +104,7 @@ You can dynamically load child data by supplying a _Promise_ callback to the `lo
 
 <example file="v-treeview/slot-directory" />
 
-#### Slots
+#### Intuitive file explorer
 
 Using slots we are able to create an intuitive file explorer. Apart from the `prepend` slot, there is also one for the `label`, and an `append` slot.
 
