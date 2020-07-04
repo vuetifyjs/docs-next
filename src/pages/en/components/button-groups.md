@@ -3,77 +3,63 @@ meta:
   title: Button group component
   description: The button group component allows you to combine a series of selectable buttons together in a single-line.
   keywords: button groups, vuetify button group component, vue button group component
+related:
+  - /components/buttons/
+  - /components/icons/
+  - /components/selection-controls/
 ---
 
 # Button groups
 
-Component description
+The `v-btn-toggle` component is a simple wrapper for `v-item-group` built specifically to work with `v-btn`.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+Toggle buttons allow you to create a styled group of buttons that can selected or toggled under a single `v-model`
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<example file="v-btn-toggle/usage" />
 
 ## API
 
-- [API Page Link](../../api/v-component)
-
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+- [v-btn-toggle](../../api/v-btn-toggle)
+- [v-btn](../../api/v-btn)
 
 ## Examples
 
-Example text.
-
 ### Props
 
-Omit if none
+#### Mandatory
 
-### Events
+`mandatory` `VBtnToggle` always has value.
 
-Omit if none
+<example file="v-btn-toggle/prop-mandatory" />
 
-### Slots
+#### Multiple
 
-Omit if none
+`multiple` `VBtnToggle` allows user to select multiple variants and returns value as an array.
+
+<example file="v-btn-toggle/prop-multiple" />
+
+#### Rounded
+
+You can make `VBtnToggle` rounded using the `rounded` prop.
+
+<example file="v-btn-toggle/prop-rounded" />
 
 ### Misc
 
-Omit if none
+#### Selected action
 
-#### Example Header
+Group similar actions and design your own WYSIWYG component.
 
-Example description
+<example file="v-btn-toggle/misc-qwerty" />
 
-`<example file="" />`
-**file**: `<component>/<type>-<propname>`
-eg: `<example file="v-alert/prop-colored-border" />`
+#### Toolbar
 
-## Accessibility
+Easily integrate customized button solutions with a `v-toolbar`
 
-Accessibility text - omit if none
+<example file="v-btn-toggle/misc-toolbar" />
 
 <backmatter />
