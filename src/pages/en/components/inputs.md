@@ -11,21 +11,19 @@ related:
 
 # Inputs
 
-Component description
+The `v-input` component gives you a baseline to create your own custom inputs. It consists of a prepend/append slot, messages, and a default slot. It is _recommended_ that you extend this component, but it can be used as a standalone.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+`v-input` has 4 main areas. The prepended slot, the appended slot, the default slot, and messages. These make up the core logic shared between all form components.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<example file="v-input/usage" />
 
 ## API
 
-- [API Page Link](../../api/v-component)
+- [v-input](../../api/v-input)
 
 ## Sub-Components
 
