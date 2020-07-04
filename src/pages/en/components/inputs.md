@@ -3,6 +3,10 @@ meta:
   title: Input component
   description: The input component is the baseline functionality for all of Vuetify's form components and provides a baseline for custom implementations.
   keywords: inputs, vuetify input component, vue input component
+related:
+  - /components/forms/
+  - /components/selects/
+  - /components/text-fields/
 ---
 
 # Inputs
