@@ -11,19 +11,19 @@
 
           <v-btn-toggle v-model="toggle_exclusive">
             <v-btn>
-              <v-icon>$mdiAlphaA</v-icon>
+              <v-icon>mdi-format-align-left</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaB</v-icon>
+              <v-icon>mdi-format-align-center</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaC</v-icon>
+              <v-icon>mdi-format-align-right</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaD</v-icon>
+              <v-icon>mdi-format-align-justify</v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -43,19 +43,19 @@
             multiple
           >
             <v-btn>
-              <v-icon>$mdiCellphoneIphone</v-icon>
+              <v-icon>mdi-format-bold</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiLaptop</v-icon>
+              <v-icon>mdi-format-italic</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiMonitor</v-icon>
+              <v-icon>mdi-format-underline</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiTelevision</v-icon>
+              <v-icon>mdi-format-color-fill</v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -69,18 +69,18 @@
 
           <v-btn-toggle v-model="toggle_none">
             <v-btn>
-              <v-icon>$mdiAlphaA</v-icon>
+              <v-icon>mdi-format-align-left</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaB</v-icon>
+              <v-icon>mdi-format-align-center</v-icon>
             </v-btn>
             <v-btn>
-              <v-icon>$mdiAlphaC</v-icon>
+              <v-icon>mdi-format-align-right</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaD</v-icon>
+              <v-icon>mdi-format-align-justify</v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -98,19 +98,19 @@
             mandatory
           >
             <v-btn>
-              <v-icon>$mdiAlphaA</v-icon>
+              <v-icon>mdi-format-align-left</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaB</v-icon>
+              <v-icon>mdi-format-align-center</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaC</v-icon>
+              <v-icon>mdi-format-align-right</v-icon>
             </v-btn>
 
             <v-btn>
-              <v-icon>$mdiAlphaD</v-icon>
+              <v-icon>mdi-format-align-justify</v-icon>
             </v-btn>
           </v-btn-toggle>
         </v-col>
@@ -161,7 +161,7 @@
               <span class="hidden-sm-and-down">Left</span>
 
               <v-icon right>
-                $mdiAlphaA
+                mdi-format-align-left
               </v-icon>
             </v-btn>
 
@@ -169,7 +169,7 @@
               <span class="hidden-sm-and-down">Center</span>
 
               <v-icon right>
-                $mdiAlphaB
+                mdi-format-align-center
               </v-icon>
             </v-btn>
 
@@ -177,7 +177,7 @@
               <span class="hidden-sm-and-down">Right</span>
 
               <v-icon right>
-                $mdiAlphaC
+                mdi-format-align-right
               </v-icon>
             </v-btn>
 
@@ -185,7 +185,7 @@
               <span class="hidden-sm-and-down">Justify</span>
 
               <v-icon right>
-                $mdiAlphaD
+                mdi-format-align-justify
               </v-icon>
             </v-btn>
           </v-btn-toggle>
