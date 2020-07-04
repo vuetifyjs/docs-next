@@ -28,18 +28,6 @@ A toolbar is a flexible container that can be used in a number of ways. By defau
 - [v-toolbar-title](../../api/v-toolbar-title)
 - [v-toolbar-items](../../api/v-toolbar-items)
 
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
 ## Caveats
 
 <alert type="warning">
@@ -47,8 +35,6 @@ When `<v-btn>`s with the **icon** prop are used inside of `v-toolbar` and `v-app
 </alert>
 
 ## Examples
-
-Example text.
 
 ### Props
 
