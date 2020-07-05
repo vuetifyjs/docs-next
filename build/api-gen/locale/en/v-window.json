@@ -12,13 +12,7 @@
     "touch": "Provide a custom **left** and **right** function when swiped left or right.",
     "touchless": "Disable touch support.",
     "transition": "The transition used when the component progressing through items. Can be one of the [built in transitions](/styles/transitions) or one your own.",
-    "vertical": "Uses a vertical transition when changing windows.",
-    "v-window-item": {
-      "disabled": "Prevents the item from becoming active when using the \"next\" and \"prev\" buttons or the `toggle` method",
-      "reverse-transition": "Sets the reverse transition",
-      "transition": "Mixins.Transitionable.props.transition",
-      "value": "Mixins.Groupable.props.value"
-    }
+    "vertical": "Uses a vertical transition when changing windows."
     // add prop lang here
   },
   "slots": {
