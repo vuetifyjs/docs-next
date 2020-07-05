@@ -18,7 +18,9 @@ The `v-timeline` is useful for stylistically displaying chronological informatio
 
 ## Usage
 
-<usage name="v-timeline" />
+`v-timeline`'s in their simplest form display a vertical timeline that should contain at least one `v-timeline-item`.
+
+<example file="v-timeline/usage" />
 
 ## API
 
@@ -27,59 +29,57 @@ The `v-timeline` is useful for stylistically displaying chronological informatio
 
 ## Examples
 
-`v-timeline`'s in their simplest form display a vertical timeline that should contain at least one `v-timeline-item`.
-
 ### Props
 
-#### Dense alert
-
-`dense` timelines position all content to the right. In this example, `v-alert` replaces the card to provide a different design.
-
-<example file="v-timeline/prop-alert" />
-
-#### Colored dots
+#### Color
 
 Colored dots create visual breakpoints that make your timelines easier to read.
 
 <example file="v-timeline/prop-color" />
 
+#### Dense
+
+**dense** timelines position all content to the right. In this example, `v-alert` replaces the card to provide a different design.
+
+<example file="v-timeline/prop-dense" />
+
 #### Icon dots
 
 Conditionally use icons within the `v-timeline-item`'s dot to provide additional context.
 
-<example file="v-timeline/prop-icons" />
+<example file="v-timeline/prop-icon-dots" />
 
-#### Reverse direction
+#### Reverse
 
-You can reverse the direction of the timeline items by using the `reverse` prop. This works both in default and `dense` mode.
+You can reverse the direction of the timeline items by using the **reverse** prop. This works both in default and **dense** mode.
 
 <example file="v-timeline/prop-reverse" />
 
-#### Small dots
+#### Small
 
-The `small` prop allows alternate styles to provide a unique design.
+The **small** prop allows alternate styles to provide a unique design.
 
 <example file="v-timeline/prop-small" />
 
 ### Slots
 
-#### Avatar dots
+#### Icon
 
 Insert avatars into dots with use of the `icon` slot and `v-avatar`.
 
-<example file="v-timeline/slot-avatars" />
+<example file="v-timeline/slot-icon" />
 
-#### Timeline card
-
-If you place a `v-card` inside of a `v-timeline-item`, a caret will appear on the side of the card.
-
-<example file="v-timeline/slot-card" />
-
-#### Opposite slot
+#### Opposite
 
 The **opposite** slot provides an additional layer of customization within your timelines.
 
-<example file="v-timeline/slot-slot" />
+<example file="v-timeline/slot-opposite" />
+
+#### Timeline item default
+
+If you place a `v-card` inside of a `v-timeline-item`, a caret will appear on the side of the card.
+
+<example file="v-timeline/slot-timeline-item-default" />
 
 ### Misc
 
