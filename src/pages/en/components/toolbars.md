@@ -31,16 +31,16 @@ A toolbar is a flexible container that can be used in a number of ways. By defau
 ## Caveats
 
 <alert type="warning">
-When `<v-btn>`s with the **icon** prop are used inside of `v-toolbar` and `v-app-bar` they will automatically have their size increased and negative margin applied to ensure proper spacing according to the Material Design Specification. If you choose to wrap your buttons in any container, such as a `<div>`, you will need to apply negative margin to that container in order to properly align them.
+  When `v-btn`s with the **icon** prop are used inside of `v-toolbar` and `v-app-bar` they will automatically have their size increased and negative margin applied to ensure proper spacing according to the Material Design Specification. If you choose to wrap your buttons in any container, such as a `div`, you will need to apply negative margin to that container in order to properly align them.
 </alert>
 
 ## Examples
 
 ### Props
 
-#### Prominent w/ Background
+#### Background
 
-Toolbars can display a background as opposed to a solid color. This can be modified by using the **img** slot and providing your own [v-img](/components/images) component. Backgrounds can be faded using a [v-app-bar](/components/app-bars#prominent-w-scroll-shrink-and-image)
+Toolbars can display a background as opposed to a solid color using the **src** prop. This can be modified further by using the **img** slot and providing your own [v-img](/components/images) component. Backgrounds can be faded using a [v-app-bar](/components/app-bars#prominent-w-scroll-shrink-and-image)
 
 <example file="v-toolbar/prop-background" />
 
@@ -88,13 +88,13 @@ Prominent toolbars increase the `v-toolbar`'s height to _128px_ and positions th
 
 ### Misc
 
-#### Contextual action bars
+#### Contextual action bar
 
 It is possible to update the appearance of a toolbar in response to changes in app state. In this example, the color and content of the toolbar changes in response to user selections in the `v-select`.
 
 <example file="v-toolbar/misc-contextual-action-bar" />
 
-#### Flexible toolbar and card toolbar
+#### Flexible and card toolbar
 
 In this example we offset our card onto the extended content area of a toolbar using the **extended** prop.
 

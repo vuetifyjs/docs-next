@@ -4,7 +4,10 @@
       <v-row class="child-flex">
         <div>
           <v-toolbar>
-            <v-btn icon class="hidden-xs-only">
+            <v-btn
+              icon
+              class="hidden-xs-only"
+            >
               <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
 
@@ -12,7 +15,10 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn icon class="hidden-xs-only">
+            <v-btn
+              icon
+              class="hidden-xs-only"
+            >
               <v-icon>mdi-magnify</v-icon>
             </v-btn>
           </v-toolbar>

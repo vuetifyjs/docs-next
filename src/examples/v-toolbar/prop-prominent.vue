@@ -5,7 +5,10 @@
     height="200px"
     tile
   >
-    <v-toolbar prominent extended>
+    <v-toolbar
+      prominent
+      extended
+    >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-toolbar-title>Title</v-toolbar-title>

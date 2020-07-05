@@ -8,8 +8,15 @@
       md="6"
       class="my-4"
     >
-      <v-card color="grey lighten-4" flat height="200px">
-        <v-toolbar :color="bar.class" :dark="bar.dark">
+      <v-card
+        color="grey lighten-4"
+        flat
+        height="200px"
+      >
+        <v-toolbar
+          :color="bar.class"
+          :dark="bar.dark"
+        >
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
           <v-toolbar-title>Title</v-toolbar-title>
           <v-spacer></v-spacer>

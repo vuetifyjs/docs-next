@@ -5,7 +5,10 @@
     height="200px"
     tile
   >
-    <v-toolbar extended extension-height="100">
+    <v-toolbar
+      extended
+      extension-height="100"
+    >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-toolbar-title>Title</v-toolbar-title>
