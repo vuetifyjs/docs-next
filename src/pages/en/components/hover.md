@@ -17,7 +17,7 @@ The `v-hover` component provides a clean interface for handling hover states for
 
 ## Usage
 
-The `v-hover` component is a wrapper that should contain only one child element, and can trigger an event when hovered over. In order for `v-hover` to work properly, either the `value` prop should be set to `true` or the wrapped element should contain `slot-scope=\"{ wrapper }\"`.
+The `v-hover` component is a wrapper that should contain only one child element, and can trigger an event when hovered over. In order for `v-hover` to work properly, either the **value** prop should be set to `true` or the wrapped element should contain `slot-scope="{ wrapper }"`.
 
 <usage name="v-hover" />
 
@@ -31,13 +31,13 @@ The `v-hover` component is a wrapper that should contain only one child element,
 
 #### Disabled
 
-The `disabled` prop disables the hover functionality.
+The **disabled** prop disables the hover functionality.
 
 <example file="v-hover/prop-disabled" />
 
-#### Open/Close Delay
+#### Open and close delay
 
-Delay `v-hover` events by using `open-delay` and `close-delay` props in combination or separately.
+Delay `v-hover` events by using **open-delay** and **close-delay** props in combination or separately.
 
 <example file="v-hover/prop-open-and-close-delay" />
 
