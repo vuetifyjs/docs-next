@@ -1,6 +1,9 @@
 <template>
   <v-container style="max-width: 600px;">
-    <v-timeline dense clipped>
+    <v-timeline
+      dense
+      clipped
+    >
       <v-timeline-item
         fill-dot
         class="white--text mb-12"
@@ -41,8 +44,15 @@
           small
         >
           <v-row justify="space-between">
-            <v-col cols="7" v-text="event.text"></v-col>
-            <v-col class="text-right" cols="5" v-text="event.time"></v-col>
+            <v-col
+              cols="7"
+              v-text="event.text"
+            ></v-col>
+            <v-col
+              class="text-right"
+              cols="5"
+              v-text="event.time"
+            ></v-col>
           </v-row>
         </v-timeline-item>
       </v-slide-x-transition>
@@ -61,8 +71,15 @@
         small
       >
         <v-row justify="space-between">
-          <v-col cols="7">This order was archived.</v-col>
-          <v-col class="text-right" cols="5">15:26 EDT</v-col>
+          <v-col cols="7">
+            This order was archived.
+          </v-col>
+          <v-col
+            class="text-right"
+            cols="5"
+          >
+            15:26 EDT
+          </v-col>
         </v-row>
       </v-timeline-item>
 
@@ -82,7 +99,12 @@
             </v-chip>
             Digital Downloads fulfilled 1 item.
           </v-col>
-          <v-col class="text-right" cols="5">15:25 EDT</v-col>
+          <v-col
+            class="text-right"
+            cols="5"
+          >
+            15:25 EDT
+          </v-col>
         </v-row>
       </v-timeline-item>
 
@@ -95,7 +117,12 @@
           <v-col cols="7">
             Order confirmation email was sent to John Leider (john@vuetifyjs.com).
           </v-col>
-          <v-col class="text-right" cols="5">15:25 EDT</v-col>
+          <v-col
+            class="text-right"
+            cols="5"
+          >
+            15:25 EDT
+          </v-col>
         </v-row>
       </v-timeline-item>
 
@@ -120,7 +147,12 @@
           <v-col cols="7">
             A $15.00 USD payment was processed on PayPal Express Checkout
           </v-col>
-          <v-col class="text-right" cols="5">15:25 EDT</v-col>
+          <v-col
+            class="text-right"
+            cols="5"
+          >
+            15:25 EDT
+          </v-col>
         </v-row>
       </v-timeline-item>
 
@@ -132,7 +164,12 @@
           <v-col cols="7">
             John Leider placed this order on Online Store (checkout #1937432132572).
           </v-col>
-          <v-col class="text-right" cols="5">15:25 EDT</v-col>
+          <v-col
+            class="text-right"
+            cols="5"
+          >
+            15:25 EDT
+          </v-col>
         </v-row>
       </v-timeline-item>
     </v-timeline>

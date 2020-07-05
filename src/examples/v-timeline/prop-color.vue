@@ -20,7 +20,9 @@
         <v-btn icon>
           <v-icon>mdi-menu</v-icon>
         </v-btn>
-        <h3 class="title font-weight-light text-center grow">Timeline</h3>
+        <h3 class="title font-weight-light text-center grow">
+          Timeline
+        </h3>
         <v-avatar>
           <v-img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"></v-img>
         </v-avatar>
@@ -33,8 +35,12 @@
           <v-row align="center">
             <strong class="display-4 font-weight-regular mr-6">8</strong>
             <v-row justify="end">
-              <div class="headline font-weight-light">Monday</div>
-              <div class="text-uppercase font-weight-light">February 2015</div>
+              <div class="headline font-weight-light">
+                Monday
+              </div>
+              <div class="text-uppercase font-weight-light">
+                February 2015
+              </div>
             </v-row>
           </v-row>
         </v-container>
@@ -55,7 +61,9 @@
             </v-col>
             <v-col>
               <strong>New Icon</strong>
-              <div class="caption">Mobile App</div>
+              <div class="caption">
+                Mobile App
+              </div>
             </v-col>
           </v-row>
         </v-timeline-item>
@@ -70,14 +78,15 @@
             </v-col>
             <v-col>
               <strong>Design Stand Up</strong>
-              <div class="caption mb-2">Hangouts</div>
+              <div class="caption mb-2">
+                Hangouts
+              </div>
               <v-avatar>
                 <v-img
                   src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairFrida&accessoriesType=Kurt&hairColor=Red&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Skull&eyeType=Wink&eyebrowType=RaisedExcitedNatural&mouthType=Disbelief&skinColor=Brown"
                 ></v-img>
               </v-avatar>
               <v-avatar>
-
                 <v-img
                   src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription02&hairColor=Black&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=BlazerSweater&clotheColor=Black&eyeType=Default&eyebrowType=FlatNatural&mouthType=Default&skinColor=Tanned"
                 ></v-img>
@@ -115,7 +124,9 @@
             </v-col>
             <v-col>
               <strong>Finish Home Screen</strong>
-              <div class="caption">Web App</div>
+              <div class="caption">
+                Web App
+              </div>
             </v-col>
           </v-row>
         </v-timeline-item>

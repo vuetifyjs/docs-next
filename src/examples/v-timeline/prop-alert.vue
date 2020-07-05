@@ -67,7 +67,7 @@
         {
           id: 1,
           color: 'info',
-          icon: ICONS['info'],
+          icon: ICONS.info,
         },
       ],
       nonce: 2,
