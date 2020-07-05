@@ -19,7 +19,6 @@
             class="fill-height"
             align="center"
             justify="center"
-            tag="v-card-text"
           >
             <h1
               style="font-size: 5rem;"

@@ -18,9 +18,10 @@
             class="fill-height"
             align="center"
             justify="center"
-            tag="v-card-text"
           >
-            Transparent themed, for background-imaged slides. Background color black added for demonstration purposes.
+            <v-card-text>
+              Transparent themed, for background-imaged slides. Background color black added for demonstration purposes.
+            </v-card-text>
           </v-row>
         </v-card>
       </v-window-item>

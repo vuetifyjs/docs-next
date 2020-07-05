@@ -18,7 +18,9 @@ The `v-window` component provides the baseline functionality for transitioning c
 
 ## Usage
 
-<usage name="v-window" />
+Designed to easily cycle through content, `v-window` provides a simple interface to create truly custom implementations.
+
+<example file="v-window/usage" />
 
 ## API
 
@@ -31,30 +33,30 @@ Designed to easily cycle through content, `v-window` provides a simple interface
 
 ### Props
 
-#### Vertical
-
-`v-window` can be vertical. Vertical windows have Y axis transition instead of X axis transition.
-
-<example file="v-window/prop-vertical" />
-
 #### Reverse
 
 Reverse `v-window` always displays reverse transition.
 
 <example file="v-window/prop-reverse" />
 
+#### Vertical
+
+`v-window` can be vertical. Vertical windows have Y axis transition instead of X axis transition.
+
+<example file="v-window/prop-vertical" />
+
 ### Misc
+
+#### Account creation
+
+Create rich forms with smooth animations. `v-window` automatically tracks the current selection index to automatically change the transition direction. This can be manually controlled with the **reverse** prop.
+
+<example file="v-window/misc-account-creation" />
 
 #### Onboarding
 
 `v-window` makes it easy to create custom components such as a different styled stepper.
 
 <example file="v-window/misc-onboarding" />
-
-#### Account creation
-
-Create rich forms with smooth animations. `v-window` automatically tracks the current selection index to automatically change the transition direction. This can be manually controlled with the `reverse` prop.
-
-<example file="v-window/misc-account" />
 
 <backmatter />
