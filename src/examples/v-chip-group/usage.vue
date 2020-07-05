@@ -1,22 +1,21 @@
 <template>
-  <v-container class="fill-height">
-    <v-row
-      align="center"
-      justify="center"
+  <v-row
+    align="center"
+    justify="center"
+  >
+    <v-chip-group
+      active-class="primary--text"
+      v-bind="$attrs"
+      v-on="$listeners"
     >
-      <v-chip-group
-        active-class="primary--text"
-        v-bind="$attrs"
+      <v-chip
+        v-for="tag in tags"
+        :key="tag"
       >
-        <v-chip
-          v-for="tag in tags"
-          :key="tag"
-        >
-          {{ tag }}
-        </v-chip>
-      </v-chip-group>
-    </v-row>
-  </v-container>
+        {{ tag }}
+      </v-chip>
+    </v-chip-group>
+  </v-row>
 </template>
 
 <script>
@@ -39,17 +38,17 @@
       ],
 
       defaults: {
+        'center-active': false,
         column: false,
         mandatory: false,
         multiple: false,
-        'center-active': false,
         'show-arrows': false,
       },
       options: {
         booleans: [
+          'center-active',
           'mandatory',
           'multiple',
-          'center-active',
           'show-arrows',
         ],
       },

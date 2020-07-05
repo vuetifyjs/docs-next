@@ -32,7 +32,7 @@ Chip groups make it easy for users to select filtering options for more complex 
 
 #### Column
 
-Chip groups with `column` prop can wrap their chips.
+Chip groups with **column** prop can wrap their chips.
 
 <example file="v-chip-group/prop-column" />
 
@@ -44,28 +44,28 @@ Easily create chip groups that provide additional feedback with the **filter** p
 
 #### Mandatory
 
-Chip groups with `mandatory` prop must always have a value selected.
+Chip groups with **mandatory** prop must always have a value selected.
 
 <example file="v-chip-group/prop-mandatory" />
 
 #### Multiple
 
-Chip groups with `multiple` prop can have many values selected.
+Chip groups with **multiple** prop can have many values selected.
 
 <example file="v-chip-group/prop-multiple" />
 
 ### Misc
 
-#### Blouse product card
+#### Product card
 
 The `v-chip` component can have an explicit value used for its model. This gets passed to the `v-chip-group` component and is useful for when you don't want to use the chips index as their values.
 
-<example file="v-chip-group/misc-blouse" />
+<example file="v-chip-group/misc-product-card" />
 
 #### Toothbrush card
 
 Chip groups allow the creation of custom interfaces that perform the same actions as an item group or radio controls, but are stylistically different.
 
-<example file="v-chip-group/misc-toothbrush" />
+<example file="v-chip-group/misc-toothbrush-card" />
 
 <backmatter />
