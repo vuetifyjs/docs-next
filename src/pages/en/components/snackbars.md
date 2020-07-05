@@ -17,7 +17,9 @@ The `v-snackbar` component is used to display a quick message to a user. Snackba
 
 ## Usage
 
-<usage name="v-snackbar" />
+a `v-snackbar` in its simplest form displays a temporary and closable notification to the user.
+
+<example file="v-snackbar/usage" />
 
 ## API
 
@@ -27,30 +29,28 @@ The `v-snackbar` component is used to display a quick message to a user. Snackba
 
 ### Props
 
-#### Multi Line
+#### Multi line
 
-The `multi-line` property extends the height of the `v-snackbar` to give you a little more room for content.
+The **multi-line** property extends the height of the `v-snackbar` to give you a little more room for content.
 
-<example file="v-asnackbar/prop-multi-line" />
+<example file="v-snackbar/prop-multi-line" />
 
 #### Timeout
 
-The `timeout` property lets you customize the delay before the `v-snackbar` is hidden.
+The **timeout** property lets you customize the delay before the `v-snackbar` is hidden.
 
-<example file="v-asnackbar/prop-timeout" />
-
-#### Vertical
-
-The `vertical` property allows you to stack the content of your `v-snackbar`.
-
-<example file="v-asnackbar/prop-vertical" />
-
-### Misc
+<example file="v-snackbar/prop-timeout" />
 
 #### Variants
 
-Apply different styles to the snackbar using props such as `text`, `shaped`, `outlined`, and more.
+Apply different styles to the snackbar using props such as **text**, **shaped**, **outlined**, and more.
 
-<example file="v-asnackbar/misc-variants" />
+<example file="v-snackbar/prop-variants" />
+
+#### Vertical
+
+The **vertical** property allows you to stack the content of your `v-snackbar`.
+
+<example file="v-snackbar/prop-vertical" />
 
 <backmatter />
