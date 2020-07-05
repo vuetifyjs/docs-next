@@ -2,7 +2,6 @@
   <v-form>
     <v-container>
       <v-row>
-
         <v-col cols="12">
           <v-text-field
             v-model="message"
@@ -20,7 +19,6 @@
             @click:clear="clearMessage"
           ></v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>

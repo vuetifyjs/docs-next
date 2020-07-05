@@ -2,8 +2,10 @@
   <v-form>
     <v-container>
       <v-row>
-
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Regular"
@@ -11,7 +13,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Regular"
@@ -19,7 +24,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Solo"
@@ -28,7 +36,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Solo"
@@ -37,7 +48,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Filled"
@@ -46,7 +60,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Filled"
@@ -55,7 +72,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Outlined"
@@ -64,7 +84,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             value="John Doe"
             label="Outlined"
@@ -72,7 +95,6 @@
             readonly
           ></v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>

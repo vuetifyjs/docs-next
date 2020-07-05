@@ -2,8 +2,10 @@
   <v-form>
     <v-container>
       <v-row>
-
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="message1"
             label="Regular"
@@ -11,7 +13,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="message2"
             solo
@@ -20,7 +25,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="message3"
             filled
@@ -29,7 +37,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="message4"
             label="Outlined"
@@ -37,7 +48,6 @@
             clearable
           ></v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>

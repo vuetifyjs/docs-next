@@ -2,8 +2,10 @@
   <v-form>
     <v-container>
       <v-row>
-
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="title"
             :rules="rules"
@@ -13,7 +15,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="description"
             :rules="rules"
@@ -24,7 +29,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="title"
             :rules="rules"
@@ -34,7 +42,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="title"
             :rules="rules"
@@ -43,7 +54,6 @@
             outlined
           ></v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>

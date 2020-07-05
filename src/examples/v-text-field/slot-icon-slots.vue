@@ -15,7 +15,9 @@
                 bottom
               >
                 <template v-slot:activator="{ on }">
-                  <v-icon v-on="on">mdi-help-circle-outline</v-icon>
+                  <v-icon v-on="on">
+                    mdi-help-circle-outline
+                  </v-icon>
                 </template>
                 I'm a tooltip
               </v-tooltip>
@@ -28,7 +30,13 @@
                   color="info"
                   indeterminate
                 ></v-progress-circular>
-                <img v-else width="24" height="24" src="https://cdn.vuetifyjs.com/images/logos/v-alt.svg" alt="">
+                <img
+                  v-else
+                  width="24"
+                  height="24"
+                  src="https://cdn.vuetifyjs.com/images/logos/v-alt.svg"
+                  alt=""
+                >
               </v-fade-transition>
             </template>
             <template v-slot:append-outer>
@@ -41,20 +49,30 @@
                     v-bind="attrs"
                     v-on="on"
                   >
-                    <v-icon left>mdi-menu</v-icon>
+                    <v-icon left>
+                      mdi-menu
+                    </v-icon>
                     Menu
                   </v-btn>
                 </template>
                 <v-card>
                   <v-card-text class="pa-6">
-                    <v-btn large flat color="primary" @click="clickMe"><v-icon left>mdi-target</v-icon>Click me</v-btn>
+                    <v-btn
+                      large
+                      flat
+                      color="primary"
+                      @click="clickMe"
+                    >
+                      <v-icon left>
+                        mdi-target
+                      </v-icon>Click me
+                    </v-btn>
                   </v-card-text>
                 </v-card>
               </v-menu>
             </template>
           </v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>

@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-
     <v-row>
       <v-col cols="4">
         <v-subheader>Prefix for dollar currency</v-subheader>
@@ -53,6 +52,5 @@
         ></v-text-field>
       </v-col>
     </v-row>
-
   </v-container>
 </template>

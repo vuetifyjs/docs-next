@@ -2,8 +2,10 @@
   <v-form>
     <v-container fluid>
       <v-row>
-
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             v-model="password"
             :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
@@ -17,7 +19,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             :append-icon="show2 ? 'mdi-eye' : 'mdi-eye-off'"
             :rules="[rules.required, rules.min]"
@@ -31,7 +36,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
             :rules="[rules.required, rules.min]"
@@ -45,7 +53,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             :append-icon="show4 ? 'mdi-eye' : 'mdi-eye-off'"
             :rules="[rules.required, rules.emailMatch]"
@@ -58,7 +69,6 @@
             @click:append="show4 = !show4"
           ></v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>

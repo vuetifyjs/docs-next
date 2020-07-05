@@ -2,8 +2,10 @@
   <v-form>
     <v-container>
       <v-row>
-
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             label="Your product or service"
             value="Grocery delivery"
@@ -11,7 +13,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             label="Your landing page"
             hint="www.example.com/page"
@@ -19,7 +24,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             label="Your product or service"
             value="Grocery delivery"
@@ -28,7 +36,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             label="Your landing page"
             hint="www.example.com/page"
@@ -37,7 +48,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             label="Your product or service"
             value="Grocery delivery"
@@ -46,7 +60,10 @@
           ></v-text-field>
         </v-col>
 
-        <v-col cols="12" sm="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-text-field
             label="Your landing page"
             hint="www.example.com/page"
@@ -54,7 +71,6 @@
             outlined
           ></v-text-field>
         </v-col>
-
       </v-row>
     </v-container>
   </v-form>
