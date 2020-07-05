@@ -7,73 +7,110 @@ meta:
 
 # Menus
 
-Component description
+The `v-menu` component shows a menu at the position of the element used to activate it.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+Remember to put the element that activates the menu in the `activator` slot.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<usage name="v-menus" />
 
 ## API
 
-- [API Page Link](../../api/v-component)
-
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+- [v-menu](../../api/v-menu)
 
 ## Examples
 
-Example text.
-
 ### Props
 
-Omit if none
+#### Absolute position
+
+Menus can also be placed absolutely on top of the activator element using the `absolute` prop. Try clicking anywhere on the image.
+
+<example file="v-menus/prop-absolute" />
+
+#### Absolute position without activator
+
+Menus can also be used without an activator by using `absolute` together with the props `position-x` and `position-y`. Try right-clicking anywhere on the image.
+
+<example file="v-menus/prop-absolute-without-activator" />
+
+#### Disabled
+
+You can disable the menu. Disabled menus can't be opened.
+
+<example file="v-menus/prop-disabled" />
+
+#### Hover
+
+Menus can be accessed using hover instead of clicking with the `open-on-hover` prop.
+
+<example file="v-menus/prop-hover" />
+
+#### Rounded
+
+Menus can have their border-radius set by the `rounded` prop. Additional information about rounded classes is on the [Border Radius page](/styles/border-radius).
+
+<example file="v-menus/prop-rounded" />
+
+#### X offset
+
+Menu can be offset by the X axis to make the activator visible.
+
+<example file="v-menus/prop-offset-x" />
+
+#### Y offset
+
+Menu can be offset by the Y axis to make the activator visible.
+
+<example file="v-menus/prop-offset-y" />
 
 ### Events
 
-Omit if none
+#### Close on click
+
+Menu can be closed when lost focus.
+
+<example file="v-menus/event-close-on-click" />
+
+#### Close on content click
+
+You can configure whether `v-menu` should be closed when its content is clicked.
+
+<example file="v-menus/event-close-on-content-click" />
+
+#### Custom transitions
+
+Vuetify comes with 3 standard transitions, **scale**, **slide-x** and **slide-y**. You can also create your own and pass it as the transition argument. For an example of how the stock transitions are constructed, visit [here](https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts).
+
+<example file="v-menus/event-custom-transition" />
 
 ### Slots
 
-Omit if none
+#### Menu with activator and tooltip
+
+With the new `v-slot` syntax, nested activators such as those seen with a `v-menu` and `v-tooltip` attached to the same activator button, need a particular setup in order to function correctly. **Note: this same syntax is used for other nested activators such as `v-dialog` w/ `v-tooltip`.**
+
+<example file="v-menus/slot-menu-activator-tooltip" />
 
 ### Misc
 
-Omit if none
+#### Menus
 
-#### Example Header
+Menus can be placed within almost any component.
 
-Example description
+<example file="v-menus/misc-menus" />
 
-`<example file="" />`
-**file**: `<component>/<type>-<propname>`
-eg: `<example file="v-alert/prop-colored-border" />`
+#### Popover menu
+
+A menu can be configured to be static when opened, allowing it to function as a popover. This can be useful when there are multiple interactive items within the menu contents.
+
+<example file="v-menus/misc-popover" />
 
 ## Accessibility
 
-Accessibility text - omit if none
+By default, `v-menu` components are _detached_ and moved to the root of your application. In order to properly support [inserting dynamic content into the DOM](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR26), you _must_ use the **attach** prop. This will ensure that focus transfers from the activator to the content when pressing the <kbd>tab</kbd> key.
 
 <backmatter />
