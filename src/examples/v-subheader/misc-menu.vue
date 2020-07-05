@@ -1,8 +1,15 @@
 <template>
   <v-row>
-    <v-col cols="12" sm="6" offset-sm="3">
+    <v-col
+      cols="12"
+      sm="6"
+      offset-sm="3"
+    >
       <v-card>
-        <v-toolbar color="teal" dark>
+        <v-toolbar
+          color="teal"
+          dark
+        >
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
           <v-toolbar-title>Manage</v-toolbar-title>
@@ -19,7 +26,6 @@
             <v-list-item
               v-if="item.action"
               :key="item.title"
-              @click=""
             >
               <v-list-item-action>
                 <v-icon>{{ item.action }}</v-icon>

@@ -17,7 +17,9 @@ The `v-subheader` component is used to separate sections of lists.
 
 ## Usage
 
-<usage name="v-subheader" />
+Subheaders in their simplest form display a subheading with default theme.
+
+<example file="v-subheader/usage" />
 
 ## API
 
@@ -25,34 +27,32 @@ The `v-subheader` component is used to separate sections of lists.
 
 ## Examples
 
-Subheaders in their simplest form display a subheading with default theme.
-
 ### Props
 
-#### Inset subheaders
+#### Inset
 
-Inset subheaders are moved 72px to the right. This gives you the option to line them up with list items and inset dividers.
+**inset** subheaders are moved 72px to the right. This gives you the option to line them up with list items and inset dividers.
 
 <example file="v-subheader/prop-inset" />
 
 ### Misc
 
-#### Grid subheaders
+#### Grid
 
 A subheader can add context to what a user is looking at.
 
 <example file="v-subheader/misc-grid" />
 
-#### Menu subheaders
+#### Menu
 
 Using a subheader can help separate different types of actions.
 
 <example file="v-subheader/misc-menu" />
 
-#### Subheaders with social media
+#### Social media
 
 Using a subheader with social media interaction.
 
-<example file="v-subheader/misc-social" />
+<example file="v-subheader/misc-social-media" />
 
 <backmatter />

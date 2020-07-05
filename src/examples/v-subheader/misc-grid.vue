@@ -1,18 +1,37 @@
 <template>
   <v-row>
-    <v-col cols="12" sm="6" offset-sm="3">
+    <v-col
+      cols="12"
+      sm="6"
+      offset-sm="3"
+    >
       <v-card>
-        <v-toolbar color="white" flat>
-          <v-btn icon light>
-            <v-icon color="grey darken-2">mdi-arrow-left</v-icon>
+        <v-toolbar
+          color="white"
+          flat
+        >
+          <v-btn
+            icon
+            light
+          >
+            <v-icon color="grey darken-2">
+              mdi-arrow-left
+            </v-icon>
           </v-btn>
 
-          <v-toolbar-title class="grey--text text--darken-4">Albums</v-toolbar-title>
+          <v-toolbar-title class="grey--text text--darken-4">
+            Albums
+          </v-toolbar-title>
 
           <v-spacer></v-spacer>
 
-          <v-btn icon light>
-            <v-icon color="grey darken-2">mdi-magnify</v-icon>
+          <v-btn
+            icon
+            light
+          >
+            <v-icon color="grey darken-2">
+              mdi-magnify
+            </v-icon>
           </v-btn>
         </v-toolbar>
 

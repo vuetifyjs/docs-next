@@ -1,14 +1,19 @@
 <template>
-  <v-col cols="12" sm="6" offset-sm="3">
+  <v-col
+    cols="12"
+    sm="6"
+    offset-sm="3"
+  >
     <v-card>
-      <v-subheader :inset="inset">Subheader</v-subheader>
+      <v-subheader :inset="inset">
+        Subheader
+      </v-subheader>
 
       <v-list>
         <template v-for="(item, index) in items">
           <v-list-item
             v-if="item.action"
             :key="item.title"
-            @click=""
           >
             <v-list-item-action>
               <v-icon>{{ item.action }}</v-icon>
