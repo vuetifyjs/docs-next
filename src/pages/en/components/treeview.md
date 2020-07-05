@@ -18,15 +18,15 @@ The `v-treeview` component is useful for displaying large amounts of nested data
 
 ## Usage
 
-<usage name="v-treeview" />
+A basic example
+
+<example file="v-treeview/usage" />
 
 ## API
 
 - [v-treeview](../../api/treeview)
 
 ## Examples
-
-A basic example
 
 ### Props
 
@@ -54,13 +54,19 @@ Treeview nodes can have a hover effect.
 
 <example file="v-treeview/prop-hoverable" />
 
-#### Disabling nodes
+#### Item disabled
 
-Setting `item-disabled` prop allows to control which node's property disables the node when set to `true`.
+Setting **item-disabled** prop allows to control which node's property disables the node when set to `true`.
 
 <example file="v-treeview/prop-item-disabled" />
 
-#### Open-all
+#### Load children
+
+You can dynamically load child data by supplying a _Promise_ callback to the **load-children** prop. This callback will be executed the first time a user tries to expand an item that has a children property that is an empty array.
+
+<example file="v-treeview/prop-load-children" />
+
+#### Open all
 
 Treeview nodes can be pre-opened on page load.
 
@@ -78,7 +84,7 @@ You can easily select treeview nodes and children.
 
 <example file="v-treeview/prop-selectable" />
 
-#### Checkbox color
+#### Selected color
 
 You can control the color of the selected node checkbox.
 
@@ -98,30 +104,24 @@ Shaped treeview's have rounded borders on one side of the nodes.
 
 ### Slots
 
-#### Async items
+#### Append and label
 
-You can dynamically load child data by supplying a _Promise_ callback to the `load-children` prop. This callback will be executed the first time a user tries to expand an item that has a children property that is an empty array.
+Using the the **label**, and an **append** slots we are able to create an intuitive file explorer.
 
-<example file="v-treeview/slot-directory" />
-
-#### Intuitive file explorer
-
-Using slots we are able to create an intuitive file explorer. Apart from the `prepend` slot, there is also one for the `label`, and an `append` slot.
-
-<example file="v-treeview/slot-file-explorer" />
-
-#### Searching a directory
-
-Easily filter your treeview by using the **search** prop. You can easily apply your custom filtering function if you need case-sensitive or fuzzy filtering by setting the **filter** prop. This works similar to the [v-autocomplete](/components/autocompletes) component.
-
-<example file="v-treeview/slot-human-resources" />
+<example file="v-treeview/slot-append-and-label" />
 
 ### Misc
 
-#### Custom selectable icons
+#### Search and filter
+
+Easily filter your treeview by using the **search** prop. You can easily apply your custom filtering function if you need case-sensitive or fuzzy filtering by setting the **filter** prop. This works similar to the [v-autocomplete](/components/autocompletes) component.
+
+<example file="v-treeview/misc-search-and-filter" />
+
+#### Selectable icons
 
 Customize the **on**, **off** and **indeterminate** icons for your selectable tree. Combine with other advanced functionality like API loaded items.
 
-<example file="v-treeview/misc-hotspots" />
+<example file="v-treeview/misc-selectable-icons" />
 
 <backmatter />

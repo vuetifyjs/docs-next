@@ -56,7 +56,12 @@
               small
               class="ma-1"
             >
-              <v-icon left small>mdi-beer</v-icon>
+              <v-icon
+                left
+                small
+              >
+                mdi-beer
+              </v-icon>
               {{ selection.name }}
             </v-chip>
           </v-scroll-x-transition>
@@ -82,7 +87,9 @@
         depressed
       >
         Save
-        <v-icon right>mdi-content-save</v-icon>
+        <v-icon right>
+          mdi-content-save
+        </v-icon>
       </v-btn>
     </v-card-actions>
   </v-card>

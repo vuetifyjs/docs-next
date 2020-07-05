@@ -1,18 +1,49 @@
 <template>
   <div>
     <v-row justify="space-around">
-      <v-switch v-model="dense" label="Dense"></v-switch>
-      <v-switch v-model="selectable" label="Selectable"></v-switch>
-      <v-switch v-model="activatable" label="Activatable"></v-switch>
-      <v-switch v-model="hoverable" label="Hoverable"></v-switch>
-      <v-switch v-model="shaped" label="Shaped"></v-switch>
-      <v-switch v-model="rounded" label="Rounded"></v-switch>
-      <v-switch v-model="openOnClick" label="Open on any item click"></v-switch>
+      <v-switch
+        v-model="dense"
+        label="Dense"
+      ></v-switch>
+      <v-switch
+        v-model="selectable"
+        label="Selectable"
+      ></v-switch>
+      <v-switch
+        v-model="activatable"
+        label="Activatable"
+      ></v-switch>
+      <v-switch
+        v-model="hoverable"
+        label="Hoverable"
+      ></v-switch>
+      <v-switch
+        v-model="shaped"
+        label="Shaped"
+      ></v-switch>
+      <v-switch
+        v-model="rounded"
+        label="Rounded"
+      ></v-switch>
+      <v-switch
+        v-model="openOnClick"
+        label="Open on any item click"
+      ></v-switch>
       <v-col cols="12">
-        <v-select v-model="selectedColor" :items="selectedColors" :disabled="!selectable" label="Selected checkbox color"></v-select>
+        <v-select
+          v-model="selectedColor"
+          :items="selectedColors"
+          :disabled="!selectable"
+          label="Selected checkbox color"
+        ></v-select>
       </v-col>
       <v-col cols="12">
-        <v-select v-model="color" :items="selectedColors" :disabled="!activatable" label="Active node color"></v-select>
+        <v-select
+          v-model="color"
+          :items="selectedColors"
+          :disabled="!activatable"
+          label="Active node color"
+        ></v-select>
       </v-col>
     </v-row>
 

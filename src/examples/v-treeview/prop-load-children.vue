@@ -18,8 +18,10 @@
           open-on-click
           transition
         >
-          <template v-slot:prepend="{ item, active }">
-            <v-icon v-if="!item.children">mdi-account</v-icon>
+          <template v-slot:prepend="{ item }">
+            <v-icon v-if="!item.children">
+              mdi-account
+            </v-icon>
           </template>
         </v-treeview>
       </v-col>
@@ -57,21 +59,46 @@
               <h3 class="headline mb-2">
                 {{ selected.name }}
               </h3>
-              <div class="blue--text mb-2">{{ selected.email }}</div>
-              <div class="blue--text subheading font-weight-bold">{{ selected.username }}</div>
+              <div class="blue--text mb-2">
+                {{ selected.email }}
+              </div>
+              <div class="blue--text subheading font-weight-bold">
+                {{ selected.username }}
+              </div>
             </v-card-text>
             <v-divider></v-divider>
             <v-row
               class="text-left"
               tag="v-card-text"
             >
-              <v-col class="text-right mr-4 mb-2" tag="strong" cols="5">Company:</v-col>
-              <v-col>{{ selected.company.name }}</v-col>
-              <v-col class="text-right mr-4 mb-2" tag="strong" cols="5">Website:</v-col>
-              <v-col>
-                <a :href="`//${selected.website}`" target="_blank">{{ selected.website }}</a>
+              <v-col
+                class="text-right mr-4 mb-2"
+                tag="strong"
+                cols="5"
+              >
+                Company:
               </v-col>
-              <v-col class="text-right mr-4 mb-2" tag="strong" cols="5">Phone:</v-col>
+              <v-col>{{ selected.company.name }}</v-col>
+              <v-col
+                class="text-right mr-4 mb-2"
+                tag="strong"
+                cols="5"
+              >
+                Website:
+              </v-col>
+              <v-col>
+                <a
+                  :href="`//${selected.website}`"
+                  target="_blank"
+                >{{ selected.website }}</a>
+              </v-col>
+              <v-col
+                class="text-right mr-4 mb-2"
+                tag="strong"
+                cols="5"
+              >
+                Phone:
+              </v-col>
               <v-col>{{ selected.phone }}</v-col>
             </v-row>
           </v-card>
