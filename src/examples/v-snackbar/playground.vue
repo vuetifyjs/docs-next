@@ -4,7 +4,10 @@
       <v-container fluid>
         <v-row>
           <v-col cols="12">
-            <v-radio-group v-model="color" row>
+            <v-radio-group
+              v-model="color"
+              row
+            >
               <v-radio
                 v-for="(colorValue, i) in ['success', 'info', 'error', 'cyan darken-2']"
                 :key="i"
@@ -14,7 +17,10 @@
               ></v-radio>
             </v-radio-group>
           </v-col>
-          <v-col cols="12" sm="3">
+          <v-col
+            cols="12"
+            sm="3"
+          >
             <v-checkbox
               v-model="x"
               label="Left"
@@ -22,7 +28,10 @@
             ></v-checkbox>
           </v-col>
 
-          <v-col cols="6" sm="3">
+          <v-col
+            cols="6"
+            sm="3"
+          >
             <v-checkbox
               v-model="x"
               label="Right"
@@ -30,7 +39,10 @@
             ></v-checkbox>
           </v-col>
 
-          <v-col cols="6" sm="3">
+          <v-col
+            cols="6"
+            sm="3"
+          >
             <v-checkbox
               v-model="y"
               label="Top"
@@ -38,7 +50,10 @@
             ></v-checkbox>
           </v-col>
 
-          <v-col cols="6" sm="3">
+          <v-col
+            cols="6"
+            sm="3"
+          >
             <v-checkbox
               v-model="y"
               label="Bottom"
@@ -46,7 +61,10 @@
             ></v-checkbox>
           </v-col>
 
-          <v-col cols="12" sm="3">
+          <v-col
+            cols="12"
+            sm="3"
+          >
             <v-checkbox
               v-model="mode"
               label="Multi-line (mobile)"
@@ -54,7 +72,10 @@
             ></v-checkbox>
           </v-col>
 
-          <v-col cols="12" sm="3">
+          <v-col
+            cols="12"
+            sm="3"
+          >
             <v-checkbox
               v-model="mode"
               label="Vertical (mobile)"
@@ -62,7 +83,10 @@
             ></v-checkbox>
           </v-col>
 
-          <v-col cols="12" sm="4">
+          <v-col
+            cols="12"
+            sm="4"
+          >
             <v-text-field
               v-model="text"
               class="px-4"
@@ -71,7 +95,10 @@
             ></v-text-field>
           </v-col>
 
-          <v-col cols="12" sm="4">
+          <v-col
+            cols="12"
+            sm="4"
+          >
             <v-text-field
               v-model.number="timeout"
               class="px-4"
@@ -80,7 +107,6 @@
             ></v-text-field>
           </v-col>
         </v-row>
-
       </v-container>
       <v-btn
         block
