@@ -1,11 +1,28 @@
  {
   "props": {
-    "empty": ""
-    // add prop lang here
+    "empty": "",
+    "v-timeline": {
+      "alignTop": "Align caret and dot of timeline items to the top",
+      "dense": "Hide opposite slot content, and position all items to one side of timeline",
+      "reverse": "Reverse direction of timeline items"
+    },
+    "v-timeline-item": {
+      "fillDot": "Remove padding from dot container",
+      "hideDot": "Hide display of timeline dot",
+      "icon": "Specify icon for dot container",
+      "iconColor": "Mixins.Colorable.props.color",
+      "large": "Large size dot",
+      "left": "Explicitly set the item to a left orientation",
+      "right": "Explicitly set the item to a right orientation",
+      "small": "Small size dot"
+    }
   },
   "slots": {
-    "empty": ""
-    // add slot lang here
+    "empty": "",
+    "v-timeline-item": {
+      "icon": "Used to customize the icon inside the timeline item's dot",
+      "opposite": "Used to customize the opposite side of timeline items"
+    }
   },
   "events": {
     "empty": ""
