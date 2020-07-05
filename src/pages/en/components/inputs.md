@@ -25,18 +25,6 @@ The `v-input` component gives you a baseline to create your own custom inputs. I
 
 - [v-input](../../api/v-input)
 
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
 ## Caveats
 
 <alert type="warning">
@@ -45,39 +33,37 @@ Sub component text
 
 ## Examples
 
-Example text.
-
 ### Props
 
 #### Error
 
-As any validatable Vuetify component, `v-input` can be set to error state using `error` prop, messages can be added using `error-messages` prop. You can determine error messages count to show using `error-count` property.
+As any validatable Vuetify component, `v-input` can be set to error state using **error** prop, messages can be added using **error-messages** prop. You can determine error messages count to show using **error-count** property.
+
+#### Error count
+
+You can add multiple errors to `v-input` using **error-count** property.
+
+<example file="v-input/prop-error-count" />
 
 <example file="v-input/prop-error" />
 
-#### Auto hiding details
+#### Hide details
 
-When `hide-details` is set to `auto` messages will be rendered only if there's a message (hint, error message etc) to display.
+When the **hide-details** prop is set to `auto` messages will be rendered only if there's a message (hint, error message etc) to display.
 
 <example file="v-input/prop-hide-details" />
 
 #### Hint
 
-`v-input` can have `hint` which can tell user how to use the input. `persistent-hint` prop makes the hint visible always if no messages are displayed.
+`v-input` can have **hint** which can tell user how to use the input. **persistent-hint** prop makes the hint visible always if no messages are displayed.
 
 <example file="v-input/prop-hint" />
 
 #### Loading
 
-`v-input` has `loading` state which can be used, e.g. for data loading indication. Note: `v-text-field` is used just for example.
+`v-input` has **loading** state which can be used, e.g. for data loading indication. Note: `v-text-field` is used just for example.
 
 <example file="v-input/prop-loading" />
-
-#### Multiple errors
-
-You can add multiple errors to `v-input` using `error-count` property.
-
-<example file="v-input/prop-multi-error" />
 
 #### Rules
 
@@ -87,22 +73,24 @@ You can add custom validation rules to `v-input`, add them as functions returnin
 
 #### Success
 
-As any validatable Vuetify component, `v-input` can be set to success state using `success` prop, you can add message to it using `success-messages` prop.
+As any validatable Vuetify component, `v-input` can be set to success state using **success** prop, you can add message to it using **success-messages** prop.
 
 <example file="v-input/prop-success" />
 
-### Slots
+### Events
 
-#### Slot events
+#### Slot clicks
 
 `v-input` can have `click:append` and `click:prepend` events for its slots. Note: `v-text-field` is used just for example.
 
-<example file="v-input/slot-events" />
+<example file="v-input/event-slot-clicks" />
 
-#### Slots
+### Slots
+
+#### Append and prepend
 
 `v-input` has `append` and `prepend` slots. You can place custom icons in them.
 
-<example file="v-input/slot-slots" />
+<example file="v-input/slot-append-and-prepend" />
 
 <backmatter />
