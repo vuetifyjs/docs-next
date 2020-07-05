@@ -17,7 +17,9 @@ Text fields components are used for collecting user provided information.
 
 ## Usage
 
-<usage name="v-text-field" />
+A simple text field with placeholder and/or label.
+
+<example file="v-text-field/usage" />
 
 ## API
 
@@ -25,25 +27,17 @@ Text fields components are used for collecting user provided information.
 
 ## Examples
 
-A simple text field with placeholder and/or label.
-
 ### Props
 
-#### Box style
+#### Counter
 
-Text fields can be used with an alternative box design. Append and prepend icon props are **not** supported in this mode.
+Use a **counter** prop to inform a user of the character limit. The counter does not perform any validation by itself. You will need to pair it with either the internal validation system, or a 3rd party library. You can use it on regular, box or outlined text fields.
 
-<example file="v-text-field/prop-box" />
-
-#### Character counter
-
-Use a `counter` prop to inform a user of the character limit. The counter does not perform any validation by itself. You will need to pair it with either the internal validation system, or a 3rd party library. You can use it on regular, box or outlined text fields.
-
-<example file="v-text-field/prop-character-counter" />
+<example file="v-text-field/prop-counter" />
 
 #### Clearable
 
-When `clearable`, you can customize the clear icon with `clear-icon`.
+When **clearable**, you can customize the clear icon with **clear-icon**.
 
 <example file="v-text-field/prop-clearable" />
 
@@ -55,65 +49,65 @@ You can optionally change a text field into any color in the Material design pal
 
 #### Dense
 
-You can reduces the text field height with `dense` prop.
+You can reduces the text field height with **dense** prop.
 
 <example file="v-text-field/prop-dense" />
 
 #### Disabled and readonly
 
-Text fields can be `disabled` or `readonly`.
+Text fields can be **disabled** or **readonly**.
 
 <example file="v-text-field/prop-disabled-and-readonly" />
 
-#### Auto hiding details
+#### Filled
 
-When `hide-details` is set to `auto` messages will be rendered only if there's a message (hint, error message, counter value etc) to display.
+Text fields can be used with an alternative box design. **append-icon** and **prepend-icon** props are _**not**_ supported in this mode.
+
+<example file="v-text-field/prop-filled" />
+
+#### Hide details
+
+When **hide-details** is set to `auto` messages will be rendered only if there's a message (hint, error message, counter value etc) to display.
 
 <example file="v-text-field/prop-hide-details" />
 
-#### Hint text
+#### Hint
 
-The `hint` property on text fields adds the provided string beneath the text field. Using `persistent-hint` keeps the hint visible when the text field is not focused. Hint prop is **not** supported in solo mode.
+The **hint** property on text fields adds the provided string beneath the text field. Using **persistent-hint** keeps the hint visible when the text field is not focused. Hint prop is _**not**_ supported in solo mode.
 
 <example file="v-text-field/prop-hint" />
 
 #### Icons
 
-You can add icons to the text field with `prepend-icon`, `append-icon` and `append-outer-icon` props.
+You can add icons to the text field with **prepend-icon**, **append-icon** and **append-outer-icon** props.
 
 <example file="v-text-field/prop-icon" />
 
-#### Outlined style
+#### Outlined
 
 Text fields can be used with an alternative outlined design.
 
 <example file="v-text-field/prop-outlined" />
 
-#### Password input
+#### Prefixes and suffixes
 
-A password input can be used with an appended icon and callback to control the visibility.
-
-<example file="v-text-field/prop-password" />
-
-#### Prefixes & suffixes
-
-The `prefix` and `suffix` properties allows you to prepend and append inline non-modifiable text next to the text field.
+The **prefix** and **suffix** properties allows you to prepend and append inline non-modifiable text next to the text field.
 
 <example file="v-text-field/prop-prefixes-and-suffixes" />
 
 #### Shaped
 
-`shaped` text fields are rounded if they're `outlined` and have higher `border-radius` if `filled`.
+**shaped** text fields are rounded if they're **outlined** and have higher **border-radius** if **filled**.
 
 <example file="v-text-field/prop-shaped" />
 
 #### Single line
 
-Single line text fields do not float their label on focus or with data.
+**single-line** text fields do not float their label on focus or with data.
 
 <example file="v-text-field/prop-single-line" />
 
-#### Solo style
+#### Solo
 
 Text fields can be used with an alternative solo design.
 
@@ -121,7 +115,7 @@ Text fields can be used with an alternative solo design.
 
 #### Validation
 
-Vuetify includes simple validation through the `rules` prop. The prop accepts an array of callbacks. While validating rules, the current v-model value will be passed to the callback. This callback should return either `true` or a `String`, the error message.
+Vuetify includes simple validation through the **rules** prop. The prop accepts an array of callbacks. While validating rules, the current v-model value will be passed to the callback. This callback should return either `true` or a `String`, the error message.
 
 <example file="v-text-field/prop-validation" />
 
@@ -129,29 +123,29 @@ Vuetify includes simple validation through the `rules` prop. The prop accepts an
 
 #### Icon events
 
-`click:prepend`, `click:append`, `click:append-outer`, and `click:clear` will be emitted when you click on the respective icon. Note that these events will not be fired if the slot is used instead. 
+`click:prepend`, `click:append`, `click:append-outer`, and `click:clear` will be emitted when you click on the respective icon. Note that these events will not be fired if the slot is used instead.
 
-<example file="v-text-field/event-icon-events" />
+<example file="v-text-field/event-icons" />
 
 ### Slots
 
 #### Icon slots
 
-Instead of using prepend / append / append-outer icons you can use slots to extend input's functionality.
+Instead of using `prepend`/`append`/`append-outer` icons you can use slots to extend input's functionality.
 
-<example file="v-text-field/slot-icon-slots" />
+<example file="v-text-field/slot-icons" />
 
-#### Label slot
+#### Label
 
 Text field label can be defined in `label` slot - that will allow to use HTML content
 
-<example file="v-text-field/slot-label-slot" />
+<example file="v-text-field/slot-label" />
 
-#### Progress bar
+#### Progress
 
 You can display a progress bar instead of the bottom line. You can use the default indeterminate progress having same color as the text field or designate a custom one using the `progress` slot
 
-<example file="v-text-field/slot-progress-bar" />
+<example file="v-text-field/slot-progress" />
 
 ### Misc
 
@@ -161,10 +155,16 @@ While the built in `v-form` or 3rd party plugin such as [vuelidate](https://gith
 
 <example file="v-text-field/misc-custom-validation" />
 
-#### Full-width text field with character counter
+#### Full width with counter
 
 Full width text fields allow you to create boundless inputs. In this example, we use a `v-divider` to separate the fields.
 
-<example file="v-text-field/misc-full-width-with-character-counter" />
+<example file="v-text-field/misc-full-width-with-counter" />
+
+#### Password input
+
+Using the HTML input **type** [password](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password)can be used with an appended icon and callback to control the visibility.
+
+<example file="v-text-field/misc-password" />
 
 <backmatter />
