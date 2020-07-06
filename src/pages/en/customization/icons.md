@@ -34,13 +34,13 @@ export default new Vuetify({
 })
 ```
 
-Using a predefined option will prefill defaults based upon the selected preset. This will overwrite the defaults of components that have default **icon** values. For more information, view the default [icon preset values](https://github.com/vuetifyjs/vuetify/tree/master/packages/vuetify/src/services/icons/presets).
+Using a predefined option will pre-fill defaults based upon the selected preset. This will overwrite the defaults of components that have default **icon** values. For more information, view the default [icon preset values](https://github.com/vuetifyjs/vuetify/tree/master/packages/vuetify/src/services/icons/presets).
 
 ## Installing iconfonts
 
 You are required to include the specified icon library (even if using default). This can be done by including a CDN link or importing the icon library into your application
 
-### Install Material Icons
+### Material Design Icons
 
 This is the default icon font for Vuetify. You can include it through a CDN:
 
@@ -72,7 +72,7 @@ export default new Vuetify({
 })
 ```
 
-### Install Material Design Icons (JS SVG)
+### Material Design Icons - JS SVG
 
 Use the SVG Path's as designated in [@mdi/js](https://www.npmjs.com/package/@mdi/js). This is the recommended installation when optimizing your application for production. You **ONLY** need to include this if you plan on using more than the default icons.
 
@@ -81,6 +81,7 @@ $ yarn add @mdi/js -D
 // OR
 $ npm install @mdi/js -D
 ```
+
 Specify the **mdiSvg** iconfont:
 
 ```js
@@ -117,7 +118,8 @@ You can custom import only the icons you use granting a much smaller bundle size
   }
 </script>
 ```
-### Install Material Icons
+
+### Material Icons
 
 Installation is the same as the above. For projects without a build process, it is recommended to import the icons from CDN
 
@@ -151,41 +153,7 @@ export default new Vuetify({
 })
 ```
 
-### Install Font Awesome 5 Icons
-
-The easiest way to get started with **FontAwesome** is to use a cdn. Within the head of your main `index.html` place this snippet:
-
-```html
-<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-```
-
-To install locally you can pull in the [Free](https://fontawesome.com/) version of **FontAwesome** using your preferred package manager:
-
-```bash
-$ yarn add @fortawesome/fontawesome-free -D
-// OR
-$ npm install @fortawesome/fontawesome-free -D
-```
-
-Within your main entry point, simply import the package's **all.css**. If you are using a configured webpack project, you will need to setup support for `.css` files using the webpack [css loader](https://github.com/webpack-contrib/css-loader). If you are already using [Vue CLI](https://cli.vuejs.org/), this is done for you automatically.
-
-```js
-// src/plugins/vuetify.js
-
-import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
-
-Vue.use(Vuetify)
-
-export default new Vuetify({
-  icons: {
-    iconfont: 'fa',
-  },
-})
-```
-
-### Install Font Awesome 4 Icons
+### Font Awesome 4 Icons
 
 Same as above. Installing FontAwesome through cdn is the easiest way to check it out within your project:
 
@@ -219,7 +187,41 @@ export default new Vuetify({
 })
 ```
 
-### Install Font Awesome SVG Icons
+### Font Awesome 5 Icons
+
+The easiest way to get started with **FontAwesome** is to use a cdn. Within the head of your main `index.html` place this snippet:
+
+```html
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+```
+
+To install locally you can pull in the [Free](https://fontawesome.com/) version of **FontAwesome** using your preferred package manager:
+
+```bash
+$ yarn add @fortawesome/fontawesome-free -D
+// OR
+$ npm install @fortawesome/fontawesome-free -D
+```
+
+Within your main entry point, simply import the package's **all.css**. If you are using a configured webpack project, you will need to setup support for `.css` files using the webpack [css loader](https://github.com/webpack-contrib/css-loader). If you are already using [Vue CLI](https://cli.vuejs.org/), this is done for you automatically.
+
+```js
+// src/plugins/vuetify.js
+
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
+import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
+
+Vue.use(Vuetify)
+
+export default new Vuetify({
+  icons: {
+    iconfont: 'fa',
+  },
+})
+```
+
+### Font Awesome SVG Icons
 
 Add required dependencies.
 
@@ -418,7 +420,7 @@ You can utilize the same icon strings in your own custom components. Any time **
 </script>
 ```
 
-### Custom Font Awesome Pro Icons
+### Font Awesome Pro Icons
 
 You can utilize component icons with Font Awesome Pro to select individual icon weights:
 
@@ -494,7 +496,7 @@ If you want your SVG icon to inherit colors and scale correctly - be sure add th
   fill: currentColor
 ```
 
-## Using missing Material Icons
+## Missing Material Icons
 
 Some material icons are missing by default. For example, `person` and `person_outline` are available, but `visibility_outline` isn't, while `visibility` is. To use missing material icons, include the font below (remove another material font if already registered).
 
@@ -539,7 +541,7 @@ export default {
         check(['outline', 'outlined'], 'outlined') ||
         check(['two-tone', 'two-toned'], 'two-tone') ||
         check(['round', 'rounded'], 'round') ||
-        check(['sharp', 'shapened'], 'sharp') || {
+        check(['sharp', 'sharpened'], 'sharp') || {
           suffix: '',
           id: this.name
         }
