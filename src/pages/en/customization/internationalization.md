@@ -8,7 +8,7 @@ related:
   - /customization/rtl/
 ---
 
-# Internationalization (i18n)
+# Internationalization - i18n
 
 Vuetify supports language Internationalization (i18n) of its components. When bootstrapping your application you can specify available locales and the currently active locale with the **current** option. The **lang** service also supports easy integration with [vue-i18n](#vue-i-18-n).
 
@@ -20,9 +20,42 @@ To set the available locales or the current locale, supply the `lang` option whe
 
 Currently Vuetify provides translations in the following languages:
 
-
-**TODO: Insert locales with "Locale" component**
-
+- **af** - Afrikaans (Afrikaans)
+- **ar** - Arabic (اللغة العربية)
+- **ca** - Catalan (català)
+- **cs** - Czech (čeština)
+- **de** - German (Deutsch)
+- **el** - Greek (Ελληνικά)
+- **en** - English
+- **es** - Spanish (Español)
+- **et** - Estonian (eesti)
+- **fa** - Persian (فارسی)
+- **fi** - Finnish (suomi)
+- **fr** - French (Français)
+- **he** - Hebrew (עברית)
+- **hr** - Croatian (hrvatski jezik)
+- **hu** - Hungarian (magyar)
+- **id** - Indonesian (Indonesian)
+- **it** - Italian (Italiano)
+- **ja** - Japanese (日本語)
+- **ko** - Korean (한국어)
+- **lt** - Lithuanian (lietuvių kalba)
+- **lv** - Latvian (latviešu valoda)
+- **nl** - Dutch (Nederlands)
+- **no** - Norwegian (Norsk)
+- **pl** - Polish (język polski)
+- **pt** - Portuguese (Português)
+- **ro** - Romanian (Română)
+- **ru** - Russian (Русский)
+- **sk** - Slovak (slovenčina)
+- **sl** - Slovene (slovenski jezik)
+- **srCyrl** - Serbian (српски језик)
+- **sv** - Swedish (svenska)
+- **th** - Thai (ไทย)
+- **tr** - Turkish (Türkçe)
+- **uk** - Ukrainian (Українська)
+- **zhHans** - Chinese (中文)
+- **zhHant** - Chinese (中文)
 
 ```js
 // src/plugins/vuetify.js
@@ -57,15 +90,17 @@ export default new Vuetify({
 })
 ```
 
-<alert type="info">
-  Vuetify provides only a basic translation function `t`. It is recommended for more advanced internationalization functions to make use of Vuetifys integration with [vue-i18n](#vue-i-18-n)
-</alert>
-
 ## API
 
 - [internationalization](../../api/internationalization)
 
-## Create a translation
+## Caveats
+
+<alert type="info">
+  Vuetify provides only a basic translation function `t`. It is recommended for more advanced internationalization functions to make use of Vuetify's integration with [vue-i18n](#vue-i-18-n)
+</alert>
+
+## Creating a translation
 
 To create your own translation, use the code below. You will inherit Vuetify's translations, but also can add your own. Alternatively, you can copy and paste the content of `vuetify/src/locale/en.ts`, but it'll require manual file syncing during updates.
 
@@ -145,6 +180,5 @@ export default new Vuetify({
   },
 })
 ```
-
 
 <backmatter />
