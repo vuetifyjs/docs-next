@@ -37,7 +37,6 @@
       <v-divider></v-divider>
 
       <v-list dense>
-
         <v-list-item
           v-for="item in items"
           :key="item.title"
@@ -62,8 +61,8 @@
       return {
         drawer: null,
         items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' },
+          { title: 'Home', icon: 'mdi-view-dashboard' },
+          { title: 'About', icon: 'mdi-forum' },
         ],
       }
     },

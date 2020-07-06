@@ -27,7 +27,9 @@
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>Logout</v-btn>
+          <v-btn block>
+            Logout
+          </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
@@ -39,9 +41,9 @@
     data () {
       return {
         items: [
-          { title: 'Dashboard', icon: 'dashboard' },
-          { title: 'Account', icon: 'account_box' },
-          { title: 'Admin', icon: 'gavel' },
+          { title: 'Dashboard', icon: 'mdi-view-dashboard' },
+          { title: 'Account', icon: 'mdi-account-box' },
+          { title: 'Admin', icon: 'mdi-gavel' },
         ],
       }
     },

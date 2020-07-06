@@ -15,7 +15,9 @@
 
             <v-list-item link>
               <v-list-item-content>
-                <v-list-item-title class="title">Sandra Adams</v-list-item-title>
+                <v-list-item-title class="title">
+                  Sandra Adams
+                </v-list-item-title>
                 <v-list-item-subtitle>sandra_a88@gmail.com</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>

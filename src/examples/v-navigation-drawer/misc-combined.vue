@@ -8,7 +8,10 @@
       permanent
       width="100%"
     >
-      <v-row class="fill-height" no-gutters>
+      <v-row
+        class="fill-height"
+        no-gutters
+      >
         <v-navigation-drawer
           dark
           mini-variant
@@ -27,7 +30,6 @@
             dense
             nav
           >
-
             <v-list-item
               v-for="item in items"
               :key="item.title"
@@ -62,8 +64,8 @@
     data () {
       return {
         items: [
-          { title: 'Home', icon: 'dashboard' },
-          { title: 'About', icon: 'question_answer' },
+          { title: 'Home', icon: 'mdi-view-dashboard' },
+          { title: 'About', icon: 'mdi-forum' },
         ],
         links: ['Home', 'Contacts', 'Settings'],
         mini: true,

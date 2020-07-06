@@ -17,7 +17,7 @@ The `v-navigation-drawer` component is what your users will utilize to navigate 
 
 ## Usage
 
-The navigation drawer is primarily used to house links to the pages in your application. Using **null** as the starting value for its `v-model` will initialize the drawer as closed on mobile and as open on desktop. It is common to pair drawers with the [v-list](/components/lists) component using the **nav** property.
+The navigation drawer is primarily used to house links to the pages in your application. Using `null` as the starting value for its **v-model** will initialize the drawer as closed on mobile and as open on desktop. It is common to pair drawers with the [v-list](/components/lists) component using the **nav** property.
 
 <example file="v-navigation-drawer/usage" />
 
@@ -28,18 +28,12 @@ The navigation drawer is primarily used to house links to the pages in your appl
 ## Caveats
 
 <alert type="error">
-If you are using `v-navigation-drawer` with **app** property enabled, you don't need to use **absolute** prop as in examples.
+  If you are using `v-navigation-drawer` with **app** property enabled, you don't need to use **absolute** prop as in examples.
 </alert>
 
 ## Examples
 
 ### Props
-
-#### Backgrounds
-
-Apply a custom background to your drawer. If you need to customize `v-img`'s properties you can use the **img** slot.
-
-<example file="v-navigation-drawer/prop-background" />
 
 #### Bottom drawer
 
@@ -47,31 +41,31 @@ Using the **bottom** prop, we are able to relocate our drawer on mobile devices 
 
 <example file="v-navigation-drawer/prop-bottom-drawer" />
 
-#### Colored drawer
-
-Navigation drawers can be customized to fit any application's design. Here we apply a custom background color and an appended content area using the **append** slot.
-
-<example file="v-navigation-drawer/prop-colored" />
-
 #### Expand on hover
 
 Places the component in **mini-variant** mode and expands once hovered. Does not alter the content area. Width can be controlled with the **mini-variant-width** property.
 
 <example file="v-navigation-drawer/prop-expand-on-hover" />
 
-#### Mini
+#### Images
+
+Apply a custom background to your drawer via the **src** prop. If you need to customize `v-img`'s properties you can use the `img` slot.
+
+<example file="v-navigation-drawer/prop-images" />
+
+#### Mini variant
 
 When using the **mini-variant** prop, the drawer will shrink (default 56px) and hide everything inside of `v-list` except the first element. In this example we use the **.sync** modifier that allows us to tie the expanding/contracting of the drawer programmatically.
 
-<example file="v-navigation-drawer/prop-mini" />
+<example file="v-navigation-drawer/prop-mini-variant" />
 
-#### Permanent floating drawer
+#### Permanent and floating
 
 By default, a navigation drawer has a 1px right border that separates it from content. In this example we want to detach the drawer from the left side and let it float on its own. The **floating** property removes the right border (or left if using **right**).
 
-<example file="v-navigation-drawer/prop-permanent-floating" />
+<example file="v-navigation-drawer/prop-permanent-and-floating" />
 
-#### Right positioned
+#### Right
 
 Navigation drawers can also be positioned on the right side of your application (or an element). This is also useful for creating a side-sheet with auxillary information that may not have any navigation links. When using **RTL** you must explicitly define **right** for your drawer.
 
@@ -85,7 +79,13 @@ A temporary drawer sits above its application and uses a scrim (overlay) to dark
 
 ### Misc
 
-#### Combined drawers
+#### Colored drawer
+
+Navigation drawers can be customized to fit any application's design. Here we apply a custom background color and an appended content area using the **append** slot.
+
+<example file="v-navigation-drawer/misc-colored" />
+
+#### Combined drawer
 
 In this example we define a custom width to accommodate our nested drawer. Using `v-row` we ensure that the drawer and list stack horizontally next to each other.
 
