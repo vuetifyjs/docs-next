@@ -29,13 +29,13 @@ The simple table is a wrapper component around the `<table>` element.
 
 ### Props
 
-#### Dark theme
+#### Dark
 
 Use **dark** prop to switch table to the dark theme.
 
 <example file="v-simple-table/prop-dark" />
 
-#### Dense table
+#### Dense
 
 You can show a dense version of the table by using the **dense** prop.
 
@@ -47,7 +47,7 @@ Use the **fixed-header** prop together with the **height** prop to fix the heade
 
 <example file="v-simple-table/prop-fixed-header" />
 
-#### Fixed height
+#### Height
 
 Use the **height** prop to set the height of the table.
 
