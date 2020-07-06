@@ -3,6 +3,10 @@ meta:
   title: Expansion panel component
   description: The expansion panel component is a lightweight container that hides information behind expandable and contractable containers.
   keywords: expansion panels, vuetify expansion panel component, vue expansion panel component
+related:
+  - /components/cards/
+  - /components/data-tables/
+  - /components/lists/
 ---
 
 # Expansion panels
