@@ -8,7 +8,7 @@
     ></v-select>
     <v-data-table
       :headers="headerArray"
-      :items="itemArray"
+      :items="itemsArray"
       :search="search"
       :hide-default-header="hideHeaders"
       :show-select="showSelect"
