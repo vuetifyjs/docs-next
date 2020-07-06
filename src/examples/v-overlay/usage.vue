@@ -7,14 +7,7 @@
       Show Overlay
     </v-btn>
 
-    <v-overlay :value="overlay">
-      <v-btn
-        icon
-        @click="overlay = false"
-      >
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-    </v-overlay>
+    <v-overlay :value="overlay"></v-overlay>
   </div>
 </template>
 
@@ -23,5 +16,13 @@
     data: () => ({
       overlay: false,
     }),
+
+    watch: {
+      overlay (val) {
+        val && setTimeout(() => {
+          this.overlay = false
+        }, 2000)
+      },
+    },
   }
 </script>

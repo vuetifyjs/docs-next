@@ -41,7 +41,7 @@ In its simplest form, the `v-overlay` component will add a dimmed layer over you
 
 <example file="v-overlay/prop-opacity" />
 
-#### Z Index
+#### Z index
 
 **z-index** gives you the ability to easily change the stack order of the `v-overlay` component.
 
