@@ -51,7 +51,9 @@
           align="center"
           justify="center"
         >
-          <h3 class="title">Selected {{ model }}</h3>
+          <h3 class="title">
+            Selected {{ model }}
+          </h3>
         </v-row>
       </v-sheet>
     </v-expand-transition>

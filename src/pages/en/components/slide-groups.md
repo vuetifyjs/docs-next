@@ -32,40 +32,40 @@ Similar to the [v-window](/components/windows) component, `v-slide-group` lets i
 
 #### Active class
 
-Active class can be customized
+**active-class** prop allows you to pass a class to customize the active items.
 
 <example file="v-slide-group/prop-active-class" />
 
-#### Centered active item
+#### Center active
 
-Active item is always centered
+Using the **center-active** prop will make the active item always centered.
 
 <example file="v-slide-group/prop-center-active" />
 
 #### Custom icons
 
-You can add your custom pagination icons instead of arrows
+You can add your custom pagination icons instead of arrows using the **next-icon** and **prev-icon** props.
 
 <example file="v-slide-group/prop-custom-icons" />
 
 ### Mandatory
 
-At least 1 item must be selected
+the **mandatory** prop will make the slide group require at least 1 item must be selected.
 
 <example file="v-slide-group/prop-mandatory" />
 
 #### Multiple
 
-You can select multiple items
+You can select multiple items by setting the **multiple** prop.
 
 <example file="v-slide-group/prop-multiple" />
 
-### Slots
+### Misc
 
 #### Pseudo Carousel
 
 Customize the slide group to creatively display information on sheets. Using the selection, we can display auxillary information easily for the user.
 
-<example file="v-slide-group/slot-carousel" />
+<example file="v-slide-group/misc-pseudo-carousel" />
 
 <backmatter />
