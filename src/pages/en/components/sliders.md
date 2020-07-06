@@ -6,7 +6,7 @@ meta:
 related:
   - /components/forms/
   - /components/selects/
-  - /components/text-fields/
+  - /components/range-sliders/
 ---
 
 # Sliders
@@ -25,12 +25,6 @@ Sliders reflect a range of values along a bar, from which users may select a sin
 
 - [v-slider](../../api/v-slider)
 - [v-range-slider](../../api/v-range-slider)
-
-## Sub-components
-
-### v-range-slider
-
-v-range-slider description
 
 ## Examples
 
