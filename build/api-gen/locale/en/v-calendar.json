@@ -49,7 +49,7 @@
     "v-model": "Sets the `value` property but also updates it when the link of a day is clicked.",
     "value": "A date in the format of `YYYY-MM-DD` which determines what span of time for the calendar.",
     "weekdayFormat": "Formats day of the week string that appears in the header to specified locale",
-    "weekdays": "Specifies which days of the week to display. To display Monday through Friday only, a value of `[1, 2, 3, 4, 5]` can be used. To display a week starting on Monday a value of `[1, 2, 3, 4, 5, 6, 0]` can be used."    
+    "weekdays": "Specifies which days of the week to display. To display Monday through Friday only, a value of `[1, 2, 3, 4, 5]` can be used. To display a week starting on Monday a value of `[1, 2, 3, 4, 5, 6, 0]` can be used."
   },
   "slots": {
     "empty": "",
@@ -144,7 +144,7 @@
     "prev": "Triggers the input event with a date that would progress the calendar to the previous timespan. If the type is `month` it will return a day in the previous month, if the type is `4day` it will return a date 4 days before `value`/`v-model`, etc.",
     "scrollToTime": "Scrolls the scrollable area in the `day` view to the given time. If the time is not in a valid format or if the calendar is not in the `day` view then false is returned.",
     "timeToY": "Converts a time to a pixel value on the y-axis for the `day` view. If the time is not in a valid format or if the calendar is not in the `day` view then false is returned.",
-    "timeDelta": "Converts a time to a delta value for the `day` view. If the time is not in a valid format or if the calendar is not in the `day` view then false is returned. A delta value is typically between 0 and 1. If the time given is before the first interval then a negative number will be returned. If the timee given is after the last interval than a number greater than 1 will be returned.",
+    "timeDelta": "Converts a time to a delta value for the `day` view. If the time is not in a valid format or if the calendar is not in the `day` view then false is returned. A delta value is typically between 0 and 1. If the time given is before the first interval then a negative number will be returned. If the time given is after the last interval than a number greater than 1 will be returned.",
     "updateEventVisibility": "If the calendar has events and `event-more` is truthy the days with too many events contain a 'button' to represent how many events had to be hidden.",
     "updateTimes": "Updates now & today in the calendar, possibly updating the styles in the calendar.",
     "getVisibleEvents": "Returns the list of events seen on the current calendar where each element returned has the following properties:<br>- `input`: the event passed in the `events` prop.<br>- `start`: a CalendarTimestamp of the start timestamp parsed.<br>- `startIdentifier`: a number which represents the day the event starts on.<br>- `startTimestampIdentifier`: a number which represents the day and time the event starts on.<br>- `end`: a CalendarTimestamp of the end timestamp parsed.<br>- `endIdentifier`: a number which represents the day the event ends on.<br>- `endTimestampIdentifier`: a number which represents the day & time the event ends on.<br>- `allDay`: if this is an all-day event (has no time specified in the `start`/`end` on the event).<br>- `index`: the index of the event in the given array.<br>- `category`: the category of the event if the calendar type is category, otherwise false.",
@@ -154,5 +154,6 @@
   },
   "sass": {
     "empty": ""
+    // add sass lang here
   }
 }
