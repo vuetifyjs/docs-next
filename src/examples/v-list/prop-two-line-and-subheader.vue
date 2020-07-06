@@ -22,8 +22,13 @@
       </v-btn>
     </v-toolbar>
 
-    <v-list two-line subheader>
-      <v-subheader inset>Folders</v-subheader>
+    <v-list
+      two-line
+      subheader
+    >
+      <v-subheader inset>
+        Folders
+      </v-subheader>
 
       <v-list-item
         v-for="item in items"
@@ -43,14 +48,18 @@
 
         <v-list-item-action>
           <v-btn icon>
-            <v-icon color="grey lighten-1">mdi-information</v-icon>
+            <v-icon color="grey lighten-1">
+              mdi-information
+            </v-icon>
           </v-btn>
         </v-list-item-action>
       </v-list-item>
 
       <v-divider inset></v-divider>
 
-      <v-subheader inset>Files</v-subheader>
+      <v-subheader inset>
+        Files
+      </v-subheader>
 
       <v-list-item
         v-for="item in items2"
@@ -70,7 +79,9 @@
 
         <v-list-item-action>
           <v-btn icon>
-            <v-icon color="grey lighten-1">mdi-information</v-icon>
+            <v-icon color="grey lighten-1">
+              mdi-information
+            </v-icon>
           </v-btn>
         </v-list-item-action>
       </v-list-item>

@@ -27,7 +27,12 @@
         :key="item.title"
       >
         <v-list-item-icon>
-          <v-icon v-if="item.icon" color="pink">mdi-star</v-icon>
+          <v-icon
+            v-if="item.icon"
+            color="pink"
+          >
+            mdi-star
+          </v-icon>
         </v-list-item-icon>
 
         <v-list-item-content>

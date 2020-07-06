@@ -6,7 +6,10 @@
   >
     <v-list rounded>
       <v-subheader>REPORTS</v-subheader>
-      <v-list-item-group v-model="item" color="primary">
+      <v-list-item-group
+        v-model="item"
+        color="primary"
+      >
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
