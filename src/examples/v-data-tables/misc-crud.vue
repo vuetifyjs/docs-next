@@ -121,13 +121,13 @@
         class="mr-2"
         @click="editItem(item)"
       >
-        mdi-pencil
+        $mdiPencil
       </v-icon>
       <v-icon
         small
         @click="deleteItem(item)"
       >
-        mdi-delete
+        $mdiDelete
       </v-icon>
     </template>
     <template v-slot:no-data>
