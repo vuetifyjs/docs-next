@@ -1,20 +1,19 @@
 <template>
-  <v-container class="fill-height">
-    <v-row
-      align="center"
-      justify="space-around"
+  <v-row
+    align="center"
+    justify="space-around"
+  >
+    <v-select
+      v-model="icon"
+      :items="icons"
+    ></v-select>
+    <v-icon
+      v-bind="$attrs"
+      v-on="$listeners"
     >
-      <v-select
-        v-model="icon"
-        :items="icons"
-      ></v-select>
-      <v-icon
-        v-bind="$attrs"
-      >
-        {{ icon || 'mdi-plus' }}
-      </v-icon>
-    </v-row>
-  </v-container>
+      {{ icon || 'mdi-plus' }}
+    </v-icon>
+  </v-row>
 </template>
 
 <script>
@@ -32,13 +31,13 @@
         'mdi-antenna',
       ],
       defaults: {
+        color: null,
         dense: false,
-        color: 'green',
-        'x-small': false,
-        small: false,
-        medium: true,
         large: false,
+        medium: false,
+        small: false,
         'x-large': false,
+        'x-small': false,
       },
       options: {
         booleans: ['dense'],

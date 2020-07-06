@@ -37,7 +37,7 @@ Using color helpers you can change the color of an icon from the standard dark a
 
 ### Events
 
-#### Clickable
+#### Click
 
 Binding any click event to `v-icon` will automatically change the cursor to a pointer.
 
