@@ -27,15 +27,13 @@ The `v-skeleton-loader` component provides a user with a visual indicator that c
 
 ## Examples
 
-### Props
+### Misc
 
 #### Boilerplate component
 
 The `v-skeleton-loader` can be used as boilerplate designs when creating mockups. Mix and match various pre-defined options or create your own unique implementations. In this example, we are extending the `v-skeleton-loader` into a new component called `v-boilerplate` for use as a functional boilerplate component.
 
-<example file="v-skeleton-loader/prop-boilerplate" />
-
-### Misc
+<example file="v-skeleton-loader/misc-boilerplate" />
 
 #### Implementation methods
 

@@ -22,7 +22,9 @@
         class="text-center"
         cols="12"
       >
-        <div class="headline">Default Slot</div>
+        <div class="headline">
+          Default Slot
+        </div>
       </v-col>
 
       <v-col
