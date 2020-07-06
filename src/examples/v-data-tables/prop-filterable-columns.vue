@@ -3,7 +3,7 @@
     <v-card-title>
       <v-text-field
         v-model="search"
-        append-icon="$mdiMagnify"
+        append-icon="search"
         label="Search"
         single-line
         hide-details

@@ -7,10 +7,10 @@
     class="elevation-1"
     :footer-props="{
       showFirstLastPage: true,
-      firstIcon: '$mdiArrowCollapseLeft',
-      lastIcon: '$mdiArrowCollapseRight',
-      prevIcon: '$mdiMinus',
-      nextIcon: '$mdiPlus'
+      firstIcon: 'mdi-arrow-collapse-left',
+      lastIcon: 'mdi-arrow-collapse-right',
+      prevIcon: 'mdi-minus',
+      nextIcon: 'mdi-plus'
     }"
   ></v-data-table>
 </template>
