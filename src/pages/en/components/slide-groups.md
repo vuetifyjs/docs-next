@@ -3,77 +3,69 @@ meta:
   title: Slide group component
   description: The slide group component is similar to item groups in that you can make selectable content out of elements but does so in a single line fashion.
   keywords: slide groups, slideable groups, vuetify slide group component, vue slide group component
+related:
+  - /components/icons/
+  - /components/carousels/
+  - /components/tabs/
 ---
 
 # Slide groups
 
-Component description
+The `v-slide-group` component is used to display pseudo paginated information. It uses [v-item-group](/components/item-groups) at its core and provides a baseline for components such as [v-tabs](/components/tabs) and [v-chip-group](/components/chip-groups).
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+Similar to the [v-window](/components/windows) component, `v-slide-group` lets items to take up as much space as needed, allowing the user to move horizontally through the provided information.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<example file="v-slide-group/usage" />
 
 ## API
 
-- [API Page Link](../../api/v-component)
-
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+- [v-slide-group](../../api/v-slide-group)
+- [v-slide-item](../../api/v-slide-item)
 
 ## Examples
 
-Example text.
-
 ### Props
 
-Omit if none
+#### Active class
 
-### Events
+Active class can be customized
 
-Omit if none
+<example file="v-slide-group/prop-active-class" />
+
+#### Centered active item
+
+Active item is always centered
+
+<example file="v-slide-group/prop-center-active" />
+
+#### Custom icons
+
+You can add your custom pagination icons instead of arrows
+
+<example file="v-slide-group/prop-custom-icons" />
+
+### Mandatory
+
+At least 1 item must be selected
+
+<example file="v-slide-group/prop-mandatory" />
+
+#### Multiple
+
+You can select multiple items
+
+<example file="v-slide-group/prop-multiple" />
 
 ### Slots
 
-Omit if none
+#### Pseudo Carousel
 
-### Misc
+Customize the slide group to creatively display information on sheets. Using the selection, we can display auxillary information easily for the user.
 
-Omit if none
-
-#### Example Header
-
-Example description
-
-`<example file="" />`
-**file**: `<component>/<type>-<propname>`
-eg: `<example file="v-alert/prop-colored-border" />`
-
-## Accessibility
-
-Accessibility text - omit if none
+<example file="v-slide-group/slot-carousel" />
 
 <backmatter />
