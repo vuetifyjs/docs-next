@@ -27,18 +27,18 @@ A parallax causes a shift in a background image when the user scrolls the page.
 
 ## Examples
 
-### Props
+### Misc
 
-#### With content
+#### Content
 
 You can also place any content inside of the parallax. This allows you to use the parallax as a hero image.
 
-<example file="v-parallax/prop-content" />
+<example file="v-parallax/misc-content" />
 
 #### Custom height
 
 You can specify a custom height on a parallax. Keep in mind this can break the parallax if your image is not sized properly
 
-<example file="v-parallax/prop-custom-height" />
+<example file="v-parallax/misc-custom-height" />
 
 <backmatter />
