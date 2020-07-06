@@ -1,7 +1,14 @@
 <template>
-  <ValidationObserver ref="observer" v-slot="{ validate, reset }">
+  <validation-observer
+    ref="observer"
+    v-slot=""
+  >
     <form>
-      <ValidationProvider v-slot="{ errors }" name="Name" rules="required|max:10">
+      <validation-provider
+        v-slot="{ errors }"
+        name="Name"
+        rules="required|max:10"
+      >
         <v-text-field
           v-model="name"
           :counter="10"
@@ -9,16 +16,24 @@
           label="Name"
           required
         ></v-text-field>
-      </ValidationProvider>
-      <ValidationProvider v-slot="{ errors }" name="email" rules="required|email">
+      </validation-provider>
+      <validation-provider
+        v-slot="{ errors }"
+        name="email"
+        rules="required|email"
+      >
         <v-text-field
           v-model="email"
           :error-messages="errors"
           label="E-mail"
           required
         ></v-text-field>
-      </ValidationProvider>
-      <ValidationProvider v-slot="{ errors }" name="select" rules="required">
+      </validation-provider>
+      <validation-provider
+        v-slot="{ errors }"
+        name="select"
+        rules="required"
+      >
         <v-select
           v-model="select"
           :items="items"
@@ -27,8 +42,12 @@
           data-vv-name="select"
           required
         ></v-select>
-      </ValidationProvider>
-      <ValidationProvider v-slot="{ errors, valid }" rules="required" name="checkbox">
+      </validation-provider>
+      <validation-provider
+        v-slot=""
+        rules="required"
+        name="checkbox"
+      >
         <v-checkbox
           v-model="checkbox"
           :error-messages="errors"
@@ -37,12 +56,19 @@
           type="checkbox"
           required
         ></v-checkbox>
-      </ValidationProvider>
+      </validation-provider>
 
-      <v-btn class="mr-4" @click="submit">submit</v-btn>
-      <v-btn @click="clear">clear</v-btn>
+      <v-btn
+        class="mr-4"
+        @click="submit"
+      >
+        submit
+      </v-btn>
+      <v-btn @click="clear">
+        clear
+      </v-btn>
     </form>
-  </ValidationObserver>
+  </validation-observer>
 </template>
 
 <script>
