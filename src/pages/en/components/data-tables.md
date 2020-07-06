@@ -22,6 +22,7 @@ The standard data-table will by default render your data as simple rows.
 <usage name="v-data-tables" />
 
 ## API
+
 - [v-data-table](../../api/v-data-table)
 - [v-data-table-header](../../api/v-data-table-header)
 - [v-data-footer](../../api/v-data-footer)

@@ -7,8 +7,8 @@
       clearable
     ></v-select>
     <v-data-table
-      :headers="headers"
-      :items="items"
+      :headers="headerArray"
+      :items="itemArray"
       :search="search"
       :hide-default-header="hideHeaders"
       :show-select="showSelect"
@@ -232,7 +232,7 @@
     data () {
       return {
         enabled: null,
-        items: desserts,
+        itemsArray: desserts,
         search: null,
         slots: [
           'body',
@@ -248,7 +248,7 @@
           'no-results',
           'top',
         ],
-        headers: [
+        headerArray: [
           {
             text: 'Dessert (100g serving)',
             align: 'start',

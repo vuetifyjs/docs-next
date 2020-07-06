@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-unused-vars -->
 <template>
   <v-data-table
-    :headers="headers"
+    :headers="dessertHeaders"
     :items="desserts"
     :single-expand="singleExpand"
     :expanded.sync="expanded"
@@ -34,7 +34,7 @@
       return {
         expanded: [],
         singleExpand: false,
-        headers: [
+        dessertHeaders: [
           {
             text: 'Dessert (100g serving)',
             align: 'start',
