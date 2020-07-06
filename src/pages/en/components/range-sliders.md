@@ -1,12 +1,12 @@
 ---
 meta:
   title: Range Slider component
-  description: The slider component is a better visualization of the number input. It is used for gathering numerical user data.
-  keywords: sliders, vuetify slider component, vue slider component
+  description: The range slider component is a better visualization of the number input. It is used for gathering a range of numerical user data.
+  keywords: sliders, range, vuetify slider component, vuetify range slider component, vue slider component
 related:
   - /components/forms/
   - /components/selects/
-  - /components/text-fields/
+  - /components/sliders/
 ---
 
 # Range Sliders
@@ -23,8 +23,8 @@ Sliders reflect a range of values along a bar, from which users may select a sin
 
 ## API
 
-- [v-slider](../../api/v-slider)
 - [v-range-slider](../../api/v-range-slider)
+- [v-slider](../../api/v-slider)
 
 ## Examples
 

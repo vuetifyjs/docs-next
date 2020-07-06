@@ -1,12 +1,12 @@
 <template>
   <v-row justify="space-around">
     <v-col cols="12">
-      <v-slider
-        v-model="slider"
-        label="Slider"
+      <v-range-slider
+        v-model="range"
+        label="Range Slider"
         v-bind="$attrs"
         v-on="$listeners"
-      ></v-slider>
+      ></v-range-slider>
     </v-col>
   </v-row>
 </template>
@@ -18,7 +18,7 @@
     inheritAttrs: false,
 
     data: () => ({
-      slider: 0,
+      range: [-25, 25],
       defaults: {
         dense: false,
         disabled: false,
