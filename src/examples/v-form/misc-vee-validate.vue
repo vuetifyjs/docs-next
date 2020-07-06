@@ -101,6 +101,7 @@
       name: '',
       email: '',
       select: null,
+      errors: null,
       items: [
         'Item 1',
         'Item 2',
