@@ -4,8 +4,8 @@ meta:
   description: Contributing to open source helps developers access amazing tools for free. Learn how you can help develop in the Vuetify framework.
   keywords: contribute, contributing, feature request
 related:
-  - /getting-started/unit-testing
-  - /introduction/frequently-asked-questions
+  - /getting-started/unit-testing/
+  - /introduction/frequently-asked-questions/
 ---
 
 # Contributing
