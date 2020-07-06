@@ -28,7 +28,7 @@ These steps ensure that we have all of the information *necessary* to quickly tr
 
 If you are making a [Pull Request](https://github.com/vuetifyjs/vuetify/pulls), please [fork the Vuetify repository](https://github.com/vuetifyjs/vuetify) before continuing; More information on forking repositories is located in the [Fork a Repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) documentation. Otherwise you can simply click the <kbd>Clone or download</kbd> option on the Vuetify repository page.
 
-If you are new to the process of contributing to Open Source, it's recommended that you clone using **https**. More information on [Which remote URL](https://help.github.com/en/github/using-git/which-remote-url-should-i-use) to use can be found on the GitHub documenation page.
+If you are new to the process of contributing to Open Source, it's recommended that you clone using **https**. More information on [Which remote URL](https://help.github.com/en/github/using-git/which-remote-url-should-i-use) to use can be found on the GitHub documentation page.
 
 ```bash
 # Example of cloning the Vuetify repository (non fork)
@@ -105,59 +105,9 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
   Sometimes creating a `.czrc` file does not work using the **command prompt**. If you get unexpected results, create the file in your user folder located in the home directory. This is typically located on your primary harddrive in the `Users` folder.
 </alert>
 
-Congrats! Commitizen is installed! When you do commits, add your files like normal and replace `git commit -m \"your message\"` with `git cz` and follow the prompts.
+Congrats! Commitizen is installed! When you do commits, add your files like normal and replace `git commit -m "your message"` with `git cz` and follow the prompts.
 
 More information on [Commit Guidelines w/Commitizen](#commit-guidelines-w-commitizen) can be found below.
-
-### Process Manager 2 (PM2)
-
-When working with Vuetify it is common to have the Playground, Documentation, and Build running at the same time. [PM2](https://pm2.keymetrics.io/) improves this process by running the dev processes for **each** package automatically. To get started, globally install the [pm2](https://github.com/Unitech/pm2) package by running the folowing commands:
-
-```bash
-yarn global add pm2
-```
-
-Once installed, start the Vuetify [ecosystem file](https://pm2.keymetrics.io/docs/usage/application-declaration/) with the following commands:
-
-```bash
-# Import and start all services into PM2
-pm2 start ecosystem.config.js
-
-# Import and start all services into PM2 (for Windows Only)
-# Currently only supports vuetify-docs
-pm2 start ecosystem-win.config.js
-
-# Import and start single service
-pm2 start ecosystem.config.js --only <process name>
-```
-
-You can check the status and many other options for your PM2 instances by using any of the following commands:
-
-```bash
-# Status of all services
-pm2 status
-
-# Start all services
-pm2 start all
-
-# Stop all services
-pm2 stop all
-
-# Restart all services
-pm2 restart all
-
-# Start/Stop/Restart single service
-pm2 <task> <process name>
-
-# Stop and remove all services
-pm2 kill
-
-# Save config
-pm2 save
-
-# Load your saved config
-pm2 resurrect
-```
 
 ## Commit Guidelines w/Commitizen
 
