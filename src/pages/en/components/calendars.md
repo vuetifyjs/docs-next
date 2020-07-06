@@ -3,77 +3,72 @@ meta:
   title: Calendar component
   description: The calendar component is a clean and simple adaptation to the popular Google Calendar application.
   keywords: calendars, vuetify calendar component, vue calendar component
+  related:
+  - /components/date-pickers
+  - /components/time-pickers
+  - /components/cards
 ---
 
 # Calendars
 
-Component description
+The `v-calendar` component is used to display information in a daily, weekly, monthly, or category view. The daily view has slots for all day or timed elements, and the weekly and monthly view has a slot for each day. The category view has a slot for each category in the day and timed sections based on the categories given or the categories in the given events. Optionally you can pass in an array of events and they will be rendered over the appropriate days and times.
 
 <entry-ad />
 
 ## Usage
 
-Usage text
+A calendar has a type and a value which determines what type of calendar is shown over what span of time. This shows the bare minimum configuration, an array of events with `name`, `start` and `end` properties. `end` is optional, it defaults to the `start`. If the `start` has a time it's considered a timed event and will be shown accordingly in the day views. An event can span multiple days and will be rendered accordingly.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<example file="v-calendar/usage" />
 
 ## API
 
-- [API Page Link](../../api/v-component)
-
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
+- [v-calendar](../../api/v-calendar)
+- [v-calendar-daily](../../api/v-calendar-daily)
+- [v-calendar-monthly](../../api/v-calendar-monthly)
+- [v-calendar-weekly](../../api/v-calendar-weekly)
 
 ## Examples
 
-Example text.
-
 ### Props
 
-Omit if none
+#### Category
+This is an example of an event calendar with a type of `category` that allows you to compare two schedules side-by-side.
+
+<example file="v-calendar/prop-category" />
+
+#### Daily
+This is an example of calendar with content in each interval slot and a type of `day`.
+
+<example file="v-calendar/prop-daily" />
+
+#### Weekly
+This is an example of an event calendar with all-day and timed events with a type of `week`.
+
+<example file="v-calendar/prop-weekly" />
 
 ### Events
 
-Omit if none
+#### Click
+This is an example of a planner with additional event handlers and external components controlling the display of the calendar.
+
+<example file="v-calendar/event-click" />
+
+#### Drag and drop
+This is an example of an event calendar where you can drag events, extend their length, and create events.
+
+<example file="v-calendar/event-dragndrop" />
 
 ### Slots
 
-Omit if none
+#### Day
+Slots allow you to define the content for each day, time interval for the daily views, and various labels.
 
-### Misc
+<example file="v-calendar/slot-day" />
 
-Omit if none
+### Now line
+This is an example of an calendar with a line for the current time.
 
-#### Example Header
-
-Example description
-
-`<example file="" />`
-**file**: `<component>/<type>-<propname>`
-eg: `<example file="v-alert/prop-colored-border" />`
-
-## Accessibility
-
-Accessibility text - omit if none
+<example file="v-calendar/slot-nowline" />
 
 <backmatter />
