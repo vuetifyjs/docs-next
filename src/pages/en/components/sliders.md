@@ -66,12 +66,6 @@ You can set **min** and **max** values of sliders.
 
 <example file="v-slider/prop-min-and-max" />
 
-#### Range
-
-Range sliders.
-
-<example file="v-slider/prop-range" />
-
 #### Readonly
 
 You cannot interact with **readonly** sliders, but they look as ordinary ones.
@@ -121,11 +115,5 @@ Use slots such as `append` and `prepend` to easily customize the `v-slider` to f
 Sliders can be combined with other components in its `append` slot, such as `v-text-field`, to add additional functionality to the component.
 
 <example file="v-slider/slot-append-text-field" />
-
-#### Thumb label
-
-Using the **tick-labels** prop along with the `thumb-label` slot, you can create a very customized solution.
-
-<example file="v-slider/slot-thumb-label" />
 
 <backmatter />
