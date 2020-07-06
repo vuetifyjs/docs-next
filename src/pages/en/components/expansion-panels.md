@@ -17,11 +17,9 @@ Component description
 
 ## Usage
 
-Usage text
+Expansion panels in their simplest form display a list of expandable items.
 
-`<usage name="" />`
-**name**: component name
-eg: `<usage name="v-alert" />`
+<example file="v-expansionpanel/usage" />
 
 ## API
 
