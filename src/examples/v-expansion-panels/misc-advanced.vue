@@ -4,7 +4,9 @@
       <v-expansion-panel-header>
         <template v-slot:default="{ open }">
           <v-row no-gutters>
-            <v-col cols="4">Trip name</v-col>
+            <v-col cols="4">
+              Trip name
+            </v-col>
             <v-col
               cols="8"
               class="text--secondary"
@@ -38,7 +40,9 @@
     <v-expansion-panel>
       <v-expansion-panel-header v-slot="{ open }">
         <v-row no-gutters>
-          <v-col cols="4">Location</v-col>
+          <v-col cols="4">
+            Location
+          </v-col>
           <v-col
             cols="8"
             class="text--secondary"
@@ -106,7 +110,9 @@
     <v-expansion-panel>
       <v-expansion-panel-header v-slot="{ open }">
         <v-row no-gutters>
-          <v-col cols="4">Start and end dates</v-col>
+          <v-col cols="4">
+            Start and end dates
+          </v-col>
           <v-col
             cols="8"
             class="text--secondary"
@@ -118,8 +124,12 @@
                 no-gutters
                 style="width: 100%"
               >
-                <v-col cols="6">Start date: {{ trip.start || 'Not set' }}</v-col>
-                <v-col cols="6">End date: {{ trip.end || 'Not set' }}</v-col>
+                <v-col cols="6">
+                  Start date: {{ trip.start || 'Not set' }}
+                </v-col>
+                <v-col cols="6">
+                  End date: {{ trip.end || 'Not set' }}
+                </v-col>
               </v-row>
             </v-fade-transition>
           </v-col>
@@ -158,12 +168,16 @@
                   text
                   color="primary"
                   @click="$refs.startMenu.isActive = false"
-                >Cancel</v-btn>
+                >
+                  Cancel
+                </v-btn>
                 <v-btn
                   text
                   color="primary"
                   @click="$refs.startMenu.save(date)"
-                >OK</v-btn>
+                >
+                  OK
+                </v-btn>
               </v-date-picker>
             </v-menu>
           </v-col>

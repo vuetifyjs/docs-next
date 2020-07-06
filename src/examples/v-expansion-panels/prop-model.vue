@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="text-center d-flex pb-4">
-      <v-btn @click="all">all</v-btn>
+      <v-btn @click="all">
+        all
+      </v-btn>
       <div>{{ panel }}</div>
-      <v-btn @click="none">none</v-btn>
+      <v-btn @click="none">
+        none
+      </v-btn>
     </div>
 
     <v-expansion-panels

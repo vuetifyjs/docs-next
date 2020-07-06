@@ -11,7 +11,7 @@ related:
 
 # Expansion panels
 
-Component description
+The `v-expansion-panel` component is useful for reducing vertical space with large amounts of information. The default functionality of the component is to only display one expansion-panel body at a time; however, with the `multiple` property, the expansion-panel can remain open until explicitly closed.
 
 <entry-ad />
 
@@ -19,7 +19,7 @@ Component description
 
 Expansion panels in their simplest form display a list of expandable items.
 
-<example file="v-expansionpanel/usage" />
+<example file="v-expansion-panels/usage" />
 
 ## API
 
@@ -28,30 +28,7 @@ Expansion panels in their simplest form display a list of expandable items.
 - ['v-expansion-panel-header'](../../api/'v-expansion-panel-header')
 - ['v-expansion-panel-content'](../../api/'v-expansion-panel-content')
 
-## Sub-Components
-
-Omit if none
-
-### Sub Component 1
-
-Sub component text
-
-### Sub Component 2
-
-Sub component text
-
-## Caveats
-
-Omit if none
-
-<alert type="success">Success Caveat</alert>
-<alert type="info">Info Caveat</alert>
-<alert type="warning">Warning Caveat</alert>
-<alert type="error">Error Caveat</alert>
-
 ## Examples
-
-Example text.
 
 ### Props
 
@@ -63,13 +40,13 @@ Example text.
 
 #### Disabled
 
-Both the expansion-panel and its content can be disabled using the `disabled` prop.
+Both the expansion-panel and its content can be disabled using the **disabled** prop.
 
 <example file="v-expansion-panels/prop-disabled" />
 
 #### Focusable
 
-The expansion-panel headers can be made focusable with the prop `focusable`.
+The expansion-panel headers can be made focusable with the prop **focusable**.
 
 <example file="v-expansion-panels/prop-focusable" />
 
@@ -79,15 +56,22 @@ The expansion-panel headers can be made focusable with the prop `focusable`.
 
 <example file="v-expansion-panels/prop-inset" />
 
+#### Model
+
+Expansion panels can be controlled externally by modifying the **v-model**. Its value corresponds to a zero-based index of the currently opened expansion panel content.
+If **multiple** prop is used then it is an array containing the indices of the open items.
+
+<example file="v-expansion-panels/prop-model" />
+
 #### Popout
 
-The expansion-panel also has **popout** design. With it, expansion-panel is enlargened when activated.
+The expansion-panel also has **popout** design. With it, expansion-panel is enlarged when activated.
 
 <example file="v-expansion-panels/prop-popout" />
 
 #### Readonly
 
-`readonly` prop does the same thing as `disabled`, but it doesn't touch styles.
+**readonly** prop does the same thing as **disabled**, but it doesn't touch styles.
 
 <example file="v-expansion-panels/prop-readonly" />
 
@@ -101,15 +85,8 @@ The expansion panel component provides a rich playground to build truly advanced
 
 #### Custom icon
 
-Expand action icon can be customized with `expand-icon` prop or the `actions` slot.
+Expand action icon can be customized with **expand-icon** prop or the `actions` slot.
 
 <example file="v-expansion-panels/misc-custom-icons" />
-
-#### External control
-
-Expansion panels can be controlled externally by modifying the `v-model`. Its value corresponds to a zero-based index of the currently opened expansion panel content.
-If `multiple` prop is used then it is an array containing the indices of the open items.
-
-<example file="v-expansion-panels/misc-external" />
 
 <backmatter />
