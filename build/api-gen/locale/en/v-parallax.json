@@ -1,22 +1,21 @@
  {
   "props": {
-    "empty": ""
-    // add prop lang here
+    "empty": "",
+    "alt": "Attaches an alt property to the parallax image",
+    "height": "Mixins.Measurable.props.height",
+    "src": "The image to parallax",
+    "srcset": "Components.Images.props.srcset"
   },
   "slots": {
     "empty": ""
-    // add slot lang here
   },
   "events": {
     "empty": ""
-    // add event lang here
   },
   "functions": {
     "empty": ""
-    // add function lang here
   },
   "sass": {
     "empty": ""
-    // add sass lang here
   }
 }
