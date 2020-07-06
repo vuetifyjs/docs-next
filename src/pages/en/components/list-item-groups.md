@@ -19,7 +19,7 @@ The `v-list-item-group` provides the ability to create a group of selectable `v-
 
 By default, the `v-list-item-group` operates similarly to `v-item-group`. If a **value** is not provided, the group will provide a default based upon its index.
 
-<usage name="v-list-item-group" />
+<example file="v-list-item-group/usage" />
 
 ## API
 
@@ -31,6 +31,8 @@ By default, the `v-list-item-group` operates similarly to `v-item-group`. If a *
 - [v-list-item-content](../../api/v-list-item-content)
 - [v-list-item-subtitle](../../api/v-list-item-subtitle)
 - [v-list-item-title](../../api/v-list-item-title)
+
+## Sub-Components
 
 ### v-list-item
 
@@ -64,7 +66,7 @@ v-list-item-title description
 
 ### Props
 
-#### Custom active class
+#### Active class
 
 You can set a class which will be added when an item is selected.
 
@@ -76,7 +78,7 @@ At least one item must be selected.
 
 <example file="v-list-item-group/prop-mandatory" />
 
-#### Select multiple items
+#### Multiple
 
 You can select multiple items at one time.
 
@@ -84,11 +86,11 @@ You can select multiple items at one time.
 
 ### Misc
 
-#### De-emphasized selections
+#### Flat list
 
 You can easily disable the default highlighting of selected `v-list-item`s. This creates a lower profile for a user's choices.
 
-<example file="v-list-item-group/misc-flat" />
+<example file="v-list-item-group/misc-flat-list" />
 
 #### Selection controls
 
