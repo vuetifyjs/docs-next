@@ -11,7 +11,7 @@ related:
 
 # Pagination
 
-The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a `v-model` attribute.
+The `v-pagination` component is used to separate long sets of data so that it is easier for a user to consume information. Depending on the length provided, the pagination component will automatically scale. To maintain the current page, simply supply a **v-model** attribute.
 
 <entry-ad />
 
@@ -47,16 +47,16 @@ Previous and next page icons can be customized with the **prev-icon** and **next
 
 <example file="v-pagination/prop-icons" />
 
-#### Limit
-
-You can also manually set the maximum number of visible page buttons with the **total-visible** prop.
-
-<example file="v-pagination/prop-limit" />
-
-#### Long
+#### Length
 
 Using the **length** prop you can set the length of `v-pagination`, if the number of page buttons exceeds the parent container, it will truncate the list.
 
-<example file="v-pagination/prop-long" />
+<example file="v-pagination/prop-length" />
+
+#### Total visible
+
+You can also manually set the maximum number of visible page buttons with the **total-visible** prop.
+
+<example file="v-pagination/prop-total-visible" />
 
 <backmatter />
