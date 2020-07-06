@@ -16,7 +16,8 @@
     "orderSm": "Changes the order of the component on small and greater breakpoints.",
     "orderMd": "Changes the order of the component on medium and greater breakpoints.",
     "orderLg": "Changes the order of the component on large and greater breakpoints.",
-    "orderXl": "Changes the order of the component on extra large and greater breakpoints."
+    "orderXl": "Changes the order of the component on extra large and greater breakpoints.",
+    "tag": "Components.Sheets.props.tag"
   },
   "slots": {
     "empty": ""
