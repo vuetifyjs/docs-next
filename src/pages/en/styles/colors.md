@@ -56,7 +56,7 @@ export default new Vuetify({
 
 While convenient, the color pack increases the CSS export size by ~30kb. Some projects may only require the default provided classes that are created at run-time from the Vuetify bootstrap. To disable this feature, you will have to _manually_ import and build the main **sass** file. This will require a [Sass loader](https://github.com/webpack-contrib/sass-loader) and a `.sass`/`.scss` file entry.
 
-```sasss
+```sass
 // src/sass/main.scss
 
 $color-pack: false;
@@ -92,6 +92,6 @@ This can also be done within your main **App.vue** file. Keep in mind, depending
 
 Below is a list of the Material design color palette grouped by primary color
 
-<StyleColors />
+<color-palette />
 
 <backmatter />
