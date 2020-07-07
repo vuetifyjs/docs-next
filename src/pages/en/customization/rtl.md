@@ -1,6 +1,6 @@
 ---
 meta:
-  title: RTL (bidirectionality)
+  title: RTL - bidirectionality
   description: Vuetify is configurable and compatible with RTL languages.
   keywords: rtl, right-to-left, bidirectionality
 related:
@@ -8,9 +8,9 @@ related:
   - /customization/internationalization/
 ---
 
-# RTL (bidirectionality)
+# RTL - bidirectionality
 
-Vuetify supports RTL **(right to left)** languages and can be activated by using the **rtl** option when bootstrapping your application. You can find additional information about [implementing bidrectionality](https://material.io/design/usability/bidirectionality.html) on the specification site.
+Vuetify supports RTL **(right to left)** languages and can be activated by using the **rtl** option when bootstrapping your application. You can find additional information about [implementing bidirectionality](https://material.io/design/usability/bidirectionality.html) on the specification site.
 
 <entry-ad />
 
@@ -26,9 +26,8 @@ export default new Vuetify({
   rtl: true,
 })
 ```
-<p align="center"> 
-<img src="https://cdn.vuetifyjs.com/images/accessibility/rtl.png">
-</p>
+
+<app-img src="https://cdn.vuetifyjs.com/images/accessibility/rtl.png" alt="rtl" width="320" />
 
 You can also change this dynamically at any point by modifying the **rtl** value on the vuetify object.
 
