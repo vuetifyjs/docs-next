@@ -103,14 +103,16 @@
         "group": "components",
         "items": [
           "autocompletes",
+          "checkboxes",
           "combobox",
           "file-inputs",
           "forms",
           "inputs",
           "overflow-btns",
+          "radios",
           "selects",
-          "selection-controls",
           "sliders",
+          "switches",
           "textareas",
           "text-fields"
         ]
@@ -124,6 +126,7 @@
           "chip-groups",
           "item-groups",
           "list-item-groups",
+          "radio-groups",
           "slide-groups",
           "windows"
         ]
