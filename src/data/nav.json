@@ -109,7 +109,7 @@
           "forms",
           "inputs",
           "overflow-btns",
-          "radios",
+          "radio-buttons",
           "selects",
           "sliders",
           "switches",
@@ -126,7 +126,6 @@
           "chip-groups",
           "item-groups",
           "list-item-groups",
-          "radio-groups",
           "slide-groups",
           "windows"
         ]

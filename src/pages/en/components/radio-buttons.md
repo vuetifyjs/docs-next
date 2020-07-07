@@ -1,28 +1,30 @@
 ---
 meta:
-  title: Radio Group component
-  description: The radio group component combines numerous radio buttons into a single group.
-  keywords: radio groups, vuetify radio group component, vue radio group component
+  title: Radio button component
+  description: A radio button allows the user to choose only one of a set of options using a radio group.
+  keywords: radio groups, radio buttons, vuetify radio group component, vuetify radio component, vue radio component, vue radio group component
 related:
   - /components/button-groups/
   - /components/forms/
-  - /components/radio-buttons/
+  - /components/checkboxes/
 ---
 
-# Radio groups
+# Radio buttons
 
-The `v-radio-group` component supercharges the `v-radio` component by providing groupable functionality. It is used for creating groups of radio buttons.
+The `v-radio` component is a simple radio button. When combined with  the `v-radio-group` component you can provide groupable functionality to allow users to select from a predefined set of options.
 
 <entry-ad />
 
 ## Usage
 
+Although `v-radio` can be used on its own, it is best used in conjunction with `v-radio-group`. Using the **v-model** on the `v-radio-group` you can access the value of the selected radio button inside the group.
+
 <example file="v-radio-group/usage" />
 
 ## API
 
-- [v-radio-group](../../api/v-radio-group)
 - [v-radio](../../api/v-radio)
+- [v-radio-group](../../api/v-radio-group)
 
 ## Examples
 
