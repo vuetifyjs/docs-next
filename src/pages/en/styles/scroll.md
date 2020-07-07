@@ -1,8 +1,8 @@
 ---
 meta:
   title: Scroll
-  description: Generic Description.
-  keywords: template
+  description: Programmatic scrolling within an application can be handled using the goTo method included in the vuetify object.
+  keywords: programmatic scrolling, vuetify goto, goto
 related:
   - /directives/scrolling/
   - /styles/content/
@@ -18,13 +18,13 @@ You can Programmatically trigger scrolling in your application by using the **go
 
 The **goTo** method takes two parameters **target** and **options**. **target** can be either a pixel offset from the top of the page, a valid css selector, or an element reference. **options** is an object that includes **duration**, **easing**, **container**, and **offset**.
 
-<example file="scroll/" />
+<example file="scroll/usage" />
 
 ## API
 
-- [$vuetify](../../../api/$vuetify)
+- [$vuetify](../../api/$vuetify)
 
-## Using with router
+## Use with router
 
 The **goTo** function can be individually imported and invoked anywhere. This is particularly useful when hooking up to [vue-router](https://router.vuejs.org/).
 
