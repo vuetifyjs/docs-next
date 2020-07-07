@@ -24,6 +24,12 @@ TODO
 - [v-radio-group](../../api/v-radio-group)
 - [v-radio](../../api/v-radio)
 
+## Sub-components
+
+### v-radio
+
+v-radio description
+
 ## Examples
 
 ### Props
