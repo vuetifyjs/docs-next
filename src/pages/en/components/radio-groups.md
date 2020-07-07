@@ -56,7 +56,7 @@ Radios can be colored by using any of the builtin colors and contextual names us
 
 #### Label slot
 
-Selection controls' labels can be defined in `label` slot - that will allow to use HTML content.
+Radio Group labels can be defined in `label` slot - that will allow to use HTML content.
 
 <example file="v-radio-group/slot-label" />
 

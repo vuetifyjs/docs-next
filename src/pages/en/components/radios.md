@@ -34,7 +34,7 @@ TODO
 
 #### Label slot
 
-Selection controls' labels can be defined in `label` slot - that will allow to use HTML content.
+Radio labels can be defined in `label` slot - that will allow to use HTML content.
 
 <example file="v-radio/slot-label" />
 
