@@ -23,84 +23,84 @@ Vuetify comes with over 10 custom css animations that can be applied to numerous
 
 ## API
 
-- [v-fab-transition](../../../api/v-fab-transition)
-- [v-fade-transition](../../../api/v-fade-transition)
-- [v-expand-transition](../../../api/v-expand-transition)
-- [v-scale-transition](../../../api/v-scale-transition)
-- [v-scroll-x-transition](../../../api/v-scroll-x-transition)
-- [v-scroll-x-reverse-transition](../../../api/v-scroll-x-reverse-transition)
-- [v-scroll-y-transition](../../../api/v-scroll-y-transition)
-- [v-scroll-y-reverse-transition](../../../api/v-scroll-y-reverse-transition)
-- [v-slide-x-transition](../../../api/v-slide-x-transition)
-- [v-slide-x-reverse-transition](../../../api/v-slide-x-reverse-transition)
-- [v-slide-y-transition](../../../api/v-slide-y-transition)
-- [v-slide-y-reverse-transition](../../../api/v-slide-y-reverse-transition)
+- [v-fab-transition](../../api/v-fab-transition)
+- [v-fade-transition](../../api/v-fade-transition)
+- [v-expand-transition](../../api/v-expand-transition)
+- [v-scale-transition](../../api/v-scale-transition)
+- [v-scroll-x-transition](../../api/v-scroll-x-transition)
+- [v-scroll-x-reverse-transition](../../api/v-scroll-x-reverse-transition)
+- [v-scroll-y-transition](../../api/v-scroll-y-transition)
+- [v-scroll-y-reverse-transition](../../api/v-scroll-y-reverse-transition)
+- [v-slide-x-transition](../../api/v-slide-x-transition)
+- [v-slide-x-reverse-transition](../../api/v-slide-x-reverse-transition)
+- [v-slide-y-transition](../../api/v-slide-y-transition)
+- [v-slide-y-reverse-transition](../../api/v-slide-y-reverse-transition)
 
 ## Examples
 
 ### Props
 
-### Custom Origin
+#### Custom Origin
 
 Programmatically control the transition origin with a simple prop.
 
 <example file="transitions/prop-custom-origin" />
 
-### Expand transition
+### Misc
+
+#### Expand x
 
 The expand transition is used in Expansion Panels and List Groups. There is also a horizontal version available with `v-expand-x-transition`.
 
-<example file="transitions/prop-expand-transition" />
+<example file="transitions/misc-expand-x" />
 
-### Fab transition
-      
+#### Fab
+
 An example of the fab transition can be found in the `v-speed-dial` component.
 
-<example file="transitions/prop-fab-transition" />
+<example file="transitions/misc-fab" />
 
-### Fade transition
+#### Fade
 
 An example of the fade transition can be found on the Carousel component.
 
-<example file="transitions/prop-fade-transition" />
+<example file="transitions/misc-fade" />
 
-### Scale transition
+#### Scale
 
-Many of Vuetify's components contain a <code>transition</code> prop which allows you to specify your own.
+Many of Vuetify's components contain a **transition** prop which allows you to specify your own.
 
-<example file="transitions/prop-scale-transition" />
+<example file="transitions/misc-scale" />
 
-### Scroll X transitions
+#### Scroll x
 
 Scroll X transitions continue along the horizontal axis.
 
-<example file="transitions/prop-scroll-x-transitions" />
+<example file="transitions/misc-scroll-x" />
 
-### Scroll Y transitions
+#### Scroll y
 
 Scroll Y transitions continue along the vertical axis.
 
-<example file="transitions/prop-scroll-y-transitions" />
+<example file="transitions/misc-scroll-y" />
 
-### Slide X transitions
+#### Slide x
 
 Slide x transitions move along the horizontal axis.
 
-<example file="transitions/prop-slide-x-transitions" />
+<example file="transitions/misc-slide-x" />
 
-### Slide Y transitions
+#### Slide y
 
 Animations use the application's `$primary-transition`.
 
-<example file="transitions/prop-slide-y-transitions" />
+<example file="transitions/misc-slide-y" />
 
-### Slots
-
-### Todo list
+#### Todo list
 
 Using multiple custom transitions, it is easy to bring a simple todo list to life!
 
-<example file="transitions/slot-todo" />
+<example file="transitions/misc-todo" />
 
 ## Create your own
 
