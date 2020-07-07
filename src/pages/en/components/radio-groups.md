@@ -1,17 +1,17 @@
 ---
 meta:
   title: Radio Group component
-  description: TODO
-  keywords: TODO
+  description: The radio group component combines numerous radio buttons into a single group.
+  keywords: radio groups, vuetify radio group component, vue radio group component
 related:
   - /components/button-groups/
   - /components/forms/
-  - /components/text-fields/
+  - /components/radio-buttons/
 ---
 
-# Radio Groups
+# Radio groups
 
-TODO
+The `v-radio-group` component supercharges the `v-radio` component by providing groupable functionality. It is used for creating groups of radio buttons.
 
 <entry-ad />
 
@@ -24,21 +24,15 @@ TODO
 - [v-radio-group](../../api/v-radio-group)
 - [v-radio](../../api/v-radio)
 
-## Sub-components
-
-### v-radio
-
-v-radio description
-
 ## Examples
 
 ### Props
 
-#### Default
+#### Colors
 
-Radio-groups are by default mandatory. This can be changed with the `mandatory` prop.
+Radios can be colored by using any of the builtin colors and contextual names using the **color** prop.
 
-<example file="v-radio-group/prop-default" />
+<example file="v-radio-group/prop-colors" />
 
 #### Direction
 
@@ -46,15 +40,15 @@ Radio-groups can be presented either as a row or a column, using their respectiv
 
 <example file="v-radio-group/prop-direction" />
 
-#### Colors
+#### Mandatory
 
-Radios can be colored by using any of the builtin colors and contextual names using the `color` prop.
+Radio-groups are by default mandatory. This can be changed with the **mandatory** prop.
 
-<example file="v-radio-group/prop-colors" />
+<example file="v-radio-group/prop-mandatory" />
 
 ### Slots
 
-#### Label slot
+#### Label
 
 Radio Group labels can be defined in `label` slot - that will allow to use HTML content.
 
