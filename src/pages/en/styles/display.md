@@ -1,6 +1,6 @@
 ---
 meta:
-  title: CSS Display helpers
+  title: Display helpers
   description: Display helper classes allow you to control when elements should display based upon viewport.
   keywords: display helper classes, display classes, vuetify display
 related:
@@ -9,13 +9,13 @@ related:
   - /customization/breakpoints/
 ---
 
-# CSS Display helpers
+# Display helpers
 
 The display helpers allow you to control the display of content. This includes being conditionally visible based upon the current viewport, or the actual element display type.
 
 <entry-ad />
 
-<BreakpointsTable />
+<breakpoints-table />
 
 ## Display
 
@@ -93,7 +93,7 @@ Print utility classes can also be combined with none print display utilities.
 
 ## Accessibility
 
-### Screen Readers
+### Screen readers
 
 Use the `d-sr` utility classes to conditionally hide content on all devices *except* screen readers.
 
