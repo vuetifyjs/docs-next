@@ -58,6 +58,6 @@ Checkboxes can be colored by using any of the builtin colors and contextual name
 
 Checkbox labels can be defined in `label` slot - that will allow to use HTML content.
 
-<example file="selection-controls/slot-label" />
+<example file="v-checkbox/slot-label" />
 
 <backmatter />
