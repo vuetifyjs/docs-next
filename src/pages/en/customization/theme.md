@@ -19,7 +19,7 @@ Easily change the colors of your application programmatically. Rebuild the defau
 
 Discover and generate new color themes for your **Vuetify** applications using our [Theme Generator](https://theme-generator.vuetifyjs.com) tool.
 
-## Light and Dark
+## Light and dark
 
 Vuetify supports both **light** and **dark** variants of the Material Design spec. This designation starts at the root application component, `v-app` and is supported by majority of components. By default, your application will use the **light** theme, but this can be easily overwritten by adding the **dark** option in the theme service.
 
@@ -281,7 +281,7 @@ export default new Vuetify({
 })
 ```
 
-### Custom Properties
+### Custom properties
 
 Enabling `customProperties` will also generate a [css variable](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for each theme color, which you can then use in your components' `<style>` blocks.
 
@@ -313,7 +313,7 @@ export default new Vuetify({
 </style>
 ```
 
-### CSP Nonce
+### CSP nonce
 
 Pages with the `script-src` or `style-src` CSP rules enabled may require a **nonce** to be specified for embedded style tags.
 
