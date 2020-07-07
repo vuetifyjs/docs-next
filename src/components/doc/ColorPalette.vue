@@ -1,9 +1,5 @@
 <template>
   <section id="material-colors">
-    <base-heading>colorHeader</base-heading>
-
-    <doc-text>colorText</doc-text>
-
     <v-text-field
       v-model="search"
       append-icon="mdi-palette"

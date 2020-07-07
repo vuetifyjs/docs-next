@@ -88,4 +88,10 @@ This can also be done within your main **App.vue** file. Keep in mind, depending
 </style>
 ```
 
+## Material colors
+
+Below is a list of the Material design color palette grouped by primary color
+
+<StyleColors />
+
 <backmatter />
