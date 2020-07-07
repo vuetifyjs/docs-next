@@ -1,8 +1,8 @@
 ---
 meta:
-  title: Border Radius
-  description: Use border utilities to quickly style the border-radius of any element.
-  keywords: border radius classes, radius utilities, vuetify radius helper classes
+  title: Border radius
+  description: Use border utilities to quickly style the border-radius of any element.
+  keywords: border radius classes, radius utilities, vuetify radius helper classes
 related:
   - /styles/text-and-typography/
   - /components/sheets/
@@ -15,40 +15,11 @@ Use border utilities to quickly style the border-radius of any element.
 
 <entry-ad />
 
+## Caveats
+
 <alert type="info">
-    The infixes **sm, lg, and xl** correlate to the border radius *size* and are not affected
-    by breakpoints.
+  The infixes **sm**, **lg**, and **xl** correlate to the border radius *size* and are not affected by breakpoints.
 </alert>
-
-## Rounded corners
-
-The **rounded** helper classes allow you to modify the *border radius* of an element. Use the `.rounded-sm`, `.rounded`, `.rounded-lg`, and `.rounded-xl` to add a border radius of varying size.
-
-<example file="v-border-radius/misc-rounded" />
-
-## Pill and Circle
-
-You can create pills with the `.rounded-pill` class and circles with the `.rounded-circle` class.
-
-<example file="v-border-radius/misc-pill-and-circle" />
-
-## Removing Border Radius
-
-Use the `.rounded-0` helper class to *remove* all of an elements radius or select by side or corner; e.g. `.rounded-l-0` and `.rounded-tr-0`.
-
-<example file="v-border-radius/misc-removing" />
-
-## Rounding sides separately
-
-Border radius is configurable on a per side basis using the infix classes, **t, r, b, l**; e.g. `.rounded-br-xl` and `.rounded-tr`.
-
-<example file="v-border-radius/misc-by-side" />
-
-## Rounding corners separately
-
-Border radius is configurable on a per corner basis using the infix classes, **tl, tr, br, bl**; e.g. `.rounded-br-xl` and `.rounded-tr`.
-
-<example file="v-border-radius/misc-separately" />
 
 ## Customizing
 
@@ -78,5 +49,39 @@ $rounded: (
   'lg': $border-radius-root * 2
 );
 ```
+
+## Examples
+
+### Misc
+
+#### Pill and circle
+
+You can create pills with the `.rounded-pill` class and circles with the `.rounded-circle` class.
+
+<example file="border-radius/misc-pill-and-circle" />
+
+#### Removing Border Radius
+
+Use the `.rounded-0` helper class to *remove* all of an elements radius or select by side or corner; e.g. `.rounded-l-0` and `.rounded-tr-0`.
+
+<example file="border-radius/misc-removing-border-radius" />
+
+#### Rounding all corners
+
+The **rounded** helper classes allow you to modify the *border radius* of an element. Use the `.rounded-sm`, `.rounded`, `.rounded-lg`, and `.rounded-xl` to add a border radius of varying size.
+
+<example file="border-radius/misc-rounding-all-corners" />
+
+#### Rounding by side
+
+Border radius is configurable on a per side basis using the infix classes, **t, r, b, l**; e.g. `.rounded-br-xl` and `.rounded-tr`.
+
+<example file="border-radius/misc-rounding-by-side" />
+
+#### Rounding by corner
+
+Border radius is configurable on a per corner basis using the infix classes, **tl, tr, br, bl**; e.g. `.rounded-br-xl` and `.rounded-tr`.
+
+<example file="border-radius/misc-rounding-by-corner" />
 
 <backmatter />
