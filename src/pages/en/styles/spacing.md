@@ -14,6 +14,10 @@ Update your layout without creating new classes. Spacing helpers are useful for 
 
 <entry-ad />
 
+Use the playground to get a feel for what the different helper classes can do. For an explanation of **how they work**, see the How it works section below.
+
+<example file="spacing/usage" />
+
 ## How it works
 
 The helper classes apply **margin** or **padding** to an element ranging from _0 to 16_. Each size increment was designed to align with common Material Design spacings. These classes can be applied using the following format `{property}{direction}-{size}`.
@@ -72,32 +76,28 @@ The **size** controls the increment of the property in 4px intervals:
 - `n16` - sets `margin` to -64px
 - `auto` - sets the spacing to **auto**
 
+## Examples
+
+### Breakpoints
+
+Vuetify comes with a 12 point grid system built using Flexbox. Spacing is used to create specific layouts within an application's content. It consists of 5 media breakpoints used to target specific screen sizes or orientations: **xs**, **sm**, **md**, **lg** and **xl**. The default resolutions are defined below in the *Viewport Breakpoints* table and can be modified by customizing the [breakpoint service config](/customization/breakpoints).
+
+<breakpoints-table />
+
+The helper classes apply **margin** or **padding** at a given breakpoint. These classes can be applied using the following format: `{property}{direction}-{breakpoint}-{size}`. This does not apply to **xs** as it is inferred; e.g. `ma-xs-2` equals `ma-2`.
+
+<example file="spacing/breakpoints" />
+
 ### Horizontal
 
 Using the margin helper classes you can easily center content horizontally.
 
-<example file="../styles/spacing/misc-horizontal" />
+<example file="spacing/horizontal" />
 
 ### Negative margin
 
 Margin can also be applied negatively at the same **1 to 16** intervals.
 
-<example file="../styles/spacing/misc-negative-margin" />
-
-## With breakpoints
-
-Vuetify comes with a 12 point grid system built using Flexbox. Spacing is used to create specific layouts within an application's content. It consists of 5 media breakpoints used to target specific screen sizes or orientations: **xs**, **sm**, **md**, **lg** and **xl**. The default resolutions are defined below in the *Viewport Breakpoints* table and can be modified by customizing the [breakpoint service config](/customization/breakpoints).
-
-<!-- layout-grid -->
-
-## How it works
-
-The helper classes apply **margin** or **padding** at a given breakpoint. These classes can be applied using the following format: `{property}{direction}-{breakpoint}-{size}`. This does not apply to **xs** as it is inferred; e.g. `ma-xs-2` equals `ma-2`.
-
-### With breakpoint
-
-Spacing with `md` and `lg` breakpoints
-
-<example file="../styles/spacing/misc-misc-breakpoint-md" />
+<example file="spacing/negative-margin" />
 
 <backmatter />

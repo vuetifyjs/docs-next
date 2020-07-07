@@ -20,7 +20,9 @@
           </template>
 
           <template v-slot:append-outer>
-            <div class="py-1"> - </div>
+            <div class="py-1">
+              -
+            </div>
           </template>
         </v-select>
 
@@ -47,7 +49,9 @@
           </template>
 
           <template v-slot:append-outer>
-            <div class="py-1"> - </div>
+            <div class="py-1">
+              -
+            </div>
           </template>
         </v-select>
 
