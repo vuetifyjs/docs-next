@@ -18,6 +18,8 @@ The elevation helpers allow you to control relative depth, or distance, between 
 
 The `elevation` helper classes allow you to assign a custom **z-depth** to any element.
 
+<example file="elevation/usage" />
+
 ## Examples
 
 ### Props
@@ -25,5 +27,7 @@ The `elevation` helper classes allow you to assign a custom **z-depth** to any e
 #### Dynamic elevation
 
 Numerous components utilize the **elevatable** mixin and are given an **elevation** prop. For components that are not supported, you can dynamically change the class
+
+<example file="elevation/prop-dynamic" />
 
 <backmatter />
