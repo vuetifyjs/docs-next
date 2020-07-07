@@ -28,21 +28,19 @@ The `v-data-iterator` allows you to customize exactly how to display your data. 
 
 ## Examples
 
-### Props
+### Slots
 
-#### Expand
+#### Default
 
 The `v-data-iterator` has internal state for both selection and expansion, just like `v-data-table`. In this example we use the methods `isExpanded` and `expand` available on the default slot.
 
-<example file="v-data-iterator/prop-single-expand" />
+<example file="v-data-iterator/slot-default" />
 
-### Slots
-
-#### Customizing header and footer
+#### Header and footer
 
 The `v-data-iterator` has both a header and footer slot for adding extra content.
 
-<example file="v-data-iterator/slot-header-footer" />
+<example file="v-data-iterator/slot-header-and-footer" />
 
 ### Misc
 
