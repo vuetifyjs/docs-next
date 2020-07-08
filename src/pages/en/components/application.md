@@ -67,21 +67,15 @@ Applying the **app** prop automatically applies position: **fixed** to the layou
 
 Below is a list of all the components that support the **app** prop and can be used as layout elements in your application. These can be mixed and matched and only **one** of each particular component should exist at any time. You can, however, swap them out and the layout will accommodate. For some examples displaying how you can build various layouts, checkout the [Pre-made layouts](/getting-started/pre-made-layouts) page.
 
-- [v-app-bar](/components/app-bars)
-- [v-bottom-navigation](/components/bottom-navigation)
-- [v-footer](/components/footer)
-- [v-navigation-drawer](/components/navigation-drawers)
-- [v-system-bar](/components/system-bars)
-
 Each of these application components have a designated location and priority that it affects within the layout system.
 
-- **v-system-bar:** Is always placed at the top of an application with higher priority than `v-app-bar`.
-- **v-app-bar:** Is always placed at the top of an application with a lower priority than `v-system-bar`.
-- **v-navigation-drawer:** Can be placed on the left or right side of an application and can be configured to sit next to or below `v-app-bar`.
-- **v-footer:** Is always placed at the bottom of an application with a lower priority than `v-bottom-navigation`.
-- **v-bottom-navigation:** Is always placed at the bottom of an application with a higher priority than `v-footer`.
+- [v-app-bar](/components/app-bars): Is always placed at the top of an application with a lower priority than `v-system-bar`.
+- [v-bottom-navigation](/components/bottom-navigation): Is always placed at the bottom of an application with a higher priority than `v-footer`.
+- [v-footer](/components/footer): Is always placed at the bottom of an application with a lower priority than `v-bottom-navigation`.
+- [v-navigation-drawer](/components/navigation-drawers): Can be placed on the left or right side of an application and can be configured to sit next to or below `v-app-bar`.
+- [v-system-bar](/components/system-bars): Is always placed at the top of an application with higher priority than `v-app-bar`.
 
-<app-img src="layouts/app.png" alt="Vuetify Application" width="320" />
+<app-img src="https://cdn.vuetifyjs.com/images/layouts/app.png" alt="Vuetify Application" />
 
 ## Application service
 
