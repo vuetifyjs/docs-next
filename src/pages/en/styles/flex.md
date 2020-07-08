@@ -36,7 +36,7 @@ You can also customize flex utilities to apply based upon various breakpoints.
 
 By default, `d-flex` applies `flex-direction: row` and can generally be omitted. However, there may be situations where you need to explicitly define it.
 
-<example file="flexflex-direction/" />
+<example file="flex/flex-direction" />
 
 The `flex-column` and `flex-column-reverse` utility classes can be used to change the orientation of the flexbox container. Keep in mind that **IE11** and **Safari** may have issues with the column direction.
 
@@ -104,7 +104,7 @@ There are also responsive variations for `justify-content`.
 The `align-items` flex setting can be changed using the flex align classes. This by default will modify the flexbox items on the **y-axis** but is reversed when using `flex-direction: column`, modifying the **x-axis**. Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
 <alert type="info">
-When using flex align with IE11 you will need to set an explicit `height` as `min-height` will not suffice and cause undesired results.
+  When using flex align with IE11 you will need to set an explicit `height` as `min-height` will not suffice and cause undesired results.
 </alert>
 
 <example file="flex/flex-align" />
@@ -181,7 +181,7 @@ There are also responsive variations for `align-self-items`.
 Using the margin helper classes in a flexbox container, you can control the positioning of flex items on the **x-axis** or **y-axis** when using `flex-row` or `flex-column` respectively.
 
 <alert type="error">
-**IE11** does not properly support auto margins on flex items that have a parent with a non-default `justify-content` value. [See this StackOverflow answer](https://stackoverflow.com/a/37535548) for more details.
+  **IE11** does not properly support auto margins on flex items that have a parent with a non-default `justify-content` value. [See this StackOverflow answer](https://stackoverflow.com/a/37535548) for more details.
 </alert>
 
 <example file="flex/margins" />
@@ -354,7 +354,7 @@ There are also responsive variations for `align-content`.
 
 ## Flex grow and shrink
 
-Vuetify has helper classes for applying grow and shrink manually. These can be applied by adding the helper class in the format `flex-{condition}-{value}`, where condition can be either `grow` or `shrink` and value can be either `0` or `1`. The condition `grow` will permit an element to grow to fill available space, whereas `shrink` will permit an element to shrink down to only the space needs for its contents. However, this will only happen if the element must shrink to fit their container such as a container resize or being effected by a `flex-grow-1`. The value `0` will prevent the condition from occuring whereas `1` will permit the condition. The following classes are available:
+Vuetify has helper classes for applying grow and shrink manually. These can be applied by adding the helper class in the format `flex-{condition}-{value}`, where condition can be either `grow` or `shrink` and value can be either `0` or `1`. The condition `grow` will permit an element to grow to fill available space, whereas `shrink` will permit an element to shrink down to only the space needs for its contents. However, this will only happen if the element must shrink to fit their container such as a container resize or being effected by a `flex-grow-1`. The value `0` will prevent the condition from occurring whereas `1` will permit the condition. The following classes are available:
 
 - **flex-grow-0**
 - **flex-grow-1**
