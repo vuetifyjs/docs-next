@@ -5,7 +5,9 @@
   >
     <v-list-item two-line>
       <v-list-item-content>
-        <v-list-item-title class="headline">San Francisco</v-list-item-title>
+        <v-list-item-title class="headline">
+          San Francisco
+        </v-list-item-title>
         <v-list-item-subtitle>Mon, 12:30 PM, Mostly sunny</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
@@ -70,7 +72,9 @@
     <v-divider></v-divider>
 
     <v-card-actions>
-      <v-btn text>Full Report</v-btn>
+      <v-btn text>
+        Full Report
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>

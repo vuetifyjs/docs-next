@@ -26,18 +26,17 @@
     data: () => ({
       defaults: {
         disabled: false,
+        elevation: 2,
         loading: false,
-        outline: false,
-        raised: false,
+        outlined: false,
         shaped: false,
         tile: false,
-        elevation: 2,
       },
       options: {
         booleans: ['disabled', 'loading'],
         sliders: { elevation: [0, 24] },
       },
-      tabs: ['outlined', 'raised', 'shaped', 'tile'],
+      tabs: ['outlined', 'shaped', 'tile'],
     }),
   }
 </script>
