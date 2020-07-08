@@ -30,35 +30,51 @@ A card has 4 basic components, `v-card-title`, `v-card-subtitle`, `v-card-text` 
 
 ## Examples
 
-Example text.
+#### Outlined cards
+An *outlined* card has 0 elevation and contains a soft border.
+<example file="v-card/outlined-cards" />
+
+### Intermediate
+The `v-card` component is useful for wrapping content.
+<example file="v-card/intermediate" />
+
+
+### Information card
+Cards are entry points to more detailed information. To keep things concise, ensure to limit the number of actions the user can take.
+<example file="v-card/information-card" />
 
 ### Props
 
-Omit if none
-
-### Events
-
-Omit if none
+#### Loading card
+Cards can be set to a loading state when processing a user action. This disables further actions and provides visual feedback with an indeterminate [v-progress-linear](/components/progress-linear).
+<example file="v-card/loading-card" />
 
 ### Slots
 
-Omit if none
+### Media with text
+Using the layout system, we can add custom text anywhere within the background.
+<example file="v-card/media-with-text" />
 
 ### Misc
 
-Omit if none
+#### Grids
+Using grids, you can create beautiful layouts.
+<example file="v-card/grids" />
 
-#### Example Header
+#### Horizontal cards
+Using `v-flex`, you can create customized horizontal cards. Use the `contain` property to shrink the `v-img` to fit inside the container, instead of covering.
+<example file="v-card/horizontal-cards" />
 
-Example description
+#### Custom actions
+With a simple conditional, you can easily add supplementary text that is hidden until opened.
+<example file="v-card/custom-actions" />
 
-`<example file="" />`
+#### Twitter card
+The `v-card` component has multiple children components that help you build complex examples without having to worry about spacing. This example is comprised of the `v-card-title`, `v-card-text` and `v-card-actions` components.
+<example file="v-card/twitter-card" />
 
-- **file**: `<component>/<type>-<propname>`
-- eg: `<example file="v-alert/prop-colored-border" />`
-
-## Accessibility
-
-Accessibility text - omit if none
+#### Weather card
+Using [v-list-items](/components/lists) and a [v-slider](/components/sliders), we are able to create a unique weather card. The list components ensure that we have consistent spacing and functionality while the slider component allows us to provide a useful interface of selection to the user.
+<example file="v-card/weather-card" />
 
 <backmatter />
