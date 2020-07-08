@@ -9,8 +9,11 @@
   "MD033": {
     "allowed_elements": [
       "alert",
+      "app-img",
       "backmatter",
       "br",
+      "breakpoints-table",
+      "color-palette",
       "contribute",
       "discovery-ad",
       "entry-ad",
@@ -19,9 +22,10 @@
       "inline-ad",
       "kbd",
       "promoted-ad",
-      "pre-made-layouts",
+      "layout-examples",
       "random-ad",
       "sponsored-ad",
+      "team-members",
       "up-next",
       "usage",
       "var",

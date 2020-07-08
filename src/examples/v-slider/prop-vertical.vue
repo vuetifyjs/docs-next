@@ -7,11 +7,6 @@
         vertical
         label="Regular"
       ></v-slider>
-      <v-range-slider
-        v-model="value2"
-        vertical
-        label="Range"
-      ></v-range-slider>
     </v-row>
   </v-container>
 </template>
@@ -21,7 +16,6 @@
     data () {
       return {
         value: 10,
-        value2: [20, 40],
       }
     },
   }
