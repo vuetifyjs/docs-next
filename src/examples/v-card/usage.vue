@@ -2,7 +2,10 @@
   <v-container>
     <v-row>
       <div class="mx-3"></div>
-      <v-card>
+      <v-card
+        v-bind="$attrs"
+        v-on="$listeners"
+      >
         <v-card-title>Card title</v-card-title>
         <v-card-subtitle>Secondary text</v-card-subtitle>
 
@@ -23,15 +26,18 @@
     data: () => ({
       defaults: {
         disabled: false,
-        image: false,
         loading: false,
-        subtitle: true,
-        supportingText: true,
+        outline: false,
+        raised: false,
+        shaped: false,
+        tile: false,
+        elevation: 2,
       },
       options: {
-        booleans: ['disabled', 'loading', 'image', 'subtitle', 'supportingText'],
+        booleans: ['disabled', 'loading'],
+        sliders: { elevation: [0, 24] },
       },
-      tabs: ['default', 'outlined', 'raised', 'shaped', 'tile'],
+      tabs: ['outlined', 'raised', 'shaped', 'tile'],
     }),
   }
 </script>
