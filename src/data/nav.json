@@ -9,7 +9,8 @@
       "sponsors-and-backers",
       "roadmap",
       "long-term-support",
-      "security-disclosure"
+      "security-disclosure",
+      "code-of-conduct"
     ]
   },
   {
@@ -103,14 +104,16 @@
         "group": "components",
         "items": [
           "autocompletes",
+          "checkboxes",
           "combobox",
           "file-inputs",
           "forms",
           "inputs",
           "overflow-btns",
+          "radio-buttons",
           "selects",
-          "selection-controls",
           "sliders",
+          "switches",
           "textareas",
           "text-fields"
         ]
@@ -176,7 +179,7 @@
       "timelines",
       "tooltips",
       "treeview",
-      "virtual-scrollers"
+      "virtual-scroller"
     ]
   },
   {

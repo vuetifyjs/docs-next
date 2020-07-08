@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
-    "build:api": "node build/api-gen.js",
+    "build:api": "node build/api-gen",
     "dev": "cross-env EN_LOCALE_ONLY=true yarn serve",
     "dev:full": "cross-env EN_LOCALE_ONLY=false yarn serve",
     "serve": "vue-cli-service serve",
@@ -21,7 +21,7 @@
     "vue": "^2.6.11",
     "vue-i18n": "^8.17.7",
     "vue-router": "^3.1.6",
-    "vuetify": "^2.3.1",
+    "vuetify": "^2.3.3",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
