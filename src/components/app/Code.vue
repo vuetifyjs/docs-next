@@ -1,7 +1,9 @@
 <template>
   <v-sheet
-    :color="dark ? '#1F1F1F' : 'grey lighten-5'"
+    :color="isDark ? '#1F1F1F' : 'grey lighten-5'"
+    :dark="isDark"
     class="app-code overflow-hidden"
+    dir="ltr"
     outlined
     rounded
   >
@@ -22,7 +24,13 @@
     name: 'AppCode',
 
     computed: {
-      dark: get('user/dark'),
+      ...get('user', [
+        'dark',
+        'mixed',
+      ]),
+      isDark () {
+        return this.dark || this.mixed
+      },
     },
 
     methods: {
@@ -88,8 +96,17 @@
     pre.language-json::after
       content: 'json'
 
+    pre.language-sass::after
+      content: 'sass'
+
     pre.language-scss::after
       content: 'scss'
+
+    pre.language-ts::after
+      content: 'ts'
+
+    pre.language-vue::after
+      content: 'vue'
 
     &.theme--dark
       code[class*=language],
@@ -102,6 +119,10 @@
 
       &.v-sheet--outlined
         border: thin solid hsla(0,0%,100%,.12) !important
+
+      .token.operator,
+      .token.string
+        background: none
 
       .token.comment,
       .token.block-comment,

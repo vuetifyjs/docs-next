@@ -1,12 +1,10 @@
 <template>
-  <div style="width: 100%">
-    <v-app-bar
-      v-bind="$attrs"
-      v-on="$listeners"
-    >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-    </v-app-bar>
-  </div>
+  <v-app-bar
+    v-bind="$attrs"
+    v-on="$listeners"
+  >
+    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+  </v-app-bar>
 </template>
 
 <script>
@@ -21,7 +19,6 @@
         color: null,
         dense: false,
         flat: false,
-        image: false,
         prominent: false,
       },
       options: {
@@ -29,7 +26,7 @@
           color: ['red', 'orange', 'yellow', 'green', 'blue', 'purple'],
         },
       },
-      tabs: ['dense', 'flat', 'image', 'prominent'],
+      tabs: ['dense', 'flat', 'prominent'],
     }),
   }
 </script>

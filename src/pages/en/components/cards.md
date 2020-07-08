@@ -27,7 +27,6 @@ A card has 4 basic components, `v-card-title`, `v-card-subtitle`, `v-card-text` 
 
 - [v-card](../../api/v-card)
 
-
 ## Examples
 
 #### Outlined cards

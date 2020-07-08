@@ -26,7 +26,7 @@ The `v-app-bar` component is used for application-wide actions and information.
 - [v-app-bar](../../api/v-app-bar)
 - [v-app-bar-nav-icon](../../api/v-app-bar-nav-icon)
 
-## Sub-Components
+## Sub-components
 
 ### v-app-bar-nav-icon
 
@@ -39,8 +39,6 @@ A styled icon button component created specifically for use with [v-toolbar](/co
 </alert>
 
 ## Examples
-
-Below is a collection of examples.
 
 ### Props
 
@@ -100,16 +98,16 @@ An `v-app-bar` with the `prominent` prop can opt to have its height shrunk as th
 
 ### Misc
 
-#### Toggle navigation drawers
-
-Using the functional component `v-app-bar-nav-icon` you can toggle the state of other components such as a [v-navigation-drawer](/components/navigation-drawers).
-
-<example file="v-app-bar/misc-app-bar-nav" />
-
 #### Menu
 
 You can easily extend the functionality of app bar by adding `VMenu` there. Click on last icon to see it in action.
 
 <example file="v-app-bar/misc-menu" />
+
+#### Toggle navigation drawers
+
+Using the functional component `v-app-bar-nav-icon` you can toggle the state of other components such as a [v-navigation-drawer](/components/navigation-drawers).
+
+<example file="v-app-bar/misc-app-bar-nav" />
 
 <backmatter />

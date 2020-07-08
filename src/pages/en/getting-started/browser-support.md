@@ -15,6 +15,17 @@ Vuetify is a progressive framework that attempts to push web development to the 
 
 <entry-ad />
 
+## Browsers
+
+| Browser | Status |
+| ------- | ------ |
+| Chromium (Chrome, Edge Insider) | Supported |
+| Edge | Supported |
+| Firefox | Supported |
+| IE11/Safari 9 | Supported with polyfill |
+| IE9 / IE10 | Not supported |
+| Safari 10+ | Supported |
+
 ## IE11 and Safari 9 support
 
 Vuetify utilizes features of ES2015/2017 that require the need to use polyfills for **Internet Explorer 11** and **Safari 9/10**. If you are using Vue CLI, this is done automatically for you. Otherwise, in your project directory, you can install `babel-polyfill`:

@@ -11,6 +11,9 @@ const state = {
     advanced: false,
     mini: false,
   },
+  // Provides a 3rd state for the
+  // light theme w/ dark fences
+  mixed: false,
   notifications: [],
   rtl: false,
   snackbar: Date.now(),
@@ -25,6 +28,10 @@ const actions = {
 
     for (const key in user) {
       commit(key, user[key])
+    }
+
+    if (user.dark === undefined) {
+      commit('dark', window.matchMedia('(prefers-color-scheme: dark)'))
     }
   },
   update: ({ state }) => {
