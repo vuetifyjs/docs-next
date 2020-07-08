@@ -11,6 +11,6 @@ Vuetify is _not_ a one person show. We have a very active and engaged team that 
 
 <entry-ad />
 
-<meet-the-team />
+<team-members />
 
 <backmatter />
