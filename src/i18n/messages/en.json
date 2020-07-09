@@ -99,5 +99,10 @@
     "tree": "Treeshaking"
   },
   "features": "Features",
-  "comparison-average": "**Based on average of all Major/Minor/Patch releases over the last 12 months."
+  "comparison-average": "**Based on average of all Major/Minor/Patch releases over the last 12 months.",
+  "jobs-search": "Search by keywords",
+  "jobs-via": "via {via}",
+  "jobs-apply": "Apply Now",
+  "jobs-not-found": "No Jobs Found",
+  "jobs-new": "#new"
 }
