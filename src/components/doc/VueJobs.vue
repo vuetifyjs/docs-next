@@ -40,7 +40,7 @@
             rel="sponsored"
             target="_blank"
           >
-            <v-card-title class="white align-start">
+            <v-card-title class="align-start">
               <v-avatar
                 class="mr-3"
                 tile
