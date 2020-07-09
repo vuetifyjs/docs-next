@@ -4,7 +4,7 @@
       v-model="filter"
       clearable
       dense
-      label="Search by keywords"
+      :label="$i18n.t('jobs-search')"
       outlined
       prepend-inner-icon="mdi-magnify"
     >
@@ -73,7 +73,7 @@
                 depressed
                 small
               >
-                Apply Now
+                {{ $i18n.t('jobs-apply') }}
 
                 <v-icon
                   right
@@ -99,7 +99,7 @@
                   label
                   x-small
                 >
-                  <span class="font-weight-bold">#new</span>
+                  <span class="font-weight-bold">{{ $i18n.t('jobs-new') }}</span>
                 </v-chip>
 
                 <v-chip
@@ -114,7 +114,7 @@
                 <v-spacer />
 
                 <div class="text-right caption text--secondary">
-                  via {{ job.via }}
+                  {{ $i18n.t('jobs-via', { via: job.via }) }}
                 </div>
               </div>
             </v-card-text>
@@ -127,7 +127,7 @@
       v-else-if="isLoading != null"
       class="text-center title pa-4"
     >
-      No Jobs Found
+      {{ $i18n.t('jobs-not-found') }}
     </div>
   </div>
 </template>
