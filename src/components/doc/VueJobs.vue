@@ -6,7 +6,7 @@
       dense
       :label="$i18n.t('jobs-search')"
       outlined
-      prepend-inner-icon="mdi-magnify"
+      prepend-inner-icon="$mdiMagnify"
     >
       <template
         v-if="isLoading"
@@ -79,7 +79,7 @@
                   right
                   small
                 >
-                  mdi-open-in-new
+                  $mdiOpenInNew
                 </v-icon>
               </v-btn>
             </v-card-title>
