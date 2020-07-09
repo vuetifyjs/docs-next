@@ -87,5 +87,17 @@
   "layout-link": "Link to layout for {name}",
   "application": "Application",
   "logo": "Vuetify Logo",
-  "homepage": "Vuetify Home Page"
+  "homepage": "Vuetify Home Page",
+  "comparison-caption": "Vue Framework Comparison {year}",
+  "comparison": {
+    "a11y": "Accessibility and Section 508 support",
+    "enterprise": "Business and Enterprise support",
+    "lts": "Long-term Support",
+    "release": "Release cadence**",
+    "rtl": "RTL support",
+    "themes": "Premium Themes",
+    "tree": "Treeshaking"
+  },
+  "features": "Features",
+  "comparison-average": "**Based on average of all Major/Minor/Patch releases over the last 12 months."
 }
