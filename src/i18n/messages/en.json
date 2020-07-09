@@ -73,5 +73,13 @@
   "core": "### Core<br>Team",
   "founder": "### Founder<br>CEO",
   "keeper": "### Keeper of<br>the Grove",
-  "operations": "### Chief Operations Officer"
+  "operations": "### Chief Operations Officer",
+  "api-search": "Search for API",
+  "api-type": {
+    "component": "Component",
+    "directive": "Directive",
+    "functional": "Functional Component",
+    "grid": "Grid Component",
+    "transition": "Transition"
+  }
 }
