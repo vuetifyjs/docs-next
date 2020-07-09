@@ -81,5 +81,7 @@
     "functional": "Functional Component",
     "grid": "Grid Component",
     "transition": "Transition"
-  }
+  },
+  "usage-options": "Options",
+  "usage-output": "Output:"
 }
