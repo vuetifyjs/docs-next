@@ -42,7 +42,7 @@
           >
             <v-card-title class="align-start">
               <v-avatar
-                class="mr-3"
+                :class="$vuetify.rtl ? 'ml-3' : 'mr-3'"
                 tile
               >
                 <v-img
@@ -93,7 +93,7 @@
               <div class="d-flex align-center">
                 <v-chip
                   v-if="job.isNew"
-                  class="px-2 mr-1"
+                  :class="$vuetify.rtl ? 'px-2 ml-1' : 'px-2 mr-1'"
                   color="#e83e8c"
                   dark
                   label
