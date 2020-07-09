@@ -84,5 +84,8 @@
   },
   "usage-options": "Options",
   "usage-output": "Output:",
-  "layout-link": "Link to layout for {name}"
+  "layout-link": "Link to layout for {name}",
+  "application": "Application",
+  "logo": "Vuetify Logo",
+  "homepage": "Vuetify Home Page"
 }
