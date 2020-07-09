@@ -83,5 +83,6 @@
     "transition": "Transition"
   },
   "usage-options": "Options",
-  "usage-output": "Output:"
+  "usage-output": "Output:",
+  "layout-link": "Link to layout for {name}"
 }
