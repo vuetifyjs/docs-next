@@ -15,9 +15,7 @@ The Vuetify team performs releases on a weekly basis. All release notes can be f
 
 ## Release notes
 
-<alert type="error">
-  **TODO** Add release notes
-</alert>
+<getting-started-releases />
 
 <entry-ad />
 
