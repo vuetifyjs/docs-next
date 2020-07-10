@@ -43,6 +43,7 @@
     border-radius: 4px
     margin: 16px 0
     padding: 16px
+
     code
       background: transparent
       background-color: unset !important
@@ -52,6 +53,7 @@
       font-weight: 300
       font-size: 15px
       line-height: 1.55
+
   ::v-deep .migration-markdown
     h1, h2, h3, h4, h5, p, pre, ul
       margin-bottom: 16px !important
