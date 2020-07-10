@@ -8,7 +8,7 @@
       hide-details
       item-text="name"
       label="Select Release Version"
-      prepend-inner-icon="mdi-database-search"
+      prepend-inner-icon="$mdiDatabaseSearch"
       return-object
       solo
     >
@@ -65,7 +65,7 @@
   import { version } from 'vuetify'
 
   export default {
-    name: 'GettingStartedReleases',
+    name: 'ReleaseNotes',
 
     data: () => ({
       branch: undefined,
