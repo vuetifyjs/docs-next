@@ -21,8 +21,6 @@ The Vuetify team performs releases on a weekly basis. All release notes can be f
 
 ## Migration guide
 
-<alert type="error">
-  **TODO** Add migration guide
-</alert>
+<getting-started-migrations />
 
 <backmatter />
