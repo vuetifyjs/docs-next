@@ -31,7 +31,8 @@
       "usage",
       "var",
       "vue-jobs",
-      "vuetify-comparison"
+      "vuetify-comparison",
+      "why-vuetify-cards"
     ]
   }
 }
