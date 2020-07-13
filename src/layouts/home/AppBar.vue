@@ -1,77 +1,44 @@
 <template>
   <v-app-bar
-    class="shrink"
-    color="transparent"
+    id="home-app-bar"
+    app
     flat
-    height="112"
+    class="v-bar--underline"
+    :color="`${$vuetify.theme.isDark ? 'grey darken-4' : 'white'}`"
   >
-    <v-spacer />
+    <!-- color="white" -->
+    <v-container class="pa-0 d-flex align-center">
+      <base-vuetify-logo />
 
-    <v-btn
-      class="mx-1"
-      color="primary"
-      outlined
-      x-large
-      :to="{
-        name: 'Documentation',
-        params: {
-          category: 'getting-started',
-          page: 'quick-start'
-        }
-      }"
-    >
-      To Documentation
+      <v-spacer />
 
-      <v-icon right>
-        $mdiOpenInNew
-      </v-icon>
-    </v-btn>
+      <v-theme-provider light>
+        <default-search />
+      </v-theme-provider>
 
-    <v-btn
-      v-if="canInstall"
-      class="mx-1"
-      color="primary"
-      outlined
-      x-large
-      @click="promptInstaller"
-    >
-      Install
+      <v-spacer class="d-sm-none" />
 
-      <v-icon right>
-        $mdiPlusCircle
-      </v-icon>
-    </v-btn>
+      <base-store-link />
 
-    <v-btn
-      v-if="updateAvailable"
-      class="mx-1"
-      color="primary"
-      outlined
-      x-large
-      @click="refreshContent"
-    >
-      Refresh Content
+      <base-enterprise-link />
 
-      <v-icon right>
-        $mdiRefreshCircle
-      </v-icon>
-    </v-btn>
-    <v-spacer />
+      <base-ecosystems-menu />
+
+      <base-support-menu />
+
+      <base-change-local />
+    </v-container>
   </v-app-bar>
 </template>
 
 <script>
-  import { call, sync } from 'vuex-pathify'
 
   export default {
     name: 'HomeBar',
 
-    computed: {
-      ...sync('pwa', ['canInstall', 'updateAvailable']),
+    components: {
+      DefaultSearch: () => import('@/layouts/default/Search'),
     },
 
-    methods: {
-      ...call('pwa', ['promptInstaller', 'refreshContent']),
-    },
   }
 </script>

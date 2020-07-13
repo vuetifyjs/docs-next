@@ -29,6 +29,10 @@ export function createRouter (vuetify, store, i18n) {
       locale([
         layout('Home', [route('Home')]),
 
+        layout('Contribution', [
+          route('Contribution'),
+        ], 'contribution'),
+
         layout('Default', [
           route('Documentation'),
         ], ':category/:page'),

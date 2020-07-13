@@ -1,30 +1,22 @@
 <template>
-  <v-app>
-    <home-bar />
-
-    <home-view />
-
-    <home-toc />
+  <v-app
+    id="home-app"
+    app
+  >
+    <home-app-bar />
+    <home-hero />
+    <home-feature />
+    <home-premium-themes />
+    <home-sponsors />
+    <home-footer />
   </v-app>
 </template>
 
 <script>
   export default {
-    name: 'HomeLayout',
-
+    name: 'Home',
     components: {
-      HomeBar: () => import(
-        /* webpackChunkName: "home-app-bar" */
-        './AppBar'
-      ),
-      HomeView: () => import(
-        /* webpackChunkName: "home-view" */
-        './View'
-      ),
-      HomeToc: () => import(
-        /* webpackChunkName: "home-toc" */
-        '@/layouts/default/Toc'
-      ),
+      HomeAppBar: () => import('./AppBar'),
     },
   }
 </script>

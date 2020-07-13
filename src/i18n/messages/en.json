@@ -104,5 +104,60 @@
   "jobs-via": "via {via}",
   "jobs-apply": "Apply Now",
   "jobs-not-found": "No Jobs Found",
-  "jobs-new": "#new"
+  "jobs-new": "#new",
+  "learn-more": "Learn more",
+  "home": {
+    "store": "Store",
+    "enterprise": "Eterprise",
+    "support": "Support",
+    "getHelp": "Get Help",
+    "consulting": "Consulting",
+    "community": "Community",
+    "bug": "Bug",
+    "issues": "Issues",
+    "stack": "Stack",
+    "ecosystem": "Ecosystem",
+    "eslint": "Eslint config",
+    "framework": "Framework",
+    "github": "GitHub",
+    "guide": "Guide",
+    "inDev": "in development",
+    "latest": "Latest releases",
+    "medium": "Medium publication",
+    "menu": "Menu",
+    "next": "next branch",
+    "quickLinks": "Quick links",
+    "reddit": "Reddit",
+    "releases": "Releases",
+    "social": "Social",
+    "stable": "stable",
+    "themeGenerator": "Theme generator",
+    "themes": "Themes",
+    "translations": "Translations",
+    "twitter": "Twitter",
+    "whyVuetify": "Why Vuetify?",
+    "whyVuetifyText": "Building applications with Vue has never been easier. Supercharge your development process with all of the tools you need to succeed.",
+    "features": {
+      "community": {
+        "text": "When you run into a roadblock, you need assistance right away. Vuetify offers support in our massive community on Discord.",
+        "title": "Vibrant Community"
+      },
+      "components": {
+        "text": "Be prepared for an armada of specialized components at your disposal. With over 80 in total, there is a solution to any situation.",
+        "title": "Semantic Material Components"
+      },
+      "scaffolding": {
+        "text": "Vuetify supports the future of Vue tooling through its Vue CLI plugin. With one command you are ready to start building your next great idea.",
+        "title": "Ready-Made Project Scaffolding"
+      }
+    },
+    "callout": "Material Design Component Framework",
+    "text": "Vuetify is a Vue UI Library with beautifully handcrafted Material Components. No design skills required — everything you need to create amazing applications is at your fingertips.",
+    "premiumThemes": "Premium Themes",
+    "premiumThemesText": "Take your project to the next level with premium themes from our official store — all built with Vuetify.",
+    "proudlySponsoredBy": "Project Sponsors",
+    "proundlySponsoredByText": "The continued development and maintenance of Vuetify is made possible by these generous sponsors:",
+    "madeWithVuetify": "Projects Made With Vuetify",
+    "madeWithVuetifyText": "A collection of projects made with Vuetify. See what others are creating in the ecosystem."
+  }
 }
