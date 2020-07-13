@@ -122,5 +122,10 @@
     "freelance": "A single page Material inspired theme for Freelancers.",
     "parallax": "This beautiful single page parallax is a great home page for any application.",
     "blog": "A simple template that features a clean interface for creating a blog or blog-like application."
-  }
+  },
+  "tidelift": {
+    "more": "Learn more",
+    "demo": "Request a demo"
+  },
+  "become-a-sponsor": "Become a sponsor"
 }
