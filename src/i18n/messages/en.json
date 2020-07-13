@@ -105,7 +105,6 @@
   "jobs-apply": "Apply Now",
   "jobs-not-found": "No Jobs Found",
   "jobs-new": "#new",
-<<<<<<< HEAD
   "learn-more": "Learn more",
   "home": {
     "store": "Store",
@@ -160,13 +159,10 @@
     "proundlySponsoredByText": "The continued development and maintenance of Vuetify is made possible by these generous sponsors:",
     "madeWithVuetify": "Projects Made With Vuetify",
     "madeWithVuetifyText": "A collection of projects made with Vuetify. See what others are creating in the ecosystem."
-  }
-}
-=======
+  },
   "tidelift": {
     "more": "Learn more",
     "demo": "Request a demo"
   },
   "become-a-sponsor": "Become a sponsor"
 }
->>>>>>> upstream/master
