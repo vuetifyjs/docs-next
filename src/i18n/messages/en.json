@@ -119,5 +119,10 @@
     "professional": "Professional",
     "support": "Support",
     "support-caption": "Need a customized support plan? Vuetify's author, John Leider, provides consulting and support services to assist with any use-case you run into while building your application."
-  }
+  },
+  "tidelift": {
+    "more": "Learn more",
+    "demo": "Request a demo"
+  },
+  "become-a-sponsor": "Become a sponsor"
 }
