@@ -105,6 +105,7 @@
   "jobs-apply": "Apply Now",
   "jobs-not-found": "No Jobs Found",
   "jobs-new": "#new",
+<<<<<<< HEAD
   "learn-more": "Learn more",
   "home": {
     "store": "Store",
@@ -161,3 +162,11 @@
     "madeWithVuetifyText": "A collection of projects made with Vuetify. See what others are creating in the ecosystem."
   }
 }
+=======
+  "tidelift": {
+    "more": "Learn more",
+    "demo": "Request a demo"
+  },
+  "become-a-sponsor": "Become a sponsor"
+}
+>>>>>>> upstream/master
