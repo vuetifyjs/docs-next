@@ -1,60 +1,44 @@
 ---
 meta:
-  title: crwdns72438:0crwdne72438:0
-  description: crwdns72440:0crwdne72440:0 crwdns72442:0crwdne72442:0
-  keywords: crwdns72444:0crwdne72444:0
+  title: crwdns79032:0crwdne79032:0
+  description: crwdns79034:0crwdne79034:0 crwdns79036:0crwdne79036:0
+  keywords: crwdns79038:0crwdne79038:0
+related:
+  - crwdns88702:0crwdne88702:0
+  - crwdns88704:0crwdne88704:0
+  - crwdns88706:0crwdne88706:0
 ---
 
-# crwdns72446:0crwdne72446:0
+# crwdns79040:0crwdne79040:0
 
-crwdns72448:0crwdne72448:0
+crwdns87720:0crwdne87720:0 crwdns87722:0crwdne87722:0 crwdns87724:0crwdne87724:0
 
 <entry-ad />
 
-## crwdns72450:0crwdne72450:0
+## crwdns79044:0crwdne79044:0
 
-crwdns72452:0crwdne72452:0
+crwdns87726:0crwdne87726:0 crwdns87728:0crwdne87728:0
 
-`crwdns72454:0crwdne72454:0`
+<example file="v-intersect/usage" />
 
-- crwdns72456:0crwdne72456:0
-- crwdns72458:0crwdne72458:0
+## crwdns86886:0crwdne86886:0
 
-## crwdns72460:0crwdne72460:0
+- [crwdns87732:0crwdne87732:0](crwdns87730:0crwdne87730:0)
 
-crwdns72462:0crwdne72462:0
+## crwdns87734:0crwdne87734:0
 
-  crwdns72464:0crwdne72464:0
+<alert type="info">
+  crwdns87736:0[polyfill]crwdne87736:0
+</alert>
 
-  crwdns72466:0crwdne72466:0
+## crwdns87738:0crwdne87738:0
 
-## crwdns72468:0crwdne72468:0
+### crwdns87740:0crwdne87740:0
 
-crwdns72470:0crwdne72470:0
-<alert type="success">crwdns72472:0crwdne72472:0</alert>
-<alert type="info">crwdns72474:0crwdne72474:0</alert>
-<alert type="warning">crwdns72476:0crwdne72476:0</alert>
-<alert type="error">crwdns72478:0crwdne72478:0</alert>
+#### crwdns87742:0crwdne87742:0
 
-## crwdns72480:0crwdne72480:0
+crwdns87744:0crwdne87744:0 crwdns87746:0crwdne87746:0 crwdns87748:0crwdne87748:0
 
-crwdns72482:0crwdne72482:0
-
-  crwdns72484:0crwdne72484:0
-
-  crwdns72486:0crwdne72486:0
-
-  `crwdns72488:0crwdne72488:0`
-
-- crwdns72490:0crwdne72490:0
-- crwdns72492:0crwdne72492:0
-
-## crwdns72494:0crwdne72494:0
-
-crwdns72496:0crwdne72496:0
-
-## crwdns72498:0crwdne72498:0
-
-- [crwdns72500:0crwdne72500:0]()
+<example file="v-intersect/prop-options" />
 
 <backmatter />

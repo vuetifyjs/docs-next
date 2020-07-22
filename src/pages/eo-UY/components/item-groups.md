@@ -1,60 +1,71 @@
 ---
 meta:
-  title: crwdns70192:0crwdne70192:0
-  description: crwdns70194:0crwdne70194:0
-  keywords: crwdns70196:0crwdne70196:0
+  title: crwdns76972:0crwdne76972:0
+  description: crwdns76974:0crwdne76974:0
+  keywords: crwdns76976:0crwdne76976:0
+related:
+  - crwdns94874:0crwdne94874:0
+  - crwdns94876:0crwdne94876:0
+  - crwdns94878:0crwdne94878:0
 ---
 
-# crwdns70198:0crwdne70198:0
+# crwdns76978:0crwdne76978:0
 
-crwdns70200:0crwdne70200:0
+crwdns94880:0crwdne94880:0 crwdns94882:0crwdne94882:0
 
 <entry-ad />
 
-## crwdns70202:0crwdne70202:0
+## crwdns76982:0crwdne76982:0
 
-crwdns70204:0crwdne70204:0
+crwdns94884:0crwdne94884:0
 
-`crwdns70206:0crwdne70206:0`
+<example file="v-item-group/usage" />
 
-- crwdns70208:0crwdne70208:0
-- crwdns70210:0crwdne70210:0
+## crwdns85774:0crwdne85774:0
 
-## crwdns70212:0crwdne70212:0
+- [crwdns94888:0crwdne94888:0](crwdns94886:0crwdne94886:0)
+- [crwdns94892:0crwdne94892:0](crwdns94890:0crwdne94890:0)
 
-crwdns70214:0crwdne70214:0
+## crwdns95682:0crwdne95682:0
 
-  crwdns70216:0crwdne70216:0
+### crwdns94922:0crwdne94922:0
 
-  crwdns70218:0crwdne70218:0
+crwdns94924:0crwdne94924:0
 
-## crwdns70220:0crwdne70220:0
+## crwdns94926:0crwdne94926:0
 
-crwdns70222:0crwdne70222:0
-<alert type="success">crwdns70224:0crwdne70224:0</alert>
-<alert type="info">crwdns70226:0crwdne70226:0</alert>
-<alert type="warning">crwdns70228:0crwdne70228:0</alert>
-<alert type="error">crwdns70230:0crwdne70230:0</alert>
+### crwdns94928:0crwdne94928:0
 
-## crwdns70232:0crwdne70232:0
+#### crwdns94898:0crwdne94898:0
 
-crwdns70234:0crwdne70234:0
+crwdns94930:0crwdne94930:0
 
-  crwdns70236:0crwdne70236:0
+<example file="v-item-group/prop-active-class" />
 
-  crwdns70238:0crwdne70238:0
+#### crwdns94902:0crwdne94902:0
 
-  `crwdns70240:0crwdne70240:0`
+crwdns94932:0crwdne94932:0
 
-- crwdns70242:0crwdne70242:0
-- crwdns70244:0crwdne70244:0
+<example file="v-item-group/prop-mandatory" />
 
-## crwdns70246:0crwdne70246:0
+#### crwdns94906:0crwdne94906:0
 
-crwdns70248:0crwdne70248:0
+crwdns94934:0crwdne94934:0
 
-## crwdns70250:0crwdne70250:0
+<example file="v-item-group/prop-multiple" />
 
-- [crwdns70252:0crwdne70252:0]()
+### crwdns94936:0crwdne94936:0
+
+#### crwdns94912:0crwdne94912:0
+
+crwdns94938:0crwdne94938:0
+
+<example file="v-item-group/misc-chips" />
+
+#### crwdns94916:0crwdne94916:0
+
+crwdns94940:0crwdne94940:0
+
+<example file="v-item-group/misc-selection" />
 
 <backmatter />

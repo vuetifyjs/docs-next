@@ -1,44 +1,56 @@
 ---
 meta:
-  title: crwdns70952:0crwdne70952:0
-  description: crwdns70954:0crwdne70954:0
-  keywords: crwdns70956:0crwdne70956:0
-nav: crwdns70958:0crwdne70958:0
+  title: crwdns81792:0crwdne81792:0
+  description: crwdns81794:0crwdne81794:0
+  keywords: crwdns81796:0crwdne81796:0
+nav: crwdns81798:0crwdne81798:0
 ---
 
-# crwdns70960:0crwdne70960:0
+# crwdns81800:0crwdne81800:0
 
-crwdns70962:0crwdne70962:0
+crwdns81802:0crwdne81802:0
 
-## crwdns70964:0crwdne70964:0
+## crwdns81804:0crwdne81804:0
 
-crwdns70966:0crwdne70966:0
+crwdns81806:0crwdne81806:0
 
 <entry-ad />
 
-## crwdns70968:0crwdne70968:0
+## crwdns87574:0crwdne87574:0
 
-crwdns70970:0crwdne70970:0
+crwdns81824:0crwdne81824:0
+
+<promoted-ad slug="vuemastery-getting-started" />
+
+## crwdns87576:0crwdne87576:0
+
+crwdns81826:0crwdne81826:0
 
 <random-ad />
 
-## crwdns70972:0crwdne70972:0
+## crwdns87578:0crwdne87578:0
 
-crwdns70974:0crwdne70974:0
+crwdns81828:0crwdne81828:0
 
 <discovery-ad />
 
-## crwdns70976:0crwdne70976:0
+## crwdns99886:0crwdne99886:0
 
-crwdns70978:0crwdne70978:0
+crwdns99888:0crwdne99888:0
 
 <highlighted-ad slug="freelancer-free" />
 
-## crwdns70980:0crwdne70980:0
+## crwdns87582:0crwdne87582:0
 
-crwdns70982:0crwdne70982:0
+crwdns81832:0crwdne81832:0
 
 <exit-ad />
+
+## crwdns87584:0crwdne87584:0
+
+crwdns87586:0crwdne87586:0<inline-ad slug="scrimba-buttons" />
+
+---
 
 <up-next />
 

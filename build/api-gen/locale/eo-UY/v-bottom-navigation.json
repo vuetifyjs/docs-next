@@ -1,0 +1,30 @@
+{
+  "props": {
+    "empty": "crwdns103276:0crwdne103276:0",
+    "absolute": "crwdns103278:0crwdne103278:0",
+    "activeClass": "crwdns103280:0[v-btn]crwdne103280:0",
+    "backgroundColor": "crwdns103282:0crwdne103282:0",
+    "fixed": "crwdns103284:0crwdne103284:0",
+    "grow": "crwdns103286:0[v-btn]crwdne103286:0",
+    "hideOnScroll": "crwdns103288:0crwdne103288:0",
+    "horizontal": "crwdns103290:0[v-btn]crwdne103290:0",
+    "inputValue": "crwdns103292:0crwdne103292:0",
+    "mandatory": "crwdns103294:0crwdne103294:0",
+    "shift": "crwdns103296:0[v-btn]crwdne103296:0",
+    "value": "crwdns103298:0[v-btn]crwdne103298:0"
+  },
+  "slots": {
+    "empty": "crwdns103300:0crwdne103300:0"
+  },
+  "events": {
+    "empty": "crwdns103302:0crwdne103302:0",
+    "change": "crwdns103304:0crwdne103304:0",
+    "update:input-value": "crwdns103306:0crwdne103306:0"
+  },
+  "functions": {
+    "empty": "crwdns103308:0crwdne103308:0"
+  },
+  "sass": {
+    "empty": "crwdns103310:0crwdne103310:0"
+  }
+}

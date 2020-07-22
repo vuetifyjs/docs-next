@@ -1,0 +1,28 @@
+{
+  "props": {
+    "empty": "crwdns100738:0crwdne100738:0",
+    "accept": "crwdns100740:0crwdne100740:0",
+    "chips": "crwdns100742:0crwdne100742:0",
+    "counterSizeString": "crwdns100744:0crwdne100744:0",
+    "counterString": "crwdns100746:0crwdne100746:0",
+    "hideInput": "crwdns100748:0crwdne100748:0",
+    "multiple": "crwdns100750:0crwdne100750:0",
+    "showSize": "crwdns100752:0crwdne100752:0",
+    "smallChips": "crwdns100754:0crwdne100754:0",
+    "truncateLength": "crwdns100756:0crwdne100756:0",
+    "value": "crwdns100758:0crwdne100758:0"
+  },
+  "slots": {
+    "empty": "crwdns100760:0crwdne100760:0",
+    "selection": "crwdns100762:0[file]crwdne100762:0"
+  },
+  "events": {
+    "empty": "crwdns100764:0crwdne100764:0"
+  },
+  "functions": {
+    "empty": "crwdns100766:0crwdne100766:0"
+  },
+  "sass": {
+    "empty": "crwdns100768:0crwdne100768:0"
+  }
+}

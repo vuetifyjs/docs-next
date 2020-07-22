@@ -1,0 +1,34 @@
+{
+  "props": {
+    "empty": "crwdns102776:0crwdne102776:0",
+    "alignSelf": "crwdns102778:0[align-items]crwdne102778:0",
+    "cols": "crwdns102780:0crwdne102780:0",
+    "sm": "crwdns102782:0crwdne102782:0",
+    "md": "crwdns102784:0crwdne102784:0",
+    "lg": "crwdns102786:0crwdne102786:0",
+    "xl": "crwdns102788:0crwdne102788:0",
+    "offset": "crwdns102790:0crwdne102790:0",
+    "offsetSm": "crwdns102792:0crwdne102792:0",
+    "offsetMd": "crwdns102794:0crwdne102794:0",
+    "offsetLg": "crwdns102796:0crwdne102796:0",
+    "offsetXl": "crwdns102798:0crwdne102798:0",
+    "order": "crwdns102800:0[order]crwdne102800:0",
+    "orderSm": "crwdns102802:0crwdne102802:0",
+    "orderMd": "crwdns102804:0crwdne102804:0",
+    "orderLg": "crwdns102806:0crwdne102806:0",
+    "orderXl": "crwdns102808:0crwdne102808:0",
+    "tag": "crwdns102810:0crwdne102810:0"
+  },
+  "slots": {
+    "empty": "crwdns102812:0crwdne102812:0"
+  },
+  "events": {
+    "empty": "crwdns102814:0crwdne102814:0"
+  },
+  "functions": {
+    "empty": "crwdns102816:0crwdne102816:0"
+  },
+  "sass": {
+    "empty": "crwdns102818:0crwdne102818:0"
+  }
+}

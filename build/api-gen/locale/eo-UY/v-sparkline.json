@@ -1,0 +1,35 @@
+{
+  "props": {
+    "empty": "crwdns103782:0crwdne103782:0",
+    "autoDraw": "crwdns103784:0crwdne103784:0",
+    "autoDrawDuration": "crwdns103786:0crwdne103786:0",
+    "autoDrawEasing": "crwdns103788:0crwdne103788:0",
+    "autoLineWidth": "crwdns103790:0crwdne103790:0",
+    "data": "crwdns103792:0crwdne103792:0",
+    "fill": "crwdns103794:0crwdne103794:0",
+    "gradient": "crwdns103796:0crwdne103796:0",
+    "gradientDirection": "crwdns103798:0crwdne103798:0",
+    "height": "crwdns103800:0crwdne103800:0",
+    "labels": "crwdns103802:0crwdne103802:0",
+    "labelSize": "crwdns103804:0crwdne103804:0",
+    "lineWidth": "crwdns103806:0crwdne103806:0",
+    "padding": "crwdns103808:0crwdne103808:0",
+    "showLabels": "crwdns103810:0crwdne103810:0",
+    "smooth": "crwdns103812:0crwdne103812:0",
+    "type": "crwdns103814:0crwdne103814:0",
+    "value": "crwdns103816:0crwdne103816:0",
+    "width": "crwdns103818:0crwdne103818:0"
+  },
+  "slots": {
+    "empty": "crwdns103820:0crwdne103820:0"
+  },
+  "events": {
+    "empty": "crwdns103822:0crwdne103822:0"
+  },
+  "functions": {
+    "empty": "crwdns103824:0crwdne103824:0"
+  },
+  "sass": {
+    "empty": "crwdns103826:0crwdne103826:0"
+  }
+}

@@ -1,60 +1,78 @@
 ---
 meta:
-  title: crwdns69718:0crwdne69718:0
-  description: crwdns69720:0crwdne69720:0
-  keywords: crwdns69722:0crwdne69722:0
+  title: crwdns76374:0crwdne76374:0
+  description: crwdns76376:0crwdne76376:0
+  keywords: crwdns76378:0crwdne76378:0
+related:
+  - crwdns89378:0crwdne89378:0
+  - crwdns89380:0crwdne89380:0
+  - crwdns89382:0crwdne89382:0
 ---
 
-# crwdns69724:0crwdne69724:0
+# crwdns76380:0crwdne76380:0
 
-crwdns69726:0crwdne69726:0
+crwdns89436:0crwdne89436:0 crwdns89438:0crwdne89438:0
 
 <entry-ad />
 
-## crwdns69728:0crwdne69728:0
+## crwdns76384:0crwdne76384:0
 
-crwdns69730:0crwdne69730:0
+crwdns89440:0crwdne89440:0 crwdns89442:0crwdne89442:0 crwdns89444:0crwdne89444:0
 
-`crwdns69732:0crwdne69732:0`
+<example file="v-bottom-navigation/usage" />
 
-- crwdns69734:0crwdne69734:0
-- crwdns69736:0crwdne69736:0
+## crwdns84628:0crwdne84628:0
 
-## crwdns69738:0crwdne69738:0
+- [crwdns89394:0crwdne89394:0](crwdns89392:0crwdne89392:0)
 
-crwdns69740:0crwdne69740:0
+## crwdns89396:0crwdne89396:0
 
-  crwdns69742:0crwdne69742:0
+### crwdns89400:0crwdne89400:0
 
-  crwdns69744:0crwdne69744:0
+#### crwdns89402:0crwdne89402:0
 
-## crwdns69746:0crwdne69746:0
+crwdns90984:0crwdne90984:0 crwdns90986:0crwdne90986:0
 
-crwdns69748:0crwdne69748:0
-<alert type="success">crwdns69750:0crwdne69750:0</alert>
-<alert type="info">crwdns69752:0crwdne69752:0</alert>
-<alert type="warning">crwdns69754:0crwdne69754:0</alert>
-<alert type="error">crwdns69756:0crwdne69756:0</alert>
+<example file="v-bottom-navigation/prop-color" />
 
-## crwdns69758:0crwdne69758:0
+#### crwdns89408:0crwdne89408:0
 
-crwdns69760:0crwdne69760:0
+crwdns90988:0crwdne90988:0 crwdns90990:0crwdne90990:0
 
-  crwdns69762:0crwdne69762:0
+<example file="v-bottom-navigation/prop-grow" />
 
-  crwdns69764:0crwdne69764:0
+#### crwdns89412:0crwdne89412:0
 
-  `crwdns69766:0crwdne69766:0`
+crwdns90992:0crwdne90992:0 crwdns90994:0crwdne90994:0 crwdns90996:0crwdne90996:0
 
-- crwdns69768:0crwdne69768:0
-- crwdns69770:0crwdne69770:0
+<example file="v-bottom-navigation/prop-hide-on-scroll" />
 
-## crwdns69772:0crwdne69772:0
+#### crwdns89416:0crwdne89416:0
 
-crwdns69774:0crwdne69774:0
+crwdns90998:0crwdne90998:0 crwdns91000:0crwdne91000:0
 
-## crwdns69776:0crwdne69776:0
+<example file="v-bottom-navigation/prop-horizontal" />
 
-- [crwdns69778:0crwdne69778:0]()
+#### crwdns89420:0crwdne89420:0
+
+crwdns91002:0crwdne91002:0
+
+<example file="v-bottom-navigation/prop-scroll-threshold" />
+
+#### crwdns89424:0crwdne89424:0
+
+crwdns91004:0crwdne91004:0 crwdns91006:0crwdne91006:0
+
+<alert type="info">
+  crwdns89462:0crwdne89462:0
+</alert>
+
+<example file="v-bottom-navigation/prop-shift" />
+
+#### crwdns89430:0crwdne89430:0
+
+crwdns91008:0crwdne91008:0 crwdns91010:0crwdne91010:0
+
+<example file="v-bottom-navigation/prop-toggle" />
 
 <backmatter />

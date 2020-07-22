@@ -1,0 +1,19 @@
+{
+  "props": {
+    "empty": "crwdns100602:0crwdne100602:0",
+    "left": "crwdns100604:0[v-chip]crwdnd100604:0[v-btn]crwdne100604:0",
+    "right": "crwdns100606:0[v-chip]crwdnd100606:0[v-btn]crwdne100606:0"
+  },
+  "slots": {
+    "empty": "crwdns100608:0crwdne100608:0"
+  },
+  "events": {
+    "empty": "crwdns100610:0crwdne100610:0"
+  },
+  "functions": {
+    "empty": "crwdns100612:0crwdne100612:0"
+  },
+  "sass": {
+    "empty": "crwdns100614:0crwdne100614:0"
+  }
+}

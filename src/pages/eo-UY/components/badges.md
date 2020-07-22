@@ -1,60 +1,56 @@
 ---
 meta:
-  title: crwdns70564:0crwdne70564:0
-  description: crwdns70566:0crwdne70566:0 crwdns70568:0crwdne70568:0
-  keywords: crwdns70570:0crwdne70570:0
+  title: crwdns77096:0crwdne77096:0
+  description: crwdns77098:0crwdne77098:0 crwdns77100:0crwdne77100:0
+  keywords: crwdns77102:0crwdne77102:0
+related:
+  - crwdns88708:0crwdne88708:0
+  - crwdns88710:0crwdne88710:0
+  - crwdns88712:0crwdne88712:0
 ---
 
-# crwdns70572:0crwdne70572:0
+# crwdns77104:0crwdne77104:0
 
-crwdns70574:0crwdne70574:0
+crwdns88714:0crwdne88714:0 crwdns88716:0crwdne88716:0
 
 <entry-ad />
 
-## crwdns70576:0crwdne70576:0
+## crwdns77108:0crwdne77108:0
 
-crwdns70578:0crwdne70578:0
+crwdns88718:0crwdne88718:0
 
-`crwdns70580:0crwdne70580:0`
+<usage name="v-badge" />
 
-- crwdns70582:0crwdne70582:0
-- crwdns70584:0crwdne70584:0
+## crwdns84004:0crwdne84004:0
 
-## crwdns70586:0crwdne70586:0
+- [crwdns88722:0crwdne88722:0](crwdns88720:0crwdne88720:0)
 
-crwdns70588:0crwdne70588:0
+## crwdns88724:0crwdne88724:0
 
-  crwdns70590:0crwdne70590:0
+### crwdns88728:0crwdne88728:0
 
-  crwdns70592:0crwdne70592:0
+#### crwdns89970:0crwdne89970:0
 
-## crwdns70594:0crwdne70594:0
+crwdns90950:0crwdne90950:0 crwdns90952:0crwdne90952:0
 
-crwdns70596:0crwdne70596:0
-<alert type="success">crwdns70598:0crwdne70598:0</alert>
-<alert type="info">crwdns70600:0crwdne70600:0</alert>
-<alert type="warning">crwdns70602:0crwdne70602:0</alert>
-<alert type="error">crwdns70604:0crwdne70604:0</alert>
+<example file="v-badge/misc-customization" />
 
-## crwdns70606:0crwdne70606:0
+#### crwdns89976:0crwdne89976:0
 
-crwdns70608:0crwdne70608:0
+crwdns90954:0crwdne90954:0
 
-  crwdns70610:0crwdne70610:0
+<example file="v-badge/misc-dynamic" />
 
-  crwdns70612:0crwdne70612:0
+#### crwdns89980:0crwdne89980:0
 
-  `crwdns70614:0crwdne70614:0`
+crwdns90956:0crwdne90956:0
 
-- crwdns70616:0crwdne70616:0
-- crwdns70618:0crwdne70618:0
+<example file="v-badge/misc-hover" />
 
-## crwdns70620:0crwdne70620:0
+#### crwdns89984:0crwdne89984:0
 
-crwdns70622:0crwdne70622:0
+crwdns90958:0crwdne90958:0
 
-## crwdns70624:0crwdne70624:0
-
-- [crwdns70626:0crwdne70626:0]()
+<example file="v-badge/misc-tabs" />
 
 <backmatter />

@@ -1,0 +1,31 @@
+{
+  "props": {
+    "empty": "crwdns103238:0crwdne103238:0",
+    "alt": "crwdns103240:0crwdne103240:0",
+    "aspectRatio": "crwdns103242:0crwdne103242:0",
+    "contain": "crwdns103244:0crwdne103244:0",
+    "eager": "crwdns103246:0crwdne103246:0",
+    "gradient": "crwdns103248:0[linear-gradient]crwdne103248:0",
+    "lazySrc": "crwdns103250:0[vuetify-loader]crwdne103250:0",
+    "position": "crwdns103252:0crwdne103252:0",
+    "sizes": "crwdns103254:0[MDN]crwdne103254:0",
+    "src": "crwdns103256:0crwdne103256:0",
+    "srcset": "crwdns103258:0crwdne103258:0",
+    "transition": "crwdns103260:0crwdne103260:0"
+  },
+  "slots": {
+    "empty": "crwdns103262:0crwdne103262:0",
+    "placeholder": "crwdns103264:0crwdne103264:0"
+  },
+  "events": {
+    "empty": "crwdns103266:0crwdne103266:0",
+    "error": "crwdns103268:0crwdne103268:0",
+    "load": "crwdns103270:0crwdne103270:0"
+  },
+  "functions": {
+    "empty": "crwdns103272:0crwdne103272:0"
+  },
+  "sass": {
+    "empty": "crwdns103274:0crwdne103274:0"
+  }
+}

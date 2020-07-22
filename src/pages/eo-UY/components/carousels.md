@@ -1,60 +1,75 @@
 ---
 meta:
-  title: crwdns66608:0crwdne66608:0
-  description: crwdns66610:0crwdne66610:0
-  keywords: crwdns66612:0crwdne66612:0
+  title: crwdns73202:0crwdne73202:0
+  description: crwdns73204:0crwdne73204:0
+  keywords: crwdns73206:0crwdne73206:0
+related:
+  - crwdns91566:0crwdne91566:0
+  - crwdns91568:0crwdne91568:0
+  - crwdns91570:0crwdne91570:0
 ---
 
-# crwdns66614:0crwdne66614:0
+# crwdns73208:0crwdne73208:0
 
-crwdns66616:0crwdne66616:0
+crwdns91572:0crwdne91572:0
 
 <entry-ad />
 
-## crwdns66618:0crwdne66618:0
+## crwdns73212:0crwdne73212:0
 
-crwdns66620:0crwdne66620:0
+crwdns91574:0crwdne91574:0
 
-`crwdns66622:0crwdne66622:0`
+<example file="v-carousel/usage" />
 
-- crwdns66624:0crwdne66624:0
-- crwdns66626:0crwdne66626:0
+## crwdns86034:0crwdne86034:0
 
-## crwdns66628:0crwdne66628:0
+- [crwdns91578:0crwdne91578:0](crwdns91576:0crwdne91576:0)
+- [crwdns91582:0crwdne91582:0](crwdns91580:0crwdne91580:0)
 
-crwdns66630:0crwdne66630:0
+## crwdns95684:0crwdne95684:0
 
-  crwdns66632:0crwdne66632:0
+### crwdns91584:0crwdne91584:0
 
-  crwdns66634:0crwdne66634:0
+crwdns91586:0crwdne91586:0
 
-## crwdns66636:0crwdne66636:0
+## crwdns91588:0crwdne91588:0
 
-crwdns66638:0crwdne66638:0
-<alert type="success">crwdns66640:0crwdne66640:0</alert>
-<alert type="info">crwdns66642:0crwdne66642:0</alert>
-<alert type="warning">crwdns66644:0crwdne66644:0</alert>
-<alert type="error">crwdns66646:0crwdne66646:0</alert>
+### crwdns91590:0crwdne91590:0
 
-## crwdns66648:0crwdne66648:0
+#### crwdns91592:0crwdne91592:0
 
-crwdns66650:0crwdne66650:0
+crwdns91594:0crwdne91594:0
 
-  crwdns66652:0crwdne66652:0
+<example file="v-carousel/prop-custom-icons" />
 
-  crwdns66654:0crwdne66654:0
+#### crwdns91596:0crwdne91596:0
 
-  `crwdns66656:0crwdne66656:0`
+crwdns91598:0crwdne91598:0
 
-- crwdns66658:0crwdne66658:0
-- crwdns66660:0crwdne66660:0
+<example file="v-carousel/prop-custom-transition" />
 
-## crwdns66662:0crwdne66662:0
+#### crwdns91600:0crwdne91600:0
 
-crwdns66664:0crwdne66664:0
+crwdns91602:0crwdne91602:0
 
-## crwdns66666:0crwdne66666:0
+<example file="v-carousel/prop-cycle" />
 
-- [crwdns66668:0crwdne66668:0]()
+#### crwdns91604:0crwdne91604:0
+
+crwdns91606:0crwdne91606:0
+
+<example file="v-carousel/prop-hide-controls" />
+
+#### crwdns91608:0crwdne91608:0
+
+crwdns91610:0crwdne91610:0
+
+<example file="v-carousel/prop-hide-delimiters" />
+
+#### crwdns91612:0crwdne91612:0
+
+crwdns91614:0crwdne91614:0
+
+<example file="v-carousel/prop-model" />
 
 <backmatter />

@@ -1,60 +1,119 @@
 ---
 meta:
-  title: crwdns71858:0crwdne71858:0
-  description: crwdns71860:0crwdne71860:0
-  keywords: crwdns71862:0crwdne71862:0
+  title: crwdns78452:0crwdne78452:0
+  description: crwdns78454:0crwdne78454:0
+  keywords: crwdns78456:0crwdne78456:0
+related:
+  - crwdns96694:0crwdne96694:0
+  - crwdns96696:0crwdne96696:0
+  - crwdns96698:0crwdne96698:0
 ---
 
-# crwdns71864:0crwdne71864:0
+# crwdns78458:0crwdne78458:0
 
-crwdns71866:0crwdne71866:0
+crwdns96700:0crwdne96700:0 crwdns96702:0crwdne96702:0 crwdns96704:0crwdne96704:0
 
 <entry-ad />
 
-## crwdns71868:0crwdne71868:0
+## crwdns78462:0crwdne78462:0
 
-crwdns71870:0crwdne71870:0
+crwdns96706:0crwdne96706:0
 
-`crwdns71872:0crwdne71872:0`
+<example file="transitions/usage" />
 
-- crwdns71874:0crwdne71874:0
-- crwdns71876:0crwdne71876:0
+## crwdns82704:0crwdne82704:0
 
-## crwdns71878:0crwdne71878:0
+- [crwdns96710:0crwdne96710:0](crwdns96708:0crwdne96708:0)
+- [crwdns96714:0crwdne96714:0](crwdns96712:0crwdne96712:0)
+- [crwdns96718:0crwdne96718:0](crwdns96716:0crwdne96716:0)
+- [crwdns96722:0crwdne96722:0](crwdns96720:0crwdne96720:0)
+- [crwdns96726:0crwdne96726:0](crwdns96724:0crwdne96724:0)
+- [crwdns96730:0crwdne96730:0](crwdns96728:0crwdne96728:0)
+- [crwdns96734:0crwdne96734:0](crwdns96732:0crwdne96732:0)
+- [crwdns96738:0crwdne96738:0](crwdns96736:0crwdne96736:0)
+- [crwdns96742:0crwdne96742:0](crwdns96740:0crwdne96740:0)
+- [crwdns96746:0crwdne96746:0](crwdns96744:0crwdne96744:0)
+- [crwdns96750:0crwdne96750:0](crwdns96748:0crwdne96748:0)
+- [crwdns96754:0crwdne96754:0](crwdns96752:0crwdne96752:0)
 
-crwdns71880:0crwdne71880:0
+## crwdns96756:0crwdne96756:0
 
-  crwdns71882:0crwdne71882:0
+### crwdns96758:0crwdne96758:0
 
-  crwdns71884:0crwdne71884:0
+#### crwdns96760:0crwdne96760:0
 
-## crwdns71886:0crwdne71886:0
+crwdns96762:0crwdne96762:0
 
-crwdns71888:0crwdne71888:0
-<alert type="success">crwdns71890:0crwdne71890:0</alert>
-<alert type="info">crwdns71892:0crwdne71892:0</alert>
-<alert type="warning">crwdns71894:0crwdne71894:0</alert>
-<alert type="error">crwdns71896:0crwdne71896:0</alert>
+<example file="transitions/prop-custom-origin" />
 
-## crwdns71898:0crwdne71898:0
+### crwdns96764:0crwdne96764:0
 
-crwdns71900:0crwdne71900:0
+#### crwdns96766:0crwdne96766:0
 
-  crwdns71902:0crwdne71902:0
+crwdns96768:0crwdne96768:0 crwdns96770:0crwdne96770:0
 
-  crwdns71904:0crwdne71904:0
+<example file="transitions/misc-expand-x" />
 
-  `crwdns71906:0crwdne71906:0`
+#### crwdns96772:0crwdne96772:0
 
-- crwdns71908:0crwdne71908:0
-- crwdns71910:0crwdne71910:0
+crwdns96774:0crwdne96774:0
 
-## crwdns71912:0crwdne71912:0
+<example file="transitions/misc-fab" />
 
-crwdns71914:0crwdne71914:0
+#### crwdns96776:0crwdne96776:0
 
-## crwdns71916:0crwdne71916:0
+crwdns96778:0crwdne96778:0
 
-- [crwdns71918:0crwdne71918:0]()
+<example file="transitions/misc-fade" />
+
+#### crwdns96780:0crwdne96780:0
+
+crwdns96782:0crwdne96782:0
+
+<example file="transitions/misc-scale" />
+
+#### crwdns96784:0crwdne96784:0
+
+crwdns96786:0crwdne96786:0
+
+<example file="transitions/misc-scroll-x" />
+
+#### crwdns96788:0crwdne96788:0
+
+crwdns96790:0crwdne96790:0
+
+<example file="transitions/misc-scroll-y" />
+
+#### crwdns96792:0crwdne96792:0
+
+crwdns96794:0crwdne96794:0
+
+<example file="transitions/misc-slide-x" />
+
+#### crwdns96796:0crwdne96796:0
+
+crwdns96798:0$primarycrwdne96798:0
+
+<example file="transitions/misc-slide-y" />
+
+#### crwdns96800:0crwdne96800:0
+
+crwdns96802:0crwdne96802:0
+
+<example file="transitions/misc-todo" />
+
+## crwdns96804:0crwdne96804:0
+
+crwdns96806:0crwdne96806:0 crwdns96808:0crwdne96808:0 crwdns96810:0crwdne96810:0 crwdns96812:0crwdne96812:0
+
+```js
+crwdns96814:0{ createSimpleTransition }crwdnd96814:0{ createSimpleTransition }crwdne96814:0
+```
+
+crwdns96816:0crwdne96816:0 crwdns96818:0crwdne96818:0 crwdns96820:0crwdne96820:0
+
+```stylus
+crwdns96822:0$primarycrwdne96822:0
+```
 
 <backmatter />

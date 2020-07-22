@@ -1,0 +1,28 @@
+{
+  "props": {
+    "empty": "crwdns101036:0crwdne101036:0",
+    "altLabels": "crwdns101038:0crwdne101038:0",
+    "color": "crwdns101040:0crwdne101040:0",
+    "complete": "crwdns101042:0crwdne101042:0",
+    "completeIcon": "crwdns101044:0crwdne101044:0",
+    "editable": "crwdns101046:0crwdne101046:0",
+    "editIcon": "crwdns101048:0crwdne101048:0",
+    "errorIcon": "crwdns101050:0crwdne101050:0",
+    "nonLinear": "crwdns101052:0crwdne101052:0",
+    "rules": "crwdns101054:0crwdne101054:0",
+    "vertical": "crwdns101056:0crwdne101056:0"
+  },
+  "slots": {
+    "empty": "crwdns101058:0crwdne101058:0"
+  },
+  "events": {
+    "empty": "crwdns101060:0crwdne101060:0",
+    "change": "crwdns101062:0crwdne101062:0"
+  },
+  "functions": {
+    "empty": "crwdns101064:0crwdne101064:0"
+  },
+  "sass": {
+    "empty": "crwdns101066:0crwdne101066:0"
+  }
+}

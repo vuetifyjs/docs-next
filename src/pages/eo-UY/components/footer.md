@@ -1,60 +1,64 @@
 ---
 meta:
-  title: crwdns68042:0crwdne68042:0
-  description: crwdns68044:0crwdne68044:0
-  keywords: crwdns68046:0crwdne68046:0
+  title: crwdns74698:0crwdne74698:0
+  description: crwdns74700:0crwdne74700:0
+  keywords: crwdns74702:0crwdne74702:0
+related:
+  - crwdns89086:0crwdne89086:0
+  - crwdns89088:0crwdne89088:0
+  - crwdns89090:0crwdne89090:0
 ---
 
-# crwdns68048:0crwdne68048:0
+# crwdns74704:0crwdne74704:0
 
-crwdns68050:0crwdne68050:0
+crwdns89092:0crwdne89092:0
 
 <entry-ad />
 
-## crwdns68052:0crwdne68052:0
+## crwdns74708:0crwdne74708:0
 
-crwdns68054:0crwdne68054:0
+crwdns89094:0crwdne89094:0
 
-`crwdns68056:0crwdne68056:0`
+<example file="v-footer/usage" />
 
-- crwdns68058:0crwdne68058:0
-- crwdns68060:0crwdne68060:0
+## crwdns84994:0crwdne84994:0
 
-## crwdns68062:0crwdne68062:0
+- [crwdns89098:0crwdne89098:0](crwdns89096:0crwdne89096:0)
 
-crwdns68064:0crwdne68064:0
+## crwdns89100:0crwdne89100:0
 
-  crwdns68066:0crwdne68066:0
+### crwdns89102:0crwdne89102:0
 
-  crwdns68068:0crwdne68068:0
+#### crwdns89104:0crwdne89104:0
 
-## crwdns68070:0crwdne68070:0
+crwdns89106:0crwdne89106:0
 
-crwdns68072:0crwdne68072:0
-<alert type="success">crwdns68074:0crwdne68074:0</alert>
-<alert type="info">crwdns68076:0crwdne68076:0</alert>
-<alert type="warning">crwdns68078:0crwdne68078:0</alert>
-<alert type="error">crwdns68080:0crwdne68080:0</alert>
+<example file="v-footer/prop-absolute" />
 
-## crwdns68082:0crwdne68082:0
+#### crwdns89108:0crwdne89108:0
 
-crwdns68084:0crwdne68084:0
+crwdns89110:0crwdne89110:0
 
-  crwdns68086:0crwdne68086:0
+<example file="v-footer/prop-padless" />
 
-  crwdns68088:0crwdne68088:0
+### crwdns89112:0crwdne89112:0
 
-  `crwdns68090:0crwdne68090:0`
+#### crwdns89114:0crwdne89114:0
 
-- crwdns68092:0crwdne68092:0
-- crwdns68094:0crwdne68094:0
+crwdns89116:0crwdne89116:0
 
-## crwdns68096:0crwdne68096:0
+<example file="v-footer/misc-company-footer" />
 
-crwdns68098:0crwdne68098:0
+#### crwdns89118:0crwdne89118:0
 
-## crwdns68100:0crwdne68100:0
+crwdns89120:0crwdne89120:0
 
-- [crwdns68102:0crwdne68102:0]()
+<example file="v-footer/misc-indigo-footer" />
+
+#### crwdns89122:0crwdne89122:0
+
+crwdns89124:0crwdne89124:0
+
+<example file="v-footer/misc-teal-footer" />
 
 <backmatter />

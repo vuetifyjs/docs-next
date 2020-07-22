@@ -1,0 +1,32 @@
+{
+  "props": {
+    "empty": "crwdns103380:0crwdne103380:0",
+    "disableItemsPerPage": "crwdns103382:0crwdne103382:0",
+    "disablePagination": "crwdns103384:0crwdne103384:0",
+    "firstIcon": "crwdns103386:0crwdne103386:0",
+    "itemsPerPageAllText": "crwdns103388:0crwdne103388:0",
+    "itemsPerPageOptions": "crwdns103390:0crwdne103390:0",
+    "itemsPerPageText": "crwdns103392:0crwdne103392:0",
+    "lastIcon": "crwdns103394:0crwdne103394:0",
+    "nextIcon": "crwdns103396:0crwdne103396:0",
+    "options": "crwdns103398:0crwdne103398:0",
+    "pagination": "crwdns103400:0crwdne103400:0",
+    "prevIcon": "crwdns103402:0crwdne103402:0",
+    "showCurrentPage": "crwdns103404:0crwdne103404:0",
+    "showFirstLastPage": "crwdns103406:0crwdne103406:0"
+  },
+  "slots": {
+    "empty": "crwdns103408:0crwdne103408:0",
+    "pageText": "crwdns103410:0crwdne103410:0"
+  },
+  "events": {
+    "empty": "crwdns103412:0crwdne103412:0",
+    "update:options": "crwdns103414:0crwdne103414:0"
+  },
+  "functions": {
+    "empty": "crwdns103416:0crwdne103416:0"
+  },
+  "sass": {
+    "empty": "crwdns103418:0crwdne103418:0"
+  }
+}

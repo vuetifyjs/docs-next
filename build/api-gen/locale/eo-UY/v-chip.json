@@ -1,0 +1,33 @@
+{
+  "props": {
+    "empty": "crwdns101568:0crwdne101568:0",
+    "active": "crwdns101570:0crwdne101570:0",
+    "close": "crwdns101572:0crwdne101572:0",
+    "closeIcon": "crwdns101574:0crwdne101574:0",
+    "disabled": "crwdns101576:0crwdne101576:0",
+    "draggable": "crwdns101578:0crwdne101578:0",
+    "filter": "crwdns101580:0crwdne101580:0",
+    "filterIcon": "crwdns101582:0crwdne101582:0",
+    "inputValue": "crwdns101584:0crwdne101584:0",
+    "label": "crwdns101586:0crwdne101586:0",
+    "link": "crwdns101588:0crwdne101588:0",
+    "outlined": "crwdns101590:0crwdne101590:0",
+    "pill": "crwdns101592:0crwdne101592:0",
+    "value": "crwdns101594:0[v-chip-group]crwdne101594:0"
+  },
+  "slots": {
+    "empty": "crwdns101596:0crwdne101596:0"
+  },
+  "events": {
+    "empty": "crwdns101598:0crwdne101598:0",
+    "click": "crwdns101600:0crwdne101600:0",
+    "click:close": "crwdns101602:0crwdne101602:0",
+    "update:active": "crwdns101604:0crwdne101604:0"
+  },
+  "functions": {
+    "empty": "crwdns101606:0crwdne101606:0"
+  },
+  "sass": {
+    "empty": "crwdns101608:0crwdne101608:0"
+  }
+}

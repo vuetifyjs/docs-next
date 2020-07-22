@@ -1,60 +1,64 @@
 ---
 meta:
-  title: crwdns67540:0crwdne67540:0
-  description: crwdns67542:0crwdne67542:0 crwdns67544:0crwdne67544:0
-  keywords: crwdns67546:0crwdne67546:0
+  title: crwdns74196:0crwdne74196:0
+  description: crwdns74198:0crwdne74198:0 crwdns74200:0crwdne74200:0
+  keywords: crwdns74202:0crwdne74202:0
+related:
+  - crwdns91732:0crwdne91732:0
+  - crwdns91734:0crwdne91734:0
+  - crwdns91736:0crwdne91736:0
 ---
 
-# crwdns67548:0crwdne67548:0
+# crwdns74204:0crwdne74204:0
 
-crwdns67550:0crwdne67550:0
+crwdns91738:0crwdne91738:0 crwdns91740:0crwdne91740:0 crwdns91742:0crwdne91742:0
 
 <entry-ad />
 
-## crwdns67552:0crwdne67552:0
+## crwdns74208:0crwdne74208:0
 
-crwdns67554:0crwdne67554:0
+crwdns91744:0crwdne91744:0
 
-`crwdns67556:0crwdne67556:0`
+<usage name="v-avatar" />
 
-- crwdns67558:0crwdne67558:0
-- crwdns67560:0crwdne67560:0
+## crwdns85982:0crwdne85982:0
 
-## crwdns67562:0crwdne67562:0
+- [crwdns91748:0crwdne91748:0](crwdns91746:0crwdne91746:0)
 
-crwdns67564:0crwdne67564:0
+### crwdns91750:0crwdne91750:0
 
-  crwdns67566:0crwdne67566:0
+#### crwdns91752:0crwdne91752:0
 
-  crwdns67568:0crwdne67568:0
+crwdns91754:0crwdne91754:0 crwdns91756:0crwdne91756:0 crwdns91758:0crwdne91758:0
 
-## crwdns67570:0crwdne67570:0
+<example file="v-avatar/prop-size" />
 
-crwdns67572:0crwdne67572:0
-<alert type="success">crwdns67574:0crwdne67574:0</alert>
-<alert type="info">crwdns67576:0crwdne67576:0</alert>
-<alert type="warning">crwdns67578:0crwdne67578:0</alert>
-<alert type="error">crwdns67580:0crwdne67580:0</alert>
+#### crwdns91760:0crwdne91760:0
 
-## crwdns67582:0crwdne67582:0
+crwdns91762:0crwdne91762:0
 
-crwdns67584:0crwdne67584:0
+<example file="v-avatar/prop-tile" />
 
-  crwdns67586:0crwdne67586:0
+### crwdns91764:0crwdne91764:0
 
-  crwdns67588:0crwdne67588:0
+#### crwdns91766:0crwdne91766:0
 
-  `crwdns67590:0crwdne67590:0`
+crwdns91768:0crwdne91768:0 crwdns91770:0crwdne91770:0
 
-- crwdns67592:0crwdne67592:0
-- crwdns67594:0crwdne67594:0
+<example file="v-avatar/slot-default" />
 
-## crwdns67596:0crwdne67596:0
+### crwdns91772:0crwdne91772:0
 
-crwdns67598:0crwdne67598:0
+#### crwdns91774:0crwdne91774:0
 
-## crwdns67600:0crwdne67600:0
+crwdns91776:0crwdne91776:0
 
-- [crwdns67602:0crwdne67602:0]()
+<example file="v-avatar/misc-advanced" />
+
+#### crwdns91778:0crwdne91778:0
+
+crwdns91780:0crwdne91780:0
+
+<example file="v-avatar/misc-profile-card" />
 
 <backmatter />

@@ -1,0 +1,41 @@
+{
+  "props": {
+    "empty": "crwdns102248:0crwdne102248:0",
+    "expanded": "crwdns102252:0crwdne102252:0",
+    "footerProps": "crwdns102254:0crwdne102254:0",
+    "hideDefaultFooter": "crwdns102256:0crwdne102256:0",
+    "itemKey": "crwdns102260:0crwdne102260:0",
+    "loading": "crwdns102262:0crwdne102262:0",
+    "loadingText": "crwdns102264:0crwdne102264:0",
+    "noDataText": "crwdns102268:0crwdne102268:0",
+    "noResultsText": "crwdns102270:0crwdne102270:0",
+    "selectableKey": "crwdns102272:0crwdne102272:0",
+    "singleExpand": "crwdns102274:0crwdne102274:0",
+    "singleSelect": "crwdns102278:0crwdne102278:0",
+    "value": "crwdns102280:0crwdne102280:0"
+  },
+  "slots": {
+    "empty": "crwdns102282:0crwdne102282:0",
+    "default": "crwdns102286:0crwdne102286:0",
+    "footer.page-text": "crwdns102288:0crwdne102288:0",
+    "footer": "crwdns102290:0crwdne102290:0",
+    "heading": "crwdns102294:0crwdne102294:0",
+    "item": "crwdns102296:0crwdne102296:0",
+    "loading": "crwdns102298:0crwdne102298:0",
+    "no-data": "crwdns102300:0crwdne102300:0",
+    "no-results": "crwdns102304:0crwdne102304:0"
+  },
+  "events": {
+    "empty": "crwdns102306:0crwdne102306:0",
+    "input": "crwdns102308:0crwdne102308:0",
+    "item-expanded": "crwdns102312:0crwdne102312:0",
+    "item-selected": "crwdns102314:0crwdne102314:0",
+    "update:expanded": "crwdns102316:0crwdne102316:0"
+  },
+  "functions": {
+    "empty": "crwdns102320:0crwdne102320:0"
+  },
+  "sass": {
+    "empty": "crwdns102322:0crwdne102322:0"
+  }
+}

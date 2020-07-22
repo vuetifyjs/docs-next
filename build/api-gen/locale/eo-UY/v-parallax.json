@@ -1,0 +1,21 @@
+{
+  "props": {
+    "empty": "crwdns103576:0crwdne103576:0",
+    "alt": "crwdns103578:0crwdne103578:0",
+    "height": "crwdns103580:0crwdne103580:0",
+    "src": "crwdns103582:0crwdne103582:0",
+    "srcset": "crwdns103584:0crwdne103584:0"
+  },
+  "slots": {
+    "empty": "crwdns103586:0crwdne103586:0"
+  },
+  "events": {
+    "empty": "crwdns103588:0crwdne103588:0"
+  },
+  "functions": {
+    "empty": "crwdns103590:0crwdne103590:0"
+  },
+  "sass": {
+    "empty": "crwdns103592:0crwdne103592:0"
+  }
+}

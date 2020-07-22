@@ -1,0 +1,26 @@
+{
+  "props": {
+    "empty": "crwdns103312:0crwdne103312:0",
+    "disableSort": "crwdns103314:0crwdne103314:0",
+    "everyItem": "crwdns103316:0crwdne103316:0",
+    "headers": "crwdns103318:0crwdne103318:0",
+    "mobile": "crwdns103320:0crwdne103320:0",
+    "options": "crwdns103322:0crwdne103322:0",
+    "showGroupBy": "crwdns103324:0crwdne103324:0",
+    "singleSelect": "crwdns103326:0crwdne103326:0",
+    "someItems": "crwdns103328:0crwdne103328:0",
+    "sortIcon": "crwdns103330:0crwdne103330:0"
+  },
+  "slots": {
+    "empty": "crwdns103332:0crwdne103332:0"
+  },
+  "events": {
+    "empty": "crwdns103334:0crwdne103334:0"
+  },
+  "functions": {
+    "empty": "crwdns103336:0crwdne103336:0"
+  },
+  "sass": {
+    "empty": "crwdns103338:0crwdne103338:0"
+  }
+}

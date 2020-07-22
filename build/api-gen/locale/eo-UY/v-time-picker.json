@@ -1,0 +1,37 @@
+{
+  "props": {
+    "empty": "crwdns103922:0crwdne103922:0",
+    "format": "crwdns103924:0crwdne103924:0",
+    "allowedHours": "crwdns103926:0crwdne103926:0",
+    "allowedMinutes": "crwdns103928:0crwdne103928:0",
+    "allowedSeconds": "crwdns103930:0crwdne103930:0",
+    "disabled": "crwdns103932:0crwdne103932:0",
+    "flat": "crwdns103934:0crwdne103934:0",
+    "scrollable": "crwdns103936:0crwdne103936:0",
+    "min": "crwdns103938:0crwdne103938:0",
+    "max": "crwdns103940:0crwdne103940:0",
+    "readonly": "crwdns103942:0crwdne103942:0",
+    "useSeconds": "crwdns103944:0crwdne103944:0",
+    "value": "crwdns103946:0crwdne103946:0",
+    "width": "crwdns103948:0crwdne103948:0",
+    "ampmInTitle": "crwdns103950:0crwdne103950:0"
+  },
+  "slots": {
+    "empty": "crwdns103952:0crwdne103952:0",
+    "default": "crwdns103954:0crwdne103954:0"
+  },
+  "events": {
+    "empty": "crwdns103956:0crwdne103956:0",
+    "click:hour": "crwdns103958:0crwdne103958:0",
+    "click:minute": "crwdns103960:0crwdne103960:0",
+    "click:second": "crwdns103962:0crwdne103962:0",
+    "change": "crwdns103964:0crwdne103964:0",
+    "update:period": "crwdns103966:0crwdne103966:0"
+  },
+  "functions": {
+    "empty": "crwdns103968:0crwdne103968:0"
+  },
+  "sass": {
+    "empty": "crwdns103970:0crwdne103970:0"
+  }
+}

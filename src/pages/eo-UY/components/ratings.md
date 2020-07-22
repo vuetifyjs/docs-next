@@ -1,60 +1,78 @@
 ---
 meta:
-  title: crwdns68724:0crwdne68724:0
-  description: crwdns68726:0crwdne68726:0
-  keywords: crwdns68728:0crwdne68728:0
+  title: crwdns75318:0crwdne75318:0
+  description: crwdns75320:0crwdne75320:0
+  keywords: crwdns75322:0crwdne75322:0
+related:
+  - crwdns88888:0crwdne88888:0
+  - crwdns88890:0crwdne88890:0
+  - crwdns88892:0crwdne88892:0
 ---
 
-# crwdns68730:0crwdne68730:0
+# crwdns75324:0crwdne75324:0
 
-crwdns68732:0crwdne68732:0
+crwdns88894:0crwdne88894:0 crwdns88896:0crwdne88896:0
 
 <entry-ad />
 
-## crwdns68734:0crwdne68734:0
+## crwdns75328:0crwdne75328:0
 
-crwdns68736:0crwdne68736:0
+crwdns88898:0crwdne88898:0
 
-`crwdns68738:0crwdne68738:0`
+<usage name="v-rating" />
 
-- crwdns68740:0crwdne68740:0
-- crwdns68742:0crwdne68742:0
+## crwdns85878:0crwdne85878:0
 
-## crwdns68744:0crwdne68744:0
+- [crwdns88902:0crwdne88902:0](crwdns88900:0crwdne88900:0)
 
-crwdns68746:0crwdne68746:0
+## crwdns88904:0crwdne88904:0
 
-  crwdns68748:0crwdne68748:0
+### crwdns88906:0crwdne88906:0
 
-  crwdns68750:0crwdne68750:0
+#### crwdns90048:0crwdne90048:0
 
-## crwdns68752:0crwdne68752:0
+crwdns90050:0crwdne90050:0
 
-crwdns68754:0crwdne68754:0
-<alert type="success">crwdns68756:0crwdne68756:0</alert>
-<alert type="info">crwdns68758:0crwdne68758:0</alert>
-<alert type="warning">crwdns68760:0crwdne68760:0</alert>
-<alert type="error">crwdns68762:0crwdne68762:0</alert>
+<example file="v-rating/prop-color" />
 
-## crwdns68764:0crwdne68764:0
+#### crwdns90052:0crwdne90052:0
 
-crwdns68766:0crwdne68766:0
+crwdns90054:0crwdne90054:0 crwdns90056:0crwdne90056:0
 
-  crwdns68768:0crwdne68768:0
+<example file="v-rating/prop-length" />
 
-  crwdns68770:0crwdne68770:0
+#### crwdns90058:0crwdne90058:0
 
-  `crwdns68772:0crwdne68772:0`
+crwdns90060:0crwdne90060:0
 
-- crwdns68774:0crwdne68774:0
-- crwdns68776:0crwdne68776:0
+<example file="v-rating/prop-half-increments" />
 
-## crwdns68778:0crwdne68778:0
+#### crwdns90062:0crwdne90062:0
 
-crwdns68780:0crwdne68780:0
+crwdns90064:0crwdne90064:0
 
-## crwdns68782:0crwdne68782:0
+<example file="v-rating/prop-size" />
 
-- [crwdns68784:0crwdne68784:0]()
+### crwdns88926:0crwdne88926:0
+
+#### crwdns88928:0crwdne88928:0
+
+crwdns88930:0crwdne88930:0
+
+<example file="v-rating/slot-item" />
+
+### crwdns88932:0crwdne88932:0
+
+#### crwdns90066:0crwdne90066:0
+
+crwdns90068:0crwdne90068:0 crwdns90070:0crwdne90070:0
+
+<example file="v-rating/misc-advanced" />
+
+#### crwdns90072:0crwdne90072:0
+
+crwdns90074:0crwdne90074:0
+
+<example file="v-rating/misc-card" />
 
 <backmatter />

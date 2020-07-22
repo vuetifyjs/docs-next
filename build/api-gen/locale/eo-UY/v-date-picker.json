@@ -1,0 +1,54 @@
+{
+  "props": {
+    "empty": "crwdns102406:0crwdne102406:0",
+    "allowedDates": "crwdns102408:0crwdne102408:0",
+    "disabled": "crwdns102410:0crwdne102410:0",
+    "dayFormat": "crwdns102412:0crwdne102412:0",
+    "eventColor": "crwdns102414:0crwdne102414:0",
+    "events": "crwdns102416:0crwdne102416:0",
+    "firstDayOfWeek": "crwdns102418:0crwdne102418:0",
+    "flat": "crwdns102420:0crwdne102420:0",
+    "headerDateFormat": "crwdns102422:0crwdne102422:0",
+    "locale": "crwdns102424:0crwdne102424:0",
+    "localeFirstDayOfYear": "crwdns102426:0crwdne102426:0",
+    "max": "crwdns102428:0crwdne102428:0",
+    "min": "crwdns102430:0crwdne102430:0",
+    "monthFormat": "crwdns102432:0crwdne102432:0",
+    "multiple": "crwdns102434:0crwdne102434:0",
+    "nextIcon": "crwdns102436:0crwdne102436:0",
+    "pickerDate": "crwdns102438:0crwdne102438:0",
+    "prevIcon": "crwdns102440:0crwdne102440:0",
+    "range": "crwdns102442:0crwdne102442:0",
+    "reactive": "crwdns102444:0crwdne102444:0",
+    "readonly": "crwdns102446:0crwdne102446:0",
+    "scrollable": "crwdns102448:0crwdne102448:0",
+    "selectedItemsText": "crwdns102450:0[Internationalization]crwdne102450:0",
+    "showCurrent": "crwdns102452:0crwdne102452:0",
+    "showWeek": "crwdns102454:0crwdne102454:0",
+    "titleDateFormat": "crwdns102456:0crwdne102456:0",
+    "type": "crwdns102458:0crwdne102458:0",
+    "value": "crwdns102460:0crwdne102460:0",
+    "weekdayFormat": "crwdns102462:0crwdne102462:0",
+    "width": "crwdns102464:0crwdne102464:0",
+    "yearFormat": "crwdns102466:0crwdne102466:0",
+    "yearIcon": "crwdns102468:0crwdne102468:0"
+  },
+  "slots": {
+    "empty": "crwdns102470:0crwdne102470:0",
+    "default": "crwdns102472:0crwdne102472:0"
+  },
+  "events": {
+    "empty": "crwdns102474:0crwdne102474:0",
+    "update:picker-date": "crwdns102476:0crwdne102476:0",
+    "<domevent>:date": "crwdns102478:0crwdne102478:0",
+    "<domevent>:month": "crwdns102480:0crwdne102480:0",
+    "<domevent>:year": "crwdns102482:0crwdne102482:0",
+    "change": "crwdns102484:0crwdne102484:0"
+  },
+  "functions": {
+    "empty": "crwdns102486:0crwdne102486:0"
+  },
+  "sass": {
+    "empty": "crwdns102488:0crwdne102488:0"
+  }
+}

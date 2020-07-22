@@ -1,0 +1,26 @@
+{
+  "props": {
+    "empty": "crwdns102506:0crwdne102506:0"
+  },
+  "slots": {
+    "empty": "crwdns102508:0crwdne102508:0"
+  },
+  "events": {
+    "empty": "crwdns102510:0crwdne102510:0"
+  },
+  "functions": {
+    "empty": "crwdns102512:0crwdne102512:0"
+  },
+  "options": {
+    "empty": "crwdns102514:0crwdne102514:0",
+    "modifiers.once": "crwdns102516:0crwdne102516:0",
+    "modifiers.attr": "crwdns102518:0[attributes]crwdne102518:0",
+    "modifiers.child": "crwdns102520:0[childList]crwdne102520:0",
+    "modifiers.char": "crwdns102522:0[characterData]crwdne102522:0",
+    "modifiers.sub": "crwdns102524:0[subtree]crwdne102524:0",
+    "value": "crwdns102526:0crwdne102526:0"
+  },
+  "sass": {
+    "empty": "crwdns102528:0crwdne102528:0"
+  }
+}

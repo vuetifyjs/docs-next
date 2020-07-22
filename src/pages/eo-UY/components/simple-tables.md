@@ -1,60 +1,56 @@
 ---
 meta:
-  title: crwdns69036:0crwdne69036:0
-  description: crwdns69038:0crwdne69038:0
-  keywords: crwdns69040:0crwdne69040:0
+  title: crwdns75630:0crwdne75630:0
+  description: crwdns75632:0crwdne75632:0
+  keywords: crwdns75634:0crwdne75634:0
+related:
+  - crwdns94072:0crwdne94072:0
+  - crwdns94074:0crwdne94074:0
+  - crwdns94076:0crwdne94076:0
 ---
 
-# crwdns69042:0crwdne69042:0
+# crwdns75636:0crwdne75636:0
 
-crwdns69044:0crwdne69044:0
+crwdns94078:0crwdne94078:0 crwdns94080:0crwdne94080:0
 
 <entry-ad />
 
-## crwdns69046:0crwdne69046:0
+## crwdns75640:0crwdne75640:0
 
-crwdns69048:0crwdne69048:0
+crwdns94082:0crwdne94082:0
 
-`crwdns69050:0crwdne69050:0`
+<example file="v-simple-table/usage" />
 
-- crwdns69052:0crwdne69052:0
-- crwdns69054:0crwdne69054:0
+## crwdns84732:0crwdne84732:0
 
-## crwdns69056:0crwdne69056:0
+- [crwdns94086:0crwdne94086:0](crwdns94084:0crwdne94084:0)
 
-crwdns69058:0crwdne69058:0
+## crwdns94088:0crwdne94088:0
 
-  crwdns69060:0crwdne69060:0
+### crwdns94090:0crwdne94090:0
 
-  crwdns69062:0crwdne69062:0
+#### crwdns94092:0crwdne94092:0
 
-## crwdns69064:0crwdne69064:0
+crwdns94094:0crwdne94094:0
 
-crwdns69066:0crwdne69066:0
-<alert type="success">crwdns69068:0crwdne69068:0</alert>
-<alert type="info">crwdns69070:0crwdne69070:0</alert>
-<alert type="warning">crwdns69072:0crwdne69072:0</alert>
-<alert type="error">crwdns69074:0crwdne69074:0</alert>
+<example file="v-simple-table/prop-dark" />
 
-## crwdns69076:0crwdne69076:0
+#### crwdns94096:0crwdne94096:0
 
-crwdns69078:0crwdne69078:0
+crwdns94098:0crwdne94098:0
 
-  crwdns69080:0crwdne69080:0
+<example file="v-simple-table/prop-dense" />
 
-  crwdns69082:0crwdne69082:0
+#### crwdns94100:0crwdne94100:0
 
-  `crwdns69084:0crwdne69084:0`
+crwdns94102:0crwdne94102:0
 
-- crwdns69086:0crwdne69086:0
-- crwdns69088:0crwdne69088:0
+<example file="v-simple-table/prop-fixed-header" />
 
-## crwdns69090:0crwdne69090:0
+#### crwdns94104:0crwdne94104:0
 
-crwdns69092:0crwdne69092:0
+crwdns94106:0crwdne94106:0
 
-## crwdns69094:0crwdne69094:0
-
-- [crwdns69096:0crwdne69096:0]()
+<example file="v-simple-table/prop-height" />
 
 <backmatter />

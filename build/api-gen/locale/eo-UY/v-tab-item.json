@@ -1,0 +1,18 @@
+{
+  "props": {
+    "empty": "crwdns101542:0crwdne101542:0",
+    "value": "crwdns101544:0crwdne101544:0"
+  },
+  "slots": {
+    "empty": "crwdns101546:0crwdne101546:0"
+  },
+  "events": {
+    "empty": "crwdns101548:0crwdne101548:0"
+  },
+  "functions": {
+    "empty": "crwdns101550:0crwdne101550:0"
+  },
+  "sass": {
+    "empty": "crwdns101552:0crwdne101552:0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "props": {
+    "empty": "crwdns103472:0crwdne103472:0",
+    "boilerplate": "crwdns103474:0crwdne103474:0",
+    "tile": "crwdns103476:0crwdne103476:0",
+    "loading": "crwdns103478:0crwdne103478:0",
+    "type": "crwdns103480:0crwdne103480:0",
+    "types": "crwdns103482:0crwdne103482:0"
+  },
+  "slots": {
+    "empty": "crwdns103484:0crwdne103484:0"
+  },
+  "events": {
+    "empty": "crwdns103486:0crwdne103486:0"
+  },
+  "functions": {
+    "empty": "crwdns103488:0crwdne103488:0"
+  },
+  "sass": {
+    "empty": "crwdns103490:0crwdne103490:0"
+  }
+}
