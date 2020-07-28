@@ -1,11 +1,17 @@
 
 // Utilities
+const { chunk } = require('lodash')
 const path = require('path')
 const Mode = require('frontmatter-markdown-loader/mode')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { ContextReplacementPlugin } = require('webpack')
 const { EN_LOCALE_ONLY, IS_PROD } = require('./src/util/globals')
 const { md } = require('./build/markdown-it')
+
+// Prerender
+const routes = require('./build/generate-routes')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const Renderer = PrerenderSpaPlugin.PuppeteerRenderer
 
 module.exports = {
   devServer: {
@@ -66,6 +72,25 @@ module.exports = {
     if (IS_PROD) {
       config.plugin('sitemap')
       .use(path.resolve('./build/sitemap.js'))
+
+      const splitQty = 300
+      const chunkRoutes = chunk(routes.map(route => route.fullPath, []), splitQty)
+      let currChunk = 1
+
+      for (const routeChunk of chunkRoutes) {
+        config.plugin(`PrerenderSpaPlugin${currChunk}`)
+        .use(
+          new PrerenderSpaPlugin({
+            staticDir: path.resolve(__dirname, 'dist'),
+            routes: routeChunk,
+            renderer: new Renderer({
+              maxConcurrentRoutes: 6,
+              headless: true,
+            }),
+          }),
+        )
+        currChunk++
+      }
     }
 
     if (process.env.ANALYZE === 'true') {
