@@ -169,5 +169,19 @@
     "name": "Phiter Fernandes",
     "team": "contributors",
     "twitter": "phiterf"
+  },
+  "kawacrepe": {
+    "focus": [
+      "[vuetifyjs](https://github.com/vuetifyjs)"
+    ],
+    "languages": [
+      "French",
+      "English"
+    ],
+    "linkedin": "vincentdhennin",
+    "location": "Arras, France",
+    "name": "Vincent Dhennin",
+    "team": "contributors",
+    "twitter": "Kawacrepe"
   }
 }
