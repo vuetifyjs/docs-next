@@ -3,7 +3,7 @@
 import { register } from 'register-service-worker'
 
 // Globals
-import { IS_PROD } from './util/globals'
+import { IS_PROD, IN_BROWSER } from './util/globals'
 
 if (IS_PROD) {
   register(`${process.env.BASE_URL}service-worker.js`, {
@@ -43,7 +43,7 @@ if (IS_PROD) {
   var refreshing
   navigator.serviceWorker && navigator.serviceWorker.addEventListener('controllerchange', function () {
     if (refreshing) return
-    window.location.reload()
+    IN_BROWSER && window.location.reload()
     refreshing = true
   })
 }

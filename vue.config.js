@@ -3,8 +3,15 @@
 const path = require('path')
 const Mode = require('frontmatter-markdown-loader/mode')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const { IS_PROD } = require('./src/util/globals')
+const { IS_PROD, IS_SERVER } = require('./src/util/globals')
 const { md } = require('./build/markdown-it')
+
+const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
+const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
+
+if (IS_SERVER) {
+  process.env.VUE_ENV = 'server'
+}
 
 module.exports = {
   devServer: {
@@ -19,7 +26,7 @@ module.exports = {
   chainWebpack: config => {
     config
       .entry('app')
-      .add('./src/entry-client.js')
+      .add(IS_SERVER ? './src/entry-server.js' : './src/entry-client.js')
       .end()
 
     config
@@ -57,6 +64,14 @@ module.exports = {
           vue: { root: 'markdown-body' },
         }))
 
+    if (IS_SERVER) {
+      config.plugin('VueSSRServerPlugin')
+        .use(VueSSRServerPlugin)
+    }
+
+    config.plugin('VueSSRClientPlugin')
+      .use(VueSSRClientPlugin)
+
     if (IS_PROD) {
       config.plugin('sitemap')
       .use(path.resolve('./build/sitemap.js'))
@@ -68,15 +83,22 @@ module.exports = {
     }
   },
   configureWebpack: {
-    optimization: {
-      splitChunks: {
-        chunks: 'all',
-        minSize: 30000,
-        maxSize: 100000,
-        maxAsyncRequests: 20,
-        maxInitialRequests: 5,
+    optimization: IS_SERVER
+      ? {
+        minimize: false,
+        splitChunks: false,
+        removeAvailableModules: IS_PROD,
+        removeEmptyChunks: IS_PROD,
+      }
+      : {
+        splitChunks: {
+          chunks: 'all',
+          minSize: 30000,
+          maxSize: 100000,
+          maxAsyncRequests: 20,
+          maxInitialRequests: 5,
+        },
       },
-    },
     module: {
       rules: [
         {
@@ -85,6 +107,12 @@ module.exports = {
         },
       ],
     },
+    target: IS_SERVER ? 'node' : 'web',
+    node: IS_SERVER ? undefined : false,
+    output: IS_SERVER ? {
+      libraryTarget: 'commonjs2',
+      filename: 'server-bundle.js',
+    } : undefined,
   },
   pwa: {
     name: 'Vuetify-Docs',
