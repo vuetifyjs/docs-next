@@ -183,5 +183,18 @@
     "name": "Vincent Dhennin",
     "team": "contributors",
     "twitter": "Kawacrepe"
+  },
+  "blalan05": {
+    "focus": [
+      "[vuetifyjs](https://github.com/vuetifyjs)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "linkedin": "blalan05",
+    "location": "Wisconsin, USA",
+    "name": "Blaine Landowski",
+    "team": "contributors",
+    "twitter": "blalan05"
   }
 }
