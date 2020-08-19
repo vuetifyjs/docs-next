@@ -7,6 +7,9 @@ import VueGtag from 'vue-gtag'
 // Globals
 import { IS_PROD } from '@/util/globals'
 
+// Redirects
+import redirects from './301.json'
+
 import { trailingSlash } from '@/util/helpers'
 import {
   abort,
@@ -27,6 +30,9 @@ export function createRouter (vuetify, store, i18n) {
     scrollBehavior: (...args) => scrollBehavior(vuetify, ...args),
     routes: [
       locale([
+        ...Object.entries(redirects)
+          .map(([from, to]) => redirect(from, () => to)),
+
         layout('Home', [route('Home')]),
 
         route('Whiteframes', null, 'examples/whiteframes/:whiteframe'),
