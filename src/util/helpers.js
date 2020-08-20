@@ -12,9 +12,10 @@ export function copyElementContent (el) {
 }
 
 export function getBranch () {
-  const branch = window
-    ? window.location.hostname.split('.')[0]
-    : 'master'
+  let branch = 'master'
+  if (IN_BROWSER) {
+    branch = window.location.hostname.split('.')[0]
+  }
 
   return ['master', 'dev', 'next'].includes(branch) ? branch : 'master'
 }
