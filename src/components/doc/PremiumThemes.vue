@@ -5,237 +5,174 @@
     fluid
     tag="section"
   >
-    <v-row>
+    <v-row v-if="digitalProducts">
       <v-col
-        v-for="template in templates"
-        :key="template.title"
+        v-for="product in digitalProducts"
+        :key="product.title"
         cols="12"
-        md="4"
+        xl="4"
+        lg="6"
+        md="6"
+        sm="6"
       >
-        <v-card
-          class="d-flex flex-column"
-          height="100%"
-          outlined
-        >
-          <v-img
-            :src="template.src"
-            height="175"
+        <v-hover v-slot:default="{ hover }">
+          <v-card
+            v-if="product"
+            :class="{'elevation-cs' : hover}"
+            class="d-flex flex-column"
+            height="400px"
+            flat
           >
-            <v-chip
-              :color="template.free ? 'blue-grey' : 'success'"
-              class="text-uppercase ma-3"
-              label
-              small
-              text-color="white"
+            <v-carousel
+              height="200px"
+              hide-delimiter-background
+              show-arrows-on-hover
+              :show-arrows="product.images.length > 1"
+              hide-delimiters
             >
-              {{ $i18n.t(`premium-themes.${template.free ? 'free' : 'premium'}`) }}
-            </v-chip>
-          </v-img>
-
-          <v-card-title class="align-center py-2">
-            <h2
-              class="title font-weight-regular mb-0"
-              v-text="template.title"
+              <v-carousel-item
+                v-for="(slide, i) in product.images"
+                :key="i"
+              >
+                <v-img
+                  height="185px"
+                  width="100%"
+                  cover
+                  :src="slide.src"
+                />
+              </v-carousel-item>
+            </v-carousel>
+            <v-card-title
+              class="align-center pb-2 pt-1 text-body-1 font-weight-medium text-no-wrap"
+              v-text="product.title"
             />
-          </v-card-title>
-
-          <v-divider />
-
-          <v-responsive
-            class="pa-4 body-2"
-            min-height="95"
-            v-text="$i18n.t(template.description)"
-          />
-
-          <v-card-actions
-            :class="$vuetify.theme.dark ? 'darken-4' : 'lighten-4'"
-            class="grey"
-          >
-            <v-menu
-              v-if="template.demoUrl.length"
-              :disabled="template.demoUrl.length === 1"
-              transition="scale-transition"
-              origin="bottom left"
-              top
-              right
-            >
-              <template #activator="{ on: menu }">
-                <v-tooltip bottom>
-                  <template #activator="{ on: tooltip }">
+            <div class="custom-card-text px-4 mb-4">
+              {{ product.description }}
+            </div>
+            <v-slide-y-reverse-transition>
+              <v-card-actions
+                v-show="hover"
+                class="rounded mx-2"
+              >
+                <v-menu
+                  v-if="product.variants.length > 1"
+                  transition="scale-transition"
+                  origin="bottom left"
+                  top
+                  right
+                >
+                  <template #activator="{ on }">
                     <v-btn
-                      :href="template.demoUrl.length === 1 ? `${template.demoUrl[0]}?ref=vuetifyjs.com${template.query || ''}` : undefined"
                       icon
                       target="_blank"
-                      rel="noopener"
-                      :aria-label="$i18n.t('premium-themes.view-demo')"
-                      v-on="{ ...tooltip, ...menu }"
+                      rel="noopener noreferrer"
+                      v-on="on"
                     >
                       <v-icon color="primary">
-                        $mdiEye
+                        $mdiDotsVertical
                       </v-icon>
                     </v-btn>
                   </template>
-                  <span v-text="$i18n.t('premium-themes.view-demo')" />
-                </v-tooltip>
-              </template>
-              <v-list v-if="template.demoUrl.length > 1">
-                <v-list-item
-                  v-for="([title, demo], i) in template.demoUrl"
-                  :key="i"
-                  :href="`${demo}?ref=vuetifyjs.com${template.query || ''}`"
+                  <v-list v-if="product.variants.length > 1">
+                    <v-list-item
+                      v-for="(variant, i) in product.variants"
+                      :key="i"
+                      target="_blank"
+                      rel="noopener"
+                      color="primary--text"
+                    >
+                      <v-list-item-content>
+                        <v-list-item-title v-text="variant.title" />
+                      </v-list-item-content>
+                      <v-list-item-action>
+                        <v-icon
+                          left
+                          color="primary"
+                          small
+                        >
+                          $mdiOpenInNew
+                        </v-icon>
+                      </v-list-item-action>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+                <v-spacer />
+                <v-btn
+                  :disabled="!product.availableForSale"
+                  :outlined="isFree(product)"
+                  color="indigo"
+                  dark
+                  depressed
+                  min-width="100"
                   target="_blank"
-                  rel="noopener"
-                >
-                  <v-list-item-content>
-                    <v-list-item-title v-text="title" />
-                  </v-list-item-content>
-                  <v-list-item-action>
-                    <v-icon>$mdiOpenInNew</v-icon>
-                  </v-list-item-action>
-                </v-list-item>
-              </v-list>
-            </v-menu>
+                  small
+                  v-text="isFree(product) ? 'Free download' : 'Buy now'"
+                />
+              </v-card-actions>
+            </v-slide-y-reverse-transition>
+          </v-card>
+        </v-hover>
+      </v-col>
+    </v-row>
 
-            <v-spacer />
-
-            <v-btn
-              :href="`${template.url}?ref=vuetifyjs.com${template.query || ''}`"
-              :outlined="template.free"
-              color="indigo"
-              dark
-              depressed
-              min-width="100"
-              target="_blank"
-            >
-              {{ $i18n.t(`premium-themes.${template.free ? 'download-now' : 'buy-now'}`) }}
-            </v-btn>
-          </v-card-actions>
-        </v-card>
+    <v-row
+      v-if="loading"
+      justify="center"
+    >
+      <v-col cols="auto">
+        <v-progress-circular
+          indeterminate
+          color="primary"
+        />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+  import { call, get } from 'vuex-pathify'
+
   export default {
     name: 'PremiumThemes',
-
     data () {
       return {
-        templates: {
-          'zero-pro': {
-            title: 'Zero Theme Pro',
-            description: 'premium-themes.zero-pro',
-            src: 'https://cdn.vuetifyjs.com/store/themes/zero/main.png',
-            free: false,
-            url: 'https://store.vuetifyjs.com/product/zero-theme-pro',
-            demoUrl: ['https://zero-theme-pro.johnleider.com'],
-          },
-          'dashboard-pro': {
-            title: 'Material Dashboard Pro',
-            description: 'premium-themes.dashboard-pro',
-            src: 'https://cdn.vuetifyjs.com/images/starter/vuetify-admin-dashboard-pro.jpg',
-            free: false,
-            url: 'https://www.creative-tim.com/product/vuetify-material-dashboard-pro',
-            demoUrl: [
-              'https://demos.creative-tim.com/vuetify-material-dashboard-pro/',
-            ],
-            query: '&partner=116160',
-          },
-          'material-kit': {
-            title: 'Material Kit',
-            description: 'premium-themes.material-kit',
-            src: 'https://cdn.vuetifyjs.com/images/starter/vuetify-material-kit.png',
-            free: false,
-            url: 'https://store.vuetifyjs.com/product/material-kit-theme',
-            demoUrl: [
-              'https://material-kit.vuetifyjs.com',
-            ],
-          },
-          'alpha-theme': {
-            title: 'Alpha Theme',
-            description: 'premium-themes.alpha-theme',
-            src: 'https://cdn.vuetifyjs.com/images/starter/vuetify-alpha-theme.png',
-            free: false,
-            url: 'https://store.vuetifyjs.com/product/alpha-theme',
-            demoUrl: [
-              [
-                'Construction',
-                'https://alpha-construction.vuetifyjs.com',
-              ],
-              [
-                'Creative',
-                'https://alpha-creative.vuetifyjs.com',
-              ],
-              [
-                'SaaS',
-                'https://alpha-saas.vuetifyjs.com',
-              ],
-              [
-                'Ecommerce',
-                'https://alpha-ecommerce.vuetifyjs.com',
-              ],
-            ],
-          },
-          'zero-free': {
-            title: 'Zero Theme Free',
-            description: 'premium-themes.zero-free',
-            src: 'https://cdn.vuetifyjs.com/store/themes/zero/free.png',
-            free: true,
-            url: 'https://store.vuetifyjs.com/product/zero-theme-free',
-            demoUrl: [
-              ['https://zero-theme-free.johnleider.com'],
-            ],
-          },
-          dashboard: {
-            title: 'Material Dashboard Free',
-            description: 'premium-themes.dashboard',
-            src: 'https://cdn.vuetifyjs.com/images/starter/vuetify-admin-dashboard.jpg',
-            free: true,
-            url: 'https://www.creative-tim.com/product/vuetify-material-dashboard',
-            demoUrl: [
-              'https://demos.creative-tim.com/vuetify-material-dashboard/#/dashboard',
-            ],
-            query: '&partner=116160',
-          },
-          freelance: {
-            title: 'Freelancer',
-            description: 'premium-themes.freelance',
-            src: 'https://cdn.vuetifyjs.com/images/starter/freelancer.png',
-            free: true,
-            url: 'https://store.vuetifyjs.com/product/freelancer-theme-free/',
-            demoUrl: [
-              'https://freelancer-free.johnleider.com/',
-            ],
-          },
-          parallax: {
-            title: 'Parallax',
-            description: 'premium-themes.parallax',
-            src: 'https://cdn.vuetifyjs.com/images/starter/parallax-2020-large.png',
-            free: true,
-            url: 'https://store.vuetifyjs.com/product/parallax-theme-free/',
-            demoUrl: [
-              'https://parallax-theme-free.johnleider.com/',
-            ],
-          },
-          blog: {
-            title: 'Blog',
-            description: 'premium-themes.blog',
-            src: 'https://cdn.vuetifyjs.com/images/starter/blog.png',
-            free: true,
-            url: 'https://store.vuetifyjs.com/product/blog-theme-free/',
-            demoUrl: [
-              'https://blog-free.johnleider.com',
-            ],
-          },
-        },
+        loading: false,
       }
+    },
+    computed: {
+      allProducts: get('products/all'),
+      digitalProducts () {
+        return this.allProducts.filter(x => x.tags.some(y => y.value === 'digital'))
+      },
+    },
+    mounted () {
+      this.loading = true
+      this.fetch().then(() => (this.loading = false))
+    },
+    methods: {
+      fetch: call('products/fetch'),
+      isFree (product) {
+        if (product.variants[0].price === '0.00') return true
+        return false
+      },
     },
   }
 </script>
 
 <style>
-  #premium-themes .v-card {
-    border-radius: 6px;
-  }
+.custom-card-text {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+
+.elevation-cs {
+  /* box-shadow: rgba(156, 156, 156, 0.082) 0px 8px 8px 4px !important; */
+  box-shadow: rgba(177, 207, 253, 0.116) 0px 8px 8px 4px !important;
+}
 </style>

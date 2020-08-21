@@ -15,4 +15,6 @@ Vuetify offers both **free** and **premium** pre-made themes designed to get you
 
 <entry-ad />
 
+<premium-themes />
+
 <backmatter />
