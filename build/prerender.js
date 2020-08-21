@@ -14,8 +14,8 @@ const {
 const ProgressBar = require('progress')
 const { createBundleRenderer } = require('vue-server-renderer')
 
-const languages = require('../src/i18n/locales.js')
-const availableLanguages = languages.map(lang => lang.alternate || lang.locale)
+// const languages = require('../src/i18n/locales.js')
+const availableLanguages = ['en']
 
 const threads = os.cpus().length
 const resolve = file => path.resolve(__dirname, file)

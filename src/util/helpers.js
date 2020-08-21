@@ -2,6 +2,8 @@
 import { IN_BROWSER, IS_PROD } from '@/util/globals'
 
 export function copyElementContent (el) {
+  if (!IN_BROWSER) return
+
   el.setAttribute('contenteditable', 'true')
   el.focus()
 

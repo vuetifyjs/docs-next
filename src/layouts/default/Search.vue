@@ -32,6 +32,8 @@
 </template>
 
 <script>
+  import { IN_BROWSER } from '@/util/globals'
+
   // This behavior should be easier to do with solo fields
   // TODO: Review this for v3
   export default {
@@ -82,16 +84,18 @@
     },
 
     mounted () {
-      document.onkeydown = e => {
-        e = e || window.event
+      if (IN_BROWSER) {
+        document.onkeydown = e => {
+          e = e || window.event
 
-        if (
-          e.key === '/' &&
-          e.target !== this.$refs.search.$refs.input
-        ) {
-          e.preventDefault()
+          if (
+            e.key === '/' &&
+            e.target !== this.$refs.search.$refs.input
+          ) {
+            e.preventDefault()
 
-          this.$refs.search.focus()
+            this.$refs.search.focus()
+          }
         }
       }
 
@@ -107,7 +111,9 @@
     },
 
     beforeDestroy () {
-      document.onkeydown = null
+      if (IN_BROWSER) {
+        document.onkeydown = null
+      }
 
       this.docSearch.autocomplete.autocomplete.close()
       this.docSearch.autocomplete.autocomplete.setVal('')

@@ -21,6 +21,8 @@
 </template>
 
 <script>
+  import { IN_BROWSER } from '@/util/globals'
+
   export default {
     name: 'DefaultFabToTop',
 
@@ -30,7 +32,7 @@
 
     methods: {
       onScroll () {
-        if (typeof window === 'undefined') return
+        if (typeof window === 'undefined' || !IN_BROWSER) return
 
         const top = (
           window.pageYOffset ||
