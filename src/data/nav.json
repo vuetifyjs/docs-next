@@ -17,6 +17,7 @@
     "title": "beginners-guide",
     "icon": "$mdiSchoolOutline",
     "items": [
+      "playground",
       "pre-amble"
     ]
   },
