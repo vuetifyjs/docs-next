@@ -15,6 +15,10 @@ Vuetify comes bootstrapped with support for Material Design Icons, Material Icon
 
 <entry-ad />
 
+## Available Icons
+
+<icon-list></icon-list>
+
 ## Usage
 
 In order to change your font library, add the `iconfont` option during instantiation.
