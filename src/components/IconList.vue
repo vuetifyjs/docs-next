@@ -31,7 +31,7 @@
           max-height="300"
         >
           <template v-slot="{ item }">
-            <v-list-item class="d-flex justify-space-between align-center w-100">
+            <v-list-item :key="item">
               <v-list-item-content>
                 <v-list-item-title>
                   <div>
@@ -114,13 +114,5 @@
 
 </script>
 
-<style scoped>
-  .w-100 {
-    width: 100%;
-  }
-
-  .v-input__prepend-outer {
-    margin: 0 5px !important;
-  }
-
+<style>
 </style>
