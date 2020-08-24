@@ -86,11 +86,15 @@
     },
     computed: {
       filteredIcons () {
-        if (!this.icons) return
         if (!this.searchIcons) return this.icons
-        return this.icons.filter((item) => {
-          return item.toLowerCase().match(this.searchIcons)
-        })
+
+        if (this.icons) {
+          return this.icons.filter((item) => {
+            return item.toLowerCase().match(this.searchIcons)
+          })
+        }
+
+        return []
       },
     },
     mounted () {
