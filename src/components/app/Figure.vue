@@ -4,9 +4,7 @@
       class="mb-3"
       v-bind="{
         ...$attrs,
-        ...attrs,
       }"
-      v-on="on"
     />
 
     <figcaption

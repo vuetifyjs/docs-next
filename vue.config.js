@@ -97,15 +97,15 @@ module.exports = {
         .use(VueSSRClientPlugin)
     }
 
-    // if (IS_PROD) {
-    //   config.plugin('sitemap')
-    //     .use(path.resolve('./build/sitemap.js'))
-    // }
+    if (IS_PROD) {
+      config.plugin('sitemap')
+        .use(path.resolve('./build/sitemap.js'))
+    }
 
-    // if (process.env.ANALYZE === 'true') {
-    //   config.plugin('BundleAnalyzerPlugin')
-    //     .use(BundleAnalyzerPlugin)
-    // }
+    if (process.env.ANALYZE === 'true') {
+      config.plugin('BundleAnalyzerPlugin')
+        .use(BundleAnalyzerPlugin)
+    }
   },
   configureWebpack: {
     devtool: IS_SERVER ? false : 'source-map',
@@ -114,7 +114,7 @@ module.exports = {
       allowlist: [/^vuetify/, /\.css*/],
     }) : undefined,
     optimization: {
-      minimize: IS_SERVER ? false : undefined,
+      minimize: IS_SERVER ? false : IS_PROD,
       splitChunks: IS_SERVER ? false : {
         chunks: 'all',
         minSize: 30000,

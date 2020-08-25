@@ -83,19 +83,19 @@
       },
     },
 
-    mounted () {
-      if (IN_BROWSER) {
-        document.onkeydown = e => {
-          e = e || window.event
+    async mounted () {
+      if (!IN_BROWSER) return
 
-          if (
-            e.key === '/' &&
-            e.target !== this.$refs.search.$refs.input
-          ) {
-            e.preventDefault()
+      document.onkeydown = e => {
+        e = e || window.event
 
-            this.$refs.search.focus()
-          }
+        if (
+          e.key === '/' &&
+          e.target !== this.$refs.search.$refs.input
+        ) {
+          e.preventDefault()
+
+          this.$refs.search.focus()
         }
       }
 
@@ -106,14 +106,14 @@
       )
       import(
         /* webpackChunkName: "docsearch" */
-        'docsearch.js'
+        'docsearch.js/dist/cdn/docsearch.min.js'
       ).then(this.init)
     },
 
     beforeDestroy () {
-      if (IN_BROWSER) {
-        document.onkeydown = null
-      }
+      if (IN_BROWSER) return
+
+      document.onkeydown = null
 
       this.docSearch.autocomplete.autocomplete.close()
       this.docSearch.autocomplete.autocomplete.setVal('')

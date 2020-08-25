@@ -1,7 +1,6 @@
 // Imports
 import locales from '@/i18n/locales'
 import { kebabCase } from 'lodash'
-import { leadingSlash, trailingSlash } from '@/util/helpers'
 
 // Globals
 import { IN_BROWSER } from '@/util/globals'
@@ -26,7 +25,7 @@ export function error (code = 404) {
   )
 }
 
-export function layout (name = 'Default', path = '', children, options) {
+export function layout (name = 'Default', children = [], path = '') {
   const dir = kebabCase(name)
 
   return {
@@ -36,15 +35,14 @@ export function layout (name = 'Default', path = '', children, options) {
       `@/layouts/${dir}/${name}`
     ),
     path,
-    ...options,
   }
 }
 
 export function locale (children) {
   return layout(
-    `/:locale(${languagePattern})`,
     'Locale',
     children,
+    `/:locale(${languagePattern})`,
   )
 }
 
@@ -67,48 +65,37 @@ export function redirect (
   rhandler,
   fallback = fallbackLocale,
 ) {
-  if (typeof path === 'function') {
-    rhandler = path
-    path = '*'
+  if (typeof rhandler !== 'function') {
+    rhandler = to => to.path
   }
 
   path = path.replace('%s', fallback)
 
   return {
     path,
-    redirect: to => {
-      const locale = 'en'
-      const rpath = rhandler(to)
-      const url = rpath !== ''
-        ? leadingSlash(rpath)
-        : rpath
-
-      return `/${locale}${url}`
-    },
+    redirect: to => rpath(rhandler(to)),
   }
 }
 
-export function route (name, component, path = '') {
-  // component = Object(component) === component
-  //   ? component
-  //   : { default: name }
+export function rpath (path = '') {
+  const locale = preferredLocale()
 
-  // const components = {}
+  const route = [
+    locale,
+    ...path.split('/').filter(p => !!p && p !== locale),
+  ]
 
-  // for (const [key, value] of Object.entries(component)) {
-  //   components[key] = () =>
-  // }
+  return `/${route.join('/')}/`
+}
 
+export function route (name, path = '', options = {}) {
   return {
     name,
     component: () => import(
       /* webpackChunkName: "views-[request]" */
       `@/views/${name}`
-    ).catch(e => {
-      console.log('SOMETHING WENT WRONG', name)
-
-      process.exit(1)
-    }),
+    ),
     path,
+    ...options,
   }
 }

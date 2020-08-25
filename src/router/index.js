@@ -7,7 +7,6 @@ import VueGtag from 'vue-gtag'
 // Globals
 import { IS_PROD } from '@/util/globals'
 
-import { trailingSlash } from '@/util/helpers'
 import {
   abort,
   locale,
@@ -27,23 +26,27 @@ export function createRouter (vuetify, store, i18n) {
     scrollBehavior: (...args) => scrollBehavior(vuetify, ...args),
     routes: [
       locale([
-        layout('Home', '', null, { name: 'Home' }),
+        layout('Home', [
+          route('Home', '', {
+            pathToRegexpOptions: { strict: true },
+          }),
 
-        route('Whiteframes', 'examples/whiteframes/:whiteframe'),
-
-        layout('Default', ':category/:page', [
-          route('Documentation'),
+          redirect('/:locale(%s)'),
         ]),
 
-        // layout('Default', [abort()], '*'),
-      ]),
+        route('Whiteframes', '', 'examples/whiteframes/:whiteframe'),
 
+        layout('Default', [
+          route('Documentation'),
+        ], ':category/:page'),
+
+        layout('Default', [abort()], '*'),
+      ]),
       // Redirect for language fallback
       redirect('/:locale(%s)/*', to => to.params.pathMatch),
       // The previous one doesn't match if there's no slash after the language code
       redirect('/:locale(%s)'),
-      redirect(to => to.path),
-      // redirect('/en/')
+      redirect(),
     ],
   })
 
