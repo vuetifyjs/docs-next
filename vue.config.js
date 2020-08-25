@@ -109,10 +109,10 @@ module.exports = {
   },
   configureWebpack: {
     devtool: IS_SERVER ? false : 'source-map',
-    externals: nodeExternals({
+    externals: IS_SERVER ? nodeExternals({
       // do not externalize CSS files in case we need to import it from a dep
       allowlist: [/^vuetify/, /\.css*/],
-    }),
+    }) : undefined,
     optimization: {
       minimize: IS_SERVER ? false : undefined,
       splitChunks: IS_SERVER ? false : {
