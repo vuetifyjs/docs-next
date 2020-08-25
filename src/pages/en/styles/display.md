@@ -35,6 +35,7 @@ The _value_ property is one of:
 - `table-row`
 - `flex`
 - `inline-flex`
+- `grid`
 
 When setting a specific breakpoint for a display helper class, it will apply to all screen widths from the designation and up. For example, `d-lg-flex` will apply to `lg` and `xl` size screens.
 
