@@ -1,22 +1,23 @@
 <template>
   <div>
     <v-menu
-      v-if="icons"
+      v-model="menu"
+      :open-on-click="filteredIcons.length > 0"
       offset-y
     >
       <template v-slot:activator="{ on, attrs }">
         <v-text-field
-          v-model="searchIcons"
-          placeholder="Search for icons (e.g. account, close etc)"
-          label="Icons"
-          clear-icon="mdi-close"
-          outlined
+          v-model="search"
           :hide-details="!copied"
-          :persistent-hint="copied"
           :hint="copied ? 'Copied!' : ''"
-          clearable
-          v-bind="attrs"
           :loading="!icons"
+          :persistent-hint="copied"
+          clear-icon="mdi-close"
+          clearable
+          label="Icons"
+          outlined
+          placeholder="Search for icons (e.g. account, close etc)"
+          v-bind="attrs"
           v-on="on"
         >
           <template v-slot:prepend-inner>
@@ -24,44 +25,40 @@
           </template>
         </v-text-field>
       </template>
-      <v-list>
+
+      <v-list v-show="filteredIcons.length > 0">
         <v-virtual-scroll
           :items="filteredIcons"
-          :item-height="50"
-          max-height="300"
+          :item-height="56"
+          :height="Math.min(filteredIcons.length * 56, 336)"
         >
           <template v-slot="{ item }">
-            <v-list-item :key="item">
+            <v-list-item
+              :key="item"
+              @click.stop="copy(item)"
+            >
+              <v-list-item-icon>
+                <v-icon
+                  color="primary"
+                  class="mr-2"
+                  v-text="item"
+                />
+              </v-list-item-icon>
+
               <v-list-item-content>
-                <v-list-item-title>
-                  <div>
-                    <v-icon
-                      color="primary"
-                      class="mr-2"
-                    >
-                      {{ item }}
-                    </v-icon>
-                    <input
-                      ref="copyTarget"
-                      type="hidden"
-                      name="copyTarget"
-                      :value="item"
-                      class="d-none"
-                    >
-                    <span>{{ item.substring(4) }}</span>
-                  </div>
-                </v-list-item-title>
+                <v-list-item-title
+                  v-text="item.substring(4)"
+                />
               </v-list-item-content>
-              <v-list-item-action>
-                <v-btn
-                  icon
-                  @click="copy"
-                >
-                  <v-icon size="21">
-                    mdi-content-copy
-                  </v-icon>
-                </v-btn>
-              </v-list-item-action>
+
+              <v-btn
+                icon
+                @click.stop="copy(item)"
+              >
+                <v-icon size="21">
+                  mdi-content-copy
+                </v-icon>
+              </v-btn>
             </v-list-item>
           </template>
         </v-virtual-scroll>
@@ -72,51 +69,55 @@
 
 <script>
   import * as allIcons from '@mdi/js'
-  import {
-    kebabCase,
-  } from 'lodash'
+  import { kebabCase } from 'lodash'
+
   export default {
     name: 'IconList',
-    data () {
-      return {
-        icons: [],
-        searchIcons: null,
-        copied: false,
-      }
-    },
+
+    data: () => ({
+      copied: false,
+      icons: [],
+      menu: false,
+      search: '',
+    }),
+
     computed: {
       filteredIcons () {
-        if (!this.searchIcons) return this.icons
+        if (!this.icons.length || !this.search) return []
+        if (!this.search) return this.icons
 
-        if (this.icons) {
-          return this.icons.filter((item) => {
-            return item.toLowerCase().match(this.searchIcons)
-          })
-        }
-
-        return []
+        return this.icons.filter((item) => {
+          return item.toLowerCase().match(this.search.toLowerCase())
+        })
       },
     },
+
+    watch: {
+      search () {
+        if (this.filteredIcons.length > 0 && !this.menu) {
+          this.menu = true
+        } else if (!this.filteredIcons.length) {
+          this.menu = false
+        }
+      },
+    },
+
     mounted () {
       this.icons = Object.keys(allIcons).map((icon) => {
         return kebabCase(icon)
       })
     },
+
     methods: {
-      copy () {
-        navigator.clipboard
-          .writeText(this.$refs.copyTarget.value)
-          .then(() => {
-            this.copied = true
-            setTimeout(() => {
-              this.copied = false
-            }, 3000)
-          })
+      copy (item) {
+        navigator.clipboard.writeText(item).then(() => {
+          this.menu = false
+          this.copied = true
+          setTimeout(() => {
+            this.copied = false
+          }, 3000)
+        })
       },
     },
   }
-
 </script>
-
-<style>
-</style>
