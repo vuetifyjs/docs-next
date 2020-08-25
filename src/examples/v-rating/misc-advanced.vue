@@ -143,8 +143,6 @@
 </template>
 
 <script>
-  import { IN_BROWSER } from '@/util/globals'
-
   export default {
     data: () => ({
       copied: false,
@@ -154,8 +152,6 @@
 
     methods: {
       copy () {
-        if (!IN_BROWSER) return
-
         const markup = this.$refs.link
         markup.focus()
         document.execCommand('selectAll', false, null)

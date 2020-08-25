@@ -105,7 +105,7 @@
             this.items = res
           })
           .catch(err => {
-            console.log('crypto example', err)
+            console.log(err)
           })
           .finally(() => (this.isLoading = false))
       },

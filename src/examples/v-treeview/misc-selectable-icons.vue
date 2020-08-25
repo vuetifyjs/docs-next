@@ -142,7 +142,7 @@
         return fetch('https://api.openbrewerydb.org/breweries')
           .then(res => res.json())
           .then(data => (this.breweries = data))
-          .catch(err => console.log('error wtf', err))
+          .catch(err => console.log(err))
       },
       getChildren (type) {
         const breweries = []

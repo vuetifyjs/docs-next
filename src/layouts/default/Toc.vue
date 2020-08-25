@@ -67,7 +67,6 @@
   // Utilities
   import { get } from 'vuex-pathify'
   import { wait } from '@/util/helpers'
-  import { IN_BROWSER } from '@/util/globals'
 
   export default {
     name: 'DefaultToc',
@@ -106,8 +105,6 @@
         this.scrolling = false
       },
       setOffsets () {
-        if (!IN_BROWSER) return
-
         const offsets = []
         const toc = this.toc.slice().reverse()
 
@@ -122,7 +119,7 @@
         this.offsets = offsets
       },
       findActiveIndex () {
-        if (this.$vuetify.breakpoint.mobile || !IN_BROWSER) return
+        if (this.$vuetify.breakpoint.mobile) return
 
         const currentOffset = (
           window.pageYOffset ||

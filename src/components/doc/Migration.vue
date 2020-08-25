@@ -32,7 +32,7 @@
         .then(res => {
           this.migration = res.content ? Buffer.from(res.content, 'base64').toString() : ' '
         })
-        .catch(err => console.log('migration', err))
+        .catch(err => console.log(err))
     },
   }
 </script>

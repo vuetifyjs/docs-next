@@ -77,7 +77,7 @@
               }
             })
           })
-          .catch(err => console.log('this one too', err))
+          .catch(err => console.log(err))
       },
     },
   }
