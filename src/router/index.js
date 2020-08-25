@@ -27,13 +27,13 @@ export function createRouter (vuetify, store, i18n) {
     scrollBehavior: (...args) => scrollBehavior(vuetify, ...args),
     routes: [
       locale([
-        layout('Home', []),
+        layout('Home', '', null, { name: 'Home' }),
 
-        route('Whiteframes', null, 'examples/whiteframes/:whiteframe'),
+        route('Whiteframes', 'examples/whiteframes/:whiteframe'),
 
-        layout('Default', [
+        layout('Default', ':category/:page', [
           route('Documentation'),
-        ], ':category/:page'),
+        ]),
 
         // layout('Default', [abort()], '*'),
       ]),

@@ -14,8 +14,8 @@ const {
 const ProgressBar = require('progress')
 const { createBundleRenderer } = require('vue-server-renderer')
 
-// const languages = require('../src/i18n/locales.js')
-const availableLanguages = ['en']
+const languages = require('../src/i18n/locales.js')
+const availableLanguages = languages.map(lang => lang.alternate || lang.locale)
 
 const threads = os.cpus().length
 const resolve = file => path.resolve(__dirname, file)
@@ -57,9 +57,9 @@ if (isMainThread) {
   const bundle = JSON.parse(readFile('../dist/vue-ssr-server-bundle.json'))
   const clientManifest = JSON.parse(readFile('../dist/vue-ssr-client-manifest.json'))
 
-  const bar = new ProgressBar('[:bar] :percent | :current/:total | :timems | :lastFile', {
+  const bar = new ProgressBar('[:bar] :percent | ETA: :etas | :current/:total | :timems | :lastFile', {
     total: routes.length,
-    width: 32,
+    width: 64,
   })
 
   chunk(routes, Math.round(routes.length / threads)).forEach((routes, index) => {

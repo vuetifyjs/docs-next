@@ -26,24 +26,25 @@ export function error (code = 404) {
   )
 }
 
-export function layout (layout = 'Default', children, path = '') {
-  const dir = kebabCase(layout)
+export function layout (name = 'Default', path = '', children, options) {
+  const dir = kebabCase(name)
 
   return {
     children,
     component: () => import(
       /* webpackChunkName: "layout-[request]" */
-      `@/layouts/${dir}/${layout}`
+      `@/layouts/${dir}/${name}`
     ),
     path,
+    ...options,
   }
 }
 
-export function locale (children = []) {
+export function locale (children) {
   return layout(
+    `/:locale(${languagePattern})`,
     'Locale',
     children,
-    `/:locale(${languagePattern})`,
   )
 }
 

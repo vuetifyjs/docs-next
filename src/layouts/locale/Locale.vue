@@ -1,5 +1,5 @@
 <template>
-  <div>hi</div>
+  <router-view />
 </template>
 
 <script>
@@ -16,13 +16,13 @@
     computed: { translating: get('pages/translating') },
 
     created () {
-      // if (!IN_BROWSER || !this.translating) return
+      if (!IN_BROWSER || !this.translating) return
 
-      // const crowdin = document.createElement('script')
+      const crowdin = document.createElement('script')
 
-      // crowdin.src = 'https://cdn.crowdin.com/jipt/jipt.js'
+      crowdin.src = 'https://cdn.crowdin.com/jipt/jipt.js'
 
-      // document.head.appendChild(crowdin)
+      document.head.appendChild(crowdin)
     },
   }
 </script>
