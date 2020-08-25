@@ -17,11 +17,22 @@ export default context => {
   /* eslint-disable-next-line no-async-promise-executor */
   return new Promise(async (resolve, reject) => {
     const s = isDev && Date.now()
-    const {
-      app,
-      router,
-      store,
-    } = await createApp(undefined, context)
+
+    let app
+    let router
+    let store
+
+    try {
+      const res = await createApp(undefined, context)
+
+      app = res.app
+      router = res.router
+      store = res.store
+    } catch (e) {
+      console.log('error in server try')
+
+      reject(e)
+    }
 
     // set router's location
     router.push(context.url)
@@ -56,6 +67,10 @@ export default context => {
         context.state = store.state
 
         resolve(app)
+      }).catch(e => {
+        console.log('missing route break server')
+
+        reject(e)
       })
     }, reject)
   })

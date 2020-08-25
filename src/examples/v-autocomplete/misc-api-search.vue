@@ -115,7 +115,7 @@
             this.entries = entries
           })
           .catch(err => {
-            console.log(err)
+            console.log('misc api search example', err)
           })
           .finally(() => (this.isLoading = false))
       },

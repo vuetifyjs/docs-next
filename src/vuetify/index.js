@@ -6,11 +6,11 @@
 
 // Imports
 import { icons } from './icons'
-import minifyTheme from 'minify-css-string'
+// import minifyTheme from 'minify-css-string'
 import Vuetify from 'vuetify/lib/framework'
 
 // Globals
-import { IN_BROWSER, IS_PROD } from '@/util/globals'
+// import { IN_BROWSER, IS_PROD } from '@/util/globals'
 
 export function useVuetify (app) {
   app.use(Vuetify)
@@ -23,11 +23,11 @@ export function createVuetify (store) {
     theme: {
       dark: store.state.user.theme.dark,
       options: {
-        themeCache: IN_BROWSER && IS_PROD ? {
-          get: key => localStorage.getItem(key),
-          set: (key, value) => localStorage.setItem(key, value),
-        } : undefined,
-        minifyTheme,
+        // themeCache: IN_BROWSER && IS_PROD ? {
+        //   get: key => localStorage.getItem(key),
+        //   set: (key, value) => localStorage.setItem(key, value),
+        // } : undefined,
+        // minifyTheme,
         variations: false,
       },
       themes: {

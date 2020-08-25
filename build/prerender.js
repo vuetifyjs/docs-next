@@ -57,9 +57,9 @@ if (isMainThread) {
   const bundle = JSON.parse(readFile('../dist/vue-ssr-server-bundle.json'))
   const clientManifest = JSON.parse(readFile('../dist/vue-ssr-client-manifest.json'))
 
-  const bar = new ProgressBar('[:bar] :percent | ETA: :etas | :current/:total | :timems | :lastFile', {
+  const bar = new ProgressBar('[:bar] :percent | :current/:total | :timems | :lastFile', {
     total: routes.length,
-    width: 64,
+    width: 32,
   })
 
   chunk(routes, Math.round(routes.length / threads)).forEach((routes, index) => {

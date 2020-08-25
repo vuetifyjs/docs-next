@@ -5,15 +5,18 @@ const Mode = require('frontmatter-markdown-loader/mode')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { IS_PROD, IS_SERVER } = require('./src/util/globals')
 const { md } = require('./build/markdown-it')
+const nodeExternals = require('webpack-node-externals')
 
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 
-if (IS_SERVER) {
-  process.env.VUE_ENV = 'server'
-}
+process.env.VUE_ENV = IS_SERVER ? 'server' : 'client'
 
 module.exports = {
+  css: {
+    extract: !IS_SERVER,
+    sourceMap: !IS_SERVER,
+  },
   devServer: {
     disableHostCheck: true,
     historyApiFallback: {
@@ -26,6 +29,7 @@ module.exports = {
   chainWebpack: config => {
     config
       .entry('app')
+      .clear()
       .add(IS_SERVER ? './src/entry-server.js' : './src/entry-client.js')
       .end()
 
@@ -65,40 +69,62 @@ module.exports = {
         }))
 
     if (IS_SERVER) {
+      config.module
+        .rule('vue')
+        .use('vue-loader')
+        .tap(options => {
+          options.optimizeSSR = false
+
+          return options
+        })
       config.plugin('VueSSRServerPlugin')
         .use(VueSSRServerPlugin)
+
+      const isExtracting = config.plugins.has('extract-css')
+      if (isExtracting) {
+        const langs = ['css', 'postcss', 'scss', 'sass', 'less', 'stylus']
+        const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+        for (const lang of langs) {
+          for (const type of types) {
+            const rule = config.module.rule(lang).oneOf(type)
+            rule.uses.delete('extract-css-loader')
+          }
+        }
+        config.plugins.delete('extract-css')
+      }
+    } else {
+      config.plugin('VueSSRClientPlugin')
+        .use(VueSSRClientPlugin)
     }
 
-    config.plugin('VueSSRClientPlugin')
-      .use(VueSSRClientPlugin)
+    // if (IS_PROD) {
+    //   config.plugin('sitemap')
+    //     .use(path.resolve('./build/sitemap.js'))
+    // }
 
-    if (IS_PROD) {
-      config.plugin('sitemap')
-      .use(path.resolve('./build/sitemap.js'))
-    }
-
-    if (process.env.ANALYZE === 'true') {
-      config.plugin('BundleAnalyzerPlugin')
-        .use(BundleAnalyzerPlugin)
-    }
+    // if (process.env.ANALYZE === 'true') {
+    //   config.plugin('BundleAnalyzerPlugin')
+    //     .use(BundleAnalyzerPlugin)
+    // }
   },
   configureWebpack: {
-    optimization: IS_SERVER
-      ? {
-        minimize: false,
-        splitChunks: false,
-        removeAvailableModules: IS_PROD,
-        removeEmptyChunks: IS_PROD,
-      }
-      : {
-        splitChunks: {
-          chunks: 'all',
-          minSize: 30000,
-          maxSize: 100000,
-          maxAsyncRequests: 20,
-          maxInitialRequests: 5,
-        },
+    devtool: IS_SERVER ? false : 'source-map',
+    externals: nodeExternals({
+      // do not externalize CSS files in case we need to import it from a dep
+      allowlist: [/^vuetify/, /\.css*/],
+    }),
+    optimization: {
+      minimize: IS_SERVER ? false : undefined,
+      splitChunks: IS_SERVER ? false : {
+        chunks: 'all',
+        minSize: 30000,
+        maxSize: 100000,
+        maxAsyncRequests: 20,
+        maxInitialRequests: 5,
       },
+      removeAvailableModules: IS_PROD,
+      removeEmptyChunks: IS_PROD,
+    },
     module: {
       rules: [
         {
@@ -107,6 +133,9 @@ module.exports = {
         },
       ],
     },
+    resolve: {
+      alias: { vue$: 'vue/dist/vue.runtime.common.js' },
+    },
     target: IS_SERVER ? 'node' : 'web',
     node: IS_SERVER ? undefined : false,
     output: IS_SERVER ? {
@@ -114,27 +143,27 @@ module.exports = {
       filename: 'server-bundle.js',
     } : undefined,
   },
-  pwa: {
-    name: 'Vuetify-Docs',
-    themeColor: '#094A7F',
-    msTileColor: '#5CBBF6',
-    manifestOptions: {
-      background_color: '#5CBBF6',
-    },
-    appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
+  // pwa: {
+  //   name: 'Vuetify-Docs',
+  //   themeColor: '#094A7F',
+  //   msTileColor: '#5CBBF6',
+  //   manifestOptions: {
+  //     background_color: '#5CBBF6',
+  //   },
+  //   appleMobileWebAppCapable: 'yes',
+  //   appleMobileWebAppStatusBarStyle: 'black',
 
-    // configure the workbox plugin
-    workboxPluginMode: 'InjectManifest',
-    workboxOptions: {
-      // swSrc is required in InjectManifest mode.
-      swSrc: 'src/service-worker.js',
-      exclude: [
-        /index\.html$/,
-      ],
-      // ...other Workbox options...
-    },
-  },
+  //   // configure the workbox plugin
+  //   workboxPluginMode: 'InjectManifest',
+  //   workboxOptions: {
+  //     // swSrc is required in InjectManifest mode.
+  //     swSrc: 'src/service-worker.js',
+  //     exclude: [
+  //       /index\.html$/,
+  //     ],
+  //     // ...other Workbox options...
+  //   },
+  // },
   transpileDependencies: [
     'vuetify',
   ],

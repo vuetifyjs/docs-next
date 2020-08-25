@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
+    "build:all": "yarn build:client && yarn build:server && yarn prerender",
     "build:api": "node build/api-gen",
+    "build:client": "yarn build",
     "build:modified": "node build/modified",
+    "build:server": "WEBPACK_TARGET=node yarn build --no-clean",
     "dev": "yarn serve",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
@@ -18,18 +21,17 @@
     "core-js": "^3.6.4",
     "docsearch.js": "^2.6.3",
     "moment": "^2.24.0",
-    "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-i18n": "^8.17.7",
     "vue-router": "^3.1.6",
     "vuetify": "^2.3.3",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "webpack-node-externals": "^2.5.1"
   },
   "devDependencies": {
     "@mdi/js": "^5.2.45",
     "@vue/cli-plugin-babel": "~4.5.3",
     "@vue/cli-plugin-eslint": "~4.5.3",
-    "@vue/cli-plugin-pwa": "~4.5.3",
     "@vue/cli-plugin-router": "~4.5.3",
     "@vue/cli-plugin-vuex": "~4.5.3",
     "@vue/cli-service": "~4.5.3",

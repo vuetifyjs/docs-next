@@ -27,7 +27,7 @@ export function createRouter (vuetify, store, i18n) {
     scrollBehavior: (...args) => scrollBehavior(vuetify, ...args),
     routes: [
       locale([
-        layout('Home', [route('Home')]),
+        layout('Home', []),
 
         route('Whiteframes', null, 'examples/whiteframes/:whiteframe'),
 
@@ -35,7 +35,7 @@ export function createRouter (vuetify, store, i18n) {
           route('Documentation'),
         ], ':category/:page'),
 
-        layout('Default', [abort()], '*'),
+        // layout('Default', [abort()], '*'),
       ]),
 
       // Redirect for language fallback
@@ -43,38 +43,39 @@ export function createRouter (vuetify, store, i18n) {
       // The previous one doesn't match if there's no slash after the language code
       redirect('/:locale(%s)'),
       redirect(to => to.path),
+      // redirect('/en/')
     ],
   })
 
-  function loadLocale (locale) {
-    if (
-      !locale ||
-      i18n.locale === locale ||
-      loadedLocales.includes(locale)
-    ) return Promise.resolve()
+  // function loadLocale (locale) {
+  //   if (
+  //     !locale ||
+  //     i18n.locale === locale ||
+  //     loadedLocales.includes(locale)
+  //   ) return Promise.resolve()
 
-    return import(
-      /* webpackChunkName: "locale-[request]" */
-      `@/i18n/messages/${locale}.json`
-    ).then(messages => {
-      i18n.setLocaleMessage(locale, messages.default)
-      loadedLocales.push(locale)
-      i18n.locale = locale
-    })
-  }
+  //   return import(
+  //     /* webpackChunkName: "locale-[request]" */
+  //     `@/i18n/messages/${locale}.json`
+  //   ).then(messages => {
+  //     i18n.setLocaleMessage(locale, messages.default)
+  //     loadedLocales.push(locale)
+  //     i18n.locale = locale
+  //   })
+  // }
 
-  router.beforeEach((to, from, next) => {
-    return to.path.endsWith('/') ? next() : next(trailingSlash(to.path))
-  })
+  // router.beforeEach((to, from, next) => {
+  //   return to.path.endsWith('/') ? next() : next(trailingSlash(to.path))
+  // })
 
-  router.beforeEach((to, _, next) => {
-    loadLocale(to.params.locale).then(() => next())
-  })
+  // router.beforeEach((to, _, next) => {
+  //   loadLocale(to.params.locale).then(() => next())
+  // })
 
-  Vue.use(VueGtag, {
-    bootstrap: IS_PROD,
-    config: { id: 'UA-75262397-3' },
-  }, router)
+  // Vue.use(VueGtag, {
+  //   bootstrap: IS_PROD,
+  //   config: { id: 'UA-75262397-3' },
+  // }, router)
 
   return router
 }

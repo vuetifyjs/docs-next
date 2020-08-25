@@ -161,22 +161,22 @@
 
     methods: {
       async genApi (items) {
-        const apiItems = []
-        for (const api of items) {
-          const tables = {}
-          const { [this.locale]: data } = await import(
-            /* webpackChunkName: "api" */
-            /* webpackMode: "lazy" */
-            '../../../build/api'
-          ) || {}
-          for (const [header, value] of Object.entries(data[api.text])) {
-            if (header === 'mixins' || !value.length) continue
-            const table = this.genTable(value)
-            tables[header] = table
-          }
-          apiItems.push({ ...api, tables })
-        }
-        this.apiItems = apiItems
+        // const apiItems = []
+        // for (const api of items) {
+        //   const tables = {}
+        //   const { [this.locale]: data } = await import(
+        //     /* webpackChunkName: "api" */
+        //     /* webpackMode: "lazy" */
+        //     '../../../build/api'
+        //   ) || {}
+        //   for (const [header, value] of Object.entries(data[api.text])) {
+        //     if (header === 'mixins' || !value.length) continue
+        //     const table = this.genTable(value)
+        //     tables[header] = table
+        //   }
+        //   apiItems.push({ ...api, tables })
+        // }
+        // this.apiItems = apiItems
       },
       genPageItem (page, lang) {
         const type = this.pageTypes[page] || 'component'

@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <home-bar />
+    <!-- <home-bar />
 
-    <home-view />
+    <home-view /> -->
   </v-app>
 </template>
 
@@ -10,15 +10,15 @@
   export default {
     name: 'HomeLayout',
 
-    components: {
-      HomeBar: () => import(
-        /* webpackChunkName: "home-app-bar" */
-        './AppBar'
-      ),
-      HomeView: () => import(
-        /* webpackChunkName: "home-view" */
-        './View'
-      ),
-    },
+    // components: {
+    //   HomeBar: () => import(
+    //     /* webpackChunkName: "home-app-bar" */
+    //     './AppBar'
+    //   ),
+    //   HomeView: () => import(
+    //     /* webpackChunkName: "home-view" */
+    //     './View'
+    //   ),
+    // },
   }
 </script>

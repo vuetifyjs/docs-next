@@ -102,7 +102,7 @@
           this.githubReleases = res
           this.releaseNotes = res.find(release => release.name === `v${this.version}`)
         })
-        .catch(err => console.log(err))
+        .catch(err => console.log('notes', err))
     },
   }
 </script>

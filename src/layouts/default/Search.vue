@@ -74,85 +74,85 @@
         this.resetSearch()
       },
       search (val) {
-        this.isSearching = Boolean(val && val.length)
+        // this.isSearching = Boolean(val && val.length)
 
-        if (val) return
+        // if (val) return
 
-        this.docSearch.autocomplete.autocomplete.close()
-        this.docSearch.autocomplete.autocomplete.setVal('')
+        // this.docSearch.autocomplete.autocomplete.close()
+        // this.docSearch.autocomplete.autocomplete.setVal('')
       },
     },
 
     mounted () {
-      if (IN_BROWSER) {
-        document.onkeydown = e => {
-          e = e || window.event
+      // if (IN_BROWSER) {
+      //   document.onkeydown = e => {
+      //     e = e || window.event
 
-          if (
-            e.key === '/' &&
-            e.target !== this.$refs.search.$refs.input
-          ) {
-            e.preventDefault()
+      //     if (
+      //       e.key === '/' &&
+      //       e.target !== this.$refs.search.$refs.input
+      //     ) {
+      //       e.preventDefault()
 
-            this.$refs.search.focus()
-          }
-        }
-      }
+      //       this.$refs.search.focus()
+      //     }
+      //   }
+      // }
 
-      // eslint-disable-next-line no-unused-expressions
-      import(
-        /* webpackChunkName: "docsearch" */
-        'docsearch.js/dist/cdn/docsearch.min.css'
-      )
-      import(
-        /* webpackChunkName: "docsearch" */
-        'docsearch.js'
-      ).then(this.init)
+      // // eslint-disable-next-line no-unused-expressions
+      // import(
+      //   /* webpackChunkName: "docsearch" */
+      //   'docsearch.js/dist/cdn/docsearch.min.css'
+      // )
+      // import(
+      //   /* webpackChunkName: "docsearch" */
+      //   'docsearch.js'
+      // ).then(this.init)
     },
 
     beforeDestroy () {
-      if (IN_BROWSER) {
-        document.onkeydown = null
-      }
+      // if (IN_BROWSER) {
+      //   document.onkeydown = null
+      // }
 
-      this.docSearch.autocomplete.autocomplete.close()
-      this.docSearch.autocomplete.autocomplete.setVal('')
+      // this.docSearch.autocomplete.autocomplete.close()
+      // this.docSearch.autocomplete.autocomplete.setVal('')
     },
 
     methods: {
       async init ({ default: docsearch }) {
-        const vm = this
+        // const vm = this
 
-        this.docSearch = docsearch({
-          apiKey: '259d4615e283a1bbaa3313b4eff7881c',
-          autocompleteOptions: {
-            appendTo: '#default-app-bar',
-            autoselect: true,
-            clearOnSelected: true,
-            hint: false,
-            debug: process.env.NODE_ENV === 'development',
-          },
-          handleSelected (input, event, suggestion) {
-            vm.$router.push(suggestion.url.split('.com').pop())
-            vm.resetSearch(400)
-          },
-          indexName: 'vuetifyjs',
-          inputSelector: '#doc-search',
-        })
+        // this.docSearch = docsearch({
+        //   apiKey: '259d4615e283a1bbaa3313b4eff7881c',
+        //   autocompleteOptions: {
+        //     appendTo: '#default-app-bar',
+        //     autoselect: true,
+        //     clearOnSelected: true,
+        //     hint: false,
+        //     debug: process.env.NODE_ENV === 'development',
+        //   },
+        //   handleSelected (input, event, suggestion) {
+        //     vm.$router.push(suggestion.url.split('.com').pop())
+        //     vm.resetSearch(400)
+        //   },
+        //   indexName: 'vuetifyjs',
+        //   inputSelector: '#doc-search',
+        // })
 
-        const { search } = this.$route.query
+        // const { search } = this.$route.query
 
-        if (!search) return
+        // if (!search) return
 
-        this.search = search
-        this.$refs.search.focus()
+        // this.search = search
+        // this.$refs.search.focus()
 
-        await this.$nextTick()
+        // await this.$nextTick()
 
-        // Dispatch an event to trigger agolia search menu
-        const event = new Event('input')
+        // // Dispatch an event to trigger agolia search menu
+        // const event = new Event('input')
 
-        this.$refs.search.$refs.input.dispatchEvent(event)
+        // this.$refs.search.$refs.input.dispatchEvent(event)
       },
       onBlur () {
         this.resetSearch()

@@ -26,7 +26,7 @@
 
     <language-menu />
 
-    <template
+    <!-- <template
       v-if="canInstall || updateAvailable"
       #extension
     >
@@ -60,7 +60,7 @@
         </v-icon>
       </v-btn>
       <v-spacer />
-    </template>
+    </template> -->
   </v-app-bar>
 </template>
 
@@ -78,10 +78,10 @@
       ...sync('app', [
         'search',
       ]),
-      ...sync('pwa', [
-        'canInstall',
-        'updateAvailable',
-      ]),
+      // ...sync('pwa', [
+      //   'canInstall',
+      //   'updateAvailable',
+      // ]),
       ...sync('user', [
         'theme@dark',
         'rtl',
@@ -89,7 +89,7 @@
     },
 
     methods: {
-      ...call('pwa', ['promptInstaller', 'refreshContent']),
+      // ...call('pwa', ['promptInstaller', 'refreshContent']),
     },
   }
 </script>

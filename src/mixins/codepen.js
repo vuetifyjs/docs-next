@@ -14,7 +14,7 @@ export default {
 
         this.boot(template.default)
       } catch (err) {
-        console.log(err)
+        console.log('template import issue', err)
       }
     },
     boot (res) {

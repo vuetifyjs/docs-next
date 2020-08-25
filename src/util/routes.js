@@ -76,10 +76,10 @@ export function redirect (
   return {
     path,
     redirect: to => {
-      const locale = preferredLocale()
+      const locale = 'en'
       const rpath = rhandler(to)
       const url = rpath !== ''
-        ? leadingSlash(trailingSlash(rpath))
+        ? leadingSlash(rpath)
         : rpath
 
       return `/${locale}${url}`
@@ -88,22 +88,26 @@ export function redirect (
 }
 
 export function route (name, component, path = '') {
-  component = Object(component) === component
-    ? component
-    : { default: name }
+  // component = Object(component) === component
+  //   ? component
+  //   : { default: name }
 
-  const components = {}
+  // const components = {}
 
-  for (const [key, value] of Object.entries(component)) {
-    components[key] = () => import(
-      /* webpackChunkName: "views-[request]" */
-      `@/views/${value}`
-    )
-  }
+  // for (const [key, value] of Object.entries(component)) {
+  //   components[key] = () =>
+  // }
 
   return {
     name,
-    components,
+    component: () => import(
+      /* webpackChunkName: "views-[request]" */
+      `@/views/${name}`
+    ).catch(e => {
+      console.log('SOMETHING WENT WRONG', name)
+
+      process.exit(1)
+    }),
     path,
   }
 }

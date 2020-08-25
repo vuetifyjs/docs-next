@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import pathify from '@/plugins/vuex-pathify'
-import pwaEvents from '@/plugins/pwa-events'
+// import pwaEvents from '@/plugins/pwa-events'
 
 // Modules
 import * as modules from './modules'
@@ -14,7 +14,7 @@ export function createStore () {
     modules,
     plugins: [
       pathify.plugin,
-      pwaEvents,
+      // pwaEvents,
     ],
   })
 
@@ -24,7 +24,7 @@ export function createStore () {
     store.dispatch('user/update', mutation)
   })
 
-  store.dispatch('app/init')
+  // store.dispatch('app/init')
 
   return store
 }
