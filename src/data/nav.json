@@ -62,6 +62,7 @@
       "elevation",
       "flex",
       "float",
+      "sizing",
       "spacing",
       "text-and-typography",
       "transitions"
