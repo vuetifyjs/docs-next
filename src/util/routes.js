@@ -88,7 +88,7 @@ export function rpath (path = '') {
   return `/${route.join('/')}/`
 }
 
-export function route (name, path = '', options = {}) {
+export function route (name, path = '', strict = true) {
   return {
     name,
     component: () => import(
@@ -96,6 +96,6 @@ export function route (name, path = '', options = {}) {
       `@/views/${name}`
     ),
     path,
-    ...options,
+    pathToRegexpOptions: { strict },
   }
 }

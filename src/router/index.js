@@ -12,6 +12,7 @@ import {
   locale,
   layout,
   route,
+  rpath,
   redirect,
 } from '@/util/routes'
 
@@ -26,21 +27,15 @@ export function createRouter (vuetify, store, i18n) {
     scrollBehavior: (...args) => scrollBehavior(vuetify, ...args),
     routes: [
       locale([
-        layout('Home', [
-          route('Home', '', {
-            pathToRegexpOptions: { strict: true },
-          }),
+        layout('Home', [route('Home')]),
 
-          redirect('/:locale(%s)'),
-        ]),
-
-        route('Whiteframes', '', 'examples/whiteframes/:whiteframe'),
+        route('Whiteframes', 'examples/whiteframes/:whiteframe/'),
 
         layout('Default', [
           route('Documentation'),
-        ], ':category/:page'),
+        ], ':category/:page/'),
 
-        layout('Default', [abort()], '*'),
+        layout('Default', [abort()]),
       ]),
       // Redirect for language fallback
       redirect('/:locale(%s)/*', to => to.params.pathMatch),
@@ -67,9 +62,9 @@ export function createRouter (vuetify, store, i18n) {
   //   })
   // }
 
-  // router.beforeEach((to, from, next) => {
-  //   return to.path.endsWith('/') ? next() : next(trailingSlash(to.path))
-  // })
+  router.beforeEach(({ path }, from, next) => {
+    return path.endsWith('/') ? next() : next(rpath(path))
+  })
 
   // router.beforeEach((to, _, next) => {
   //   loadLocale(to.params.locale).then(() => next())
