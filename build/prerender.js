@@ -53,7 +53,9 @@ if (isMainThread) {
     width: 64,
   })
 
-  chunk(routes, Math.ceil(routes.length / threads)).forEach((routes, index) => {
+  const numChunks = 2 * Math.round(routes.length / threads)
+
+  chunk(routes, numChunks).forEach((routes, index) => {
     const worker = new Worker(__filename, {
       workerData: { routes, template, bundle, clientManifest, index },
       stdout: true,
@@ -94,6 +96,7 @@ if (isMainThread) {
     parentPort.postMessage({
       message: '\n' + currentRoute.fullPath + '\n' + data.toString(),
     })
+
     return write.call(process.stdout, data)
   }
 
