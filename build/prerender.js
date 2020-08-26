@@ -1,3 +1,4 @@
+const { chunk } = require('lodash')
 const os = require('os')
 const fs = require('fs')
 const path = require('path')
@@ -19,16 +20,6 @@ const availableLanguages = languages.map(lang => lang.alternate || lang.locale)
 
 const threads = os.cpus().length
 const resolve = file => path.resolve(__dirname, file)
-
-function chunk (arr, chunkSize) {
-  const chunks = []
-
-  for (let i = 0; i < arr.length; i += chunkSize) {
-    chunks.push(arr.slice(i, i + chunkSize))
-  }
-
-  return chunks
-}
 
 function readFile (file) {
   return fs.readFileSync(resolve(file), 'utf-8')
@@ -62,7 +53,7 @@ if (isMainThread) {
     width: 64,
   })
 
-  chunk(routes, Math.round(routes.length / threads)).forEach((routes, index) => {
+  chunk(routes, Math.ceil(routes.length / threads)).forEach((routes, index) => {
     const worker = new Worker(__filename, {
       workerData: { routes, template, bundle, clientManifest, index },
       stdout: true,
