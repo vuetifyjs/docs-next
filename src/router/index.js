@@ -5,7 +5,7 @@ import Vue from 'vue'
 import VueGtag from 'vue-gtag'
 
 // Globals
-import { IS_PROD } from '@/util/globals'
+import { IS_PROD, IS_SERVER } from '@/util/globals'
 
 import {
   abort,
@@ -45,35 +45,35 @@ export function createRouter (vuetify, store, i18n) {
     ],
   })
 
-  // function loadLocale (locale) {
-  //   if (
-  //     !locale ||
-  //     i18n.locale === locale ||
-  //     loadedLocales.includes(locale)
-  //   ) return Promise.resolve()
+  function loadLocale (locale) {
+    if (
+      !locale ||
+      i18n.locale === locale ||
+      loadedLocales.includes(locale)
+    ) return Promise.resolve()
 
-  //   return import(
-  //     /* webpackChunkName: "locale-[request]" */
-  //     `@/i18n/messages/${locale}.json`
-  //   ).then(messages => {
-  //     i18n.setLocaleMessage(locale, messages.default)
-  //     loadedLocales.push(locale)
-  //     i18n.locale = locale
-  //   })
-  // }
+    return import(
+      /* webpackChunkName: "locale-[request]" */
+      `@/i18n/messages/${locale}.json`
+    ).then(messages => {
+      i18n.setLocaleMessage(locale, messages.default)
+      loadedLocales.push(locale)
+      i18n.locale = locale
+    })
+  }
 
   router.beforeEach(({ path }, from, next) => {
     return path.endsWith('/') ? next() : next(rpath(path))
   })
 
-  // router.beforeEach((to, _, next) => {
-  //   loadLocale(to.params.locale).then(() => next())
-  // })
+  router.beforeEach((to, _, next) => {
+    loadLocale(to.params.locale).then(() => next())
+  })
 
-  // Vue.use(VueGtag, {
-  //   bootstrap: IS_PROD,
-  //   config: { id: 'UA-75262397-3' },
-  // }, router)
+  Vue.use(VueGtag, {
+    bootstrap: IS_PROD && !IS_SERVER,
+    config: { id: 'UA-75262397-3' },
+  }, router)
 
   return router
 }
