@@ -28,13 +28,8 @@ export function createRouter (vuetify, store, i18n) {
     routes: [
       locale([
         layout('Home', [route('Home')]),
-
+        layout('Default', [route('Documentation')], ':category/:page/'),
         route('Whiteframes', 'examples/whiteframes/:whiteframe/'),
-
-        layout('Default', [
-          route('Documentation'),
-        ], ':category/:page/'),
-
         layout('Default', [abort()]),
       ]),
       // Redirect for language fallback
