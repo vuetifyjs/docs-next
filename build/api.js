@@ -23639,7 +23639,7 @@ module.exports = {
       "mixins": [],
       "sass": []
     },
-    "$vuetify": {
+    "vuetify": {
       "functions": [
         {
           "name": "goTo",
