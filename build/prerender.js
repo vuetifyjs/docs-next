@@ -90,20 +90,11 @@ if (isMainThread) {
   })
 
   // Redirect console.log to the main thread
-  let currentRoute
   const write = process.stdout.write
-  process.stdout.write = data => {
-    parentPort.postMessage({
-      message: '\n' + currentRoute.fullPath + '\n' + data.toString(),
-    })
-
-    return write.call(process.stdout, data)
-  }
+  process.stdout.write = data => write.call(process.stdout, data)
 
   forEachSequential(routes, route => {
-    currentRoute = route
     const start = performance.now()
-
     const context = {
       hostname: 'https://vuetifyjs.com', // TODO
       hreflangs: availableLanguages.reduce((acc, lang) => {
