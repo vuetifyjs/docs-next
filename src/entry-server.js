@@ -1,12 +1,14 @@
 // Imports
 import { createApp } from './main'
+import { IS_PROD } from '@/util/globals'
+
+const path = require('path')
+const resolve = file => path.resolve(__dirname, file)
 
 // ENV Variables
-require('dotenv').config()
+require('dotenv').config({ path: resolve('../.env.local') })
 
 global.fetch = require('node-fetch')
-
-const isDev = process.env.NODE_ENV !== 'production'
 
 // This exported function will be called by `bundleRenderer`.
 // This is where we perform data-prefetching to determine the
@@ -16,7 +18,7 @@ const isDev = process.env.NODE_ENV !== 'production'
 export default context => {
   /* eslint-disable-next-line no-async-promise-executor */
   return new Promise(async (resolve, reject) => {
-    const s = isDev && Date.now()
+    const s = IS_PROD && Date.now()
 
     let app
     let router
@@ -57,7 +59,7 @@ export default context => {
           }
         }),
       ).then(() => {
-        isDev && console.log(`data pre-fetch: ${Date.now() - s}ms`)
+        IS_PROD && console.log(`data pre-fetch: ${Date.now() - s}ms`)
         // After all preFetch hooks are resolved, our store is now
         // filled with the state needed to render the app.
         // Expose the state on the render context, and let the request handler
