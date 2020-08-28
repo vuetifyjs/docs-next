@@ -1,34 +1,24 @@
 // Globals
-// import { IN_BROWSER, IS_PROD } from '@/util/globals'
+import { IN_BROWSER } from '@/util/globals'
 
 export function copyElementContent (el) {
-  // if (!IN_BROWSER) return
+  if (!IN_BROWSER) return
 
-  // el.setAttribute('contenteditable', 'true')
-  // el.focus()
+  el.setAttribute('contenteditable', 'true')
+  el.focus()
 
-  // document.execCommand('selectAll', false, null)
-  // document.execCommand('copy')
+  document.execCommand('selectAll', false, null)
+  document.execCommand('copy')
 
-  // el.removeAttribute('contenteditable')
+  el.removeAttribute('contenteditable')
 }
 
 export function getBranch () {
-  return 'master'
-  // let branch = 'master'
-  // if (IN_BROWSER) {
-  //   branch = window.location.hostname.split('.')[0]
-  // }
+  const branch = IN_BROWSER
+    ? window.location.hostname.split('.')[0]
+    : 'master'
 
-  // return ['master', 'dev', 'next'].includes(branch) ? branch : 'master'
-}
-
-export function leadingSlash (str) {
-  return str.startsWith('/') ? str : '/' + str
-}
-
-export function trailingSlash (str) {
-  return str.endsWith('/') ? str : str + '/'
+  return ['master', 'dev', 'next'].includes(branch) ? branch : 'master'
 }
 
 export const wait = timeout => {
@@ -36,18 +26,17 @@ export const wait = timeout => {
 }
 
 export async function waitForReadystate () {
-  // if (
-  //   IN_BROWSER &&
-  //   IS_PROD &&
-  //   document.readyState !== 'complete'
-  // ) {
-    // await new Promise(resolve => {
-    //   const cb = () => {
-    //     window.requestAnimationFrame(resolve)
-    //     window.removeEventListener('load', cb)
-    //   }
+  if (
+    !IN_BROWSER ||
+    document.readyState === 'complete'
+  ) return
 
-    //   window.addEventListener('load', cb)
-    // })
-  // }
+  await new Promise(resolve => {
+    const cb = () => {
+      window.requestAnimationFrame(resolve)
+      window.removeEventListener('load', cb)
+    }
+
+    window.addEventListener('load', cb)
+  })
 }
