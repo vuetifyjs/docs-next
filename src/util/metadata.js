@@ -1,3 +1,4 @@
+// Globals
 import { IN_BROWSER } from '@/util/globals'
 
 export function genTwitterMetaInfo () {
