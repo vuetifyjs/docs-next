@@ -17,7 +17,7 @@ Vuetify comes bootstrapped with support for Material Design Icons, Material Icon
 
 ## Available Icons
 
-<icon-list></icon-list>
+<icon-list />
 
 ## Usage
 
