@@ -50,7 +50,7 @@
           >
             <v-timeline-item
               v-for="message in messages"
-              :key="message.from"
+              :key="message.time"
               :color="message.color"
               small
             >
