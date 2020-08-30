@@ -71,7 +71,8 @@
                 <v-card-subtitle v-text="item.artist"></v-card-subtitle>
 
                 <v-card-action>
-                  <v-btn v-if="item.artist === 'Ellie Goulding'"
+                  <v-btn
+                    v-if="item.artist === 'Ellie Goulding'"
                     class="ml-2 mt-3"
                     fab
                     icon
