@@ -1,35 +1,50 @@
 <template>
   <div>
     <v-autocomplete
-      v-model="releaseNotes"
+      v-model="search"
+      :background-color="`grey lighten-${isFocused ? '5' : '3'}`"
+      :class="isFocused ? 'rounded-b-0 rounded-t-lg' : 'rounded-lg'"
       :items="releases"
-      chips
-      clearable
+      :menu-props="{
+        contentClass: 'notes-autocomplete rounded-b-lg elevation-0 grey lighten-5'
+      }"
+      class="mt-8 mb-12"
+      dense
+      flat
       hide-details
       item-text="name"
       label="Select Release Version"
-      prepend-inner-icon="$mdiDatabaseSearch"
-      return-object
+      prepend-inner-icon="$mdiTextBoxSearchOutline"
       solo
+      return-object
+      @blur="onBlur"
+      @focus="onFocus"
     >
-      <template v-slot:selection="props">
-        <v-chip
-          :value="props.selected"
-          class="white--text"
-          color="primary"
-          label
+      <template #prepend-inner>
+        <div
+          class="ml-1 mr-2"
+          style="width: 40px;"
         >
-          <v-icon left>
-            mdi-tag
-          </v-icon>
+          <v-progress-circular
+            v-if="isLoading"
+            size="20"
+            width="1"
+            color="primary"
+            indeterminate
+          />
 
-          <span v-text="props.item.name" />
-        </v-chip>
+          <v-icon
+            v-else
+            :color="!isFocused ? 'grey' : undefined"
+          >
+            $mdiTextBoxSearchOutline
+          </v-icon>
+        </div>
       </template>
 
-      <template v-slot:item="props">
+      <template #item="props">
         <v-list-item-action>
-          <v-icon>mdi-tag</v-icon>
+          <v-icon>$mdiTagOutline</v-icon>
         </v-list-item-action>
 
         <v-list-item-content>
@@ -38,22 +53,62 @@
             v-text="props.item.name"
           />
 
-          <v-list-item-subtitle v-text="`Published: ${new Date(props.item.published_at).toDateString()}`" />
+          <v-list-item-subtitle>
+            Published on <strong v-text="search.published_at" />
+          </v-list-item-subtitle>
         </v-list-item-content>
       </template>
     </v-autocomplete>
 
-    <v-expand-transition>
-      <v-card
-        v-if="releaseNotes"
-        class="pa-4 mt-3"
-        outlined
-      >
+    <v-skeleton-loader
+      v-if="isLoading"
+      type="image"
+      height="180"
+    />
+
+    <v-card
+      v-else
+      min-height="180"
+      outlined
+    >
+      <v-list-item v-if="!!search">
+        <v-list-item-avatar>
+          <v-img :src="search.author.avatar_url" />
+        </v-list-item-avatar>
+
+        <v-list-item-content>
+          <v-list-item-title>
+            Released by:
+
+            <app-link :href="search.author.html_url">
+              {{ search.author.login }}
+            </app-link>
+          </v-list-item-title>
+
+          <v-list-item-subtitle>
+            Published on <strong v-text="search.published_at" />
+          </v-list-item-subtitle>
+        </v-list-item-content>
+
+        <v-list-item-action>
+          <app-tooltip-btn
+            :href="search.html_url"
+            icon="mdi-package-up"
+            path="release"
+            rel="noopener"
+            target="_blank"
+          />
+        </v-list-item-action>
+      </v-list-item>
+
+      <v-divider />
+
+      <div class="pa-4">
         <app-md>
-          {{ releaseNotes ? releaseNotes.body : ' ' }}
+          {{ search ? search.body : ' ' }}
         </app-md>
-      </v-card>
-    </v-expand-transition>
+      </div>
+    </v-card>
   </div>
 </template>
 
@@ -61,48 +116,90 @@
   // Utilities
   import { get } from 'vuex-pathify'
   import { sortBy } from 'lodash'
+  import { wait } from '@/util/helpers'
 
   export default {
     name: 'Notes',
 
+    inject: ['theme'],
+
     data: () => ({
       branch: undefined,
-      githubReleases: [],
-      releaseNotes: undefined,
+      releases: [],
+      isLoading: true,
+      isFocused: false,
+      isSearching: false,
+      search: undefined,
     }),
 
     computed: {
-      releases () {
-        const v1 = sortBy(
-          this.githubReleases.filter(release => release.name && release.name.substring(0, 3) === 'v1.'),
-          ['published_at'],
-        ).reverse()
-        const v2 = sortBy(
-          this.githubReleases.filter(release => release.name && release.name.substring(0, 3) === 'v2.'),
-          ['published_at'],
-        ).reverse()
-        if (v1.length > 0) {
-          v1.unshift({ header: 'v1.x' })
-        }
-        if (v2.length > 0) {
-          v2.unshift({ header: 'v2.x' })
-        }
-        return v2.concat(v1) || []
-      },
+      ...get('app', ['modified']),
+      ...get('route', [
+        'params@category',
+        'params@page',
+      ]),
       version: get('app/version'),
+      at () {
+        const stat = this.modified[`/${this.category}/${this.page}/`] || {}
+
+        return stat.modified
+      },
     },
 
-    mounted () {
-      fetch('https://api.github.com/repos/vuetifyjs/vuetify/releases?per_page=100', {
+    created () {
+      fetch('https://api.github.com/repos/vuetifyjs/vuetify/releases?per_page=50', {
         method: 'get',
         headers: { 'Content-Type': 'application/json' },
       })
         .then(res => res.json())
-        .then(res => {
-          this.githubReleases = res
-          this.releaseNotes = res.find(release => release.name === `v${this.version}`)
+        .then(async res => {
+          this.isLoading = false
+
+          await wait(100)
+
+          const releases = []
+
+          for (const release of res) {
+            if (!release.name.startsWith('v2')) continue
+
+            releases.push({
+              ...release,
+              published_at: new Date(release.published_at).toDateString(),
+            })
+          }
+
+          this.releases = releases
+
+          this.search = releases[0]
         })
         .catch(err => console.log(err))
+        .finally(() => (this.isLoading = false))
+    },
+
+    methods: {
+      onBlur () {
+        this.resetSearch()
+      },
+      onFocus () {
+        clearTimeout(this.timeout)
+
+        this.isFocused = true
+      },
+      resetSearch (timeout = 0) {
+        clearTimeout(this.timeout)
+
+        this.$nextTick(() => {
+          this.isSearching = false
+
+          this.timeout = setTimeout(() => (this.isFocused = false), timeout)
+        })
+      },
     },
   }
 </script>
+
+<style lang="sass">
+  .notes-autocomplete
+    > .v-list.v-select-list
+      background: transparent !important
+</style>
