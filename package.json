@@ -86,5 +86,8 @@
     "webfontloader": "^1.6.28",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-virtual-modules": "^0.2.2"
+  },
+  "vuePlugins": {
+    "service": ["./plugins/@vuetify/ssg.js"]
   }
 }
