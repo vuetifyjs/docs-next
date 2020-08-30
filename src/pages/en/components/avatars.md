@@ -55,7 +55,7 @@ Combining an avatar with other components allows you to build beautiful user int
 
 <example file="v-avatar/misc-advanced" />
 
-An other example combining avatar with menu.
+Another example combining avatar with menu.
 
 <example file="v-avatar/misc-avatar-menu" />
 
