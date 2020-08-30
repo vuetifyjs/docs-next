@@ -7,11 +7,46 @@
         page: 'jobs-for-vue'
       }
     }"
-    icon="$mdiBriefcaseSearchOutline"
+    class="jobs-link"
     path="jobs"
-  />
+  >
+    <template #icon>
+      <v-badge
+        :value="newJobs.length"
+        color="red"
+        left
+        overlap
+      >
+        <template #badge>
+          {{ newJobs.length }}
+        </template>
+
+        <v-icon v-text="icon" />
+      </v-badge>
+    </template>
+  </app-tooltip-btn>
 </template>
 
 <script>
-  export default { name: 'JobsLink' }
+  // Utilities
+  import { get } from 'vuex-pathify'
+
+  export default {
+    name: 'JobsLink',
+
+    computed: {
+      newJobs: get('jobs/newJobs'),
+      page: get('route/params@page'),
+      icon () {
+        return this.page === 'jobs-for-vue'
+          ? '$mdiBriefcaseVariant'
+          : '$mdiBriefcaseVariantOutline'
+      },
+    },
+  }
 </script>
+
+<style lang="sass">
+  .jobs-link .v-btn:not(:hover)::before
+    display: none
+</style>
