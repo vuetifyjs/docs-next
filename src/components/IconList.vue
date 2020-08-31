@@ -8,10 +8,8 @@
       <template v-slot:activator="{ on, attrs }">
         <v-text-field
           v-model="search"
-          :hide-details="!copied"
-          :hint="copied ? 'Copied!' : ''"
+          hide-details
           :loading="!icons"
-          :persistent-hint="copied"
           clearable
           outlined
           placeholder="Search for icons (e.g. account, close)"
@@ -27,6 +25,15 @@
               mdi-{{ search }}
             </v-icon>
             <code class="mx-1 py-1">mdi-</code>
+          </template>
+
+          <template v-slot:append>
+            <span
+              v-if="copied"
+              class="text--primary pt-1"
+            >
+              Copied
+            </span>
           </template>
         </v-text-field>
       </template>
