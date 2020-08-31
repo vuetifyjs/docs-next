@@ -30,6 +30,8 @@
 
         <support-menu />
 
+        <blog-link />
+
         <vertical-divider />
 
         <store-link />
