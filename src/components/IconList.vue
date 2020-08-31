@@ -12,9 +12,7 @@
           :hint="copied ? 'Copied!' : ''"
           :loading="!icons"
           :persistent-hint="copied"
-          clear-icon="mdi-close"
           clearable
-          label="Icons"
           outlined
           placeholder="Search for icons (e.g. account, close)"
           v-bind="attrs"
@@ -22,15 +20,13 @@
           v-on="on"
         >
           <template v-slot:prepend-inner>
-            <code class="mx-1 py-1">mdi-</code>
-          </template>
-          <template
-            v-if="copied"
-            v-slot:prepend
-          >
-            <v-icon color="primary">
+            <v-icon
+              v-if="copied"
+              color="primary"
+            >
               mdi-{{ search }}
             </v-icon>
+            <code class="mx-1 py-1">mdi-</code>
           </template>
         </v-text-field>
       </template>
@@ -63,7 +59,7 @@
                 @click.stop="copy(item)"
               >
                 <v-icon size="21">
-                  mdi-content-copy
+                  $mdiContentCopy
                 </v-icon>
               </v-btn>
             </v-list-item>
