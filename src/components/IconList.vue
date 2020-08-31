@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-2 mb-6">
     <v-menu
       v-model="menu"
       :open-on-click="filteredIcons.length > 0"
@@ -16,12 +16,21 @@
           clearable
           label="Icons"
           outlined
-          placeholder="Search for icons (e.g. account, close etc)"
+          placeholder="Search for icons (e.g. account, close)"
           v-bind="attrs"
+          @click:clear="reset"
           v-on="on"
         >
           <template v-slot:prepend-inner>
             <code class="mx-1 py-1">mdi-</code>
+          </template>
+          <template
+            v-if="copied"
+            v-slot:prepend
+          >
+            <v-icon color="primary">
+              mdi-{{ search }}
+            </v-icon>
           </template>
         </v-text-field>
       </template>
@@ -46,9 +55,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title
-                  v-text="item.substring(4)"
-                />
+                <v-list-item-title v-text="item.substring(4)" />
               </v-list-item-content>
 
               <v-btn
@@ -111,12 +118,14 @@
     methods: {
       copy (item) {
         navigator.clipboard.writeText(item).then(() => {
-          this.menu = false
+          this.search = item.substring(4)
           this.copied = true
-          setTimeout(() => {
-            this.copied = false
-          }, 3000)
         })
+      },
+      reset () {
+        this.menu = false
+        this.copied = false
+        this.search = ''
       },
     },
   }
