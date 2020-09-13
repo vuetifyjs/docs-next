@@ -12,9 +12,7 @@ nav: Ecosystem
 
 # Ecosystem
 
- ## Core Project
-
- ### Vuetify
+ <!-- ### Vuetify
  [Github](https://github.com/vuetifyjs/vuetify)
  
   🐉 Material Component Framework for Vue
@@ -32,7 +30,8 @@ nav: Ecosystem
   ### Vue CLI Plugins
   [Github](https://github.com/vuetifyjs/vue-cli-plugins)
 
-🔌 A collection of Vuetify plugins for Vue CLI
+🔌 A collection of Vuetify plugins for Vue CLI -->
 
+<vuetify-ecosystem-list />
 
-  <backmatter />
+<backmatter />

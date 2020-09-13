@@ -1,0 +1,44 @@
+[ 
+  {
+    "name": "@vuetify/cli-plugin-utils",
+    "repo_url": "https://github.com/vuetifyjs/vue-cli-plugins",
+    "description": "🔌 A collection of Vuetify plugins for Vue CLI"
+
+  },
+  {
+    "name": "eslint-config-vuetify",
+    "repo_url": "https://github.com/vuetifyjs/eslint-config-vuetify",
+    "description": "💼 Opinionated eslint config for Vuetify projects."
+
+  },
+  {
+    "name": "vue-cli-plugin-vuetify",
+    "repo_url": "https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify",
+    "description": "A Vue CLI 3 Plugin for installing Vuetify"
+
+  },
+  {
+    "name": "@vuetify/material-studies",
+    "repo_url": "",
+    "description": "Pre-alpha"
+
+  },
+  {
+    "name": "@vuetify/preset",
+    "repo_url": "https://github.com/vuetifyjs/preset",
+    "description": "A Vue CLI Preset for generating pre-scaffolded Vuetify applications"
+
+  },
+  {
+    "name": "Awesome Vuetify",
+    "repo_url": "https://github.com/vuetifyjs/awesome-vuetify",
+    "description": "🎉 The best resources related to Vuetify"
+
+  },
+  {
+    "name": "vuetify-loader",
+    "repo_url": "https://github.com/vuetifyjs/vuetify-loader",
+    "description": "📦 A Webpack plugin for treeshaking Vuetify components and more."
+
+  }
+]
